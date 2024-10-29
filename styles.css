@@ -20,14 +20,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
     background-color: var(--main-color);
     color: var(--bg-color);
     z-index: 100;
 }
 
 .navbar > h1 {
-    margin: 5px;
+    margin: 3px;
     padding: 10px;
 }
 
@@ -89,24 +89,23 @@ sup> i {
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 50%;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgba(2,150,138, 70%);
+    background-color: rgba(2,150,138, 90%);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     box-shadow: 4px 4px 10px black;
-
   }
   
   .sidenav a {
     margin-top: 40px;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 3vh;
     color: var(--bg-color);
     display: block;
     transition: 0.3s;
@@ -122,8 +121,12 @@ sup> i {
     border-color: var(--main-color);
     box-shadow: 2px 2.5px 15px var(--bg-color);
   }
+
+  .sidenav a:not(:hover) {
+    opacity: 0.5; /* Example style change */
+  }
   
-  .sidenav .closebtn {
+   .closebtn {
     position: absolute;
     top: 25px;
     right: 35px;
