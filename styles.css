@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --main-color: #02968a;
+    --alt-color: #ffff67;
+    --bg-color: #fff;
+    --body-font: "Montserrat", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    z-index: 100;
+}
+
+.navbar > h1 {
+    margin: 5px;
+    padding: 10px;
+}
+
+.options > ol {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.options > ol > a {
+    font-weight: 450;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.7s;
+    box-shadow: 2px 2px 300px black;
+}
+
+.options > ol > a:hover {
+    cursor: pointer;
+    margin: 10px;
+    background-color: var(--bg-color);
+    padding: 10px;
+    color: var(--main-color);
+    border-radius: 5px;
+    border-color: var(--main-color);
+    box-shadow: 2px 2.5px 15px var(--bg-color);
+}
+
+ a {
+    color: white;
+    text-decoration: none;
+}
+
+ a:hover {
+    color: var(--main-color);
+}
+
+sup> i {
+    font-size: 2vh;
+}
+
+@media (min-width: 630px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 630px) {
+    .options {
+        display: none;
+    }
+    .menu {
+        padding: 17px;
+        margin: 5px;
+    }
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(2,150,138, 70%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 4px 4px 10px black;
+
+  }
+  
+  .sidenav a {
+    margin-top: 40px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--bg-color);
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    cursor: pointer;
+    margin: 10px;
+    background-color: var(--bg-color);
+    padding: 10px;
+    color: var(--main-color);
+    border-radius: 5px;
+    border-color: var(--main-color);
+    box-shadow: 2px 2.5px 15px var(--bg-color);
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
