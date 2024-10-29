@@ -68,6 +68,7 @@
 
 sup> i {
     font-size: 1.7vh;
+    box-shadow: 1px 1px 25px white;
 }
 
 @media (min-width: 630px) {
@@ -89,7 +90,7 @@ sup> i {
 
 .sidenav {
     height: 100%;
-    width: 50%;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -102,13 +103,14 @@ sup> i {
   }
   
   .sidenav a {
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 3vh;
     color: var(--bg-color);
     display: block;
     transition: 0.3s;
+    opacity: 0.6;
   }
   
   .sidenav a:hover {
@@ -120,17 +122,18 @@ sup> i {
     border-radius: 5px;
     border-color: var(--main-color);
     box-shadow: 2px 2.5px 15px var(--bg-color);
+    opacity: 1;
   }
 
-  .sidenav a:not(:hover) {
-    opacity: 0.5; /* Example style change */
-  }
+  .sidenav.open {
+    width: 250px;
+}
   
    .closebtn {
     position: absolute;
     top: 25px;
-    right: 35px;
-    font-size: 36px;
+    right: 30px;
+    font-size: 5vh;
     margin-left: 50px;
   }
   
