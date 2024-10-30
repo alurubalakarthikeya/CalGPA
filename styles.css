@@ -76,6 +76,7 @@ sup> i {
     }
     button {
         font-size: 2vh;
+        padding: 10px;
     }
     .img > img {
         min-width: 550px;
@@ -112,9 +113,10 @@ sup> i {
     right: 0;
     background-color: rgba(2,150,138, 90%);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.9s;
     padding-top: 60px;
     box-shadow: 4px 4px 10px black;
+    overflow-x: hidden;
   }
   
   .sidenav a {
@@ -127,6 +129,7 @@ sup> i {
     transition: 0.3s;
     opacity: 0.6;
   }
+
   
   .sidenav a:hover {
     cursor: pointer;
@@ -197,4 +200,12 @@ sup> i {
 
   .content {
     float: left;
+  }
+
+  .day-night {
+    padding: 10px;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border-radius: 40%;
+    margin: 150px 20px;
   }
