@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do | CalGPA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="imgs/gpa-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <title>Home | CalGPA</title>
 </head>
 <body>
     <nav class="navbar">
@@ -18,7 +18,7 @@
             <ol>
                 <a href="about.html"><li>About</li></a>
                 <a href=""><li>Estimators</li></a>
-                <a href="todo.html"><li>To Do</li></a>
+                <a href="todo.html"><li>ToDo</li></a>
                 <a href=""><li>Roadmap</li></a>
             </ol>
         </span>
@@ -26,28 +26,13 @@
             <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
             <a href="about.html">About</a>
             <a href="#">Estimators</a>
-            <a href="todo.html">Todo</a>
-            <a href="#">Roadmap</a>
-            <a onclick="darkMode()"><i class="fa-solid fa-moon"></i></a>
-            <a href=""><small>@CalGPA2024</small></a>
+            <a href="todo.html">To Do</a>
+            <a href="#">Road Map</a><br><br>
+            <span class="day-night" onclick="darkMode()"><i class="fa-solid fa-moon"></i></span>
+            <span class="day-night" onclick="lightMode()"><i class="fa-regular fa-moon"></i></span>
           </div>
     </nav><br>
-    <div class="mode">
-        <i class="fa-solid fa-moon" onclick="darkMode()"></i>
-    </div>
-    <div class="home">
-        <div class="content">
-            <h1>Welcome to CalGPA</h1><br>
-            <h2>Check prediction made by our neural networks of your SGPA based on your internal marks!!</h2>
-            <div class="buttons">
-                <button id="button1">Get Started</button>
-                <button id="button2" class="button2">Know more</button>
-            </div>
-        </div>
-        <div class="img">
-            <img src="imgs/home.png" alt="GPA">
-        </div>
-    </div>
+    <h2 class="home">Start learning practically, which is more efficient than just reading</h2>
     <script src="functional.js"></script>
 </body>
 </html>
