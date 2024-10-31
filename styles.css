@@ -67,6 +67,18 @@ body.dark-mode .button2:hover {
   color: var(--dark-text-color);
 }
 
+.img img.dark-mode {
+  display: none;
+}
+
+body.dark-mode .img img {
+  display: none;
+}
+
+body.dark-mode .img img.dark-mode {
+  display: block;
+}
+
 *{
     margin: 0;
     padding: 0;
