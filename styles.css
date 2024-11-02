@@ -4,7 +4,7 @@
     --alt-color: #ffff67;
     --bg-color: #fff;
     --dark-bg-color: #1c4233;
-    --dark-main-color: #02968a;
+    --dark-main-color: #037e73;
     --dark-alt-color: #03dac6;
     --dark-text-color: #ffffff;
     --body-font: "Montserrat", sans-serif;
@@ -109,12 +109,13 @@ body.dark-mode .img img.dark-mode {
 
 body.dark-mode .long-bar {
   background-color: var(--dark-main-color);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--dark-bg-color);
   border: 2px solid var(--dark-main-color);
 }
 body.dark-mode .circle i {
-  background-color: var(--dark-alt-color);
+  background-color: var(--dark-main-color);
+  box-shadow: 1px 0px 10px var(--dark-bg-color);
   color: var(--dark-bg-color);
 }
 
@@ -244,7 +245,7 @@ sup> i {
     }
     .home {
       color: var(--main-color);
-      margin: 145px 30px 50px 30px;
+      margin: 130px 30px 50px 30px;
     }
     
 }
