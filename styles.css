@@ -115,14 +115,14 @@ body.dark-mode .long-bar {
 }
 body.dark-mode .circle i {
   background-color: var(--dark-main-color);
-  box-shadow: 1px 0px 10px var(--dark-bg-color);
+  box-shadow: 1px 0px 2px var(--dark-bg-color);
   color: var(--dark-bg-color);
 }
 
 body.dark-mode .circle i:hover {
   background-color: var(--dark-bg-color);
   color: var(--dark-alt-color);
-  box-shadow: 2px 0px 15px var(--dark-bg-color);
+  box-shadow: 2px 0px 10px var(--dark-bg-color);
 }
 
 *{
@@ -245,7 +245,7 @@ sup> i {
     }
     .home {
       color: var(--main-color);
-      margin: 130px 30px 50px 30px;
+      margin: 115px 30px 50px 30px;
     }
     
 }
