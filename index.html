@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <h1>CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></h1>
+        <h1><a href="index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
         <div class="menu" onclick="openNav()">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -28,8 +28,16 @@
             <a href="#">Estimators</a>
             <a href="todo.html">Todo</a>
             <a href="#">Roadmap</a>
-            <a onclick="darkMode()"><i class="fa-solid fa-moon"></i></a>
-            <a href=""><small>@CalGPA2024</small></a>
+            <div class="info">
+                <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
+                <a href="" class="logo-name"><small>@CalGPA2024</small></a>
+            </div>
+            <a href="" class="social-heading">Our Socials</a>
+            <div class="socials">
+                <a href="" class="circle"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" class="circle"><i class="fa-brands fa-github"></i></a>
+                <a href="" class="circle"><i class="fa-brands fa-twitter"></i></a>
+            </div>
           </div>
     </nav><br>
     <div class="mode">
@@ -51,11 +59,11 @@
     </div>
     <footer>
         <div class="long-bar">
-            <span class="circle"><i class="fa-solid fa-book-bookmark"></i><br>CPGA</span>
-            <span class="circle"><i class="fa-solid fa-book"></i><br>SGPA</span>
-            <span class="circle"><i class="fa-solid fa-location-pin"></i><br>Tracker</span>
-            <span class="circle"><i class="fa-solid fa-route"></i><br>Guider</span>
-            <span class="circle"><i class="fa-solid fa-wand-magic-sparkles"></i><br>Predictor</span>
+            <span class="circle"><i class="fa-solid fa-book-bookmark" title="CGPA Estimator"></i><br>CPGA</span>
+            <span class="circle"><i class="fa-solid fa-book" title="SGPA Estimator"></i><br>SGPA</span>
+            <span class="circle"><i class="fa-solid fa-location-pin" title="Progress Tracker"></i><br>Tracker</span>
+            <span class="circle"><i class="fa-solid fa-route" title="Goals by Guider"></i><br>Guider</span>
+            <span class="circle"><i class="fa-solid fa-wand-magic-sparkles" title="Predictions based on Previous data"></i><br>Predictor</span>
         </div>
     </footer>
     <script src="functional.js"></script>

@@ -110,7 +110,7 @@ body.dark-mode .img img.dark-mode {
 body.dark-mode .long-bar {
   background-color: var(--dark-main-color);
   font-weight: 600;
-  color: var(--dark-bg-color);
+  color: var(--dark-alt-color);
   border: 2px solid var(--dark-main-color);
 }
 body.dark-mode .circle i {
@@ -122,6 +122,14 @@ body.dark-mode .circle i {
 body.dark-mode .circle i:hover {
   transform: translateY(-7px);
   box-shadow: 2px 0px 10px var(--dark-bg-color);
+}
+
+body.dark-mode h1 sup i {
+  color: var(--dark-alt-color);
+}
+
+body.dark-mode h1:hover sup i {
+  color: var(--dark-bg-color);
 }
 
 *{
@@ -165,7 +173,7 @@ body.dark-mode .circle i:hover {
 
 }
 
-.options > ol > a:hover {
+.options ol a:hover {
     cursor: pointer;
     margin: 10px;
     background-color: var(--bg-color);
@@ -176,12 +184,21 @@ body.dark-mode .circle i:hover {
     box-shadow: 2px 2.5px 15px var(--bg-color);
 }
 
- a {
+h1 > a {
+  color: white;
+  text-decoration: none;
+}
+
+body.dark-mode h1 > a {
+  color: var(--dark-bg-color);
+}
+
+ ol a {
     color: white;
     text-decoration: none;
 }
 
- a:hover {
+ ol a:hover {
     color: var(--main-color);
 }
 
@@ -279,14 +296,42 @@ sup> i {
   
   .sidenav a:hover {
     cursor: pointer;
-    margin: 10px;
     background-color: var(--bg-color);
-    padding: 10px;
     color: var(--main-color);
     border-radius: 5px;
     border-color: var(--main-color);
     box-shadow: 2px 2.5px 15px var(--bg-color);
     opacity: 1;
+  }
+
+  .sidenav > .info > span > .mode-change > i {
+    transition: 0.5s;
+  }
+
+  .sidenav > .info > .logo-name {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--bg-color);
+  }
+
+  .sidenav > a.social-heading {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--bg-color);
+  }
+
+  .sidenav > .socials > a {
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--bg-color);
+  }
+
+  body.dark-mode .sidenav > .info > span > .mode-change > i {
+    transform: translateX(-20px);
+  }
+
+  .socials {
+    display: flex;
   }
 
   .sidenav.open {
@@ -377,15 +422,15 @@ sup> i {
   @keyframes floating-img {
     0% { 
         transform: translateY(0px); 
-        filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0px 10px 10px rgba(2,150,138, 0.3));
     }
     50% { 
         transform: translateY(-20px); 
-        filter: drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0px 30px 20px rgba(2,150,138, 0.6));
     }
     100% { 
         transform: translateY(0px);  
-        filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0px 10px 10px rgba(2,150,138, 0.3));
     }
 }
 
@@ -431,3 +476,18 @@ footer {
   box-shadow: 2px 0px 15px var(--dark-alt-color);
 }
 
+h1 sup i {
+  color: var(--dark-bg-color);
+  transform: translateY(-5px);
+  transition: transform 0.6s ease-in-out;
+}
+
+h1:hover sup i {
+  transform: translateY(-12px);
+  color: var(--bg-color);
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
