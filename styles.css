@@ -3,7 +3,7 @@
     --main-color: #02968a;
     --alt-color: #ffff67;
     --bg-color: #fff;
-    --dark-bg-color: #10241c;
+    --dark-bg-color: #1c4233;
     --dark-main-color: #02968a;
     --dark-alt-color: #03dac6;
     --dark-text-color: #ffffff;
@@ -26,10 +26,20 @@ body.dark-mode .sidenav {
 }
 
 body.dark-mode .sidenav a {
-  color: var(--dark-text-color);
+  color: var(--dark-bg-color);
 }
 
 body.dark-mode .sidenav a:hover {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-main-color);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .options a {
+  color: var(--dark-bg-color);
+}
+
+body.dark-mode .options a:hover {
   background-color: var(--dark-bg-color);
   color: var(--dark-main-color);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
