@@ -105,6 +105,7 @@ body.dark-mode .img img {
 
 body.dark-mode .img img.dark-mode {
   display: block;
+  filter: hue-rotate(120deg) brightness(0.5) saturate(2);
 }
 
 body.dark-mode .long-bar {
@@ -130,6 +131,36 @@ body.dark-mode h1 sup i {
 
 body.dark-mode h1:hover sup i {
   color: var(--dark-bg-color);
+}
+
+body.dark-mode  .sidenav > .info > .logo-name {
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--dark-bg-color);
+}
+
+body.dark-mode   .sidenav > a.social-heading {
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--dark-bg-color);
+}
+
+body.dark-mode   .sidenav > .socials > a {
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--dark-bg-color);
+  position: relative;
+  left: -15px;
+  bottom: 40px;
+}
+
+body.dark-mode .sidenav > .info > span > .mode-change {
+  background-color: var(--dark-bg-color);
+  color: var(--main-color);
+  border-radius: 5px;
+  border-color: var(--main-color);
+  box-shadow: 2px 2.5px 15px var(--dark-bg-color);
+  opacity: 1;
 }
 
 *{
@@ -308,6 +339,15 @@ sup> i {
     transition: 0.5s;
   }
 
+  .sidenav > .info > span > .mode-change {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    border-color: var(--main-color);
+    box-shadow: 2px 2.5px 15px var(--bg-color);
+    opacity: 1;
+  }
+
   .sidenav > .info > .logo-name {
     box-shadow: none;
     background-color: transparent;
@@ -326,6 +366,7 @@ sup> i {
     color: var(--bg-color);
     position: relative;
     left: -15px;
+    bottom: 40px;
   }
 
   body.dark-mode .sidenav > .info > span > .mode-change > i {
