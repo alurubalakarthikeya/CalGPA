@@ -4,35 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | CalGPA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="imgs/gpa-logo.png">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/imgs/gpa-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
     <nav class="navbar">
-        <h1>CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></h1>
+        <h1><a href="index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
         <div class="menu" onclick="openNav()">
             <i class="fa-solid fa-bars"></i>
         </div>
         <span class="options" id="options">
             <ol>
-                <a href="about.html"><li>About</li></a>
-                <a href=""><li>Estimators</li></a>
-                <a href="todo.html"><li>ToDo</li></a>
-                <a href=""><li>Roadmap</li></a>
+                <a href="/index.html"><li>Home</li></a>
+                <a href="pages/estimator.html"><li>Estimators</li></a>
+                <a href="pages/todo.html"><li>To Do</li></a>
+                <a href="pages/roadmap.html"><li>Roadmap</li></a>
             </ol>
         </span>
         <div id="mySidenav" class="sidenav">
             <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
-            <a href="about.html">About</a>
-            <a href="#">Estimators</a>
-            <a href="todo.html">To Do</a>
-            <a href="#">Road Map</a><br><br>
-            <span class="day-night" onclick="darkMode()"><i class="fa-solid fa-moon"></i></span>
-            <span class="day-night" onclick="lightMode()"><i class="fa-regular fa-moon"></i></span>
+            <a href="/index.html">Home</a>
+            <a href="pages/estimator.html">Estimators</a>
+            <a href="pages/todo.html">Todo</a>
+            <a href="pages/roadmap.html">Roadmap</a>
+            <div class="info">
+                <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
+                <a href="#" class="logo-name small-text"><small>@CalGPA2024</small></a>
+            </div>
+            <a class="social-heading small-text"><small>devSocials</small></a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class="circle"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class="circle"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class="circle"><i class="fa-brands fa-twitter"></i></a>
+            </div>
           </div>
     </nav><br>
-    <h2 class="home">Planning is important to know how much effort is required to achieve your goal</h2>
-    <script src="functional.js"></script>
+    <div class="mode">
+        <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+    </div>
+    <span class="heading-desk">
+        <a>Socials</a>
+    </span>
+    <div class="desktop-socials">
+        <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="main">
+        <h1>About us</h1> <br>
+        <p>CalGPA was born out of a desire to provide students with a reliable and accurate way to assess their performance. We believe that academic success is not only determined by grades, but also by the quality of the learning experience. We have developed a sophisticated platform that allows users to input their internal marks and receive personalized SGPA estimations. CalGPA is a cutting-edge technology-driven project designed to help students estimate their grades based on their internal marks. Our team of experts in machine learning and data analysis has developed an advanced algorithm that uses historical data to predict your SGPA. With our platform, you can easily access our estimations and compare them with your peers.</p><br>
+        <h1>Our Team</h1> <br>
+        <div class="team">
+            <div class="member">
+                <img src="/imgs/person.png" alt="Bala Karthikeya" width="100px">
+                <div class="name-details">
+                    <h3>Bala Karthikeya</h3>
+                    <p>Team Lead and Developer</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="/imgs/person.png" alt="Prasanna Ganesan" width="100px">
+                <div class="name-details">
+                    <h3>Amogh</h3>
+                    <p>Emotional supporter</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="/imgs/person.png" alt="Kiran Kumar" width="100px">
+                <div class="name-details">
+                    <h3>User not found</h3>
+                    <p>Null</p>
+                </div>
+            </div>
+        </div>
+        <h1>Our features</h1><br>
+        <div class="cards-container">
+            <div class="cards">
+                <div class="card">
+                    <h3>Estimator</h3><br>
+                    <p>Certainly works for 2nd and 3rd years, our GPA estimator estimates your current year CGPA based on your previous semester results, number of subjects you are good at and current performance (upto CIA's), but your performance and efforts you put will still play an important role!</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Tracker</h3><br>
+                    <p>Tracker analyzes your current semester grades and provides valuable insights that can help you get better and also helps you work on important skills from subjects that are useful for IT sector and provides the order of importance to subjects in which you have to improve </p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Guider</h3> <br>
+                    <p>Guider helps you with guidance that gives better understanding over each subject and effort that is required for each subject, to score and understand the core concepts and how high credit subjects progress impacts both in industry knowledge and CGPA</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Predictor</h3> <br>
+                    <p>This prediction is based on previous year data, which may vary but still can be more close to the actual result in most cases, this process is done using neural networks which analyze the data and predict yours based on hardness levels you chose for each subjects provides output</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+        </div>
+        <!--<h3>Types of Grading Systems:</h3>
+            <p>1) Relative Grading</p>
+            <p>2) Standard Grading</p><br>
+        <p><strong>Relative Grading: </strong>     This grading system assigns a grade to each subject based on a scale of 0 to 100. The grades are then converted into a weighted average, which is then used to calculate the overall SGPA. Relative grading can help students understand the importance of each subject and make informed decisions about their academic plans.</p>
+        <p><strong>Standard Grading: </strong>     This grading system assigns a grade to each subject based on predefined criteria, such as A, B, C, D, and F. The grades are then converted into a weighted average, which is then used to calculate the overall SGPA. Standard grading can help students understand the importance of each subject and make informed decisions about their academic plans.</p><br>
+        <h3>Q&A's</h3><br>
+        <h4>How does CalGPA work?</h4>
+        <p>CalGPA uses historical data to analyze your performance, identify areas for improvement, and provide personalized SGPA estimations. Our machine learning algorithms analyze your marks, grades, and other relevant factors to predict your SGPA. We also incorporate a variety of factors like your academic performance, extracurricular activities, and coursework to provide a more accurate and comprehensive estimation.</p><br>
+        <h4>What are the benefits of using CalGPA?</h4>
+        <p>CalGPA offers several benefits to students. Firstly, it provides a reliable and accurate way to assess their performance. Secondly, it helps students identify areas for improvement and make necessary adjustments to their academic plans. Thirdly, it allows students to compare their SGPA with their peers and make informed decisions about their academic success.</p><br>
+        <h4>What are some of the features and services offered by CalGPA?</h4>
+        <p>CalGPA offers a variety of features and services to help you improve your academic performance. Some of the features and services include: 1. Input your internal marks and receive personalized SGPA estimations. 2. View your progress and analyze your academic performance. 3. Compare your SGPA with your peers and make informed decisions about your academic success. 4. Access a library of resources and information to help you improve your education.</p><br>-->
+    </div>
+    <script src="/functional.js"></script>
 </body>
 </html>

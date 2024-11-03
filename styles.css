@@ -163,6 +163,10 @@ body.dark-mode .sidenav > .info > span > .mode-change {
   opacity: 1;
 }
 
+body.dark-mode .card {
+  color: var(--dark-bg-color);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -255,7 +259,7 @@ sup> i {
         display: flex;
     }
     .mode {
-      position: absolute;
+      position: fixed;
       top: 20%;
       right: 0;
       padding: 15px;
@@ -275,6 +279,11 @@ sup> i {
   .home {
     color: var(--main-color);
     margin: 230px 50px 50px 50px;
+  }
+  .main {
+    font-size: 2.5vh;
+    color: var(--main-color);
+    margin: 120px 50px 50px 50px;
   }
   .desktop-socials {
     position: fixed;
@@ -342,6 +351,11 @@ sup> i {
         font-size: 1.5vh;
     }
     .home {
+      color: var(--main-color);
+      margin: 85px 30px 50px 30px;
+    }
+
+    .main {
       color: var(--main-color);
       margin: 105px 30px 50px 30px;
     }
@@ -447,7 +461,7 @@ sup> i {
     color: var(--bg-color);
     border: 2px solid var(--main-color);
     padding: 15px;
-    margin: 20px 5px;
+    margin: 20px 5px 5px 5px;
     background-color: var(--main-color);
     border-radius: 10px;
     transition: 0.6s;
@@ -590,4 +604,59 @@ h1:hover sup i {
 
 .small-text {
   font-size: 1vh;
+}
+
+.cards {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 300px;
+  font-size: 2.3vh;
+  box-shadow: 3px 0px 10px rgba(2,150,138, 0.6);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card > button {
+  box-shadow: 0.5px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+.card > h3 {
+  border-bottom: 1px solid;
+  padding: 0px 0px 10px 0px;
+}
+
+.main > h1 {
+  font-size: 3.3vh;
+  border-bottom: 2px solid;
+  padding: 0px 0px 10px 0px;
+  display: inline-block; 
+  margin-bottom: 25px;
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.member {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 20px;
+}
+
+.name-details {
+  display: flex;
+  flex-direction: column;
 }
