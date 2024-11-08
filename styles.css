@@ -167,6 +167,7 @@ body.dark-mode .card {
   color: var(--dark-bg-color);
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -219,6 +220,14 @@ body.dark-mode .card {
     box-shadow: 2px 2.5px 15px var(--bg-color);
 }
 
+.links {
+  margin: 40px 10px;
+}
+
+.links > a {
+  color: var(--main-color);
+}
+
 h1 > a {
   color: white;
   text-decoration: none;
@@ -241,7 +250,7 @@ sup> i {
     font-size: 1.7vh;
 }
 
-@media (min-width: 630px) {
+@media (min-width: 1130px) {
     h2 {
         font-size: 6vh;
     }
@@ -335,6 +344,16 @@ sup> i {
   body.dark-mode .heading-desk > a{
     color: var(--dark-bg-color);
   }
+  .table {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0px;
+  }
+
+  .table > .box-one, .box-two {
+    max-width: 500px;
+  }
+
 }
 
 
@@ -345,6 +364,13 @@ sup> i {
     .menu {
         padding: 17px;
         margin: 5px;
+    }
+
+    .sidenav {
+      display: block;
+    }
+    .closebtn {
+      display: block;
     }
 
     button {
@@ -464,7 +490,7 @@ sup> i {
     margin: 20px 5px 5px 5px;
     background-color: var(--main-color);
     border-radius: 10px;
-    transition: 0.6s;
+    transition: 0.5s;
     box-shadow: 0px 4px 10px rgba(2,150,138, 60%);
   }
 
@@ -481,7 +507,7 @@ sup> i {
     margin: 20px 5px;
     background-color: var(--bg-color);
     border-radius: 10px;
-    transition: 0.6s;
+    transition: 0.5s;
   }
 
   .button2:hover {
@@ -519,7 +545,7 @@ sup> i {
     position: absolute;
     top: 0px;
     left: 100px;
-    transition: 0.6s;
+    transition: 0.5s;
   }
 
   .day-night:hover {
@@ -573,7 +599,7 @@ footer {
   background-color: var(--dark-alt-color);
   color: var(--dark-text-color);
   border-radius: 60px;
-  transition: 0.6s;
+  transition: 0.5s;
   color: var(--main-color);
   background-color: var(--bg-color);
   box-shadow: 1px 0px 5px var(--bg-color);
@@ -589,7 +615,7 @@ footer {
 h1 sup i {
   color: var(--dark-bg-color);
   transform: translateY(-5px);
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 h1:hover sup i {
@@ -620,7 +646,7 @@ h1:hover sup i {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card > button {
@@ -643,7 +669,7 @@ h1:hover sup i {
 .team {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 50px;
@@ -659,4 +685,36 @@ h1:hover sup i {
 .name-details {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main {
+    color: var(--main-color);
+    margin: 40px 50px 50px 50px;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .closebtn {
+    display: none;
+  }
+
+  .cards {
+    max-width: 600px;
+  }
+
+  .home {
+    color: var(--main-color);
+    margin: 120px 50px 50px 50px;
+    font-size: 2.5vh;
+  }
+  .img> img {
+    text-align: center;
+    max-width: 600px;
+  }
+  .cards-container {
+    justify-content: center;
+  }
 }
