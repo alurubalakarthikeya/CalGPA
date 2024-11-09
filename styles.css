@@ -173,6 +173,7 @@ body.dark-mode .card {
     padding: 0;
     box-sizing: border-box;
     font-family: var(--body-font);
+    scroll-behavior:smooth;
 }
 
 .navbar {
@@ -305,6 +306,7 @@ sup> i {
   }
 
   .desktop-socials > a {
+    box-shadow: 3px -3px 10px rgba(2,150,138, 0.3);
     color: var(--dark-bg-color);
     background-color: var(--main-color);
     padding: 10px 20px;
@@ -323,6 +325,11 @@ sup> i {
   body.dark-mode .desktop-socials > a:hover {
     color: var(--dark-bg-color);
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .boxs > img {
+    gap: 20px;
+    max-width: 450px;
   }
 
   .heading-desk > a{
@@ -352,6 +359,10 @@ sup> i {
 
   .table > .box-one, .box-two {
     max-width: 500px;
+  }
+
+  .footer-section {
+    justify-content: space-evenly;
   }
 
 }
@@ -388,6 +399,14 @@ sup> i {
     .desktop-socials {
       display: none;
     }
+
+      .footer-section {
+        justify-content: center;
+      }
+  
+      .boxs > img {
+        max-width: 250px;
+      }
 }
 
 .sidenav {
@@ -461,6 +480,7 @@ sup> i {
     left: -15px;
     bottom: 40px;
   }
+
 
   body.dark-mode .sidenav > .info > span > .mode-change > i {
     transform: translateX(-20px);
@@ -568,6 +588,7 @@ sup> i {
         transform: translateY(0px);  
         filter: drop-shadow(0px 10px 10px rgba(2,150,138, 0.3));
     }
+
 }
 
 footer {
@@ -717,4 +738,52 @@ h1:hover sup i {
   .cards-container {
     justify-content: center;
   }
+}
+
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0px -4px 10px rgba(2,150,138, 60%);
+}
+
+.footer-section > .quick-links > a {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  justify-content: center;
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.social {
+  max-width: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.social > a {
+  opacity: 0.8;
+  color: var(--main-color);
+  text-decoration: none;
+  background-color: var(--bg-color);
+  padding: 10px 12px;
+  border-radius: 60%;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+  transition: 0.5s;
+}
+
+.social > a:hover {
+  opacity: 1;
+  background-color: var(--bg-color);
+  color: var(--dark-alt-color);
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
 }
