@@ -209,6 +209,11 @@ body.dark-mode .footer-section {
   background-color: var(--dark-main-color);
 }
 
+body.dark-mode th {
+  color: var(--dark-bg-color);
+  border-left: 1px solid var(--dark-bg-color);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -391,15 +396,6 @@ sup> i {
 
   body.dark-mode .heading-desk > a{
     color: var(--dark-bg-color);
-  }
-  .table {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0px;
-  }
-
-  .table > .box-one, .box-two {
-    max-width: 500px;
   }
 
   .footer-section {
@@ -879,7 +875,7 @@ h1:hover sup i {
 .back-to-top {
   background-color: var(--dark-alt-color);
   position: fixed;
-  top: 90%;
+  top: 80%;
   right: 5%;
   padding: 10px 13px;
   border-radius: 50%;
@@ -946,4 +942,60 @@ body.dark-mode .loader {
 /* Disable transitions when the no-transition class is applied */
 .no-transition * {
   transition: none !important;
+}
+
+p::selection {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+h1::selection {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+h2::selection {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+h3::selection {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+a::selection {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+img::selection {
+  background-color: var(--main-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--main-color);
+}
+
+th {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  padding: 10px;
+  text-align: center;
+  border-left: 1px solid var(--bg-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+td {
+  border: 1px solid var(--main-color);
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.main img.img {
+  max-width: 300px;
+  width: 100%;
 }

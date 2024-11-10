@@ -79,6 +79,41 @@ function stopLoaderAnimation() {
   clearInterval(loaderInterval);
 }
 
+// Wait for all images to load before hiding the loader
+function waitForImagesToLoad() {
+    const images = document.querySelectorAll('img');
+    let imagesLoaded = 0;
+
+    images.forEach((img) => {
+        if (img.complete) {
+            imagesLoaded++;
+        } else {
+            img.addEventListener('load', () => {
+                imagesLoaded++;
+                if (imagesLoaded === images.length) {
+                    hideLoader();
+                }
+            });
+            img.addEventListener('error', () => {
+                imagesLoaded++;
+                if (imagesLoaded === images.length) {
+                    hideLoader();
+                }
+            });
+        }
+    });
+
+    if (imagesLoaded === images.length) {
+        hideLoader();
+    }
+}
+
+// Apply dark mode preference and wait for images to load on page load
+document.addEventListener('DOMContentLoaded', () => {
+    applyDarkModePreference();
+    waitForImagesToLoad();
+});
+
 // Hide loader
 function hideLoader() {
   const loader = document.getElementById('loader');

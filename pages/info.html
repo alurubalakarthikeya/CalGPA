@@ -32,7 +32,7 @@
             <a href="../index.html">Home</a>
             <a href="estimator.html">Estimators</a>
             <a href="todo.html">Todo</a>
-            <a href="roadmap.html">Roadmap</a>
+            <a href="../pages/about.html">About</a>
             <div class="info">
                 <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
                 <a href="#" class="logo-name small-text"><small>@CalGPA2024</small></a>
@@ -59,41 +59,74 @@
     <div class="main">
         <h1>Grading Systems</h1> <br>
         <p>There are two types of grading systems commonly used in educational institutions: Relative Grading and Absolute Grading.</p> <br>
+        <img src="../imgs/info-img.png" alt="" class="img floater">
         <h1>Relative Grading</h1>
         <p>Relative grading, also known as curve grading, assigns grades based on the distribution of scores within a class. This means that a student's grade is determined in relation to the performance of their peers. For example, the top 10% of students might receive an 'O', the next 20% a 'A', and so on. This system ensures a certain percentage of students receive each grade, regardless of their absolute performance.</p> <br>
-        <div class="table">
-            <div class="box-one">
-            <h3><strong>Advantages of Relative Grading:</strong></h3> <br>
-            <ul>
-                <li>Encourages competition among students.</li>
-                <li>Accounts for varying levels of difficulty in different exams.</li>
-                <li>Ensures a balanced distribution of grades.</li> <br>
-            </ul>
-            </div>
-            <div class="box-two">
-            <h3><strong>Disadvantages of Relative Grading:</strong></h3> <br>
-            <ul>
-                <li>Can create unhealthy competition among students.</li>
-                <li>May not accurately reflect a student's understanding of the material.</li>
-                <li>Students' grades depend on the performance of their peers.</li>
-            </ul> 
-        </div>
-        </div>
+        <table border="1">
+            <tr>
+                <th><h3>Advantages </h3></th>
+                <th><h3>Disadvantages</h3></th>
+            </tr>
+            <tr>
+                <td>
+                    <li>Promotes competition among students.</li>
+                </td>
+                <td>
+                    <li>Encourages a balanced distribution of grades.</li>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <li>Can create unhealthy competition among students.</li>
+                </td>
+                <td>
+                    <li>May not accurately reflect a student's understanding of the material.</li>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <li>Students' grades depend on the performance of their peers.</li>
+                </td>
+                <td>
+                    <li>Does not account for varying levels of difficulty in different exams.</li>
+                </td>
+            </tr>
+        </table>
         <br>
         <h1>Absolute Grading</h1>
         <p>Absolute grading assigns grades based on a fixed scale, where each grade corresponds to a specific range of scores. For example, a score of 90-100 will be an 'O', 80-89 a 'A', and so on. This system evaluates students based on their individual performance, without considering how others have performed.</p> <br>
-        <h3><strong>Advantages of Absolute Grading:</strong></h3> <br>
-        <ul>
-            <li>Provides a clear and consistent standard for all students.</li>
-            <li>Encourages mastery of the material.</li>
-            <li>Grades are not influenced by the performance of peers.</li> <br>
-        </ul>
-        <h3><strong>Disadvantages of Absolute Grading:</strong></h3> <br>
-        <ul>
-            <li>Does not account for varying levels of difficulty in different exams.</li>
-            <li>May not provide a balanced distribution of grades.</li>
-            <li>Can be discouraging if the grading scale is too strict.</li>
-        </ul> 
+        <div class="table">
+            <table border="1">
+                <tr>
+                    <th><h3>Advantages </h3></th>
+                    <th><h3>Disadvantages</h3></th>
+                </tr>
+                <tr>
+                    <td> 
+                        <li>Provides a clear and consistent standard for all students.</li>
+                    </td>
+                    <td>
+                        <li>Does not account for varying levels of difficulty in different exams.</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>Encourages mastery of the material.</li>
+                    </td>
+                    <td>
+                        <li>May not provide a balanced distribution of grades.</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>Grades are not influenced by the performance of peers.</li>
+                    </td>
+                    <td>
+                        <li>Can be discouraging if the grading scale is too strict.</li>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <!--<h3>Types of Grading Systems:</h3>
             <p>1) Relative Grading</p>
             <p>2) Standard Grading</p><br>
@@ -106,7 +139,16 @@
         <p>CalGPA offers several benefits to students. Firstly, it provides a reliable and accurate way to assess their performance. Secondly, it helps students identify areas for improvement and make necessary adjustments to their academic plans. Thirdly, it allows students to compare their SGPA with their peers and make informed decisions about their academic success.</p><br>
         <h4>What are some of the features and services offered by CalGPA?</h4>
         <p>CalGPA offers a variety of features and services to help you improve your academic performance. Some of the features and services include: 1. Input your internal marks and receive personalized SGPA estimations. 2. View your progress and analyze your academic performance. 3. Compare your SGPA with your peers and make informed decisions about your academic success. 4. Access a library of resources and information to help you improve your education.</p><br>-->
-    </div>
+    </div> <br> <br>
+    <footer>
+        <div class="long-bar">
+            <span class="circle"><i class="fa-solid fa-book-bookmark" title="CGPA Estimator"></i><br>CPGA</span>
+            <span class="circle"><i class="fa-solid fa-book" title="SGPA Estimator"></i><br>SGPA</span>
+            <span class="circle"><i class="fa-solid fa-location-pin" title="Progress Tracker"></i><br>Tracker</span>
+            <span class="circle"><i class="fa-solid fa-route" title="Goals by Guider"></i><br>Guider</span>
+            <span class="circle"><i class="fa-solid fa-wand-magic-sparkles" title="Predictions based on Previous data"></i><br>Predictor</span>
+        </div>
+    </footer>
     <script src="../functional.js"></script>
 </body>
 </html>
