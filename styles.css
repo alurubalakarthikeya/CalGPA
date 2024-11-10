@@ -103,7 +103,7 @@ body.dark-mode .long-bar {
 }
 body.dark-mode .circle i {
   background-color: var(--dark-bg-color);
-  color: var(--dark-alt-color);
+  color: var(--dark-main-color);
   box-shadow: 1px 0px 2px var(--dark-bg-color);
 }
 
@@ -406,6 +406,12 @@ sup> i {
   .title {
     display: flex;
     gap: 80px;
+    margin-bottom: 40px;
+  }
+
+  .title > .image {
+    min-width: 400px;
+    max-width: 500px;
   }
 
   .boxs {
@@ -461,6 +467,16 @@ sup> i {
       .under {
         padding: 20px 0px 25px 0px;
         border-bottom: 1px solid var(--dark-main-color);
+      }
+
+      .title {
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .cards-container {
+        display: flex;
+        justify-content: center;
       }
 }
 

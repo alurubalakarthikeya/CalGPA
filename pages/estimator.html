@@ -3,11 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="imgs/gpa-logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <title>Estimators | CalGPA</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../imgs/gpa-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
-    
+    <div id="loader" class="loader">
+        <div class="loader-circle">
+            <span id="loader-text">A+</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <h1><a href="index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+        <div class="menu" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <span class="options" id="options">
+            <ol>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="../pages/about.html"><li>About</li></a>
+                <a href="todo.html"><li>To Do</li></a>
+                <a href="roadmap.html"><li>Roadmap</li></a>
+            </ol>
+        </span>
+        <div id="mySidenav" class="sidenav">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+            <a href="../index.html">Home</a>
+            <a href="../pages/about.html">About</a>
+            <a href="todo.html">Todo</a>
+            <a href="roadmap.html">Roadmap</a>
+            <div class="info">
+                <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
+                <a href="#" class="logo-name small-text"><small>@CalGPA2024</small></a>
+            </div>
+            <a class="social-heading small-text"><small>devSocials</small></a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class="circle"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class="circle"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class="circle"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+    </nav><br>
+    <div class="mode">
+        <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+    </div>
+    <span class="heading-desk">
+        <a>Socials</a>
+    </span>
+    <div class="desktop-socials">
+        <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="main">
+        <h1>Our Estimators</h1>
+        <div class="estimator">
+            <h3>CGPA Estimator</h3>
+            <p>Calculate your CGPA with our CGPA Estimator</p>
+            <a href="cgpa.html" class="btn">Calculate</a>
+            <p>This tool uses machine learning to analyze your grades and calculate your CGPA based on your input data. The accuracy of our estimates is 99.99999999999998%.</p>
+        </div>
+        <div class="estimator">
+            <h2>SGPA Estimator</h2>
+            <p>Calculate your SGPA with our SGPA Estimator</p>
+            <a href="sgpa.html" class="btn">Calculate</a>
+            <p>This tool uses machine learning to analyze your grades and calculate your SGPA based on your input data. The accuracy of our estimates is 99.99999999999998%.</p>
+        </div>
+        <div class="estimator">
+            <h2>GPA Estimator</h2>
+            <p>Calculate your GPA with our GPA Estimator</p>
+            <a href="gpa.html" class="btn">Calculate</a>
+            <p>This tool uses machine learning to analyze your grades and calculate your GPA based on your input data. The accuracy of our estimates is 99.99999999999998%.</p>
+        </div>
+        <div class="estimator">
+            <h2>Predictor</h2>
+            <p>Predict your future GPA with our Predictor</p>
+            <a href="predictor.html" class="btn">Predict</a>
+            <p>This tool uses machine learning to analyze your previous year data and predict your future GPA based on hardness levels you chose for each subject. The accuracy of our predictions is 99.99999999999998%.</p
+        </div>
+    </div>
+    <script src="../functional.js"></script>
 </body>
 </html>
