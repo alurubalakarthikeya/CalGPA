@@ -912,7 +912,6 @@ body.dark-mode .back-to-top > a {
   align-items: center;
   z-index: 9999;
   visibility: hidden;
-  opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
@@ -922,8 +921,8 @@ body.dark-mode .back-to-top > a {
 }
 
 .loader-circle {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: var(--bg-color);
   display: flex;
@@ -931,6 +930,17 @@ body.dark-mode .back-to-top > a {
   align-items: center;
   font-size: 2rem;
   color: var(--main-color);
+  box-shadow: 0px 2px 10px rgba(2,150,138, 0.3);
+}
+
+body.dark-mode .loader-circle {
+  background-color: var(--dark-main-color);
+  color: var(--main-color);
+  box-shadow: 0px 2px 10px rgba(2,150,138, 0.6);
+}
+
+body.dark-mode .loader {
+  background-color: var(--dark-bg-color);
 }
 
 /* Disable transitions when the no-transition class is applied */
