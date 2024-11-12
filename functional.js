@@ -1,5 +1,3 @@
-
-
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
@@ -7,8 +5,6 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
-
-// Function to toggle dark mode
 function darkMode() {
   document.body.classList.toggle('dark-mode');
   // Save the dark mode preference in local storage
@@ -19,7 +15,6 @@ function darkMode() {
   }
 }
 
-// Function to apply dark mode based on local storage
 function applyDarkModePreference() {
   const darkModePreference = localStorage.getItem('darkMode');
   if (darkModePreference === 'enabled') {
@@ -29,20 +24,16 @@ function applyDarkModePreference() {
   }
 }
 
-// Apply dark mode preference on page load
 document.addEventListener('DOMContentLoaded', applyDarkModePreference);
 
-// Disable transitions before page unload
 window.addEventListener('beforeunload', function() {
   document.body.classList.add('no-transition');
 });
 
-// Enable transitions after page load
 window.addEventListener('load', function() {
   document.body.classList.remove('no-transition');
 });
 
-// Example of existing code
 document.getElementById('button1').addEventListener('mouseover', function() {
   document.getElementById('button2').classList.add('hovered');
 });
@@ -60,26 +51,20 @@ window.addEventListener('beforeunload', function() {
   showLoader();
 });
 
-// Enable transitions after page load
 window.addEventListener('load', function() {
   document.body.classList.remove('no-transition');
   hideLoader();
 });
 
-// Show loader
 function showLoader() {
   const loader = document.getElementById('loader');
   loader.classList.add('show');
   startLoaderAnimation();
 }
 
-
-// Stop loader animation
 function stopLoaderAnimation() {
   clearInterval(loaderInterval);
 }
-
-// Wait for all images to load before hiding the loader
 function waitForImagesToLoad() {
     const images = document.querySelectorAll('img');
     let imagesLoaded = 0;
@@ -129,7 +114,6 @@ setInterval(() => {
     gradeIndex = (gradeIndex + 1) % grades.length;
 }, 1000);
 
-
   document.getElementById('button1').addEventListener('mouseover', function() {
     document.getElementById('button2').classList.add('hovered');
 });
@@ -145,3 +129,39 @@ document.getElementById('button2').addEventListener('mouseover', function() {
 document.getElementById('button2').addEventListener('mouseout', function() {
     document.getElementById('button1').classList.remove('hovered');
 });
+function addTodo() {
+  const todoInput = document.getElementById('todo');
+  const todoText = todoInput.value.trim();
+  if (todoText !== '') {
+      const todosList = document.getElementById('todos');
+      const newTodo = document.createElement('li');
+      newTodo.innerHTML = `<input type="checkbox" onclick="toggleTask(this)"> ${todoText}`;
+      todosList.appendChild(newTodo);
+      todoInput.value = '';
+      updateProgress();
+  }
+}
+function toggleTask(checkbox) {
+  const task = checkbox.parentElement;
+  if (checkbox.checked) {
+      task.innerHTML = `<input type="checkbox" onclick="toggleTask(this)" checked> <del>${task.textContent.trim()}</del>`;
+  } else {
+      task.innerHTML = `<input type="checkbox" onclick="toggleTask(this)"> ${task.textContent.trim()}`;
+  }
+  updateProgress();
+}
+function updateProgress() {
+  const todosList = document.getElementById('todos');
+  const tasks = todosList.getElementsByTagName('li');
+  const totalTasks = tasks.length;
+  let completedTasks = 0;
+  for (let task of tasks) {
+      if (task.querySelector('input[type="checkbox"]').checked) {
+          completedTasks++;
+      }
+  }
+  const progress = (completedTasks / totalTasks) * 100;
+  document.getElementById('progress-bar').style.width = `${progress}%`;
+  document.getElementById('progress-text').textContent = `${Math.round(progress)}%`;
+}
+document.addEventListener('DOMContentLoaded', updateProgress);

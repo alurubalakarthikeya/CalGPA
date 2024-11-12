@@ -56,7 +56,32 @@
         <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
         <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
     </div>
-    <h2 class="home">Start learning practically, which is more efficient than just reading</h2>
+    <div class="home">
+        <div class="meh">
+            <h2>Track your progress</h2>
+            <p>Track your progress and understand your abilities</p>
+        </div>
+    </div>
+<div class="todo-list">
+    <div class="center">
+        <h3>To Do List</h3>
+        <div class="todo">
+            <input type="text" id="todo" placeholder="Add a task">
+            <button onclick="addTodo()" class="button2">Add</button>
+        </div>
+        <div class="todos">
+            <ul id="todos">
+                <li><input type="checkbox" onclick="toggleTask(this)"> FSD Assignment</li>
+                <li><input type="checkbox" onclick="toggleTask(this)"> Java Assignment</li>
+                <li><input type="checkbox" onclick="toggleTask(this)"> DS LinkedList practice</li>
+            </ul>
+        </div>
+        <div class="progress">
+            <div id="progress-text">0%</div>
+            <div id="progress-bar" style="width: 1%"></div><br>
+        </div>
+      </div>
+    </div>
     <script src="../functional.js"></script>
 </body>
 </html>

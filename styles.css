@@ -406,7 +406,6 @@ sup> i {
   .title {
     display: flex;
     gap: 80px;
-    margin-bottom: 40px;
   }
 
   .title > .image {
@@ -471,7 +470,6 @@ sup> i {
 
       .title {
         justify-content: center;
-        margin-bottom: 40px;
       }
 
       .cards-container {
@@ -1014,4 +1012,62 @@ td {
 .main img.img {
   max-width: 300px;
   width: 100%;
+}
+
+.todo-list {
+  height: 50%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 15px;
+  border: 2px solid var(--dark-main-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:active {
+  border: 2px solid var(--main-color);
+}
+
+.todo-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+input[type="checkbox"]{
+  margin-right: 10px;
+}
+
+#todos > li {
+  margin: 20px;
+}
+
+.progress {
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark-main-color);
+  border-radius: 10px;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: var(--dark-bg-color);
+  height: 40%;
+  border-radius: 50px;
+  transition: 1s ease-in-out;
+}
+
+#progress-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
