@@ -7,7 +7,6 @@ function openNav() {
   }
 function darkMode() {
   document.body.classList.toggle('dark-mode');
-  // Save the dark mode preference in local storage
   if (document.body.classList.contains('dark-mode')) {
       localStorage.setItem('darkMode', 'enabled');
   } else {
