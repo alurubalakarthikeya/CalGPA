@@ -1075,3 +1075,11 @@ input[type="checkbox"]{
   justify-content: center;
   gap: 10px;
 }
+
+p {
+  font-weight: 500;
+}
+
+.sidenav > a {
+  font-weight: 550;
+}

@@ -1,10 +1,9 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 function darkMode() {
   document.body.classList.toggle('dark-mode');
   if (document.body.classList.contains('dark-mode')) {
@@ -13,7 +12,6 @@ function darkMode() {
       localStorage.setItem('darkMode', 'disabled');
   }
 }
-
 function applyDarkModePreference() {
   const darkModePreference = localStorage.getItem('darkMode');
   if (darkModePreference === 'enabled') {
@@ -22,45 +20,35 @@ function applyDarkModePreference() {
       document.body.classList.remove('dark-mode');
   }
 }
-
 document.addEventListener('DOMContentLoaded', applyDarkModePreference);
-
 window.addEventListener('beforeunload', function() {
   document.body.classList.add('no-transition');
 });
-
 window.addEventListener('load', function() {
   document.body.classList.remove('no-transition');
 });
-
 document.getElementById('button1').addEventListener('mouseover', function() {
   document.getElementById('button2').classList.add('hovered');
 });
-
 document.getElementById('button1').addEventListener('mouseout', function() {
   document.getElementById('button2').classList.remove('hovered');
 });
-
 document.getElementById('button2').addEventListener('mouseover', function() {
   document.getElementById('button1').classList.add('hovered');
 });
-
 window.addEventListener('beforeunload', function() {
   document.body.classList.add('no-transition');
   showLoader();
 });
-
 window.addEventListener('load', function() {
   document.body.classList.remove('no-transition');
   hideLoader();
 });
-
 function showLoader() {
   const loader = document.getElementById('loader');
   loader.classList.add('show');
   startLoaderAnimation();
 }
-
 function stopLoaderAnimation() {
   clearInterval(loaderInterval);
 }
@@ -91,20 +79,15 @@ function waitForImagesToLoad() {
         hideLoader();
     }
 }
-
-// Apply dark mode preference and wait for images to load on page load
 document.addEventListener('DOMContentLoaded', () => {
     applyDarkModePreference();
     waitForImagesToLoad();
 });
-
-// Hide loader
 function hideLoader() {
   const loader = document.getElementById('loader');
   loader.classList.remove('show');
   stopLoaderAnimation();
 }
-
 const grades = ['A+', 'A', 'B', 'B+', 'C', 'D', 'F'];
 let gradeIndex = 0;
 setInterval(() => {
