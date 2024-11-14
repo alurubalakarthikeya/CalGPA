@@ -3,7 +3,7 @@
     --main-color: #02968a;
     --alt-color: #ffff67;
     --bg-color: #fff;
-    --dark-bg-color: #081611;
+    --dark-bg-color: #0b1f18;
     --dark-main-color: #03746b;
     --dark-alt-color: #03dac6;
     --dark-text-color: #ffffff;
@@ -101,6 +101,10 @@ body.dark-mode .long-bar {
   color: var(--dark-alt-color);
   border: 2px solid var(--dark-main-color);
 }
+
+body.dark-mode .circle {
+  color: var(--dark-bg-color);
+}
 body.dark-mode .circle i {
   background-color: var(--dark-bg-color);
   color: var(--dark-main-color);
@@ -176,7 +180,7 @@ body.dark-mode .quick-links > a {
 }
 
 body.dark-mode .quick-links > a:hover {
-  color: var(--dark-text-color);
+  transform: translateY(-5px);
 }
 
 body.dark-mode .social-link {
