@@ -3,7 +3,8 @@
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image.png?raw=true" alt="Image 1" width="300" style="display: inline-block; margin-right: 20px;"/>
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image1.png?raw=true" alt="Image 2" width="300" style="display: inline-block; margin-right: 20px;"/>
-  <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="Image 3" width="300" style="display: inline-block;"/>
+  <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="Image 3" width="300" style="display: inline-block; margin-right: 20px;"/>
+  <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image4.png?raw=true" alt="Image 4" width="300" style="display: inline-block; margin-right: 20px;">
 </p>
 
 CalGPA is a full-stack web application designed to help students predict their cumulative GPA (Grade Point Average) based on their course grades and credits. 
