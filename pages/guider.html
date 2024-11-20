@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guider.io | CalGPA</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../imgs/gpa-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-circle">
+            <span id="loader-text">A+</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <h1><a href="../index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+        <div class="menu" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <span class="options" id="options">
+            <ol>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="../pages/estimator.html"><li>Estimators</li></a>
+                <a href="../pages/todo.html"><li>To Do</li></a>
+                <a href="../pages/roadmap.html"><li>Roadmap</li></a>
+            </ol>
+        </span>
+        <div id="mySidenav" class="sidenav">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+            <a href="../index.html">Home</a>
+            <a href="../pages/estimator.html">Estimators</a>
+            <a href="../pages/todo.html">Todo</a>
+            <a href="../pages/roadmap.html">Roadmap</a>
+            <div class="info">
+                <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
+                <a href="../index.html" class="logo-name small-text"><small>@CalGPA2024</small></a>
+            </div>
+            <a class="social-heading small-text"><small>devSocials</small></a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class="circle"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class="circle"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class="circle"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+    </nav><br>
+    <div class="mode">
+        <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+    </div>
+    <div class="main">
+        <h1>Welcome to Guider</h1> <br>
+        <div class="title">
+            <div class="meh">
+                <p>Our mission is to provide students with the resources and guidance they need to succeed academically. We understand that every student has unique needs and challenges, and we strive to offer personalized support to help you achieve your goals. </p>
+            </div>
+            <img id="floater" src="../imgs/about-1.png" alt="img" class="img floater">
+            <br>
+        </div>
+        <h1>Our Team <sup><small>(CalGraders)</small></sup></h1> <br>
+        <div class="team">
+            <div class="member">
+                <img src="../imgs/person.png" alt="Bala Karthikeya" width="100px" class="img-dim">
+                <div class="name-details">
+                    <h3>Bala Karthikeya</h3>
+                    <p>Team Lead and Developer</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="../imgs/person.png" alt="Prasanna Ganesan" width="100px" class="img-dim">
+                <div class="name-details">
+                    <h3>Amogh</h3>
+                    <p>Emotional supporter</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="../imgs/person.png" alt="Kiran Kumar" width="100px" class="img-dim">
+                <div class="name-details">
+                    <h3>User not found</h3>
+                    <p>Null</p>
+                </div>
+            </div>
+        </div>
+        <h1>Our features</h1><br>
+        <div class="cards-container">
+            <div class="cards">
+                <div class="card">
+                    <h3>Estimator</h3><br>
+                    <p>Certainly works for 2nd and 3rd years, our GPA estimator estimates your current year CGPA based on your previous semester results, number of subjects you are good at and current performance (upto CIA's), but your performance and efforts you put will still play an important role!</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Tracker</h3><br>
+                    <p>Tracker analyzes your current semester grades and provides valuable insights that can help you get better and also helps you work on important skills from subjects that are useful for IT sector and provides the order of importance to subjects in which you have to improve </p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Guider</h3> <br>
+                    <p>Guider helps you with guidance that gives better understanding over each subject and effort that is required for each subject, to score and understand the core concepts and how high credit subjects progress impacts both in industry knowledge and CGPA</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Predictor</h3> <br>
+                    <p>This prediction is based on previous year data, which may vary but still can be more close to the actual result in most cases, this process is done using neural networks which analyze the data and predict yours based on hardness levels you chose for each subjects provides output</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div>
+            <div class="links">
+                <h3>There are two of grading with each of them with their own advantages and disadvantages</h3>
+                <a href="../pages/info.html"><h4>Grading types <i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a> <br>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <!--<h3>Types of Grading Systems:</h3>
+            <p>1) Relative Grading</p>
+            <p>2) Standard Grading</p><br>
+        <p><strong>Relative Grading: </strong>     This grading system assigns a grade to each subject based on a scale of 0 to 100. The grades are then converted into a weighted average, which is then used to calculate the overall SGPA. Relative grading can help students understand the importance of each subject and make informed decisions about their academic plans.</p>
+        <p><strong>Standard Grading: </strong>     This grading system assigns a grade to each subject based on predefined criteria, such as A, B, C, D, and F. The grades are then converted into a weighted average, which is then used to calculate the overall SGPA. Standard grading can help students understand the importance of each subject and make informed decisions about their academic plans.</p><br>
+        <h3>Q&A's</h3><br>
+        <h4>How does CalGPA work?</h4>
+        <p>CalGPA uses historical data to analyze your performance, identify areas for improvement, and provide personalized SGPA estimations. Our machine learning algorithms analyze your marks, grades, and other relevant factors to predict your SGPA. We also incorporate a variety of factors like your academic performance, extracurricular activities, and coursework to provide a more accurate and comprehensive estimation.</p><br>
+        <h4>What are the benefits of using CalGPA?</h4>
+        <p>CalGPA offers several benefits to students. Firstly, it provides a reliable and accurate way to assess their performance. Secondly, it helps students identify areas for improvement and make necessary adjustments to their academic plans. Thirdly, it allows students to compare their SGPA with their peers and make informed decisions about their academic success.</p><br>
+        <h4>What are some of the features and services offered by CalGPA?</h4>
+        <p>CalGPA offers a variety of features and services to help you improve your academic performance. Some of the features and services include: 1. Input your internal marks and receive personalized SGPA estimations. 2. View your progress and analyze your academic performance. 3. Compare your SGPA with your peers and make informed decisions about your academic success. 4. Access a library of resources and information to help you improve your education.</p><br>-->
+    </div>
+    <div class="footer-section">
+        <div class="boxs">
+            <div class="box">
+                <h1 class="footer-logo"><a href="index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+            <p> @2024 All rights reserved.</p> 
+            </div>
+            <br>
+        </div>
+        <div class="quick-links">
+        <h3>Quick Links:</h3><br>
+        <a href="../index.html">Home <i class="fa-solid fa-house"></i></a>
+        <a href="../pages/estimator.html">Estimators <i class="fas fa-calculator"></i></a>
+        <a href="../pages/todo.html">To Do <i class="fas fa-tasks"></i></a>
+        <a href="../pages/roadmap.html">Roadmap <i class="fas fa-map-signs"></i> </a> 
+        </div>
+        <div class="floater">
+            <img src="../imgs/bottom.gif" alt="" class="img">
+        <p class="under">Life is like this if you're prepared</p> <br>
+        <center>Simply peaceful.</center>
+        </div>
+        <div class="social-link">
+            <h3>Developer Socials:</h3><br>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <br> <br> <br>
+        </div>
+    </div> 
+    <script src="../functional.js"></script>
+</body>
+</html>
