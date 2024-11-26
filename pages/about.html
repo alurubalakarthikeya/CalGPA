@@ -81,56 +81,69 @@
                 </div>
             </div>
         </div>
-        <h1>Our features</h1><br>
-        <div class="cards-container">
-            <div class="cards">
-                <div class="card">
-                    <h3>Estimator</h3><br>
-                    <p>Certainly works for 2nd and 3rd years, our GPA estimator estimates your current year CGPA based on your previous semester results, number of subjects you are good at and current performance (upto CIA's), but your performance and efforts you put will still play an important role!</p>
+        <h1>Our Features</h1><br>
+            <div class="features-container">
+                <div class="feature-card">
+                    <i class="fa-solid fa-calculator feature-icon"></i>
+                    <h3>Estimator</h3>
+                    <p>Estimate your current year CGPA based on your previous semester results and current performance.</p>
                     <button class="button2">Try Now</button>
                 </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <h3>Tracker</h3><br>
-                    <p>Tracker analyzes your current semester grades and provides valuable insights that can help you get better and also helps you work on important skills from subjects that are useful for IT sector and provides the order of importance to subjects in which you have to improve </p>
+                <div class="feature-card">
+                    <i class="fa-solid fa-chart-line feature-icon"></i>
+                    <h3>Tracker</h3>
+                    <p>Analyze your current semester grades and receive valuable insights to improve your performance.</p>
                     <button class="button2">Try Now</button>
                 </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <h3>Guider</h3> <br>
-                    <p>Guider helps you with guidance that gives better understanding over each subject and effort that is required for each subject, to score and understand the core concepts and how high credit subjects progress impacts both in industry knowledge and CGPA</p>
+                <div class="feature-card">
+                    <i class="fa-solid fa-lightbulb feature-icon"></i>
+                    <h3>Guider</h3>
+                    <p>Get guidance on how to approach each subject, understand core concepts, and improve your grades.</p>
                     <button class="button2">Try Now</button>
                 </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <h3>Predictor</h3> <br>
-                    <p>This prediction is based on previous year data, which may vary but still can be more close to the actual result in most cases, this process is done using neural networks which analyze the data and predict yours based on hardness levels you chose for each subjects provides output</p>
+                <div class="feature-card">
+                    <i class="fa-solid fa-brain feature-icon"></i>
+                    <h3>Predictor</h3>
+                    <p>Use neural networks to predict your future performance based on historical data and current efforts.</p>
                     <button class="button2">Try Now</button>
                 </div>
-            </div>
-            <div class="links">
-                <h3>There are two of grading with each of them with their own advantages and disadvantages</h3>
-                <a href="../pages/info.html"><h4>Grading types <i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a> <br>
-            </div>
-        </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-paint-brush feature-icon"></i>
+                    <h3>UI</h3>
+                    <p>Enjoy a seamless and intuitive user experience designed with students in mind.</p>
+                    <button class="button2">Try Now</button>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-adjust feature-icon"></i>
+                    <h3>Modes</h3>
+                    <p>Switch between different modes to suit your study preferences and improve productivity.</p>
+                    <button class="button2" onclick="darkMode()">Try Now</button>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-book feature-icon"></i>
+                    <h3>To do</h3>
+                    <p>Write down the tasks that you need and complete them on time which creates productivity.</p>
+                    <button class="button2">Try Now</button>
+                </div>
+            </div><br><br>
         <div class="back-to-top">
             <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
-        <!--<h3>Types of Grading Systems:</h3>
-            <p>1) Relative Grading</p>
-            <p>2) Standard Grading</p><br>
-        <p><strong>Relative Grading: </strong>     This grading system assigns a grade to each subject based on a scale of 0 to 100. The grades are then converted into a weighted average, which is then used to calculate the overall SGPA. Relative grading can help students understand the importance of each subject and make informed decisions about their academic plans.</p>
-        <p><strong>Standard Grading: </strong>     This grading system assigns a grade to each subject based on predefined criteria, such as A, B, C, D, and F. The grades are then converted into a weighted average, which is then used to calculate the overall SGPA. Standard grading can help students understand the importance of each subject and make informed decisions about their academic plans.</p><br>
-        <h3>Q&A's</h3><br>
-        <h4>How does CalGPA work?</h4>
-        <p>CalGPA uses historical data to analyze your performance, identify areas for improvement, and provide personalized SGPA estimations. Our machine learning algorithms analyze your marks, grades, and other relevant factors to predict your SGPA. We also incorporate a variety of factors like your academic performance, extracurricular activities, and coursework to provide a more accurate and comprehensive estimation.</p><br>
-        <h4>What are the benefits of using CalGPA?</h4>
-        <p>CalGPA offers several benefits to students. Firstly, it provides a reliable and accurate way to assess their performance. Secondly, it helps students identify areas for improvement and make necessary adjustments to their academic plans. Thirdly, it allows students to compare their SGPA with their peers and make informed decisions about their academic success.</p><br>
-        <h4>What are some of the features and services offered by CalGPA?</h4>
-        <p>CalGPA offers a variety of features and services to help you improve your academic performance. Some of the features and services include: 1. Input your internal marks and receive personalized SGPA estimations. 2. View your progress and analyze your academic performance. 3. Compare your SGPA with your peers and make informed decisions about your academic success. 4. Access a library of resources and information to help you improve your education.</p><br>-->
+        <h1>Q&A's</h1><br>
+        <div class="qa-section">
+            <div class="qa-item">
+                <h4>How does CalGPA work? <span class="toggle-answer" onclick="toggleAnswer(this)">+</span></h4>
+                <p class="answer" id="answer1">CalGPA uses historical data to analyze your performance, identify areas for improvement, and provide personalized SGPA estimations. Our machine learning algorithms analyze your marks, grades, and other relevant factors to predict your SGPA. We also incorporate a variety of factors like your academic performance, extracurricular activities, and coursework to provide a more accurate and comprehensive estimation.</p>
+            </div>
+            <div class="qa-item">
+                <h4>Benefits of using CalGPA? <span class="toggle-answer" onclick="toggleAnswer(this)">+</span></h4>
+                <p class="answer" id="answer2">CalGPA offers several benefits to students. Firstly, it provides a reliable and accurate way to assess their performance. Secondly, it helps students identify areas for improvement and make necessary adjustments to their academic plans. Thirdly, it allows students to compare their SGPA with their peers and make informed decisions about their academic success.</p>
+            </div>
+            <div class="qa-item">
+                <h4>Services by CalGPA? <span class="toggle-answer" onclick="toggleAnswer(this)">+</span></h4>
+                <p class="answer" id="answer3">CalGPA offers a variety of features and services to help you improve your academic performance. Some of the features and services include: 1. Input your internal marks and receive personalized SGPA estimations. 2. View your progress and analyze your academic performance. 3. Compare your SGPA with your peers and make informed decisions about your academic success. 4. Access a library of resources and information to help you improve your education.</p>
+            </div>
+        </div>
     </div>
     <div class="footer-section">
         <div class="boxs">

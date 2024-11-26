@@ -52,36 +52,8 @@ function showLoader() {
 function stopLoaderAnimation() {
   clearInterval(loaderInterval);
 }
-function waitForImagesToLoad() {
-    const images = document.querySelectorAll('img');
-    let imagesLoaded = 0;
-
-    images.forEach((img) => {
-        if (img.complete) {
-            imagesLoaded++;
-        } else {
-            img.addEventListener('load', () => {
-                imagesLoaded++;
-                if (imagesLoaded === images.length) {
-                    hideLoader();
-                }
-            });
-            img.addEventListener('error', () => {
-                imagesLoaded++;
-                if (imagesLoaded === images.length) {
-                    hideLoader();
-                }
-            });
-        }
-    });
-
-    if (imagesLoaded === images.length) {
-        hideLoader();
-    }
-}
 document.addEventListener('DOMContentLoaded', () => {
     applyDarkModePreference();
-    waitForImagesToLoad();
 });
 function hideLoader() {
   const loader = document.getElementById('loader');
@@ -147,3 +119,16 @@ function updateProgress() {
   document.getElementById('progress-text').textContent = `${Math.round(progress)}%`;
 }
 document.addEventListener('DOMContentLoaded', updateProgress);
+
+function toggleAnswer(element) {
+  const qaItem = element.parentElement.parentElement;
+  const answer = qaItem.querySelector('.answer');
+  
+  if (qaItem.classList.contains('active')) {
+      qaItem.classList.remove('active');
+      element.textContent = '+';
+  } else {
+      qaItem.classList.add('active');
+      element.textContent = '-';
+  }
+}
