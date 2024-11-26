@@ -1174,17 +1174,3 @@ input[type="radio"]:checked{
 .feature-card i {
   color: var(--bg-color);
 }
-
-.button2 {
-  background-color: var(--main-color);
-  color: var(--bg-color);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button2:hover {
-  background-color: var(--dark-main-color);
-}
