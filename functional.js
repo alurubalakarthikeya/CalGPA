@@ -126,9 +126,7 @@ function toggleAnswer(element) {
   
   if (qaItem.classList.contains('active')) {
       qaItem.classList.remove('active');
-      element.textContent = '+';
   } else {
       qaItem.classList.add('active');
-      element.textContent = '-';
   }
 }

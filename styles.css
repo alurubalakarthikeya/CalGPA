@@ -446,6 +446,11 @@ sup> i {
   .footer-logo {
     font-size: 6vh;
   }
+
+  .toggle-answer {
+    position: absolute;
+    right: 5%;
+  }
 }
 
 
@@ -501,6 +506,11 @@ sup> i {
       .cards-container {
         display: flex;
         justify-content: center;
+      }
+
+      .toggle-answer {
+        position: absolute;
+        right: 15%;
       }
 }
 
@@ -1173,4 +1183,10 @@ input[type="radio"]:checked{
 
 .feature-card i {
   color: var(--bg-color);
+}
+
+.nuh-uh {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
