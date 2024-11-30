@@ -1,9 +1,11 @@
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "250px";
 }
+
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
 function darkMode() {
   document.body.classList.toggle('dark-mode');
   if (document.body.classList.contains('dark-mode')) {
@@ -12,6 +14,7 @@ function darkMode() {
       localStorage.setItem('darkMode', 'disabled');
   }
 }
+
 function applyDarkModePreference() {
   const darkModePreference = localStorage.getItem('darkMode');
   if (darkModePreference === 'enabled') {
@@ -20,69 +23,63 @@ function applyDarkModePreference() {
       document.body.classList.remove('dark-mode');
   }
 }
-document.addEventListener('DOMContentLoaded', applyDarkModePreference);
-window.addEventListener('beforeunload', function() {
-  document.body.classList.add('no-transition');
-});
-window.addEventListener('load', function() {
-  document.body.classList.remove('no-transition');
-});
-document.getElementById('button1').addEventListener('mouseover', function() {
-  document.getElementById('button2').classList.add('hovered');
-});
-document.getElementById('button1').addEventListener('mouseout', function() {
-  document.getElementById('button2').classList.remove('hovered');
-});
-document.getElementById('button2').addEventListener('mouseover', function() {
-  document.getElementById('button1').classList.add('hovered');
-});
-window.addEventListener('beforeunload', function() {
-  document.body.classList.add('no-transition');
-  showLoader();
-});
-window.addEventListener('load', function() {
-  document.body.classList.remove('no-transition');
-  hideLoader();
-});
+
 function showLoader() {
   const loader = document.getElementById('loader');
   loader.classList.add('show');
   startLoaderAnimation();
 }
-function stopLoaderAnimation() {
-  clearInterval(loaderInterval);
-}
-document.addEventListener('DOMContentLoaded', () => {
-    applyDarkModePreference();
-});
+
 function hideLoader() {
   const loader = document.getElementById('loader');
   loader.classList.remove('show');
   stopLoaderAnimation();
 }
-const grades = ['A+', 'A', 'B', 'B+', 'C', 'D', 'F'];
-let gradeIndex = 0;
-setInterval(() => {
-    const loaderText = document.getElementById('loader-text');
-    loaderText.textContent = grades[gradeIndex];
-    gradeIndex = (gradeIndex + 1) % grades.length;
-}, 1000);
 
-  document.getElementById('button1').addEventListener('mouseover', function() {
-    document.getElementById('button2').classList.add('hovered');
+let loaderInterval;
+function startLoaderAnimation() {
+  const grades = ['A+', 'A', 'B', 'B+', 'C', 'D', 'F'];
+  let gradeIndex = 0;
+  loaderInterval = setInterval(() => {
+      const loaderText = document.getElementById('loader-text');
+      loaderText.textContent = grades[gradeIndex];
+      gradeIndex = (gradeIndex + 1) % grades.length;
+  }, 1000);
+}
+
+function stopLoaderAnimation() {
+  clearInterval(loaderInterval);
+}
+
+window.addEventListener('beforeunload', function() {
+  document.body.classList.add('no-transition');
+  showLoader();
+});
+
+window.addEventListener('load', function() {
+  document.body.classList.remove('no-transition');
+  hideLoader();
+  applyDarkModePreference();
+  updateProgress();
+});
+
+// Button hover effects
+document.getElementById('button1').addEventListener('mouseover', function() {
+  document.getElementById('button2').classList.add('hovered');
 });
 
 document.getElementById('button1').addEventListener('mouseout', function() {
-    document.getElementById('button2').classList.remove('hovered');
+  document.getElementById('button2').classList.remove('hovered');
 });
 
 document.getElementById('button2').addEventListener('mouseover', function() {
-    document.getElementById('button1').classList.add('hovered');
+  document.getElementById('button1').classList.add('hovered');
 });
 
 document.getElementById('button2').addEventListener('mouseout', function() {
-    document.getElementById('button1').classList.remove('hovered');
+  document.getElementById('button1').classList.remove('hovered');
 });
+
 function addTodo() {
   const todoInput = document.getElementById('todo');
   const todoText = todoInput.value.trim();
@@ -95,6 +92,7 @@ function addTodo() {
       updateProgress();
   }
 }
+
 function toggleTask(checkbox) {
   const task = checkbox.parentElement;
   if (checkbox.checked) {
@@ -104,6 +102,7 @@ function toggleTask(checkbox) {
   }
   updateProgress();
 }
+
 function updateProgress() {
   const todosList = document.getElementById('todos');
   const tasks = todosList.getElementsByTagName('li');
@@ -118,15 +117,34 @@ function updateProgress() {
   document.getElementById('progress-bar').style.width = `${progress}%`;
   document.getElementById('progress-text').textContent = `${Math.round(progress)}%`;
 }
-document.addEventListener('DOMContentLoaded', updateProgress);
 
 function toggleAnswer(element) {
   const qaItem = element.parentElement.parentElement;
   const answer = qaItem.querySelector('.answer');
-  
   if (qaItem.classList.contains('active')) {
       qaItem.classList.remove('active');
   } else {
       qaItem.classList.add('active');
   }
+}
+
+function showInfo(option) {
+  const infoBox = document.getElementById('info-box');
+  const infoText = document.getElementById('info-text');
+  let info = '';
+  switch (option) {
+      case 'gpa9':
+          info = 'To achieve a GPA > 9, focus on understanding core concepts, attend all classes, participate in discussions, complete assignments on time, and prepare thoroughly for exams.';
+          break;
+      case 'gpa8':
+          info = 'To achieve a GPA > 8, maintain consistent study habits, review your notes regularly, seek help when needed, and ensure you perform well in both assignments and exams.';
+          break;
+      case 'gpa65':
+          info = 'To achieve a GPA > 6.5, prioritize your studies, manage your time effectively, focus on key subjects, and make sure to complete all assignments and prepare for exams.';
+          break;
+      default:
+          info = '';
+  }
+  infoText.textContent = info;
+  infoBox.style.display = 'block';
 }

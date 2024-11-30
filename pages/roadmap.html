@@ -139,20 +139,16 @@
         <div class="response">
             <h2>Choose an option</h2>
             <h4>( By choosing an option you'll get a mini-roadmap for scoring  )</h4><br>
-            <input type="radio">
+            <input type="radio" name="input" onclick="showInfo('gpa9')">
             <label for="response">GPA > 9</label><br>
-            <input type="radio">
+            <input type="radio" name="input" onclick="showInfo('gpa8')">
             <label for="response">GPA > 8</label><br>
-            <input type="radio">
+            <input type="radio" name="input" onclick="showInfo('gpa65')">
             <label for="response">GPA > 6.5</label><br>
         </div>
-        <!--<h3>Q&A's</h3><br>
-        <h4>How does CalGPA work?</h4>
-        <p>CalGPA uses historical data to analyze your performance, identify areas for improvement, and provide personalized SGPA estimations. Our machine learning algorithms analyze your marks, grades, and other relevant factors to predict your SGPA. We also incorporate a variety of factors like your academic performance, extracurricular activities, and coursework to provide a more accurate and comprehensive estimation.</p><br>
-        <h4>What are the benefits of using CalGPA?</h4>
-        <p>CalGPA offers several benefits to students. Firstly, it provides a reliable and accurate way to assess their performance. Secondly, it helps students identify areas for improvement and make necessary adjustments to their academic plans. Thirdly, it allows students to compare their SGPA with their peers and make informed decisions about their academic success.</p><br>
-        <h4>What are some of the features and services offered by CalGPA?</h4>
-        <p>CalGPA offers a variety of features and services to help you improve your academic performance. Some of the features and services include: 1. Input your internal marks and receive personalized SGPA estimations. 2. View your progress and analyze your academic performance. 3. Compare your SGPA with your peers and make informed decisions about your academic success. 4. Access a library of resources and information to help you improve your education.</p><br>-->
+        <div id="info-box" class="info-box">
+            <p id="info-text"></p>
+        </div>
     </div> <br> <br>
     <div class="footer-section">
         <div class="boxs">
