@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker.io | CalGPA</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../imgs/gpa-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-circle">
+            <span id="loader-text">A+</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <h1><a href="../index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+        <div class="menu" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <span class="options" id="options">
+            <ol>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="../pages/estimator.html"><li>Estimators</li></a>
+                <a href="../pages/todo.html"><li>To Do</li></a>
+                <a href="../pages/roadmap.html"><li>Roadmap</li></a>
+            </ol>
+        </span>
+        <div id="mySidenav" class="sidenav">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+            <a href="../index.html">Home</a>
+            <a href="../pages/estimator.html">Estimators</a>
+            <a href="../pages/todo.html">Todo</a>
+            <a href="../pages/roadmap.html">Roadmap</a>
+            <div class="info">
+                <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
+                <a href="../index.html" class="logo-name small-text"><small>@CalGPA2024</small></a>
+            </div>
+            <a class="social-heading small-text"><small>devSocials</small></a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class="circle"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class="circle"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class="circle"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+    </nav><br>
+    <div class="mode">
+        <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+    </div>
+    <div class="main">
+        <h1>Welcome to Tracker.io</h1> <br>
+        <div class="title">
+            <div class="meh">
+                <p>Our mission with the Tracker feature is to provide students with the tools and insights they need to monitor and improve their academic performance. We understand that tracking progress is crucial for identifying strengths and areas for improvement, and we strive to offer personalized support to help you stay on track and achieve your academic goals.</p>
+                <p>Whether you need help with analyzing your grades, setting academic targets, or understanding your progress over time, our Tracker feature is here to assist you. Our team of experienced educators and data analysts are dedicated to helping you make informed decisions and reach your full potential.</p>
+            </div><br>
+            <img id="floater" src="../imgs/guider.png" alt="img" class="img floater">
+            <br> <br>
+        </div>
+        <div class="form">
+            <form id="marksForm" onsubmit="calculatePercentage(event)">
+                <fieldset>
+                <h4>Enter your marks</h4><br>
+                <input type="text" id="subjectName" placeholder="Subject Name" required>
+                <input type="number" id="obtainedMarks" placeholder="Obtained Marks" required>
+                <input type="number" id="totalMarks" placeholder="Total Marks" required>
+                <input type="text" id="percentage" placeholder="Percentage" readonly>
+                <button type="submit" class="button2">Submit</button>
+            </fieldset>
+            </form>
+        </div>
+        <div id="infoBox" class="info-box"></div>
+    </div>
+
+    <div class="footer-section">
+        <div class="boxs">
+            <div class="box">
+                <h1 class="footer-logo"><a href="index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+            <p> @2024 All rights reserved.</p> 
+            </div>
+            <br>
+        </div>
+        <div class="quick-links">
+        <h3>Quick Links:</h3><br>
+        <a href="../index.html">Home <i class="fa-solid fa-house"></i></a>
+        <a href="../pages/estimator.html">Estimators <i class="fas fa-calculator"></i></a>
+        <a href="../pages/todo.html">To Do <i class="fas fa-tasks"></i></a>
+        <a href="../pages/roadmap.html">Roadmap <i class="fas fa-map-signs"></i> </a> 
+        </div>
+        <div class="floater">
+            <img src="../imgs/bottom.gif" alt="" class="img">
+        <p class="under">Life is like this if you're prepared</p> <br>
+        <center>Simply peaceful.</center>
+        </div>
+        <div class="social-link">
+            <h3>Developer Socials:</h3><br>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <br> <br> <br>
+        </div>
+    </div> 
+    <script src="../functional.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estimators | CalGPA</title>
+    <title>Predictor.io | CalGPA</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" href="../imgs/gpa-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
@@ -22,7 +22,7 @@
         <span class="options" id="options">
             <ol>
                 <a href="../index.html"><li>Home</li></a>
-                <a href="../pages/about.html"><li>About</li></a>
+                <a href="../pages/estimator.html"><li>Estimators</li></a>
                 <a href="../pages/todo.html"><li>To Do</li></a>
                 <a href="../pages/roadmap.html"><li>Roadmap</li></a>
             </ol>
@@ -30,12 +30,12 @@
         <div id="mySidenav" class="sidenav">
             <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
             <a href="../index.html">Home</a>
-            <a href="../pages/about.html">About</a>
+            <a href="../pages/estimator.html">Estimators</a>
             <a href="../pages/todo.html">Todo</a>
             <a href="../pages/roadmap.html">Roadmap</a>
             <div class="info">
                 <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
-                <a href="#" class="logo-name small-text"><small>@CalGPA2024</small></a>
+                <a href="../index.html" class="logo-name small-text"><small>@CalGPA2024</small></a>
             </div>
             <a class="social-heading small-text"><small>devSocials</small></a>
             <div class="socials">
@@ -48,51 +48,31 @@
     <div class="mode">
         <i class="fa-solid fa-moon" onclick="darkMode()"></i>
     </div>
-    <span class="heading-desk">
-        <a>Socials</a>
-    </span>
-    <div class="desktop-socials">
-        <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class=""><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
-        <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
-    </div>
     <div class="main">
-        <h1>Our Estimators</h1>
-        <div class="cards-container">
-            <div class="cards">
-                <div class="card">
-                    <h3>Estimator</h3><br>
-                    <p>Certainly works for 2nd and 3rd years, our GPA estimator estimates your current year CGPA based on your previous semester results, number of subjects you are good at and current performance (upto CIA's), but your performance and efforts you put will still play an important role!</p>
-                    <button class="button2">Try Now</button>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <h3>Tracker</h3><br>
-                    <p>Tracker analyzes your current semester grades and provides valuable insights that can help you get better and also helps you work on important skills from subjects that are useful for IT sector and provides the order of importance to subjects in which you have to improve </p>
-                    <button class="button2">Try Now</button>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <h3>Guider</h3> <br>
-                    <p>Guider helps you with guidance that gives better understanding over each subject and effort that is required for each subject, to score and understand the core concepts and how high credit subjects progress impacts both in industry knowledge and CGPA</p>
-                    <button class="button2">Try Now</button>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <h3>Predictor</h3> <br>
-                    <p>This prediction is based on previous year data, which may vary but still can be more close to the actual result in most cases, this process is done using neural networks which analyze the data and predict yours based on hardness levels you chose for each subjects provides output</p>
-                    <button class="button2">Try Now</button>
-                </div>
-            </div>
-            <div class="links">
-                <h3>There are two of grading with each of them with their own advantages and disadvantages</h3>
-                <a href="../pages/roadmap.html"><h4>Grading types <i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a> <br>
-            </div>
+        <h1>Welcome to Predictor.io</h1> <br>
+        <div class="title">
+            <div class="meh">
+                <p>Our mission with the Predictor feature is to provide students with accurate and insightful predictions about their academic performance. We understand that anticipating future outcomes can help in better planning and preparation, and we strive to offer personalized support to help you achieve your academic goals.</p>
+                <p>Whether you need help with understanding your potential grades, setting realistic academic targets, or making informed decisions about your study strategies, our Predictor feature is here to assist you. Our team of experienced educators and data analysts are dedicated to helping you leverage predictive insights to reach your full potential.</p>
+            </div><br>
+            <img id="floater" src="../imgs/guider.png" alt="img" class="img floater">
+            <br> <br>
         </div>
-    </div> 
+        <div class="form">
+            <form id="marksForm" onsubmit="calculatePercentage(event)">
+                <fieldset>
+                <h4>Enter your marks</h4><br>
+                <input type="text" id="subjectName" placeholder="Subject Name" required>
+                <input type="number" id="obtainedMarks" placeholder="Obtained Marks" required>
+                <input type="number" id="totalMarks" placeholder="Total Marks" required>
+                <input type="text" id="percentage" placeholder="Percentage" readonly>
+                <button type="submit" class="button2">Submit</button>
+            </fieldset>
+            </form>
+        </div>
+        <div id="infoBox" class="info-box"></div>
+    </div>
+
     <div class="footer-section">
         <div class="boxs">
             <div class="box">
@@ -103,8 +83,8 @@
         </div>
         <div class="quick-links">
         <h3>Quick Links:</h3><br>
-        <a href="../index.html">Home <i class="fas fa-home"></i></a>
-        <a href="../pages/about.html">About <i class="fa-solid fa-info-circle"></i></a>
+        <a href="../index.html">Home <i class="fa-solid fa-house"></i></a>
+        <a href="../pages/estimator.html">Estimators <i class="fas fa-calculator"></i></a>
         <a href="../pages/todo.html">To Do <i class="fas fa-tasks"></i></a>
         <a href="../pages/roadmap.html">Roadmap <i class="fas fa-map-signs"></i> </a> 
         </div>
@@ -124,6 +104,7 @@
             </div>
             <br> <br> <br>
         </div>
+    </div> 
     <script src="../functional.js"></script>
 </body>
 </html>
