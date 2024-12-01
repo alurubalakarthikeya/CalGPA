@@ -148,3 +148,40 @@ function showInfo(option) {
   infoText.textContent = info;
   infoBox.style.display = 'block';
 }
+
+function calculatePercentage(event) {
+  event.preventDefault(); // Prevent form submission
+
+  const subjectName = document.getElementById('subjectName').value;
+  const obtainedMarks = parseFloat(document.getElementById('obtainedMarks').value);
+  const totalMarks = parseFloat(document.getElementById('totalMarks').value);
+  const percentageInput = document.getElementById('percentage');
+  const infoBox = document.getElementById('infoBox');
+
+  if (!isNaN(obtainedMarks) && !isNaN(totalMarks) && totalMarks > 0) {
+      const percentage = (obtainedMarks / totalMarks) * 100;
+      percentageInput.value = percentage.toFixed(2) + '%';
+
+      // Display the info box with uses of the subject in the real world
+      let infoText = '';
+      switch (subjectName.toLowerCase()) {
+          case 'math':
+              infoText = 'Math is used in various fields such as engineering, finance, and technology. It helps in problem-solving and logical thinking.';
+              break;
+          case 'science':
+              infoText = 'Science is essential for understanding the natural world, developing new technologies, and improving healthcare.';
+              break;
+          case 'history':
+              infoText = 'History helps us understand past events, cultures, and societies, and learn from them to shape a better future.';
+              break;
+          default:
+              infoText = 'This subject has various applications in the real world, contributing to different fields and industries.';
+      }
+
+      infoBox.innerHTML = `<p><strong>${subjectName}:</strong> ${infoText}</p>`;
+      infoBox.style.display = 'block';
+  } else {
+      percentageInput.value = 'Invalid input';
+      infoBox.style.display = 'none';
+  }
+}

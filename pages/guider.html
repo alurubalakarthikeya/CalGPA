@@ -53,26 +53,24 @@
         <div class="title">
             <div class="meh">
                 <p>Our mission is to provide students with the resources and guidance they need to succeed academically. We understand that every student has unique needs and challenges, and we strive to offer personalized support to help you achieve your goals. </p>
-            </div>
-            <img id="floater" src="../imgs/about-1.png" alt="img" class="img floater">
-            <br>
-        </div>
-        <div class="title">
-            <div class="meh">
                 <p>Whether you need help with time management, study skills, or test preparation, we are here to help. Our team of experienced tutors and academic coaches are dedicated to helping you reach your full potential. </p>
-            </div>
-            <img id="floater" src="../imgs/about-2.png" alt="img" class="img floater">
-            <br>
+            </div><br>
+            <img id="floater" src="../imgs/guider.png" alt="img" class="img floater">
+            <br> <br>
         </div>
         <div class="form">
-            <form action="">
-                <h2>Enter your marks</h2>
-                <input type="text" placeholder="Marks" required>
-                <input type="email" placeholder="Email" required>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                <button type="submit">Submit</button>
+            <form id="marksForm" onsubmit="calculatePercentage(event)">
+                <fieldset>
+                <h4>Enter your marks</h4><br>
+                <input type="text" id="subjectName" placeholder="Subject Name" required>
+                <input type="number" id="obtainedMarks" placeholder="Obtained Marks" required>
+                <input type="number" id="totalMarks" placeholder="Total Marks" required>
+                <input type="text" id="percentage" placeholder="Percentage" readonly>
+                <button type="submit" class="button2">Submit</button>
+            </fieldset>
             </form>
         </div>
+        <div id="infoBox" class="info-box"></div>
     </div>
 
     <div class="footer-section">
