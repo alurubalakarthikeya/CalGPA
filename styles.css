@@ -1313,3 +1313,12 @@ form > button {
   margin: 0;
   color: var(--text-color);
 }
+
+a.link:link {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+a.link:visited {
+  color: var(--bg-color);
+}
