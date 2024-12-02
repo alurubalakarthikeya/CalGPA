@@ -1323,8 +1323,17 @@ body.dark-mode .form  {
   color: var(--bg-color);
 }
 
+body.dark-mode .form fieldset > input::placeholder {
+  color: var(--main-color);
+}
+
 .button3 {
   background-color: var(--dark-main-color);
+}
+
+body.dark-mode .button3 {
+  color: var(--main-color);
+  background-color: var(--dark-bg-color);
 }
 
 
