@@ -1300,7 +1300,7 @@ body.dark-mode .form fieldset > h4 {
 }
 
 body.dark-mode .form  fieldset {
-  background-color: var(--dark-main-color);
+  background-color: var(--main-color);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
