@@ -150,35 +150,58 @@ function showInfo(option) {
 }
 
 function calculatePercentage(event) {
-  event.preventDefault(); // Prevent form submission
-
+  event.preventDefault(); 
   const subjectName = document.getElementById('subjectName').value;
   const obtainedMarks = parseFloat(document.getElementById('obtainedMarks').value);
   const totalMarks = parseFloat(document.getElementById('totalMarks').value);
   const percentageInput = document.getElementById('percentage');
   const infoBox = document.getElementById('infoBox');
-
   if (!isNaN(obtainedMarks) && !isNaN(totalMarks) && totalMarks > 0) {
       const percentage = (obtainedMarks / totalMarks) * 100;
-      percentageInput.value = percentage.toFixed(2) + '%';
-
-      // Display the info box with uses of the subject in the real world
-      let infoText = '';
-      switch (subjectName.toLowerCase()) {
-          case 'math':
-              infoText = 'Math is used in various fields such as engineering, finance, and technology. It helps in problem-solving and logical thinking.';
-              break;
-          case 'science':
-              infoText = 'Science is essential for understanding the natural world, developing new technologies, and improving healthcare.';
-              break;
-          case 'history':
-              infoText = 'History helps us understand past events, cultures, and societies, and learn from them to shape a better future.';
-              break;
-          default:
-              infoText = 'This subject has various applications in the real world, contributing to different fields and industries.';
+      if(percentage <= 100){
+        percentageInput.value = percentage.toFixed(2) + '%';
+      } else {
+        percentageInput.value = 'Invalid input.';
       }
 
-      infoBox.innerHTML = `<p><strong>${subjectName}:</strong> ${infoText}</p>`;
+      let infoText = '';
+      switch (subjectName.toLowerCase()) {
+        case 'dld':
+          infoText = ' Digital Logic Design is crucial in creating circuits for computers, mobile phones, and other electronics. Job roles include Digital Design Engineer and VLSI Engineer, with an average salary of ₹6 LPA in India.';
+          break;
+        case 'fsd':
+          infoText = ' Full Stack Development involves both front-end and back-end web development. Job roles include Full Stack Developer, Front-end Developer, Back-end Developer, UI/UX Designer, and more, with an average salary of ₹8 LPA in India.';
+          break;
+        case 'ds':
+          infoText = ' Data Structures are essential for organizing and storing data efficiently. Job roles include Software Developer and Systems Analyst, with an average salary of ₹7 LPA in India.';
+          break;
+        case 'dmgt':
+          infoText = ' Discrete Mathematics and Graph Theory are fundamental in computer science, cryptography, and network analysis. Job roles include Algorithm Developer and Network Analyst, with an average salary of ₹6 LPA in India.';
+          break;
+        case 'tnt':
+          infoText = ' Transform Numerical Techniques are used in solving mathematical problems in engineering and science. Job roles include Numerical Analyst and Computational Scientist, with an average salary of ₹6 LPA in India.';
+          break;
+        case 'java':
+          infoText = ' Java Development involves building applications using Java. Job roles include Java Developer, with an average salary of ₹7 LPA in India.';
+          break;
+        default:
+          infoText = 'This subject has various applications in the real world, contributing to different fields and industries.';
+      }
+      if(percentage > 100){
+        alert("Enter valid marks");
+      }
+      infoBox.innerHTML = `<p><strong>Why ${subjectName} ?:</strong><br><br> ${infoText}</p><br>`;
+      if(percentage > 80 && percentage <= 100){ 
+          infoBox.innerHTML += `<p>You scored ${percentage}%, Excellent! Keep up the work!</p>`;
+      } else if (percentage > 70 && percentage <= 100) {
+        infoBox.innerHTML += `<p>You scored ${percentage}%, You are doing good!</p>`;
+      } else {
+        if(percentage < 100){
+          infoBox.innerHTML += `<p>You scored ${percentage}%, You need to work harder!</p>`;
+        } else if(percentage > 100){
+          infoBox.innerHTML += `<p>Invalid input!</p>`;
+        }
+      }
       infoBox.style.display = 'block';
   } else {
       percentageInput.value = 'Invalid input';
