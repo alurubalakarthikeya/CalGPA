@@ -820,14 +820,14 @@ h1:hover sup i {
   border-radius: 10px;
   margin: 10px;
   max-width: 300px;
-  font-size: 2.3vh;
+  font-size: 2.2vh;
   box-shadow: 3px 0px 10px rgba(2,150,138, 0.6);
 }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .card > button {
@@ -1262,6 +1262,7 @@ input[type="radio"]:checked{
   border-radius: 10px;
   background-color: var(--bg-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
 }
 
 .info-box p {
@@ -1286,9 +1287,16 @@ fieldset {
   max-width: 350px;
 }
 
+.form > .info-box {
+  max-width: 350px;
+  min-height: 420px;
+  box-shadow: 0px 4px 10px rgba(8, 94, 86, 0.95);
+}
+
 .form {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--dark-main-color);
   border-radius: 15px;
@@ -1346,7 +1354,8 @@ form > button {
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--bg-color);
+  color: var(--bg-color);
+  background-color: var(--main-color);
   box-shadow:0px 7px 14px rgba(10, 125, 115, 0.55);
 }
 

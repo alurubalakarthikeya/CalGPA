@@ -165,32 +165,40 @@ function calculatePercentage(event) {
       }
 
       let infoText = '';
+      let suggestionsText = '';
       switch (subjectName.toLowerCase()) {
-        case 'dld':
-          infoText = ' Digital Logic Design is crucial in creating circuits for computers, mobile phones, and other electronics. Job roles include Digital Design Engineer and VLSI Engineer, with an average salary of ₹6 LPA in India.';
-          break;
-        case 'fsd':
-          infoText = ' Full Stack Development involves both front-end and back-end web development. Job roles include Full Stack Developer, Front-end Developer, Back-end Developer, UI/UX Designer, and more, with an average salary of ₹8 LPA in India.';
-          break;
-        case 'ds':
-          infoText = ' Data Structures are essential for organizing and storing data efficiently. Job roles include Software Developer and Systems Analyst, with an average salary of ₹7 LPA in India.';
-          break;
-        case 'dmgt':
-          infoText = ' Discrete Mathematics and Graph Theory are fundamental in computer science, cryptography, and network analysis. Job roles include Algorithm Developer and Network Analyst, with an average salary of ₹6 LPA in India.';
-          break;
-        case 'tnt':
-          infoText = ' Transform Numerical Techniques are used in solving mathematical problems in engineering and science. Job roles include Numerical Analyst and Computational Scientist, with an average salary of ₹6 LPA in India.';
-          break;
-        case 'java':
-          infoText = ' Java Development involves building applications using Java. Job roles include Java Developer, with an average salary of ₹7 LPA in India.';
-          break;
-        default:
-          infoText = 'This subject has various applications in the real world, contributing to different fields and industries.';
-      }
+          case 'dld':
+              infoText = 'Digital Logic Design is crucial in creating circuits for computers, mobile phones, and other electronics. Job roles include Digital Design Engineer and VLSI Engineer, with an average salary of ₹6 LPA in India.';
+              suggestionsText = 'To improve in Digital Logic Design, focus on understanding the basics of logic gates and circuits. Practice designing simple circuits and gradually move to complex ones. Useful resources: <a href="https://www.coursera.org/learn/digital-circuits">Coursera Digital Circuits</a>, <a href="https://www.khanacademy.org/computing/computer-science/algorithms">Khan Academy Algorithms</a>.';
+              break;
+          case 'fsd':
+              infoText = 'Full Stack Development involves both front-end and back-end web development. Job roles include Full Stack Developer, Front-end Developer, Back-end Developer, UI/UX Designer, and more, with an average salary of ₹8 LPA in India.';
+              suggestionsText = 'To improve in Full Stack Development, practice building projects that involve both front-end and back-end technologies. Learn popular frameworks like React, Angular, Node.js, and Django. Useful resources: <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>, <a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/">Udemy Web Developer Course</a>.';
+              break;
+          case 'ds':
+              infoText = 'Data Structures are essential for organizing and storing data efficiently. Job roles include Software Developer and Systems Analyst, with an average salary of ₹7 LPA in India.';
+              suggestionsText = 'To improve in Data Structures, practice implementing different data structures like arrays, linked lists, stacks, queues, trees, and graphs. Solve problems on platforms like LeetCode and HackerRank. Useful resources: <a href="https://www.geeksforgeeks.org/data-structures/">GeeksforGeeks Data Structures</a>, <a href="https://www.coursera.org/specializations/data-structures-algorithms">Coursera Data Structures and Algorithms</a>.';
+              break;
+          case 'dmgt':
+              infoText = 'Discrete Mathematics and Graph Theory are fundamental in computer science, cryptography, and network analysis. Job roles include Algorithm Developer and Network Analyst, with an average salary of ₹6 LPA in India.';
+              suggestionsText = 'To improve in Discrete Mathematics and Graph Theory, focus on understanding the core concepts and solving related problems. Study topics like set theory, combinatorics, graph theory, and algorithms. Useful resources: <a href="https://www.khanacademy.org/math/discrete-math">Khan Academy Discrete Math</a>, <a href="https://www.coursera.org/learn/algorithms-graphs-data-structures">Coursera Graph Algorithms</a>.';
+              break;
+          case 'tnt':
+              infoText = 'Transform Numerical Techniques are used in solving mathematical problems in engineering and science. Job roles include Numerical Analyst and Computational Scientist, with an average salary of ₹6 LPA in India.';
+              suggestionsText = 'To improve in Transform Numerical Techniques, practice solving numerical problems and understand the underlying mathematical concepts. Study topics like numerical integration, differentiation, and linear algebra. Useful resources: <a href="https://www.coursera.org/learn/numerical-methods-engineers">Coursera Numerical Methods</a>, <a href="https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-spring-2019/">MIT OpenCourseWare Numerical Methods</a>.';
+              break;
+          case 'java':
+              infoText = 'Java Development involves building applications using Java. Job roles include Java Developer, with an average salary of ₹7 LPA in India.';
+              suggestionsText = 'To improve in Java Development, practice writing Java programs and understand object-oriented programming concepts. Build projects using Java frameworks like Spring and Hibernate. Useful resources: <a href="https://www.codecademy.com/learn/learn-java">Codecademy Java</a>, <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/">Udemy Java Course</a>.';
+              break;
+          default:
+              infoText = 'This subject has various applications in the real world, contributing to different fields and industries.';
+              suggestionsText = 'To improve in this subject, focus on understanding the core concepts and practicing regularly. Utilize online resources and courses to enhance your knowledge.';
+        }
       if(percentage > 100){
         alert("Enter valid marks");
       }
-      infoBox.innerHTML = `<p><strong>Why ${subjectName} ?:</strong><br><br> ${infoText}</p><br>`;
+      infoBox.innerHTML = `<p><strong>Why ${subjectName} :</strong><br><br> ${infoText}</p><br>`;
       if(percentage > 80 && percentage <= 100){ 
           infoBox.innerHTML += `<p>You scored ${percentage}%, Excellent! Keep up the work!</p>`;
       } else if (percentage > 70 && percentage <= 100) {
@@ -203,8 +211,11 @@ function calculatePercentage(event) {
         }
       }
       infoBox.style.display = 'block';
+      suggestionsBox.innerHTML = `<p><strong>How to get better in ${subjectName}:</strong><br><br> ${suggestionsText}</p>`;
+      suggestionsBox.style.display = 'block';
   } else {
       percentageInput.value = 'Invalid input';
       infoBox.style.display = 'none';
+      suggestionsBox.style.display = 'none';
   }
 }
