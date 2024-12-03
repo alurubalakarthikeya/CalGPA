@@ -1263,6 +1263,34 @@ input[type="radio"]:checked{
   background-color: var(--bg-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 350px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  z-index: 1;
+  width: 13px; 
+  background: var(--main-color);
+  box-shadow: 8px 8px 14px rgba(10, 125, 115, 0.95);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color); 
+  border-radius: 13px;
+  border: 1px solid var(--main-color);
+  box-shadow: 8px 0px 14px rgba(10, 125, 115, 0.95);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-main-color); 
+  border-radius: 10px; 
+  border: 2px solid var(--main-color); 
+  box-shadow: 8px 0px 14px rgba(10, 125, 115, 0.95);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-main-color); /* Color of the scrollbar thumb on hover */
 }
 
 .info-box p {
@@ -1377,4 +1405,6 @@ a.link:link {
 a.link:visited {
   color: var(--bg-color);
 }
+
+
 
