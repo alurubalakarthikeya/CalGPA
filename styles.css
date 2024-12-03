@@ -1255,7 +1255,7 @@ input[type="radio"]:checked{
 }
 
 .info-box {
-  display: none;
+  display: block;
   margin-top: 20px;
   padding: 20px;
   border: 1px solid var(--main-color);
@@ -1272,6 +1272,18 @@ input[type="radio"]:checked{
   width: 13px; 
   background: var(--main-color);
   box-shadow: 8px 8px 14px rgba(10, 125, 115, 0.95);
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--dark-bg-color);
+}
+
+body.dark-mode ::-webkit-scrollbar {
+  background: var(--dark-main-color);
+}
+
+body.dark-mode .info-box > a {
+  color: var(--dark-main-color);
 }
 
 ::-webkit-scrollbar-track {
