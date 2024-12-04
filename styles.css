@@ -1077,14 +1077,14 @@ td {
 }
 
 .todo-list {
-  position: relative;
   width: 100%;
   background-color: var(--main-color);
   color: var(--bg-color);
-  padding: 25px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   top: 150px;
+  border-radius: 10px;
 }
 
 input[type="text"] {
@@ -1418,5 +1418,15 @@ a.link:visited {
   color: var(--bg-color);
 }
 
+.width-increase >  button {
+  width: 100%;
+}
 
+.width-increase > input {
+  width: 100%;
+}
+
+.home.main.form {
+  gap: 30px;
+}
 
