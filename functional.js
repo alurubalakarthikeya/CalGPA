@@ -63,7 +63,6 @@ window.addEventListener('load', function() {
   updateProgress();
 });
 
-// Button hover effects
 document.getElementById('button1').addEventListener('mouseover', function() {
   document.getElementById('button2').classList.add('hovered');
 });
@@ -150,7 +149,6 @@ function showInfo(option) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Set initial content for infoBox and suggestionsBox
   const infoBox = document.getElementById('infoBox');
   const suggestionsBox = document.getElementById('suggestionsBox');
   infoBox.innerHTML = '<p><strong>Info:</strong> Information about the subject will be displayed here.</p>';
