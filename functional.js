@@ -115,6 +115,10 @@ function updateProgress() {
   const progress = (completedTasks / totalTasks) * 100;
   document.getElementById('progress-bar').style.width = `${progress}%`;
   document.getElementById('progress-text').textContent = `${Math.round(progress)}%`;
+  document.getElementById('temp-progress').innerHTML = `Your current progress is at ${Math.round(progress)}% keep up the pace and make all your tasks in the quick queue. <br><br> <strong>The secret of getting ahead is getting started.</strong> – Mark Twain`;
+  if(progress > 50) {
+    document.getElementById('temp-progress').innerHTML = `Your current progress is at ${Math.round(progress)}% keep up the pace and make all your tasks in the quick queue. <br><br> <strong>The secret of getting ahead is getting started.</strong> – Mark Twain <br><br> Your current progress is at ${Math.round(progress)}%, Keep up the good work! and reach all your tasks in the queue.`;
+  }
 }
 
 function toggleAnswer(element) {

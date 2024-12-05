@@ -1082,7 +1082,9 @@ td {
   color: var(--bg-color);
   padding: 20px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
   top: 150px;
   border-radius: 10px;
 }
@@ -1399,6 +1401,23 @@ form > button {
   box-shadow:0px 7px 14px rgba(10, 125, 115, 0.55);
 }
 
+.temp-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--bg-color);
+  background-color: var(--dark-main-color);
+  min-width: 230px;
+  min-height: 400px;
+  box-shadow:0px 7px 14px rgba(10, 125, 115, 0.55);
+}
+
+body.dark-mode .temp-box {
+  background-color: var(--dark-bg-color);
+  color: var(--main-color);
+}
+
+
 body.dark-mode .info-box {
   background-color: var(--dark-bg-color);
   color: var(--main-color);
@@ -1428,4 +1447,13 @@ a.link:visited {
 
 .home.main.form {
   gap: 30px;
+}
+
+body.dark-mode .form .center{
+  color: var(--dark-bg-color);
+}
+
+body.dark-mode .form .center input[type="text"], body.dark-{
+  background: var(--dark-bg-color);
+  color: var(--main-color);
 }

@@ -62,25 +62,33 @@
             <p>Track your progress and understand your abilities</p>
         </div>
         <div class="todo-list">
-    <div class="center">
-        <h3>To Do List</h3> <br>
-        <div class="todo width-increase">
-            <input type="text" id="todo" placeholder="Add a task">
-            <button onclick="addTodo()" class="button3">Add</button>
+            <div class="temp-box" id="temp-progress">
+                
+            </div>
+            <div class="form">
+                <div id="suggestionsBox" class="info-box"></div>
+                <div class="center">
+                    <h3>To Do List</h3> <br>
+                    <div class="todo width-increase">
+                        <input type="text" id="todo" placeholder="Add a task">
+                        <button onclick="addTodo()" class="button3">Add</button>
+                    </div>
+                    <div class="todos">
+                        <ul id="todos">
+                            <li><input type="checkbox" onclick="toggleTask(this)"> FSD Assignment</li>
+                            <li><input type="checkbox" onclick="toggleTask(this)"> Java Assignment</li>
+                            <li><input type="checkbox" onclick="toggleTask(this)"> DS LinkedList practice</li>
+                        </ul>
+                    </div>
+                    <div class="progress">
+                        <div id="progress-text">0%</div>
+                        <div id="progress-bar" style="width: 1%"></div><br>
+                    </div>
+                  </div>
+                </div>
+                <div id="infoBox" class="info-box"></div>
+            </div>
         </div>
-        <div class="todos">
-            <ul id="todos">
-                <li><input type="checkbox" onclick="toggleTask(this)"> FSD Assignment</li>
-                <li><input type="checkbox" onclick="toggleTask(this)"> Java Assignment</li>
-                <li><input type="checkbox" onclick="toggleTask(this)"> DS LinkedList practice</li>
-            </ul>
-        </div>
-        <div class="progress">
-            <div id="progress-text">0%</div>
-            <div id="progress-bar" style="width: 1%"></div><br>
-        </div>
-      </div>
-    </div>
     </div>
     <script src="../functional.js"></script>
 </body>
