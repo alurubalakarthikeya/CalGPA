@@ -481,6 +481,9 @@ sup> i {
 
 
 @media (max-width: 630px) {
+  .info-box {
+    display: none;
+  }
     .options {
         display: none;
     }
@@ -538,6 +541,7 @@ sup> i {
         position: absolute;
         right: 15%;
       }
+
 }
 
 .sidenav {
@@ -1392,7 +1396,6 @@ form > button {
 }
 
 .info-box {
-  display: none;
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -1458,4 +1461,8 @@ body.dark-mode .form .center{
 body.dark-mode .form .center input[type="text"], body.dark-{
   background: var(--dark-bg-color);
   color: var(--main-color);
+}
+
+.info-box ol {
+  padding: 20px;
 }

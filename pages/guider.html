@@ -53,16 +53,23 @@
         <div class="title">
             <div class="meh">
                 <p> Guider.io is an interface which guides you about how to get better in a subject and how the subject is gonna help in the real world scenarios (basically how much does the subject related job pays you and skills required to get the job) There are also few course links provided for each subject why? section, to work on the subject and score better. Kinda reality check lol ;)!!</p><br>
-                <p>Currently Available Subjects:  FSD (3 Credits) ,DS (4 Credits) ,DLD (4 Credits) ,DMGT (3 Credits) ,TNT (3 Credits) ,JAVA (2 Credits) ,LINUX (2 Credits) (The subjects are of 2nd year only)</li>
-                </p>
             </div><br>
             <img id="floater" src="../imgs/guider.png" alt="img" class="img floater">
             <br> <br>
         </div>
         <div class="form">
-            <div id="suggestionsBox" class="info-box">Enter marks for more info</div>
+            <div id="suggestionsBox" class="info-box"><p>List of currently Available Subjects: 
+                <ol>
+                    <li>FSD (3 Credits)</li>
+                    <li>DS (4 Credits)</li>
+                    <li>DLD (4 Credits)</li>
+                    <li>DMGT (3 Credits)</li>
+                    <li>TNT (3 Credits)</li>
+                    <li>JAVA (2 Credits)</li>
+                    <li>LINUX (2 Credits)</li>
+                </ol> ( <strong>Note:</strong> For now the subjects are of 2nd year only )</p></div>
             <form id="marksForm" onsubmit="calculatePercentage(event)">
-                <fieldset>
+                <fieldset>              
                 <h4>Enter your marks</h4><br>
                 <input type="text" id="subjectName" placeholder="Subject Name" required>
                 <input type="number" id="obtainedMarks" placeholder="Obtained Marks" required>
