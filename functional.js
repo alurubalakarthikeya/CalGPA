@@ -239,3 +239,24 @@ function calculatePercentage(event) {
       suggestionsBox.style.display = 'none';
   }
 }
+
+function createInputs(event) {
+  event.preventDefault();
+  const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
+  const dynamicForms = document.getElementById('dynamicForms');
+  dynamicForms.innerHTML = ''; 
+
+  for (let i = 1; i <= noOfSubjects; i++) {
+      const formBox = document.createElement('div');
+      formBox.className = 'form-box';
+      formBox.innerHTML = `
+          <fieldset>
+              <p class="hmm">Subject ${i}</p><br>
+              <input type="text" placeholder="Subject Name" required>
+              <input type="number" placeholder="No.of Credits" required>
+              <input type="number" placeholder="CIA Marks" required>
+          </fieldset>
+      `;
+      dynamicForms.appendChild(formBox);
+  }
+}

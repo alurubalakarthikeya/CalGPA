@@ -60,21 +60,20 @@
             <br> <br>
         </div>
         <div class="form">
-            <div id="infoBox" class="info-box"><p>Instructions: <br>Step-1: Enter number of credited subjects you have<br> Step-2: Then you'll find new n boxes (for n subjects) fill the info <br> Step-3: You're almost done choose your options based on questions <br> Step-4: There you go your estimation is done!</p></div>
-            <form id="marksForm" onsubmit="calculatePercentage(event)">
+            <div id="infoBox" class="info-box"><p><strong>Instructions:</strong> <br> <br>Step-1: Enter number of credited subjects you have<br> Step-2: Then you'll find new n boxes (for n subjects) fill the info <br> Step-3: You're almost done choose your options based on questions <br> Step-4: There you go your estimation is done!</p></div>
+            <form action="">
                 <fieldset>
-                <h4>Enter your marks</h4><br>
-                <input type="text" id="subjectName" placeholder="Subject Name" required>
-                <input type="number" id="obtainedMarks" placeholder="No.of Credits" required max="5">
-                <input type="number" id="totalMarks" placeholder="CIA Marks" required>
-                <input type="text" id="percentage" placeholder="Percentage" readonly>
-                <button type="submit" class="button2">Submit</button>
-            </fieldset>
+                    <p class="hmm">Enter the Subjects</p> <br>
+                    <input type="number" id="noOfSubjects" placeholder="No. of Subjects" required>
+                    <button onclick="createInputs(event)" class="button2">Submit</button>
+                </fieldset>
             </form>
-            <div id="infoBox" class="info-box"></div>
+            <div id="infoBox" class="info-box"><strong>Note:</strong> This tracker is just to bring awareness among students of how they can plan and score better by analyzing with their </div>
+        </div>
+        <div class="form">
+            <div id="dynamicForms" class="forms"></div>
         </div>
     </div>
-
     <div class="footer-section">
         <div class="boxs">
             <div class="box">

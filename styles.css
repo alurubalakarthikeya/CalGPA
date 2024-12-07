@@ -1466,3 +1466,20 @@ body.dark-mode .form .center input[type="text"], body.dark-{
 .info-box ol {
   padding: 20px;
 }
+
+.hmm {
+  color: var(--bg-color);
+  font-weight: 500;
+}
+
+body.dark-mode .hmm{
+  color: var(--dark-bg-color);
+}
+
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+
