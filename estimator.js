@@ -14,6 +14,6 @@ net.train(data, {
     logPeriod: 100,
     learningRate: 0.3,
 });
-const newStudent = { subject1: 80, subject2: 85, subject3: 78, subject4: 95, subject5: 90, subject6: 88, subject7: 85 };
-const predictedGPA = net.run(newStudent);
+const input = { subject1: 80, subject2: 85, subject3: 78, subject4: 95, subject5: 90, subject6: 88, subject7: 85 };
+const predictedGPA = net.run(input);
 console.log(`Predicted GPA: ${predictedGPA}`);
