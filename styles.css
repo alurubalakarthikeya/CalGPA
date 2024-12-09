@@ -266,6 +266,10 @@ body.dark-mode .response > input[type="radio"]:checked::before {
   transform: translate(-50%, -50%);
 }
 
+body.dark-mode .response > label {
+  color: var(--dark-bg-color);
+}
+
 *{
     margin: 0;
     padding: 0;

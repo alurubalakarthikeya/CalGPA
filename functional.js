@@ -245,24 +245,77 @@ function createInputs(event) {
   const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
   const dynamicForms = document.getElementById('dynamicForms');
   dynamicForms.innerHTML = ''; 
-
   for (let i = 1; i <= noOfSubjects; i++) {
       const formBox = document.createElement('div');
       formBox.className = 'form-box';
       formBox.innerHTML = `
+      <form class="subject-form">
           <fieldset>
               <p class="hmm">Subject ${i}</p><br>
               <input type="text" placeholder="Subject Name" required>
               <input type="number" placeholder="No.of Credits" required>
-              <input type="number" placeholder="CIA Marks" required>
+              <input type="number" placeholder="CIA Marks" required><br><br>
               <label for="seePred" class="hmm">How much you think you can score in SEE?</label><br><br>
               <div class="response">
-              <input type="radio" name = "seePred" value = "10-20" class="hmm" required> 10-20<br><br>
-              <input type="radio" name = "seePred" value = "20-30" class="hmm" required> 20-30<br><br>
-              <input type="radio" name = "seePred" value = "30-40" class="hmm" required> 30-40<br><br>
+              <input type="radio" name = "seePred" value = "19" class="hmm" required> <label for="seePred">10-20</label> <br><br>
+              <input type="radio" name = "seePred" value = "27" class="hmm" required> <label for="seePred">20-30</label> <br><br>
+              <input type="radio" name = "seePred" value = "35" class="hmm" required> <label for="seePred">30-40</label> <br><br>
               </div>
           </fieldset>
+      </form>
       `;
       dynamicForms.appendChild(formBox);
   }
 }
+
+function createInputs(event) {
+  event.preventDefault();
+  const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
+  const dynamicForms = document.getElementById('dynamicForms');
+  dynamicForms.innerHTML = ''; 
+  for (let i = 1; i <= noOfSubjects; i++) {
+      const formBox = document.createElement('div');
+      formBox.className = 'form-box';
+      formBox.innerHTML = `
+      <form class="subject-form">
+          <fieldset>
+              <p class="hmm">Subject ${i}</p><br>
+              <input type="text" placeholder="Subject Name" required>
+              <input type="number" placeholder="No.of Credits" required>
+              <input type="number" placeholder="CIA Marks" required><br><br>
+              <label for="seePred" class="hmm">How much you think you can score in SEE?</label><br><br>
+              <div class="response">
+              <input type="radio" name="seePred${i}" value="19" class="hmm" required> <label for="seePred">10-20</label> <br><br>
+              <input type="radio" name="seePred${i}" value="27" class="hmm" required> <label for="seePred">20-30</label> <br><br>
+              <input type="radio" name="seePred${i}" value="35" class="hmm" required> <label for="seePred">30-40</label> <br><br>
+              </div>
+          </fieldset>
+      </form>
+      `;
+      dynamicForms.appendChild(formBox);
+  }
+}
+
+function checkInputsAndSubmit() {
+  const forms = document.querySelectorAll('.subject-form');
+  let allFilled = true;
+
+  forms.forEach(form => {
+      const inputs = form.querySelectorAll('input[required]');
+      inputs.forEach(input => {
+          if (!input.value || (input.type === 'radio' && !form.querySelector(`input[name="${input.name}"]:checked`))) {
+              allFilled = false;
+              console.log(`Missing input: ${input.name}`);
+          }
+      });
+  });
+
+  if (allFilled) {
+      // Proceed further
+      console.log('All inputs are filled. Proceeding further...');
+  } else {
+      alert('Please fill in all required input areas.');
+  }
+}
+
+document.getElementById('submitButton').addEventListener('click', checkInputsAndSubmit);
