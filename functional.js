@@ -249,73 +249,104 @@ function createInputs(event) {
       const formBox = document.createElement('div');
       formBox.className = 'form-box';
       formBox.innerHTML = `
-      <form class="subject-form">
+      <form class="subject-form" id="subjectForm${i}">
           <fieldset>
               <p class="hmm">Subject ${i}</p><br>
-              <input type="text" placeholder="Subject Name" required>
-              <input type="number" placeholder="No.of Credits" required>
-              <input type="number" placeholder="CIA Marks" required><br><br>
-              <label for="seePred" class="hmm">How much you think you can score in SEE?</label><br><br>
+              <input type="text" id="subjectName${i}" placeholder="Subject Name" required>
+              <input type="number" id="creds${i}" placeholder="No.of Credits" required>
+              <input type="number" id="internal${i}" placeholder="CIA Marks" required><br><br>
+              <label for="seePred${i}" class="hmm">How much you think you can score in SEE?</label><br><br>
               <div class="response">
-              <input type="radio" name = "seePred" value = "19" class="hmm" required> <label for="seePred">10-20</label> <br><br>
-              <input type="radio" name = "seePred" value = "27" class="hmm" required> <label for="seePred">20-30</label> <br><br>
-              <input type="radio" name = "seePred" value = "35" class="hmm" required> <label for="seePred">30-40</label> <br><br>
+              <input type="radio" name="seePred${i}" value="19" class="hmm" required> <label for="seePred${i}">10-20</label> <br><br>
+              <input type="radio" name="seePred${i}" value="27" class="hmm" required> <label for="seePred${i}">20-30</label> <br><br>
+              <input type="radio" name="seePred${i}" value="35" class="hmm" required> <label for="seePred${i}">30-40</label> <br><br>
               </div>
           </fieldset>
       </form>
       `;
       dynamicForms.appendChild(formBox);
   }
+  addInputListeners();
 }
 
-function createInputs(event) {
-  event.preventDefault();
-  const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
-  const dynamicForms = document.getElementById('dynamicForms');
-  dynamicForms.innerHTML = ''; 
-  for (let i = 1; i <= noOfSubjects; i++) {
-      const formBox = document.createElement('div');
-      formBox.className = 'form-box';
-      formBox.innerHTML = `
-      <form class="subject-form">
-          <fieldset>
-              <p class="hmm">Subject ${i}</p><br>
-              <input type="text" placeholder="Subject Name" required>
-              <input type="number" placeholder="No.of Credits" required>
-              <input type="number" placeholder="CIA Marks" required><br><br>
-              <label for="seePred" class="hmm">How much you think you can score in SEE?</label><br><br>
-              <div class="response">
-              <input type="radio" name="seePred${i}" value="19" class="hmm" required> <label for="seePred">10-20</label> <br><br>
-              <input type="radio" name="seePred${i}" value="27" class="hmm" required> <label for="seePred">20-30</label> <br><br>
-              <input type="radio" name="seePred${i}" value="35" class="hmm" required> <label for="seePred">30-40</label> <br><br>
-              </div>
-          </fieldset>
-      </form>
-      `;
-      dynamicForms.appendChild(formBox);
-  }
-}
-
-function checkInputsAndSubmit() {
+function addInputListeners() {
   const forms = document.querySelectorAll('.subject-form');
-  let allFilled = true;
-
   forms.forEach(form => {
       const inputs = form.querySelectorAll('input[required]');
       inputs.forEach(input => {
-          if (!input.value || (input.type === 'radio' && !form.querySelector(`input[name="${input.name}"]:checked`))) {
-              allFilled = false;
-              console.log(`Missing input: ${input.name}`);
-          }
+          input.addEventListener('input', () => {
+              if (input.type === 'radio') {
+                  const radioGroup = form.querySelectorAll(`input[name="${input.name}"]`);
+                  radioGroup.forEach(radio => {
+                      if (radio.checked) {
+                          radio.parentElement.style.backgroundColor = 'var(--main-color)';
+                      } else {
+                          radio.parentElement.style.backgroundColor = '';
+                      }
+                  });
+              } else {
+                  if (input.value) {
+                      input.style.backgroundColor = 'var(--main-color)';
+                  } else {
+                      input.style.backgroundColor = '';
+                  }
+              }
+          });
       });
   });
-
-  if (allFilled) {
-      // Proceed further
-      console.log('All inputs are filled. Proceeding further...');
-  } else {
-      alert('Please fill in all required input areas.');
-  }
 }
 
-document.getElementById('submitButton').addEventListener('click', checkInputsAndSubmit);
+function calculateGrade(internal, see) {
+  const totalMarks = internal + see;
+  const percentage = (totalMarks / 100) * 100;
+
+  let grade;
+  switch (true) {
+      case (percentage >= 90 && percentage <= 100):
+          grade = 10;
+          break;
+      case (percentage >= 80 && percentage < 90):
+          grade = 9;
+          break;
+      case (percentage >= 70 && percentage < 80):
+          grade = 8;
+          break;
+      case (percentage >= 60 && percentage < 70):
+          grade = 7;
+          break;
+      case (percentage >= 50 && percentage < 60):
+          grade = 6;
+          break;
+      default:
+          grade = 0; // Fail
+  }
+  return grade;
+}
+
+function processForms() {
+  const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
+  let totalCredits = 0;
+  let totalGradePoints = 0;
+
+  for (let i = 1; i <= noOfSubjects; i++) {
+      const internal = parseInt(document.getElementById(`internal${i}`).value);
+      const see = parseInt(document.querySelector(`input[name="seePred${i}"]:checked`).value);
+      const credits = parseInt(document.getElementById(`creds${i}`).value);
+
+      const grade = calculateGrade(internal, see);
+      const gradePoints = grade * credits;
+
+      totalCredits += credits;
+      totalGradePoints += gradePoints;
+
+      console.log(`Subject ${i}: Grade = ${grade}, Credits = ${credits}, Grade Points = ${gradePoints}`);
+  }
+
+  const gpa = totalGradePoints / totalCredits;
+  document.getElementById("dynamicForms").innerHTML = `Total GPA: ${gpa.toFixed(2)}`;
+}
+
+document.getElementById('submitButton').addEventListener('click', (event) => {
+  event.preventDefault();
+  processForms();
+});
