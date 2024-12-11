@@ -27,6 +27,7 @@ function applyDarkModePreference() {
 window.addEventListener('load', function() {
   applyDarkModePreference();
 });
+
 document.getElementById('button1').addEventListener('mouseover', function() {
   document.getElementById('button2').classList.add('hovered');
 });
@@ -93,27 +94,6 @@ function toggleAnswer(element) {
   } else {
       qaItem.classList.add('active');
   }
-}
-
-function showInfo(option) {
-  const infoBox = document.getElementById('info-box');
-  const infoText = document.getElementById('info-text');
-  let info = '';
-  switch (option) {
-      case 'gpa9':
-          info = 'To achieve a GPA > 9, focus on understanding core concepts, attend all classes, participate in discussions, complete assignments on time, and prepare thoroughly for exams.';
-          break;
-      case 'gpa8':
-          info = 'To achieve a GPA > 8, maintain consistent study habits, review your notes regularly, seek help when needed, and ensure you perform well in both assignments and exams.';
-          break;
-      case 'gpa65':
-          info = 'To achieve a GPA > 6.5, prioritize your studies, manage your time effectively, focus on key subjects, and make sure to complete all assignments and prepare for exams.';
-          break;
-      default:
-          info = '';
-  }
-  infoText.textContent = info;
-  infoBox.style.display = 'block';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -220,11 +200,9 @@ function createInputs(event) {
               <input type="number" id="creds${i}" placeholder="No.of Credits" required>
               <input type="number" id="internal${i}" placeholder="CIA Marks" required><br><br>
               <label for="seePred${i}" class="hmm">How much you think you can score in SEE?</label><br><br>
-              <div class="response">
-              <input type="radio" name="seePred${i}" value="19" class="hmm" required> <label for="seePred${i}">10-20</label> <br><br>
-              <input type="radio" name="seePred${i}" value="27" class="hmm" required> <label for="seePred${i}">20-30</label> <br><br>
-              <input type="radio" name="seePred${i}" value="35" class="hmm" required> <label for="seePred${i}">30-40</label> <br><br>
-              </div>
+              <input type="number" id="predSEE${i}" placeholder="Predicted SEE" required>
+              <input type="text" id="grade${i}" placeholder="Grade" readonly>
+              <button type="button" onclick="calculatePercentage(${i})">Calculate</button>
           </fieldset>
       </form>
       `;
@@ -282,35 +260,48 @@ function calculateGrade(internal, see) {
           grade = 6;
           break;
       default:
-          grade = 0; // Fail
+          grade = 0; 
   }
   return grade;
 }
 
-function processForms() {
+function calculatePercentage(i) {
+  const internal = parseInt(document.getElementById(`internal${i}`).value);
+  const see = parseInt(document.getElementById(`predSEE${i}`).value);
+  const gradeInput = document.getElementById(`grade${i}`);
+
+  if (!isNaN(internal) && !isNaN(see)) {
+      const grade = calculateGrade(internal, see);
+      gradeInput.value = grade;
+  } else {
+      gradeInput.value = 'Invalid input';
+  }
+}
+
+function displayFinalGPA() {
   const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
   let totalCredits = 0;
   let totalGradePoints = 0;
 
   for (let i = 1; i <= noOfSubjects; i++) {
-      const internal = parseInt(document.getElementById(`internal${i}`).value);
-      const see = parseInt(document.querySelector(`input[name="seePred${i}"]:checked`).value);
       const credits = parseInt(document.getElementById(`creds${i}`).value);
+      const grade = parseInt(document.getElementById(`grade${i}`).value);
 
-      const grade = calculateGrade(internal, see);
-      const gradePoints = grade * credits;
-
-      totalCredits += credits;
-      totalGradePoints += gradePoints;
-
-      console.log(`Subject ${i}: Grade = ${grade}, Credits = ${credits}, Grade Points = ${gradePoints}`);
+      if (!isNaN(credits) && !isNaN(grade)) {
+          const gradePoints = grade * credits;
+          totalCredits += credits;
+          totalGradePoints += gradePoints;
+      } else {
+          alert(`Please calculate the grade for Subject ${i} before submitting.`);
+          return;
+      }
   }
 
   const gpa = totalGradePoints / totalCredits;
-  document.getElementById("dynamicForms").innerHTML = `Total GPA: ${gpa.toFixed(2)}`;
+  document.getElementById("dynamicForms").innerHTML += `<h3>Total GPA: ${gpa.toFixed(2)}</h3>`;
 }
 
 document.getElementById('submitButton').addEventListener('click', (event) => {
   event.preventDefault();
-  processForms();
+  displayFinalGPA();
 });
