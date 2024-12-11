@@ -23,6 +23,10 @@ function applyDarkModePreference() {
       document.body.classList.remove('dark-mode');
   }
 }
+
+window.addEventListener('load', function() {
+  applyDarkModePreference();
+});
 document.getElementById('button1').addEventListener('mouseover', function() {
   document.getElementById('button2').classList.add('hovered');
 });
