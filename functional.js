@@ -23,46 +23,6 @@ function applyDarkModePreference() {
       document.body.classList.remove('dark-mode');
   }
 }
-
-function showLoader() {
-  const loader = document.getElementById('loader');
-  loader.classList.add('show');
-  startLoaderAnimation();
-}
-
-function hideLoader() {
-  const loader = document.getElementById('loader');
-  loader.classList.remove('show');
-  stopLoaderAnimation();
-}
-
-let loaderInterval;
-function startLoaderAnimation() {
-  const grades = ['A+', 'A', 'B', 'B+', 'C', 'D', 'F'];
-  let gradeIndex = 0;
-  loaderInterval = setInterval(() => {
-      const loaderText = document.getElementById('loader-text');
-      loaderText.textContent = grades[gradeIndex];
-      gradeIndex = (gradeIndex + 1) % grades.length;
-  }, 1000);
-}
-
-function stopLoaderAnimation() {
-  clearInterval(loaderInterval);
-}
-
-window.addEventListener('beforeunload', function() {
-  document.body.classList.add('no-transition');
-  showLoader();
-});
-
-window.addEventListener('load', function() {
-  document.body.classList.remove('no-transition');
-  hideLoader();
-  applyDarkModePreference();
-  updateProgress();
-});
-
 document.getElementById('button1').addEventListener('mouseover', function() {
   document.getElementById('button2').classList.add('hovered');
 });

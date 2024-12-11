@@ -397,6 +397,11 @@ sup> i {
     color: var(--main-color);
     margin: 120px 50px 50px 50px;
   }
+
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+  }
   .desktop-socials {
     position: fixed;
     right: -10px;
@@ -439,7 +444,7 @@ sup> i {
     right: 0px;
     top: 67%;
     transform: rotate(90deg);
-    transform-origin: right top; /* Adjust the origin point if needed */
+    transform-origin: right top; 
     display: inline-block; 
     font-size: 3vh;
     background-color: var(--main-color);
@@ -835,7 +840,7 @@ h1:hover sup i {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .card > button {
