@@ -1302,9 +1302,9 @@ body.dark-mode .info-box > a {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-color); 
+  background: var(--main-color); 
   border-radius: 13px;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--dark-main-color);
   box-shadow: 8px 0px 14px rgba(10, 125, 115, 0.95);
 }
 
@@ -1491,4 +1491,3 @@ body.dark-mode .hmm{
   gap: 30px;
   justify-content: space-evenly;
 }
-

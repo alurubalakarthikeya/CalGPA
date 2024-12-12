@@ -64,14 +64,15 @@
                 <fieldset>
                     <p class="hmm">Enter the Subjects</p> <br>
                     <input type="number" id="noOfSubjects" placeholder="No. of Subjects" required>
-                    <button onclick="createInputs(event)" class="button2">Submit</button>
+                    <button onclick="createInputs(event)" class="button3">Submit</button>
                 </fieldset>
             </form>
             <div id="infoBox" class="info-box"><strong>Note:</strong> This tracker is just to bring awareness among students of how they can plan and score better by analyzing with their inputs and grades</div>
         </div><br>
         <div class="form">
             <div id="dynamicForms" class="forms">Input forms will appear here</div>
-        </div>
+        </div><br>
+        <div id="dynamicGPA" class="form"></div>
         <center><button id="submitButton" class="button3" onclick="displayFinalGPA()">Submit All</button></center>
         <div id="successMessage" class="info-box" style="display: none;"><strong>All inputs are filled. You can proceed further!</strong></div>
     </div>
