@@ -317,6 +317,35 @@ document.getElementById('submitButton').addEventListener('click', (event) => {
   displayFinalGPA();
 });
 
-function AttendanceCal(){
-  
+function attendanceCal(){
+  const form = document.getElementById('attendance-form');
+  form.innerHTML = `
+  <form action="">
+                <fieldset>
+                <input type="number" id="reqPercentage" placeholder="Required Percentage" required>
+                <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+                <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+                <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+                <button onlick="createInputs(event)" class="button3">Submit</button>
+                </fieldset>
+  </form>
+  `;
+    
+}
+
+function attendanceGuider(){
+  const form = document.getElementById('attendance-form');
+  form.innerHTML = `
+  <form action="">
+                <fieldset>
+                    <p class="hmm">Enter number of days</p> <br>
+                    <input type="number" id="noOfDays" placeholder="No. of days" required>
+                    <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+                    <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+                    <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+                    <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
+                    <button onclick="createInputs(event)" class="button3">Submit</button>
+                </fieldset>
+            </form>
+  `;  
 }

@@ -57,18 +57,10 @@
             <img id="floater" src="../imgs/tracker.png" alt="img" class="img floater">
             <br> <br>
         </div>
-        <div class="form">
-            <form action="">
-                <fieldset>
-                    <p class="hmm">Enter number of days</p> <br>
-                    <input type="number" id="noOfDays" placeholder="No. of days" required>
-                    <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
-                    <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
-                    <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
-                    <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
-                    <button onclick="createInputs(event)" class="button3">Submit</button>
-                </fieldset>
-            </form>
+        <div id="attendance-form" class="form">
+            Choose an Attendance tool to continue:
+            <button onclick="attendanceCal()">Calculator</button>
+            <button onclick="attendanceGuider()">Tracker</button>
         </div><br>
     </div>
     <div class="footer-section">
