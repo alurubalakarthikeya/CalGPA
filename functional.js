@@ -316,3 +316,7 @@ document.getElementById('submitButton').addEventListener('click', (event) => {
   event.preventDefault();
   displayFinalGPA();
 });
+
+function AttendanceCal(){
+  
+}

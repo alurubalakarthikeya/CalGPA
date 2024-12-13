@@ -52,28 +52,24 @@
         <h1>Welcome to Attendance.io</h1> <br>
         <div class="title">
             <div class="meh">
-                <p>Attendance.io is a tool made by our CalGPA team which focuses on making attendance calculations students that even a single mark can change their grade by minus one. Using ths tool, students can now estimate their predicted GPA based on their inputs and then creating goals for the SEE and CIA Marks in the forms below</p>
+                <p>Attendance.io is a tool made by our CalGPA team which focuses on making attendance calculations easy for students especially for the once who want to take a long leave and are worried about the minimum attendance requirement for the mid semester exams</p>
             </div><br>
             <img id="floater" src="../imgs/tracker.png" alt="img" class="img floater">
             <br> <br>
         </div>
         <div class="form">
-            <div id="infoBox" class="info-box"><p><strong>Instructions:</strong> <br> <br>Step-1: Enter number of credited subjects you have<br> Step-2: Then you'll find new n boxes (for n subjects) fill the info <br> Step-3: You're almost done choose your options based on questions <br> Step-4: There you go your estimation is done!</p></div>
             <form action="">
                 <fieldset>
-                    <p class="hmm">Enter the Subjects</p> <br>
-                    <input type="number" id="noOfSubjects" placeholder="No. of Subjects" required>
+                    <p class="hmm">Enter number of days</p> <br>
+                    <input type="number" id="noOfDays" placeholder="No. of days" required>
+                    <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+                    <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+                    <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+                    <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
                     <button onclick="createInputs(event)" class="button3">Submit</button>
                 </fieldset>
             </form>
-            <div id="infoBox" class="info-box"><strong>Note:</strong> This tracker is just to bring awareness among students of how they can plan and score better by analyzing with their inputs and grades</div>
         </div><br>
-        <div class="form">
-            <div id="dynamicForms" class="forms">Input forms will appear here</div>
-        </div><br>
-        <div id="dynamicGPA" class="form"></div>
-        <center><button id="submitButton" class="button3" onclick="displayFinalGPA()">Submit All</button></center>
-        <div id="successMessage" class="info-box" style="display: none;"><strong>All inputs are filled. You can proceed further!</strong></div>
     </div>
     <div class="footer-section">
         <div class="boxs">
