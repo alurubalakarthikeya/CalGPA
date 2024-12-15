@@ -332,20 +332,103 @@ function attendanceCal(){
   `;
     
 }
-
-function attendanceGuider(){
+function attendanceGuider() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
-  <form action="">
-                <fieldset>
-                    <p class="hmm">Enter number of days</p> <br>
-                    <input type="number" id="noOfDays" placeholder="No. of days" required>
-                    <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
-                    <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
-                    <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
-                    <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
-                    <button onclick="createInputs(event)" class="button3">Submit</button>
-                </fieldset>
-            </form>
-  `;  
+  <form id="attendanceForm">
+    <fieldset>
+      <div>
+        <p>Enter the details:</p><br>
+        <input type="number" id="requiredPercentage" placeholder="Required Percentage" required>
+        <p class="hmm">Choose the days you will be absent: </p> <br>
+        <input type="checkbox" name="monday" id="monday"> Monday <br><br>
+        <input type="checkbox" name="tuesday" id="tuesday"> Tuesday <br><br>
+        <input type="checkbox" name="wednesday" id="wednesday"> Wednesday <br><br>
+        <input type="checkbox" name="thursday" id="thursday"> Thursday <br><br>
+        <input type="checkbox" name="friday" id="friday"> Friday <br><br>
+        <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+        <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+        <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+        <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
+        <button type="submit" class="button3">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+  `;
+
+  document.getElementById('attendanceForm').addEventListener('submit', calculateClass);
 }
+
+function attendanceGuider() {
+  const form = document.getElementById('attendance-form');
+  form.innerHTML = `
+  <form id="attendanceForm">
+    <fieldset>
+      <div>
+        <p>Enter the details:</p><br>
+        <input type="number" id="requiredPercentage" placeholder="Required Percentage" required>
+        <p class="hmm">Choose the days you will be absent: </p> <br>
+        <input type="checkbox" name="monday" id="monday"> Monday <br><br>
+        <input type="checkbox" name="tuesday" id="tuesday"> Tuesday <br><br>
+        <input type="checkbox" name="wednesday" id="wednesday"> Wednesday <br><br>
+        <input type="checkbox" name="thursday" id="thursday"> Thursday <br><br>
+        <input type="checkbox" name="friday" id="friday"> Friday <br><br>
+        <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+        <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+        <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+        <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
+        <button type="submit" class="button3">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+  <div id="results" class="results"></div> <!-- Placeholder for results -->
+  `;
+
+  document.getElementById('attendanceForm').addEventListener('submit', calculateClass);
+}
+
+function calculateClass(event) {
+  event.preventDefault();
+  const requiredPercentage = parseFloat(document.getElementById('requiredPercentage').value);
+  const noOfAttended = parseInt(document.getElementById('noOfAttended').value);
+  const totalNoOfClasses = parseInt(document.getElementById('totalNoOfClasses').value);
+  const days = {
+    monday: 5,
+    tuesday: 6,
+    wednesday: 3,
+    thursday: 3,
+    friday: 3
+  };
+  let totalClassesToMiss = 0;
+  for (const day in days) {
+    if (document.getElementById(day).checked) {
+      totalClassesToMiss += days[day];
+    }
+  }
+  const futureTotalClasses = totalNoOfClasses + totalClassesToMiss;
+  const futureAttendedClasses = noOfAttended;
+  const futurePercentage = (futureAttendedClasses / futureTotalClasses) * 100;
+  document.getElementById('attendancePercentage').value = ((noOfAttended / totalNoOfClasses) * 100).toFixed(2);
+  document.getElementById('futurePercentage').value = futurePercentage.toFixed(2);
+
+  const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100) - futureAttendedClasses);
+  let hardnessLevel = '';
+
+  if (requiredClassesToAttend > 20) {
+    hardnessLevel = 'Hard';
+  } else if (requiredClassesToAttend > 10) {
+    hardnessLevel = 'Medium';
+  } else {
+    hardnessLevel = 'Easy';
+  }
+
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = `
+    <p>Current Attendance Percentage: ${((noOfAttended / totalNoOfClasses) * 100).toFixed(2)}%</p>
+    <p>Future Attendance Percentage: ${futurePercentage.toFixed(2)}%</p>
+    <p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes.</p>
+    <p>Possibility to attain required percentage: ${hardnessLevel}</p>
+  `;
+}
+
+attendanceGuider();
