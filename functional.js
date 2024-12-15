@@ -330,58 +330,40 @@ function attendanceCal(){
                 </fieldset>
   </form>
   `;
-    
-}
-function attendanceGuider() {
-  const form = document.getElementById('attendance-form');
-  form.innerHTML = `
-  <form id="attendanceForm">
-    <fieldset>
-      <div>
-        <p>Enter the details:</p><br>
-        <input type="number" id="requiredPercentage" placeholder="Required Percentage" required>
-        <p class="hmm">Choose the days you will be absent: </p> <br>
-        <input type="checkbox" name="monday" id="monday"> Monday <br><br>
-        <input type="checkbox" name="tuesday" id="tuesday"> Tuesday <br><br>
-        <input type="checkbox" name="wednesday" id="wednesday"> Wednesday <br><br>
-        <input type="checkbox" name="thursday" id="thursday"> Thursday <br><br>
-        <input type="checkbox" name="friday" id="friday"> Friday <br><br>
-        <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
-        <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
-        <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
-        <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
-        <button type="submit" class="button3">Submit</button>
-      </div>
-    </fieldset>
-  </form>
-  `;
-
-  document.getElementById('attendanceForm').addEventListener('submit', calculateClass);
 }
 
 function attendanceGuider() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
-  <form id="attendanceForm">
-    <fieldset>
-      <div>
+  <div class="form-section">
+    <form id="requiredPercentageForm">
+      <fieldset>
         <p>Enter the details:</p><br>
         <input type="number" id="requiredPercentage" placeholder="Required Percentage" required>
         <p class="hmm">Choose the days you will be absent: </p> <br>
-        <input type="checkbox" name="monday" id="monday"> Monday <br><br>
-        <input type="checkbox" name="tuesday" id="tuesday"> Tuesday <br><br>
-        <input type="checkbox" name="wednesday" id="wednesday"> Wednesday <br><br>
-        <input type="checkbox" name="thursday" id="thursday"> Thursday <br><br>
-        <input type="checkbox" name="friday" id="friday"> Friday <br><br>
+        <div class="days">
+          <input type="checkbox" name="monday" id="monday"> Monday <br><br>
+          <input type="checkbox" name="tuesday" id="tuesday"> Tuesday <br><br>
+          <input type="checkbox" name="wednesday" id="wednesday"> Wednesday <br><br>
+          <input type="checkbox" name="thursday" id="thursday"> Thursday <br><br>
+          <input type="checkbox" name="friday" id="friday"> Friday 
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="form-section">
+    <form id="attendanceForm">
+      <fieldset>
+        <p>Enter the details:</p><br>
         <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
         <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
         <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
         <input type="number" id="futurePercentage" placeholder="Future Percentage" readonly>
         <button type="submit" class="button3">Submit</button>
-      </div>
-    </fieldset>
-  </form>
-  <div id="results" class="results"></div> <!-- Placeholder for results -->
+      </fieldset>
+    </form>
+  </div>
+  <div id="results" class="info-box results">The Results will appear here once you enter all the required data into the form</div> 
   `;
 
   document.getElementById('attendanceForm').addEventListener('submit', calculateClass);
@@ -413,22 +395,27 @@ function calculateClass(event) {
 
   const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100) - futureAttendedClasses);
   let hardnessLevel = '';
+  let hardnessColor = '';
 
   if (requiredClassesToAttend > 20) {
-    hardnessLevel = 'Hard';
+    hardnessLevel = 'Kinda Hard to get that percentage';
+    hardnessColor = 'red';
   } else if (requiredClassesToAttend > 10) {
-    hardnessLevel = 'Medium';
+    hardnessLevel = 'Try to attend every single class without fail';
+    hardnessColor = 'orange';
   } else {
-    hardnessLevel = 'Easy';
+    hardnessLevel = 'You can easily get that percentage';
+    hardnessColor = 'green';
   }
-
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = `
-    <p>Current Attendance Percentage: ${((noOfAttended / totalNoOfClasses) * 100).toFixed(2)}%</p>
-    <p>Future Attendance Percentage: ${futurePercentage.toFixed(2)}%</p>
-    <p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes.</p>
-    <p>Possibility to attain required percentage: ${hardnessLevel}</p>
+    <p>Current Attendance Percentage: ${((noOfAttended / totalNoOfClasses) * 100).toFixed(2)}%</p><br>
+    <p>Future Attendance Percentage: ${futurePercentage.toFixed(2)}%</p><br>
+    <p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes.</p><br>
+    <p>Possibility to attain required percentage:<br><br> <span id="hardnessLevel">${hardnessLevel}</span></p><br>
   `;
-}
-
-attendanceGuider();
+  
+  document.getElementById('hardnessLevel').style.color = hardnessColor;
+  }
+  
+  attendanceGuider();

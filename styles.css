@@ -1491,3 +1491,9 @@ body.dark-mode .hmm{
   gap: 30px;
   justify-content: space-evenly;
 }
+.choose-option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: column;
+}

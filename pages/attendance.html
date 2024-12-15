@@ -52,18 +52,19 @@
         <h1>Welcome to Attendance.io</h1> <br>
         <div class="title">
             <div class="meh">
-                <p>Attendance.io is a tool made by our CalGPA team which focuses on making attendance calculations easy for students especially for the once who want to take a long leave and are worried about the minimum attendance requirement for the mid semester exams</p>
+                <p>Attendance.io is a tool which focuses on making attendance calculations easy for students especially for the once who want to take a long leave and are worried about the minimum attendance requirement for the mid semester exams, it provides insights like how many more classes the student should attend after the vacation and the posibility of reaching the required percentage</p>
             </div><br>
             <img id="floater" src="../imgs/travel.png" alt="img" class="img floater">
             <br> <br>
         </div>
         <div id="attendance-form" class="form">
-        Choose an Attendance tool to continue:
-        <div>
+        <div id="infoBox" class="info-box"><p><strong>Instructions:</strong> <br> <br>Step-1: Enter the required percentage which you want to maintain even after the leave<br> Step-2: Tick the days which you are plannning to take a leave <br>Step-3: Enter the number of classes you attended till date  <br> Step-4: Enter the total number of classes till date <br> Step-5: Press the submit button and you'll find current percentage and below that you'll find future percentage which is of after leave, and below the form you'll find a box which displays how many more classes you should attend if there's a shortage in your attendance after the leave.</p></div><br>
+        <div class="choose-option">
+            <h3>Choose an Attendance tool to continue: </h3>
             <button onclick="attendanceCal()" class="button3">Calculator</button>
             <button onclick="attendanceGuider()" class="button3">Suggestor</button>
-            <div id="infoBox" class="info-box"><strong>Note: </strong> Enter marks for more information related the particular subject and how it helps you in your daily life </div>
         </div>
+        <div id="infoBox" class="info-box"><strong>Note: </strong> Enter marks for more information related the particular subject and how it helps you in your daily life </div>
         </div><br>
     </div>
     <div class="footer-section">
