@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment.io | CalGPA</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../imgs/gpa-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-circle">
+            <span id="loader-text">A+</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <h1><a href="../index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+        <div class="menu" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <span class="options" id="options">
+            <ol>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="../pages/estimator.html"><li>Estimators</li></a>
+                <a href="../pages/todo.html"><li>To Do</li></a>
+                <a href="../pages/roadmap.html"><li>Roadmap</li></a>
+            </ol>
+        </span>
+        <div id="mySidenav" class="sidenav">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+            <a href="../index.html">Home</a>
+            <a href="../pages/estimator.html">Estimators</a>
+            <a href="../pages/todo.html">Todo</a>
+            <a href="../pages/roadmap.html">Roadmap</a>
+            <div class="info">
+                <span><a onclick="darkMode()" class="mode-change"><i class="fa-solid fa-moon"></i></a></span>
+                <a href="../index.html" class="logo-name small-text"><small>@CalGPA2024</small></a>
+            </div>
+            <a class="social-heading small-text"><small>devSocials</small></a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class="circle"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class="circle"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class="circle"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+    </nav><br>
+    <div class="mode">
+        <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+    </div>
+    <div class="main">
+        <h1>Welcome to Assessment.io</h1> <br>
+        <div class="title">
+            <div class="meh">
+                <p>Assessment.io is a tool which focuses on helping students pre-calculate their internal marks split-up (such as Mid-semester, assignments, lab exams and projects ) based on the user input.</p>
+            </div><br>
+            <img id="floater" src="../imgs/assessment.png" alt="img" class="img floater">
+            <br> <br>
+        </div>
+        <div class="form">
+            <div id="infoBox" class="info-box"><p><strong>Instructions:</strong> <br> <br>Step-1: Enter number of credited subjects (n) you have<br> Step-2: Then you'll find new n boxes (for n subjects) fill the info <br>Step-3: Enter the subject name, number of credits of the subject, obtained CIA Marks and predicted SEE Marks and based on all these info you will see your grade <br> Step-4: Enter the details for all the credited subjects you have <br> Step-5:After filling all the subjects info press the Submit all button and There you go your estimation is done!</p></div>
+            <form action="">
+                <fieldset>
+                    <p class="hmm">Enter the Subjects</p> <br>
+                    <input type="number" id="noOfSubjects" placeholder="No. of Subjects" required>
+                    <button onclick="createInputs(event)" class="button3">Submit</button>
+                </fieldset>
+            </form>
+            <div id="infoBox" class="info-box"><strong>Tip:</strong> Maintaining higher grades in high credit subjects is benificial for both career and maintianing GPA <br><br><strong>Note:</strong> This tracker is just to bring awareness among students of how they can plan and score better by analyzing with their inputs and grades</div>
+        </div><br>
+        <center><button id="submitButton" class="button3" onclick="displayFinalGPA()">Submit All</button></center>
+        <div id="successMessage" class="info-box" style="display: none;"><strong>All inputs are filled. You can proceed further!</strong></div>
+    </div>
+    <div class="footer-section">
+        <div class="boxs">
+            <div class="box">
+                <h1 class="footer-logo"><a href="index.html">CalGPA <sup><i class="fa-solid fa-graduation-cap"></i></sup></a></h1>
+            <p> @2024 All rights reserved.</p> 
+            </div>
+            <br>
+        </div>
+        <div class="quick-links">
+        <h3>Quick Links:</h3><br>
+        <a href="../index.html">Home <i class="fa-solid fa-house"></i></a>
+        <a href="../pages/estimator.html">Estimators <i class="fas fa-calculator"></i></a>
+        <a href="../pages/todo.html">To Do <i class="fas fa-tasks"></i></a>
+        <a href="../pages/roadmap.html">Roadmap <i class="fas fa-map-signs"></i> </a> 
+        </div>
+        <div class="floater">
+            <img src="../imgs/bottom.gif" alt="" class="img">
+        <p class="under">Life is like this if you're prepared</p> <br>
+        <center>Simply peaceful.</center>
+        </div>
+        <div class="social-link">
+            <h3>Developer Socials:</h3><br>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/bala-karthikeya-aluru/" target="_blank" class=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/alurubalakarthikeya" target="_blank" class=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/balakarthikeyaa" target="_blank" class=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <br> <br> <br>
+        </div>
+    </div> 
+    <script src="../functional.js"></script>
+</body>
+</html>
