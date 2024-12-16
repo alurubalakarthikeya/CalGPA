@@ -1497,3 +1497,80 @@ body.dark-mode .hmm{
   gap: 30px;
   flex-direction: column;
 }
+
+body.dark-mode .dark-text {
+  color: var(--dark-bg-color);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--dark-main-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+}
+
+body.dark-mode input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--dark-bg-color);
+  border-radius: 4px;
+  background-color: var(--dark-main-color);
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: #03dac6;
+  border-color: #03dac6;
+}
+
+body.dark-mode input[type="checkbox"]:checked + label::before {
+  background-color: var(--main-color);
+  border-color: var(--dark-main-color);
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--bg-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+body.dark-mode input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--dark-bg-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+body.dark-mode .days > label {
+  color: var(--dark-bg-color);
+}

@@ -338,15 +338,20 @@ function attendanceGuider() {
   <div class="form-section">
     <form id="requiredPercentageForm">
       <fieldset>
-        <p>Enter the details:</p><br>
+        <p class="dark-text">Enter the details:</p><br>
         <input type="number" id="requiredPercentage" placeholder="Required Percentage" required>
         <p class="hmm">Choose the days you will be absent: </p> <br>
         <div class="days">
-          <input type="checkbox" name="monday" id="monday"> Monday <br><br>
-          <input type="checkbox" name="tuesday" id="tuesday"> Tuesday <br><br>
-          <input type="checkbox" name="wednesday" id="wednesday"> Wednesday <br><br>
-          <input type="checkbox" name="thursday" id="thursday"> Thursday <br><br>
-          <input type="checkbox" name="friday" id="friday"> Friday 
+          <input type="checkbox" name="monday" id="monday">
+          <label for="monday">Monday</label><br><br>
+          <input type="checkbox" name="tuesday" id="tuesday">
+          <label for="tuesday">Tuesday</label><br><br>
+          <input type="checkbox" name="wednesday" id="wednesday">
+          <label for="wednesday">Wednesday</label><br><br>
+          <input type="checkbox" name="thursday" id="thursday">
+          <label for="thursday">Thursday</label><br><br>
+          <input type="checkbox" name="friday" id="friday">
+          <label for="friday">Friday</label><br><br>
         </div>
       </fieldset>
     </form>
@@ -354,7 +359,7 @@ function attendanceGuider() {
   <div class="form-section">
     <form id="attendanceForm">
       <fieldset>
-        <p>Enter the details:</p><br>
+        <p class="dark-text">Enter the details:</p><br>
         <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
         <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
         <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
