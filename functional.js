@@ -317,19 +317,26 @@ document.getElementById('submitButton').addEventListener('click', (event) => {
   displayFinalGPA();
 });
 
-function attendanceCal(){
+function attendanceCal() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
-  <form action="">
-                <fieldset>
-                <input type="number" id="reqPercentage" placeholder="Required Percentage" required>
-                <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
-                <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
-                <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
-                <button onlick="createInputs(event)" class="button3">Submit</button>
-                </fieldset>
+  <form id="attendanceForm">
+    <fieldset>
+      <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+      <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+      <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+      <button type="submit" class="button3">Submit</button>
+    </fieldset>
   </form>
   `;
+
+  document.getElementById('attendanceForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const numberOfAttended = document.getElementById('noOfAttended').value;
+    const totalNumberOfClasses = document.getElementById('totalNoOfClasses').value;
+    const percentage = (numberOfAttended / totalNumberOfClasses) * 100;
+    document.getElementById('attendancePercentage').value = percentage.toFixed(2);
+  });
 }
 
 function attendanceGuider() {
