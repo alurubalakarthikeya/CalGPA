@@ -102,17 +102,53 @@ function showInfo(gpa) {
   const infoText3 = document.getElementById('info-text3');
 
   if (gpa === 'gpa9') {
-    infoText1.textContent = 'Tip 1 for GPA > 9: Focus on understanding the core concepts deeply.';
-    infoText2.textContent = 'Tip 2 for GPA > 9: Practice regularly and solve previous year papers.';
-    infoText3.textContent = 'Tip 3 for GPA > 9: Participate in study groups and discussions.';
+    infoText1.innerHTML = `
+      <strong>Tip 1 for GPA > 9:</strong> Focus on understanding the core concepts deeply. 
+      Use resources like textbooks, online courses, and tutorials to strengthen your understanding. 
+      Participate in study groups and discussions to clarify doubts and gain new perspectives.
+    `;
+    infoText2.innerHTML = `
+      <strong>Tip 2 for GPA > 9:</strong> Practice regularly and solve previous year papers. 
+      Consistent practice helps in retaining information and improving problem-solving skills. 
+      Use platforms like Coursera, Khan Academy, and edX for additional practice and learning.
+    `;
+    infoText3.innerHTML = `
+      <strong>Tip 3 for GPA > 9:</strong> Manage your time effectively. 
+      Create a study schedule that allocates sufficient time for each subject. 
+      Avoid last-minute cramming by reviewing your notes regularly and staying on top of your assignments.
+    `;
   } else if (gpa === 'gpa8') {
-    infoText1.textContent = 'Tip 1 for GPA > 8: Manage your time effectively and prioritize your studies.';
-    infoText2.textContent = 'Tip 2 for GPA > 8: Take regular breaks to avoid burnout.';
-    infoText3.textContent = 'Tip 3 for GPA > 8: Seek help from professors and peers when needed.';
+    infoText1.innerHTML = `
+      <strong>Tip 1 for GPA > 8:</strong> Manage your time effectively and prioritize your studies. 
+      Use tools like planners and to-do lists to keep track of your tasks and deadlines. 
+      Break down your study sessions into manageable chunks to avoid burnout.
+    `;
+    infoText2.innerHTML = `
+      <strong>Tip 2 for GPA > 8:</strong> Take regular breaks to avoid burnout. 
+      Incorporate short breaks into your study sessions to rest and recharge. 
+      Use techniques like the Pomodoro Technique to maintain focus and productivity.
+    `;
+    infoText3.innerHTML = `
+      <strong>Tip 3 for GPA > 8:</strong> Seek help from professors and peers when needed. 
+      Don't hesitate to ask questions and seek clarification on topics you find challenging. 
+      Attend office hours, join study groups, and participate in class discussions to enhance your learning.
+    `;
   } else if (gpa === 'gpa65') {
-    infoText1.textContent = 'Tip 1 for GPA > 6.5: Attend all classes and take good notes.';
-    infoText2.textContent = 'Tip 2 for GPA > 6.5: Review your notes regularly and clarify doubts immediately.';
-    infoText3.textContent = 'Tip 3 for GPA > 6.5: Focus on assignments and projects to boost your grades.';
+    infoText1.innerHTML = `
+      <strong>Tip 1 for GPA > 6.5:</strong> Attend all classes and take good notes. 
+      Regular attendance helps you stay updated with the course material and understand the concepts better. 
+      Review your notes regularly to reinforce your learning and identify areas that need improvement.
+    `;
+    infoText2.innerHTML = `
+      <strong>Tip 2 for GPA > 6.5:</strong> Review your notes regularly and clarify doubts immediately. 
+      Don't let doubts accumulate; seek help from your professors or classmates as soon as possible. 
+      Use additional resources like textbooks and online tutorials to supplement your learning.
+    `;
+    infoText3.innerHTML = `
+      <strong>Tip 3 for GPA > 6.5:</strong> Focus on assignments and projects to boost your grades. 
+      Put in the effort to complete your assignments and projects to the best of your ability. 
+      Use them as opportunities to apply what you've learned and demonstrate your understanding of the subject.
+    `;
   }
 }
 
