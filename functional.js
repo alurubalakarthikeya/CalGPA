@@ -96,25 +96,24 @@ function toggleAnswer(element) {
   }
 }
 
-function showInfo(option) {
-  const infoBox = document.getElementById('info-box');
-  const infoText = document.getElementById('info-text');
-  let info = '';
-  switch (option) {
-      case 'gpa9':
-          info = 'To achieve a GPA > 9, focus on understanding core concepts, attend all classes, participate in discussions, complete assignments on time, and prepare thoroughly for exams.';
-          break;
-      case 'gpa8':
-          info = 'To achieve a GPA > 8, maintain consistent study habits, review your notes regularly, seek help when needed, and ensure you perform well in both assignments and exams.';
-          break;
-      case 'gpa65':
-          info = 'To achieve a GPA > 6.5, prioritize your studies, manage your time effectively, focus on key subjects, and make sure to complete all assignments and prepare for exams.';
-          break;
-      default:
-          info = '';
+function showInfo(gpa) {
+  const infoText1 = document.getElementById('info-text1');
+  const infoText2 = document.getElementById('info-text2');
+  const infoText3 = document.getElementById('info-text3');
+
+  if (gpa === 'gpa9') {
+    infoText1.textContent = 'Tip 1 for GPA > 9: Focus on understanding the core concepts deeply.';
+    infoText2.textContent = 'Tip 2 for GPA > 9: Practice regularly and solve previous year papers.';
+    infoText3.textContent = 'Tip 3 for GPA > 9: Participate in study groups and discussions.';
+  } else if (gpa === 'gpa8') {
+    infoText1.textContent = 'Tip 1 for GPA > 8: Manage your time effectively and prioritize your studies.';
+    infoText2.textContent = 'Tip 2 for GPA > 8: Take regular breaks to avoid burnout.';
+    infoText3.textContent = 'Tip 3 for GPA > 8: Seek help from professors and peers when needed.';
+  } else if (gpa === 'gpa65') {
+    infoText1.textContent = 'Tip 1 for GPA > 6.5: Attend all classes and take good notes.';
+    infoText2.textContent = 'Tip 2 for GPA > 6.5: Review your notes regularly and clarify doubts immediately.';
+    infoText3.textContent = 'Tip 3 for GPA > 6.5: Focus on assignments and projects to boost your grades.';
   }
-  infoText.textContent = info;
-  infoBox.style.display = 'block';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
