@@ -1574,3 +1574,7 @@ body.dark-mode input[type="checkbox"]:checked + label::after {
 body.dark-mode .days > label {
   color: var(--dark-bg-color);
 }
+
+body.dark-mode .response > label {
+  color: var(--main-color);
+}
