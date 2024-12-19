@@ -26,7 +26,8 @@ CalGPA is a web application designed to help students analyze and track their se
   - HTML5 
   - CSS3 
   - JavaScript 
-  - Brain.js  (for GPA prediction logic)
+  - FLask
+  - Python
     
 - **Hosting**:
   - GitHub Pages
