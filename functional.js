@@ -108,14 +108,20 @@ function showInfo(gpa) {
       Participate in study groups and discussions to clarify doubts and gain new perspectives.
     `;
     infoText2.innerHTML = `
-      <strong>Tip 2 for GPA > 9:</strong> Practice regularly and solve previous year papers. 
-      Consistent practice helps in retaining information and improving problem-solving skills. 
-      Use platforms like Coursera, Khan Academy, and edX for additional practice and learning.
+      <strong>Roadmap for GPA > 9:</strong><br>
+      1. <strong>Set Clear Goals:</strong> Define your academic goals and create a detailed study plan.<br>
+      2. <strong>Deep Understanding:</strong> Focus on understanding the core concepts deeply. Use resources like textbooks, online courses, and tutorials to strengthen your understanding.<br>
+      3. <strong>Regular Practice:</strong> Practice regularly and solve previous year papers. Consistent practice helps in retaining information and improving problem-solving skills.<br>
+      4. <strong>Time Management:</strong> Manage your time effectively. Create a study schedule that allocates sufficient time for each subject. Avoid last-minute cramming by reviewing your notes regularly and staying on top of your assignments.<br>
+      5. <strong>Seek Help:</strong> Seek help from professors and peers when needed. Don't hesitate to ask questions and seek clarification on topics you find challenging.<br>
+      6. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional practice and learning.<br>
+      7. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
     `;
     infoText3.innerHTML = `
-      <strong>Tip 3 for GPA > 9:</strong> Manage your time effectively. 
-      Create a study schedule that allocates sufficient time for each subject. 
-      Avoid last-minute cramming by reviewing your notes regularly and staying on top of your assignments.
+      <strong>Additional Tips for GPA > 9:</strong><br>
+      - <strong>Active Learning:</strong> Engage in active learning techniques such as summarizing information in your own words, teaching concepts to others, and applying knowledge to practical problems.<br>
+      - <strong>Consistent Review:</strong> Regularly review your notes and materials to reinforce your understanding and retention of the subject matter.<br>
+      - <strong>Mock Tests:</strong> Take mock tests to simulate exam conditions and identify areas where you need improvement.<br>
     `;
   } else if (gpa === 'gpa8') {
     infoText1.innerHTML = `
@@ -124,14 +130,20 @@ function showInfo(gpa) {
       Break down your study sessions into manageable chunks to avoid burnout.
     `;
     infoText2.innerHTML = `
-      <strong>Tip 2 for GPA > 8:</strong> Take regular breaks to avoid burnout. 
-      Incorporate short breaks into your study sessions to rest and recharge. 
-      Use techniques like the Pomodoro Technique to maintain focus and productivity.
+      <strong>Roadmap for GPA > 8:</strong><br>
+      1. <strong>Set Priorities:</strong> Identify your priorities and focus on important tasks. Use tools like planners and to-do lists to keep track of your tasks and deadlines.<br>
+      2. <strong>Effective Study:</strong> Use effective study techniques like active learning and spaced repetition. Break down your study sessions into manageable chunks to avoid burnout.<br>
+      3. <strong>Regular Breaks:</strong> Take regular breaks to avoid burnout and maintain productivity. Incorporate short breaks into your study sessions to rest and recharge.<br>
+      4. <strong>Seek Clarification:</strong> Seek help from professors and peers when needed. Don't hesitate to ask questions and seek clarification on topics you find challenging.<br>
+      5. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional practice and learning.<br>
+      6. <strong>Stay Organized:</strong> Keep your study materials and notes organized. Use tools like binders, folders, and digital note-taking apps to stay organized.<br>
+      7. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
     `;
     infoText3.innerHTML = `
-      <strong>Tip 3 for GPA > 8:</strong> Seek help from professors and peers when needed. 
-      Don't hesitate to ask questions and seek clarification on topics you find challenging. 
-      Attend office hours, join study groups, and participate in class discussions to enhance your learning.
+      <strong>Additional Tips for GPA > 8:</strong><br>
+      - <strong>Group Study:</strong> Form study groups with classmates to discuss and review course materials. Group study can provide different perspectives and help clarify doubts.<br>
+      - <strong>Practice Problems:</strong> Solve practice problems and exercises to reinforce your understanding. Use textbooks, online resources, and past exam papers for practice.<br>
+      - <strong>Feedback:</strong> Seek feedback on your assignments and exams to identify areas for improvement. Use the feedback to improve your understanding and performance.<br>
     `;
   } else if (gpa === 'gpa65') {
     infoText1.innerHTML = `
@@ -140,14 +152,20 @@ function showInfo(gpa) {
       Review your notes regularly to reinforce your learning and identify areas that need improvement.
     `;
     infoText2.innerHTML = `
-      <strong>Tip 2 for GPA > 6.5:</strong> Review your notes regularly and clarify doubts immediately. 
-      Don't let doubts accumulate; seek help from your professors or classmates as soon as possible. 
-      Use additional resources like textbooks and online tutorials to supplement your learning.
+      <strong>Roadmap for GPA > 6.5:</strong><br>
+      1. <strong>Attend Classes:</strong> Attend all classes and take detailed notes. Regular attendance helps you stay updated with the course material and understand the concepts better.<br>
+      2. <strong>Review Regularly:</strong> Review your notes regularly and clarify doubts immediately. Don't let doubts accumulate; seek help from your professors or classmates as soon as possible.<br>
+      3. <strong>Focus on Assignments:</strong> Complete assignments and projects to the best of your ability. Use them as opportunities to apply what you've learned and demonstrate your understanding of the subject.<br>
+      4. <strong>Seek Help:</strong> Seek help from professors and peers when needed. Don't hesitate to ask questions and seek clarification on topics you find challenging.<br>
+      5. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional practice and learning.<br>
+      6. <strong>Stay Organized:</strong> Keep your study materials and notes organized. Use tools like binders, folders, and digital note-taking apps to stay organized.<br>
+      7. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
     `;
     infoText3.innerHTML = `
-      <strong>Tip 3 for GPA > 6.5:</strong> Focus on assignments and projects to boost your grades. 
-      Put in the effort to complete your assignments and projects to the best of your ability. 
-      Use them as opportunities to apply what you've learned and demonstrate your understanding of the subject.
+      <strong>Additional Tips for GPA > 6.5:</strong><br>
+      - <strong>Active Participation:</strong> Participate actively in class discussions and activities. Active participation helps reinforce your understanding and retention of the subject matter.<br>
+      - <strong>Study Schedule:</strong> Create a study schedule and stick to it to ensure consistent study habits. Use tools like planners and to-do lists to keep track of your tasks and deadlines.<br>
+      - <strong>Practice Tests:</strong> Take practice tests to assess your understanding and prepare for exams. Use past exam papers and online resources for practice.<br>
     `;
   }
 }
