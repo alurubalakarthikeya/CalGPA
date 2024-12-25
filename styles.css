@@ -405,7 +405,7 @@ sup> i {
   .desktop-socials {
     position: fixed;
     right: -10px;
-    top: 70%;
+    top: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -421,6 +421,12 @@ sup> i {
     margin: 5px 0px;
     transform: translateX(35px);
     transition: 0.4s;
+  }
+
+  .full-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .desktop-socials > a:hover {
@@ -442,7 +448,7 @@ sup> i {
   .heading-desk > a{
     position: fixed;
     right: 0px;
-    top: 67%;
+    top: 57%;
     transform: rotate(90deg);
     transform-origin: right top; 
     display: inline-block; 
