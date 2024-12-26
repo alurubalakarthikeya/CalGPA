@@ -373,24 +373,75 @@ document.getElementById('submitButton').addEventListener('click', (event) => {
 function attendanceCal() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
-  <form id="attendanceForm">
-    <fieldset>
-      <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
-      <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
-      <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
-      <button type="submit" class="button3">Submit</button>
-    </fieldset>
-  </form>
+    <form id="attendanceForm">
+      <fieldset>
+        <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
+        <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+        <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
+        <button type="submit" class="button3">Submit</button>
+      </fieldset>
+    </form>
+    <div class="chart-container form">
+      <canvas id="attendanceChart"></canvas>
+    </div>
   `;
 
   document.getElementById('attendanceForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const numberOfAttended = document.getElementById('noOfAttended').value;
-    const totalNumberOfClasses = document.getElementById('totalNoOfClasses').value;
-    const percentage = (numberOfAttended / totalNumberOfClasses) * 100;
-    document.getElementById('attendancePercentage').value = percentage.toFixed(2);
+    perCal();
   });
 }
+
+function perCal() {
+  const numberOfAttended = parseInt(document.getElementById('noOfAttended').value);
+  const totalNumberOfClasses = parseInt(document.getElementById('totalNoOfClasses').value);
+  if (numberOfAttended > totalNumberOfClasses || numberOfAttended < 0 || totalNumberOfClasses < 0 || numberOfAttended > 500 || totalNumberOfClasses > 500) {
+    alert("Invalid Input, please enter valid stuff.");
+    return;
+  } else {
+    const percentage = (numberOfAttended / totalNumberOfClasses) * 100;
+    document.getElementById('attendancePercentage').value = percentage.toFixed(2);
+    updateChart(numberOfAttended, totalNumberOfClasses);
+  }
+}
+
+function updateChart(numberOfAttended, totalNumberOfClasses) {
+  const ctx = document.getElementById('attendanceChart').getContext('2d');
+  const data = {
+    labels: ['Attended Classes', 'Total Classes'],
+    datasets: [{
+      label: 'Classes',
+      data: [numberOfAttended, totalNumberOfClasses - numberOfAttended],
+      backgroundColor: ['#03dac6', '#f4f4f4'],
+      borderColor: ['#03dac6', '#ccc'],
+      borderWidth: 1
+    }]
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  };
+
+  if (window.attendanceChart) {
+    window.attendanceChart.data = data;
+    window.attendanceChart.update();
+  } else {
+    window.attendanceChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', attendanceCal);
+
 
 function attendanceGuider() {
   const form = document.getElementById('attendance-form');

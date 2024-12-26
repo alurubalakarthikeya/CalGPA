@@ -1585,3 +1585,6 @@ body.dark-mode .response > label {
   color: var(--main-color);
 }
 
+canvas {
+  width: 100%;
+}
