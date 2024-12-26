@@ -452,6 +452,11 @@ function calculateClass(event) {
       totalClassesToMiss += days[day];
     }
   }
+  if(requiredPercentage > 92 || isNaN(requiredPercentage) || isNaN(noOfAttended) || isNaN(totalNoOfClasses) || noOfAttended > totalNoOfClasses || noOfAttended < 0 || totalNoOfClasses < 0 || noOfAttended > 500 || totalNoOfClasses > 500 || requiredPercentage < 0) {
+    alert('Invalid input. Please enter valid details.');
+    return;
+  }
+  else {
   const futureTotalClasses = totalNoOfClasses + totalClassesToMiss;
   const futureAttendedClasses = noOfAttended;
   const futurePercentage = (futureAttendedClasses / futureTotalClasses) * 100;
@@ -481,6 +486,7 @@ function calculateClass(event) {
   `;
   
   document.getElementById('hardnessLevel').style.color = hardnessColor;
+}
   }
   
   attendanceGuider();
