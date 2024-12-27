@@ -1,7 +1,6 @@
 # <h2 align="center">CalGPA 🎓</h2>
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image.png?raw=true" alt="Image 1" width="500" style="display: inline-block; margin-right: 20px;"/>
-  <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="Image 3" width="500" style="display: inline-block; margin-right: 20px;"/>
 </p>
 <h2>Description📜</h2>
 CalGPA is a web application designed to help students analyze and track their semester performance effectively, allows students to monitor their academic progress throughout the semester in real-time. A new feature on predictions that are based on neural networks is coming up soon. CalGPA delivers insights that help you improve your weaker subjects and get better in subjects you are good at.
@@ -27,6 +26,7 @@ CalGPA is a web application designed to help students analyze and track their se
 ## Demo 💻
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image4.png?raw=true" alt="Image 4" width="300" style="display: inline-block; margin-right: 20px;">
+  <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="Image 3" width="300" style="display: inline-block; margin-right: 20px;"/>
 </p>
 
 ## Tech Used 🛠️
