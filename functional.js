@@ -493,8 +493,8 @@ function calculateClass(event) {
   const days = {
     monday: 5,
     tuesday: 6,
-    wednesday: 3,
-    thursday: 3,
+    wednesday: 4,
+    thursday: 4,
     friday: 3
   };
   let totalClassesToMiss = 0;
@@ -503,41 +503,42 @@ function calculateClass(event) {
       totalClassesToMiss += days[day];
     }
   }
-  if(requiredPercentage > 92 || isNaN(requiredPercentage) || isNaN(noOfAttended) || isNaN(totalNoOfClasses) || noOfAttended > totalNoOfClasses || noOfAttended < 0 || totalNoOfClasses < 0 || noOfAttended > 500 || totalNoOfClasses > 500 || requiredPercentage < 0) {
+  if (requiredPercentage > 92 || isNaN(requiredPercentage) || isNaN(noOfAttended) || isNaN(totalNoOfClasses) || noOfAttended > totalNoOfClasses || noOfAttended < 0 || totalNoOfClasses < 0 || noOfAttended > 500 || totalNoOfClasses > 500 || requiredPercentage < 0) {
     alert('Invalid input. Please enter valid details.');
     return;
-  }
-  else {
-  const futureTotalClasses = totalNoOfClasses + totalClassesToMiss;
-  const futureAttendedClasses = noOfAttended;
-  const futurePercentage = (futureAttendedClasses / futureTotalClasses) * 100;
-  document.getElementById('attendancePercentage').value = ((noOfAttended / totalNoOfClasses) * 100).toFixed(2);
-  document.getElementById('futurePercentage').value = futurePercentage.toFixed(2);
-
-  const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100) - futureAttendedClasses);
-  let hardnessLevel = '';
-  let hardnessColor = '';
-
-  if (requiredClassesToAttend > 20) {
-    hardnessLevel = 'Kinda Hard to get that percentage';
-    hardnessColor = 'red';
-  } else if (requiredClassesToAttend > 10) {
-    hardnessLevel = 'Try to attend every single class without fail';
-    hardnessColor = 'orange';
   } else {
-    hardnessLevel = 'You can easily get that percentage';
-    hardnessColor = 'green';
+    const futureTotalClasses = totalNoOfClasses + totalClassesToMiss;
+    const futureAttendedClasses = noOfAttended;
+    const futurePercentage = (futureAttendedClasses / futureTotalClasses) * 100;
+    document.getElementById('attendancePercentage').value = ((noOfAttended / totalNoOfClasses) * 100).toFixed(2);
+    document.getElementById('futurePercentage').value = futurePercentage.toFixed(2);
+
+    // Calculate the number of additional classes needed to achieve the required percentage
+    const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100 - futureAttendedClasses) / (1 - requiredPercentage / 100));
+    let hardnessLevel = '';
+    let hardnessColor = '';
+
+    if (requiredClassesToAttend > totalClassesToMiss) {
+      hardnessLevel = 'Kinda Hard to get that percentage';
+      hardnessColor = 'red';
+    } else if (requiredClassesToAttend > totalClassesToMiss / 2) {
+      hardnessLevel = 'Try to attend every single class without fail';
+      hardnessColor = 'orange';
+    } else {
+      hardnessLevel = 'You can easily get that percentage';
+      hardnessColor = 'green';
+    }
+
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = `
+      <p>Current Attendance Percentage: ${((noOfAttended / totalNoOfClasses) * 100).toFixed(2)}%</p><br>
+      <p>Future Attendance Percentage: ${futurePercentage.toFixed(2)}%</p><br>
+      ${requiredClassesToAttend > 0 ? `<p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes.</p><br>` : ''}
+      <p>Possibility to attain required percentage:<br><br> <span id="hardnessLevel">${hardnessLevel}</span></p><br>
+    `;
+
+    document.getElementById('hardnessLevel').style.color = hardnessColor;
   }
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = `
-    <p>Current Attendance Percentage: ${((noOfAttended / totalNoOfClasses) * 100).toFixed(2)}%</p><br>
-    <p>Future Attendance Percentage: ${futurePercentage.toFixed(2)}%</p><br>
-    <p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes.</p><br>
-    <p>Possibility to attain required percentage:<br><br> <span id="hardnessLevel">${hardnessLevel}</span></p><br>
-  `;
-  
-  document.getElementById('hardnessLevel').style.color = hardnessColor;
 }
-  }
-  
-  attendanceGuider();
+
+document.getElementById('requiredPercentageForm').addEventListener('submit', calculateClass);
