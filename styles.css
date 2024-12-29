@@ -309,7 +309,6 @@ body.dark-mode .response > label {
     padding: 10px;
     border-radius: 15px;
     transition: 0.7s;
-
 }
 
 .options ol a:hover {
@@ -526,6 +525,7 @@ sup> i {
       color: var(--main-color);
       margin: 105px 30px 50px 30px;
     }
+
     .desktop-socials {
       display: none;
     }
@@ -586,7 +586,6 @@ sup> i {
     text-align: left;
   }
 
-  
   .sidenav a:hover {
     cursor: pointer;
     background-color: var(--bg-color);
@@ -631,7 +630,6 @@ sup> i {
     bottom: 40px;
   }
 
-
   body.dark-mode .sidenav > .info > span > .mode-change > i {
     transform: translateX(-20px);
   }
@@ -644,7 +642,7 @@ sup> i {
     width: 250px;
   }
   
-   .closebtn {
+  .closebtn {
     position: absolute;
     top: 25px;
     right: 30px;
@@ -652,7 +650,6 @@ sup> i {
     margin-left: 50px;
   }
   
-
   button {
     color: var(--bg-color);
     border: 2px solid var(--main-color);
@@ -714,7 +711,6 @@ sup> i {
   .floater {
     animation: floating-img 6s infinite ease-in-out;
   }
-
 
   .content {
     float: left;
@@ -1034,7 +1030,6 @@ body.dark-mode .loader {
   background-color: var(--dark-bg-color);
 }
 
-/* Disable transitions when the no-transition class is applied */
 .no-transition * {
   transition: none !important;
 }
@@ -1497,6 +1492,7 @@ body.dark-mode .hmm{
   gap: 30px;
   justify-content: space-evenly;
 }
+
 .choose-option {
   display: flex;
   flex-wrap: wrap;
