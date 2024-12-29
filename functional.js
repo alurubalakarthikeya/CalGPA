@@ -261,6 +261,11 @@ function createInputs(event) {
   const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
   const dynamicForms = document.getElementById('dynamicForms');
   dynamicForms.innerHTML = ''; 
+  if(noOfSubjects < 1 || noOfSubjects > 10) {
+    alert("Please enter a valid number of subjects (max 10)");
+    return;
+  }
+  else {
   for (let i = 1; i <= noOfSubjects; i++) {
       const formBox = document.createElement('div');
       formBox.className = 'form-box';
@@ -279,6 +284,7 @@ function createInputs(event) {
       </form>
       `;
       dynamicForms.appendChild(formBox);
+      }
   }
   addInputListeners();
 }
