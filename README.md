@@ -7,7 +7,7 @@ CalGPA is a web application designed to help students analyze and track their se
 
 ## Features ✨
 
-- **GPA Calculator (Estimator.io)**: Estimator.io is a tool which focuses on bringing awareness in students that even a single mark can change their grade by minus one or even plus one. So by using this tool, students can now estimate their predicted GPA based on their inputs and then creating goals for the SEE and CIA Marks by filling the form inputs like no.of credits, CIA marks and predicted SEE marks. Try the tool here: <a href="https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html" target="_blank">Open</a> <br>
+- **GPA Calculator (Estimator.io)**:  Estimator.io is a tool which focuses on bringing awareness in students that even a single mark can change their grade by minus one or even plus one. So by using this tool, students can now estimate their predicted GPA based on their inputs and then creating goals for the SEE and CIA Marks by filling the form inputs like no.of credits, CIA marks and predicted SEE marks.Try the tool here: <a href="https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html" target="_blank">Open</a> <br>
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image5.png?raw=true" alt="Image 4" width="550" style="display: inline-block; margin-right: 20px;">
 </p>
@@ -27,7 +27,7 @@ CalGPA is a web application designed to help students analyze and track their se
 - Task manager (Todo.io) : a basic todo tool to add remainders and work on them with some cool stuff like todo completion streaks 
 - GPA Roadmap (Tracker.io) : a tool which has different study plans to get a certain GPA based on your inputs, and how to improve the GPA.
   <br>
-## Demo 💻
+## UI Demo 💻
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image4.png?raw=true" alt="Image 4" width="300" style="display: inline-block; margin-right: 20px;">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="Image 3" width="300" style="display: inline-block; margin-right: 20px;"/>
