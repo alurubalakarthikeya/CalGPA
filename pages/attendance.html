@@ -58,14 +58,27 @@
             <br> <br>
         </div>
         <div id="attendance-form" class="form">
-        <div id="infoBox" class="info-box"><p><strong>Instructions:</strong> <br> <br>Step-1: Enter the required percentage which you want to maintain even after the leave<br> Step-2: Tick the days which you are plannning to take a leave <br>Step-3: Enter the number of classes you attended till date  <br> Step-4: Enter the total number of classes till date <br> Step-5: Press the submit button and you'll find current percentage and below that you'll find future percentage which is of after leave, and below the form you'll find a box which displays how many more classes you should attend if there's a shortage in your attendance after the leave.</p></div><br>
-        <div class="choose-option">
-            <h3>Choose an Attendance tool to continue: </h3>
-            <button onclick="attendanceCal()" class="button3">Calculator</button>
-            <button onclick="attendanceGuider()" class="button3">Suggestor</button>
+            <div id="infoBox" class="info-box">
+                <p>
+                    <strong>Instructions:</strong> <br><br>
+                    Step-1: Enter the required percentage which you want to maintain even after the leave.<br>
+                    Step-2: Tick the days which you are planning to take a leave.<br>
+                    Step-3: Enter the number of classes you attended till date.<br>
+                    Step-4: Enter the total number of classes till date.<br>
+                    Step-5: Press the submit button, and you'll find the current percentage. Below that, you'll find the future percentage which is after leave, and below the form, you'll find a box that displays how many more classes you should attend if there's a shortage in your attendance after the leave.
+                </p>
+            </div>
+            <br>
+            <div class="choose-option">
+                <h3>Choose an Attendance tool to continue:</h3>
+                <button onclick="attendanceCal()" class="button3">Calculator</button>
+                <button onclick="attendanceGuider()" class="button3">Suggestor</button>
+            </div>
+            <div class="info-box">
+                <strong>Note:</strong> Calculator is a basic attendance percentage calculation tool. Suggestor is a tool that calculates and tells how likely you can skip classes for a vacation and still maintain the required percentage.
+            </div>
         </div>
-        <div id="infoBox" class="info-box"><strong>Note: </strong> Calculator is a basic attendence percentage calculation tool. Suggestor is a tool that calculates and tells how likely you can skip classes for a vacation and still maintain required percentage.</div>
-        </div><br>
+        <br>
     </div>
     <div class="footer-section">
         <div class="boxs">
@@ -99,7 +112,11 @@
             <br> <br> <br>
         </div>
     </div> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../functional.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-doughnutlabel"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels"></script>
 </body>
 </html>

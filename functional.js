@@ -550,7 +550,7 @@ function createInputs(event) {
   const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
   const dynamicForms = document.getElementById('dynamicForms');
   dynamicForms.innerHTML = ''; 
-  if(noOfSubjects < 1 || noOfSubjects > 10) {
+  if(noOfSubjects < 1 || noOfSubjects >= 10) {
     alert("Please enter a valid number of subjects (max 10)");
     return;
   }
@@ -670,13 +670,13 @@ function attendanceCal() {
   form.innerHTML = `
     <form id="attendanceForm">
       <fieldset>
-        <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
-        <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
+        <input type="number" id="noOfAttended" placeholder="No. of Attended classes" required>
+        <input type="number" id="totalNoOfClasses" placeholder="Total No. of classes" required>
         <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
         <button type="submit" class="button3">Submit</button>
       </fieldset>
     </form>
-    <div class="chart-container form">
+    <div class="chart-container form" style="position: relative; width: 100%; height: 400px;">
       <canvas id="attendanceChart"></canvas>
     </div>
   `;
@@ -690,8 +690,10 @@ function attendanceCal() {
 function perCal() {
   const numberOfAttended = parseInt(document.getElementById('noOfAttended').value);
   const totalNumberOfClasses = parseInt(document.getElementById('totalNoOfClasses').value);
+
+  // Validate inputs
   if (numberOfAttended > totalNumberOfClasses || numberOfAttended < 0 || totalNumberOfClasses < 0 || numberOfAttended > 500 || totalNumberOfClasses > 500) {
-    alert("Invalid Input, please enter valid stuff.");
+    alert("Invalid Input, please enter valid values.");
     return;
   } else {
     const percentage = (numberOfAttended / totalNumberOfClasses) * 100;
@@ -702,8 +704,9 @@ function perCal() {
 
 function updateChart(numberOfAttended, totalNumberOfClasses) {
   const ctx = document.getElementById('attendanceChart').getContext('2d');
+  
   const data = {
-    labels: ['Attended Classes', 'Total Classes'],
+    labels: ['Attended Classes', 'Remaining Classes'],
     datasets: [{
       label: 'Classes',
       data: [numberOfAttended, totalNumberOfClasses - numberOfAttended],
@@ -718,11 +721,15 @@ function updateChart(numberOfAttended, totalNumberOfClasses) {
     maintainAspectRatio: false,
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          callback: function(value) { return value; } // Customize tick format if needed
+        }
       }
     }
   };
 
+  // Create or update the chart
   if (window.attendanceChart) {
     window.attendanceChart.data = data;
     window.attendanceChart.update();
