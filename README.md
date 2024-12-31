@@ -7,7 +7,7 @@ CalGPA is a web application designed to help students analyze and track their se
 
 ## Features ✨
 
-- **GPA Calculator (Tracker.io)**: Tracker.io is a tool which focuses on bringing awareness in students that even a single mark can change their grade by minus one or even plus one. So by using this tool, students can now estimate their predicted GPA based on their inputs and then creating goals for the SEE and CIA Marks by filling the form inputs like no.of credits, CIA marks and predicted SEE marks. Try the tool here: <a href="https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html" target="_blank">Open</a> <br>
+- **GPA Calculator (Estimator.io)**: Estimator.io is a tool which focuses on bringing awareness in students that even a single mark can change their grade by minus one or even plus one. So by using this tool, students can now estimate their predicted GPA based on their inputs and then creating goals for the SEE and CIA Marks by filling the form inputs like no.of credits, CIA marks and predicted SEE marks. Try the tool here: <a href="https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html" target="_blank">Open</a> <br>
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image5.png?raw=true" alt="Image 4" width="550" style="display: inline-block; margin-right: 20px;">
 </p>
@@ -22,7 +22,11 @@ CalGPA is a web application designed to help students analyze and track their se
    <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image6.png?raw=true" alt="Image 4" width="550" style="display: inline-block; margin-right: 20px;">
 </p>
 
-- **GPA Predictor (Predictor.io)** a tool which is being developed and that is focused on providing insights such as students performance and future predictions based on current performance like predicting the 4th year CGPA and so on. The predictions are based on the ML.
+## Further Updates
+- ML-based GPA Calculator (Predictor.io): a tool which is focused on providing insights such as students performance and future predictions based on current performance like predicting the 4th year CGPA and so on.
+- Task manager (Todo.io) : a basic todo tool to add remainders and work on them with some cool stuff like todo completion streaks 
+- GPA Roadmap (Tracker.io) : a tool which has different study plans to get a certain GPA based on your inputs, and how to improve the GPA.
+  <br>
 ## Demo 💻
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image4.png?raw=true" alt="Image 4" width="300" style="display: inline-block; margin-right: 20px;">
@@ -34,7 +38,8 @@ CalGPA is a web application designed to help students analyze and track their se
 - **Frontend**:
   - HTML5 
   - CSS3 
-  - JavaScript 
+  - JavaScript
+  - Chart.js
   - FLask
   - Python
 
@@ -43,10 +48,12 @@ CalGPA is a web application designed to help students analyze and track their se
     
 - **Hosting**:
   - GitHub Pages
-
+    
 1. Clone the repository:
+   
    ```bash
    git clone https://github.com/alurubalakarthikeya/CalGPA.git
+
 <h2>Contributing✒️</h2>
 <p>We welcome contributions from the community! To get started:</p>
 <ol>
