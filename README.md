@@ -50,7 +50,7 @@ CalGPA is a web application designed to help students analyze and track their se
 <h2>Contributing✒️</h2>
 <p>We welcome contributions from the community! To get started:</p>
 <ol>
-  <li>Fork the Repository. </li>
+  <li>Fork the Repository. </li><br>
   <li>Create a new branch for your feature or fix:</li>
   <pre><code>git checkout -b feature-branch</code></pre>
   <li>Make your changes and commit them with a clear message:</li>
