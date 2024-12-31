@@ -1444,7 +1444,7 @@ body.dark-mode .info-box {
 }
 
 a.link:link {
-  color: var(--bg-color);
+  color: var(--dark-alt-color);
   text-decoration: none;
 }
 
