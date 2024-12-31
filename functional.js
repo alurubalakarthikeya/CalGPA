@@ -187,12 +187,13 @@ function calculatePercentage(event) {
   const percentageInput = document.getElementById('percentage');
   const infoBox = document.getElementById('infoBox');
   const suggestionsBox = document.getElementById('suggestionsBox');
-  if (!isNaN(obtainedMarks) && !isNaN(totalMarks) && totalMarks > 0) {
+  if (!isNaN(obtainedMarks) && !isNaN(totalMarks) && totalMarks > 0 && obtainedMarks >= 0 && obtainedMarks <= totalMarks) {
       const percentage = (obtainedMarks / totalMarks) * 100;
       console.log("Percentage:", percentage);
       if (percentage <= 100) {
           percentageInput.value = percentage.toFixed(2) + '%';
       } else {
+          alert('Invalid input. Please enter valid marks.');
           percentageInput.value = 'Invalid input.';
       }
       let infoText = '';
@@ -341,9 +342,8 @@ function calculatePercentage(event) {
       suggestionsBox.innerHTML = `<p><strong>How to do well in ${subjectName}:</strong><br><br> ${suggestionsText}</p>`;
       suggestionsBox.style.display = 'block';
   } else {
+      alert('Invalid input. Please enter valid marks.');
       percentageInput.value = 'Invalid input';
-      infoBox.style.display = 'none';
-      suggestionsBox.style.display = 'none';
   }
 }
 
@@ -612,8 +612,6 @@ function calculateClass(event) {
     const futurePercentage = (futureAttendedClasses / futureTotalClasses) * 100;
     document.getElementById('attendancePercentage').value = ((noOfAttended / totalNoOfClasses) * 100).toFixed(2);
     document.getElementById('futurePercentage').value = futurePercentage.toFixed(2);
-
-    // Calculate the number of additional classes needed to achieve the required percentage
     const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100 - futureAttendedClasses) / (1 - requiredPercentage / 100));
     let hardnessLevel = '';
     let hardnessColor = '';
