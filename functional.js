@@ -197,53 +197,145 @@ function calculatePercentage(event) {
       }
       let infoText = '';
       let suggestionsText = '';
+      let salaryInsights = '';
+      let jobRoles = '';
+
       switch (subjectName.toLowerCase()) {
-          case 'dld':
-              infoText = 'Digital Logic Design is vital for developing circuits used in computers, mobile phones, and modern electronics. Key skills include proficiency in Boolean algebra, circuit simulation, and hardware description languages like Verilog or VHDL. Common job roles are Digital Design Engineer and VLSI Engineer, offering salaries averaging ₹8–12 LPA in India, with experienced professionals earning up to ₹25 LPA. Global salaries range from $80,000 to $120,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Digital Logic Design, focus on understanding the basics of logic gates, truth tables, and Boolean algebra. Practice designing simple circuits and progress to combinational and sequential circuits. Review past problems and simulate circuits using tools like Logisim.<br><br>Resources:<br><a href="https://www.coursera.org/learn/digital-circuits" style="text-decoration: none; color: #03dac6">Coursera Digital Circuits <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.khanacademy.org/computing/computer-science/algorithms" style="text-decoration: none; color: #03dac6">Khan Academy Algorithms <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.tutorialspoint.com/digital_circuits/index.htm" style="text-decoration: none; color: #03dac6">TutorialsPoint Digital Circuits <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
-              break;
           case 'fsd':
-              infoText = 'Full Stack Development involves both front-end and back-end web development. Key skills include proficiency in HTML, CSS, JavaScript, and back-end technologies like Node.js, Django, or Ruby on Rails. Common job roles are Full Stack Developer, Front-end Developer, Back-end Developer, and UI/UX Designer, offering salaries averaging ₹10–15 LPA in India, with experienced professionals earning up to ₹30 LPA. Global salaries range from $85,000 to $130,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Full Stack Development, focus on understanding the basics of web development, including HTML, CSS, and JavaScript. Practice building projects that involve both front-end and back-end technologies. Learn popular frameworks like React, Angular, Node.js, and Django.<br><br>Resources:<br><a href="https://www.freecodecamp.org/" style="text-decoration: none; color: #03dac6">FreeCodeCamp <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/" style="text-decoration: none; color: #03dac6">Udemy Web Developer Course <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.codecademy.com/learn/paths/full-stack-engineer-career-path" style="text-decoration: none; color: #03dac6">Codecademy Full Stack Engineer <i class="fa-solid fa-arrow-up-right-from-square"></i></a> <br><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" style="text-decoration: none; color: #03dac6">Udemy Angela Yu Full Stack Bootcamp <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
-              break;            
+              infoText = 'Full Stack Development involves both front-end and back-end web development. Developers in this field are responsible for designing, developing, and maintaining complete web applications. The role demands expertise in both client-side and server-side technologies, making it a versatile and highly sought-after skill.';
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹20 LPA';
+                  jobRoles = 'Key roles: Full Stack Developer, Software Architect';
+                  suggestionsText = 'Study advanced topics like React, Node.js, Express, and MongoDB. Build complex projects, contribute to open-source repositories, and focus on optimizing application performance.';
+              } else if (percentage > 80) {
+                  salaryInsights = 'Expected salary: ₹15 LPA';
+                  jobRoles = 'Key roles: Full Stack Developer, Backend Developer';
+                  suggestionsText = 'Learn intermediate concepts like Node.js, Express, and MongoDB. Work on API integrations and enhance debugging skills for real-world applications.';
+              } else if (percentage > 70) {
+                  salaryInsights = 'Expected salary: ₹10 LPA';
+                  jobRoles = 'Key roles: Frontend Developer, UI/UX Designer';
+                  suggestionsText = 'Focus on building strong skills in HTML, CSS, and JavaScript. Gain experience with frontend frameworks like Bootstrap and basic React.';
+              } else {
+                  salaryInsights = 'Expected salary: ₹8 LPA';
+                  jobRoles = 'Key roles: Junior Frontend Developer';
+                  suggestionsText = 'Start with foundational topics like HTML, CSS, and basic JavaScript. Practice creating small, functional websites.';
+              }
+              break;
+          case 'dld':
+              infoText = 'Digital Logic Design is crucial for hardware development and forms the backbone of electronic systems. It focuses on the design and analysis of digital circuits used in computers, mobile phones, and other digital devices.';
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹18 LPA';
+                  jobRoles = 'Key roles: Hardware Engineer, Embedded Systems Developer';
+                  suggestionsText = 'Focus on advanced topics like FPGA design and Verilog. Work on hardware simulation projects and experiment with microcontroller programming.';
+              } else if (percentage > 80) {
+                  salaryInsights = 'Expected salary: ₹14 LPA';
+                  jobRoles = 'Key roles: Hardware Engineer, Digital Design Specialist';
+                  suggestionsText = 'Learn intermediate concepts like logic circuits and VHDL. Study combinational and sequential logic design in depth.';
+              } else if (percentage > 70) {
+                  salaryInsights = 'Expected salary: ₹10 LPA';
+                  jobRoles = 'Key roles: Circuit Designer, Test Engineer';
+                  suggestionsText = 'Build strong fundamentals in logic gates and Boolean algebra. Practice designing simple circuits and analyzing their behavior.';
+              } else {
+                  salaryInsights = 'Expected salary: ₹7 LPA';
+                  jobRoles = 'Key roles: Junior Hardware Engineer';
+                  suggestionsText = 'Focus on basics like logic gates and truth tables. Learn how basic circuits are constructed and tested.';
+              }
+              break;
           case 'ds':
-              infoText = 'Data Structures are essential for organizing and storing data efficiently. Key skills include proficiency in arrays, linked lists, stacks, queues, trees, and graphs. Common job roles are Software Developer and Systems Analyst, offering salaries averaging ₹6–11 LPA in India, with experienced professionals earning up to ₹50 LPA. Global salaries range from $75,000 to $115,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Data Structures, focus on understanding the basics of different data structures and their applications. Practice implementing data structures like arrays, linked lists, stacks, queues, trees, and graphs. Solve problems on platforms like LeetCode and HackerRank.<br><br>Resources:<br><a href="https://www.geeksforgeeks.org/data-structures/" style="text-decoration: none; color: #03dac6">GeeksforGeeks Data Structures <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.coursera.org/specializations/data-structures-algorithms" style="text-decoration: none; color: #03dac6">Coursera Data Structures and Algorithms <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
+              infoText = 'Data Structures are key for efficient algorithm implementation and are foundational to computer science. Proficiency in this area allows developers to write optimized and scalable code.';
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹22 LPA';
+                  jobRoles = 'Key roles: Algorithm Developer, Software Engineer';
+                  suggestionsText = 'Master advanced data structures like AVL trees and graph algorithms. Solve complex problems on competitive programming platforms.';
+              } else if (percentage > 80) {
+                  salaryInsights = 'Expected salary: ₹17 LPA';
+                  jobRoles = 'Key roles: Software Engineer, Data Analyst';
+                  suggestionsText = 'Focus on intermediate structures like heaps and hash tables. Work on practical applications of data structures in real-world scenarios.';
+              } else if (percentage > 70) {
+                  salaryInsights = 'Expected salary: ₹12 LPA';
+                  jobRoles = 'Key roles: Junior Developer, Programmer Analyst';
+                  suggestionsText = 'Practice implementing linked lists and binary trees. Focus on solving basic problems involving recursion.';
+              } else {
+                  salaryInsights = 'Expected salary: ₹9 LPA';
+                  jobRoles = 'Key roles: Trainee Developer';
+                  suggestionsText = 'Start with arrays and stacks for a strong foundation. Work on understanding their operations and use cases.';
+              }
               break;
           case 'dmgt':
-              infoText = 'Discrete Mathematics and Graph Theory are fundamental in computer science, cryptography, and network analysis. Key skills include proficiency in set theory, combinatorics, graph theory, and algorithms. Common job roles are Algorithm Developer and Network Analyst, offering salaries averaging ₹7–13 LPA in India, with experienced professionals earning up to ₹20 LPA. Global salaries range from $70,000 to $110,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Discrete Mathematics and Graph Theory, focus on understanding the core concepts and solving related problems. Study topics like set theory, combinatorics, graph theory, and algorithms.<br><br>Resources:<br><a href="https://www.khanacademy.org/math/discrete-math" style="text-decoration: none; color: #03dac6">Khan Academy Discrete Math <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.coursera.org/learn/algorithms-graphs-data-structures" style="text-decoration: none; color: #03dac6">Coursera Graph Algorithms <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
+              infoText = 'Discrete Mathematics and Graph Theory are fundamental to algorithm development and theoretical computer science. These topics are widely used in cryptography, network theory, and database systems.';
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹18 LPA';
+                  jobRoles = 'Key roles: Algorithm Analyst, Software Developer';
+                  suggestionsText = 'Dive deep into graph algorithms and combinatorics. Practice problem-solving for competitive programming.';
+              } else if (percentage > 80) {
+                  salaryInsights = 'Expected salary: ₹14 LPA';
+                  jobRoles = 'Key roles: Data Scientist, Software Engineer';
+                  suggestionsText = 'Focus on intermediate topics like trees and set theory. Learn the applications of graph theory in real-world problems.';
+              } else if (percentage > 70) {
+                  salaryInsights = 'Expected salary: ₹10 LPA';
+                  jobRoles = 'Key roles: Junior Analyst, Developer';
+                  suggestionsText = 'Build a good understanding of basic graph theory. Practice problems involving shortest paths and network flows.';
+              } else {
+                  salaryInsights = 'Expected salary: ₹7 LPA';
+                  jobRoles = 'Key roles: Trainee Analyst';
+                  suggestionsText = 'Start with basic set theory and logical reasoning. Work on understanding the foundational concepts of graphs.';
+              }
               break;
           case 'tnt':
-              infoText = 'Transform Numerical Techniques are used in solving mathematical problems in engineering and science. Key skills include proficiency in numerical integration, differentiation, and linear algebra. Common job roles are Numerical Analyst and Computational Scientist, offering salaries averaging ₹9–14 LPA in India, with experienced professionals earning up to ₹25 LPA. Global salaries range from $75,000 to $105,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Transform Numerical Techniques, practice solving numerical problems and understand the underlying mathematical concepts. Study topics like numerical integration, differentiation, and linear algebra.<br><br>Resources:<br><a href="https://www.coursera.org/learn/numerical-methods-engineers" style="text-decoration: none; color: #03dac6">Coursera Numerical Methods <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-spring-2019/" style="text-decoration: none; color: #03dac6">MIT OpenCourseWare Numerical Methods <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
+              infoText = 'Transforms and Numerical Techniques are vital for solving complex equations in engineering and applied mathematics. These methods are used extensively in signal processing and scientific computing.';
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹20 LPA';
+                  jobRoles = 'Key roles: Data Scientist, Simulation Engineer';
+                  suggestionsText = 'Master advanced numerical methods and transform techniques. Work on projects involving real-world scientific data analysis.';
+              } else if (percentage > 80) {
+                  salaryInsights = 'Expected salary: ₹16 LPA';
+                  jobRoles = 'Key roles: Numerical Analyst, Software Engineer';
+                  suggestionsText = 'Focus on solving differential equations and Fourier transforms. Gain expertise in numerical computation tools like MATLAB.';
+              } else if (percentage > 70) {
+                  salaryInsights = 'Expected salary: ₹12 LPA';
+                  jobRoles = 'Key roles: Junior Simulation Engineer';
+                  suggestionsText = 'Practice basic numerical methods like Newton-Raphson. Work on understanding their application in engineering problems.';
+              } else {
+                  salaryInsights = 'Expected salary: ₹8 LPA';
+                  jobRoles = 'Key roles: Trainee Analyst';
+                  suggestionsText = 'Start with fundamental techniques like interpolation. Focus on understanding their relevance in real-world scenarios.';
+              }
               break;
           case 'java':
-              infoText = 'Java Development involves building applications using Java. Key skills include proficiency in Java programming, object-oriented programming (OOP) concepts, and frameworks like Spring and Hibernate. Common job roles are Java Developer and Software Engineer, offering salaries averaging ₹8–15 LPA in India, with experienced professionals earning up to ₹30 LPA. Global salaries range from $70,000 to $120,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Java Development, practice writing Java programs and understand object-oriented programming concepts. Build projects using Java frameworks like Spring and Hibernate.<br><br>Resources:<br><a href="https://www.codecademy.com/learn/learn-java" style="text-decoration: none; color: #03dac6">Codecademy Java <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.udemy.com/course/java-the-complete-java-developer-course/" style="text-decoration: none; color: #03dac6">Udemy Java Course <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
-              break;  
-          case 'linux':
-              infoText = 'Linux is a powerful and versatile operating system used in servers, desktops, and embedded systems. Key skills include proficiency in Linux command line, shell scripting, system administration, and networking. Common job roles are Linux System Administrator and DevOps Engineer, offering salaries averaging ₹6–12 LPA in India, with experienced professionals earning up to ₹20 LPA. Global salaries range from $70,000 to $120,000 annually, depending on skills and location.';
-              suggestionsText = 'To excel in Linux, practice using the Linux command line and writing shell scripts. Learn about system administration tasks such as user management, file permissions, and network configuration. Useful resources:<br><br>Resources:<br><a href="https://www.codecademy.com/learn/learn-the-command-line" style="text-decoration: none; color: #03dac6">Codecademy Command Line <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><a href="https://www.udemy.com/course/linux-mastery/" style="text-decoration: none; color: #03dac6">Udemy Linux Mastery <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.';
-              break;  
+              infoText = 'Java Development is widely used for building robust applications in various domains including enterprise systems, mobile development, and web applications. It is known for its platform independence and vast ecosystem.';
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹22 LPA';
+                  jobRoles = 'Key roles: Senior Java Developer, Backend Engineer';
+                  suggestionsText = 'Learn advanced topics like multithreading and JVM internals. Contribute to large-scale Java projects to gain practical experience.';
+              } else if (percentage > 80) {
+                  salaryInsights = 'Expected salary: ₹18 LPA';
+                  jobRoles = 'Key roles: Java Developer, API Specialist';
+                  suggestionsText = 'Focus on frameworks like Spring and Hibernate. Work on backend development projects to understand API design.';
+              } else if (percentage > 70) {
+                  salaryInsights = 'Expected salary: ₹12 LPA';
+                  jobRoles = 'Key roles: Junior Developer, API Developer';
+                  suggestionsText = 'Practice object-oriented programming and basic Java APIs. Build small projects to solidify your understanding.';
+              } else {
+                  salaryInsights = 'Expected salary: ₹9 LPA';
+                  jobRoles = 'Key roles: Trainee Java Developer';
+                  suggestionsText = 'Start with core Java basics like loops and arrays. Focus on writing clean, error-free code.';
+              }
+              break;
           default:
-              infoText = 'This subject has various applications in the real world, contributing to different fields and industries.';
-              suggestionsText = 'To improve in this subject, focus on understanding the core concepts and practicing regularly. Utilize online resources and courses to enhance your knowledge.';
+              infoText = 'This subject has various applications in the real world. Understanding it well can open up multiple career opportunities in diverse fields.';
+              salaryInsights = 'Expected salary: ₹8 LPA';
+              jobRoles = 'Key roles: Entry-Level Analyst';
+              suggestionsText = 'Focus on improving foundational knowledge in this area. Practice problems and gain hands-on experience.';
       }
-      if (percentage > 100) {
-          alert("Enter valid marks");
-      }
+
       infoBox.innerHTML = `<p><strong>Why ${subjectName} :</strong><br><br> ${infoText}</p><br>`;
+      infoBox.innerHTML += `<p>${salaryInsights}<br>${jobRoles}</p>`;
       if (percentage > 80 && percentage <= 100) { 
           infoBox.innerHTML += `<p>You scored ${Math.round(percentage)}%, Excellent! Keep up the work!</p>`;
-      } else if (percentage > 70 && percentage <= 100) {
+      } else if (percentage > 70 && percentage <= 80) {
           infoBox.innerHTML += `<p>You scored ${Math.round(percentage)}%, You are doing good!</p>`;
       } else {
-          if (percentage < 100) {
-              infoBox.innerHTML += `<p>You scored ${Math.round(percentage)}%, You need to work harder!</p>`;
-          } else if (percentage > 100) {
-              infoBox.innerHTML += `<p>Invalid input!</p>`;
-          }
+          infoBox.innerHTML += `<p>You scored ${Math.round(percentage)}%, You need to work harder!</p>`;
       }
       infoBox.style.display = 'block';
       suggestionsBox.innerHTML = `<p><strong>How to do well in ${subjectName}:</strong><br><br> ${suggestionsText}</p>`;
@@ -254,7 +346,9 @@ function calculatePercentage(event) {
       suggestionsBox.style.display = 'none';
   }
 }
+
 document.getElementById('marksForm').addEventListener('submit', calculatePercentage);
+
 
 function createInputs(event) {
   event.preventDefault();
