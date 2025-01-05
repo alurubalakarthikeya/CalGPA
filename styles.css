@@ -487,6 +487,10 @@ sup> i {
     position: absolute;
     right: 5%;
   }
+
+  .long-bar {
+    width: 90%;
+  }
 }
 
 
@@ -551,6 +555,10 @@ sup> i {
       .toggle-answer {
         position: absolute;
         right: 15%;
+      }
+
+      .long-bar {
+        width: 98%;
       }
 
 }
@@ -772,7 +780,6 @@ footer {
 
 .long-bar {
   color: var(--main-color);
-  width: 90%;
   display: flex;
   justify-content: space-around;
   text-align: center;
