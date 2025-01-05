@@ -886,10 +886,18 @@ h1:hover sup i {
   flex-direction: column;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 760px) and (max-width: 1024px) {
   .main {
     color: var(--main-color);
     margin: 40px 50px 50px 50px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .long-bar{
+    width: 90%;
   }
 
   .sidenav {
@@ -904,14 +912,27 @@ h1:hover sup i {
     max-width: 600px;
   }
 
+  button {
+    gap: 10px;
+    padding: 25px;
+  }
+
+  .button2{
+    gap: 10px;
+    padding: 25px;
+  }
+
   .home {
     color: var(--main-color);
     margin: 120px 50px 50px 50px;
     font-size: 2.5vh;
   }
-  .img> img {
-    text-align: center;
-    max-width: 600px;
+  .img {
+    width: 100%;
+  }
+  .img > img {
+    justify-content: center;
+    max-width: 700px;
   }
   .cards-container {
     justify-content: center;
