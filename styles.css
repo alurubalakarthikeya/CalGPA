@@ -834,12 +834,19 @@ h1:hover sup i {
 .cards {
   background-color: var(--main-color);
   color: var(--bg-color);
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   margin: 10px;
   max-width: 280px;
   font-size: 2.2vh;
   box-shadow: 0px 3px 10px var(--dark-alt-color);
+  transition: 0.3s;
+  border: 1.5px solid var(--dark-main-color);
+}
+
+.cards:hover {
+  transform: translateY(-5px);
+  border: 1.5px solid var(--dark-alt-color);
 }
 
 .cards-container {
@@ -1230,19 +1237,20 @@ input[type="radio"]:checked{
 .feature-card {
   color: var(--bg-color);
   background-color: var(--main-color);
-  border: 1px solid var(--main-color);
+  border: 1.5px solid var(--main-color);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 10px var(--dark-alt-color);
-  transition: transform 0.3s ease;
+  transition: 0.3s;
 }
 
 .feature-card > p {
-  text-align: justify;
+  text-align: center;
 }
 
 .feature-card:hover {
+  border: 1.5px solid var(--dark-alt-color);
   transform: translateY(-10px);
 }
 
@@ -1481,6 +1489,15 @@ a.link:visited {
   color: var(--bg-color);
 }
 
+a.links:link {
+  color: var(--dark-alt-color);
+  text-decoration: none;
+}
+
+a.links:visited {
+  color: var(--dark-alt-color);
+}
+
 .width-increase >  button {
   width: 100%;
 }
@@ -1612,4 +1629,25 @@ body.dark-mode .response > label {
 
 canvas {
   width: 100%;
+}
+
+.view-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+.view-counter > p {
+  font-size: 2.2vh;
+}
+.view-counter > a img {
+  height: 12px;
+}
+
+body.dark-mode .view-counter {
+  background-color: var(--dark-main-color);
+  color: var(--dark-bg-color);
 }
