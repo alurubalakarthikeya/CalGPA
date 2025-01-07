@@ -840,7 +840,7 @@ h1:hover sup i {
   min-width: 280px;
   max-width: 285px;
   font-size: 2.2vh;
-  box-shadow: 0px 2px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
   transition: 0.3s;
   border: 1.5px solid var(--dark-main-color);
 }
@@ -1316,15 +1316,15 @@ input[type="radio"]:checked{
   max-width: 350px;
   max-height: 400px;
   overflow-y: scroll;
-  box-shadow: 0px 4px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
 }
 
 ::-webkit-scrollbar {
   z-index: 1;
-  width: 13px; 
+  width: 10px; 
   border-radius: 0px 15px 15px 0px;
   background: var(--main-color);
-  box-shadow: 8px 8px 14px rgba(10, 125, 115, 0.95);
+  box-shadow: 0px 8px 14px rgba(10, 125, 115, 0.95);
 }
 
 body.dark-mode ::-webkit-scrollbar-track {
@@ -1383,7 +1383,7 @@ fieldset {
 .form > .info-box {
   max-width: 350px;
   min-height: 420px;
-  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
 }
 
 .form {
@@ -1394,17 +1394,17 @@ fieldset {
   background-color: var(--dark-main-color);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
 }
 
 .boxy {
   border: 1.5px solid var(--dark-alt-color);
-  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
 }
 
 body.dark-mode .boxy{
   border: 1.5px solid var(--dark-alt-color);
-  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
 }
 
 body.dark-mode .form fieldset > h4 {
@@ -1439,6 +1439,7 @@ body.dark-mode .form fieldset > input::placeholder {
 }
 
 .button3 {
+  margin: 10px 5px 5px 5px;
   background-color: var(--dark-main-color);
 }
 
@@ -1461,7 +1462,7 @@ form > button {
   min-height: 400px;
   border: 1.5px solid var(--dark-alt-color);
   background-color: var(--main-color);
-  box-shadow:0px 2px 14px var(--dark-alt-color);
+  box-shadow:0px 1px 14px var(--dark-alt-color);
 }
 
 .temp-box {
@@ -1472,7 +1473,7 @@ form > button {
   background-color: var(--dark-main-color);
   min-width: 230px;
   min-height: 400px;
-  box-shadow:0px 2px 14px var(--dark-alt-color);
+  box-shadow:0px 1px 14px var(--dark-alt-color);
 }
 
 body.dark-mode .temp-box {
@@ -1555,6 +1556,9 @@ body.dark-mode .hmm{
   flex-wrap: wrap;
   gap: 30px;
   flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--dark-alt-color);
 }
 
 body.dark-mode .dark-text {
@@ -1665,5 +1669,5 @@ body.dark-mode .view-counter {
 
 .subject-form > fieldset{
   border: 2px solid var(--dark-alt-color);
-  box-shadow: 0px 2px 10px var(--dark-alt-color);
+  box-shadow: 0px 1px 10px var(--dark-alt-color);
 }
