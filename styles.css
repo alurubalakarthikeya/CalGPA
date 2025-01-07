@@ -1137,7 +1137,7 @@ td {
 
 input[type="text"] {
   padding: 15px;
-  border: 2px solid var(--dark-main-color);
+  border: 1.5px solid var(--dark-alt-color);
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -1148,7 +1148,7 @@ input[type="text"]:active {
 
 input[type="number"] {
   padding: 15px;
-  border: 2px solid var(--dark-main-color);
+  border: 1.5px solid var(--dark-alt-color);
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -1311,18 +1311,18 @@ input[type="radio"]:checked{
   display: block;
   margin-top: 20px;
   padding: 20px;
-  border: 1px solid var(--main-color);
   border-radius: 10px;
   background-color: var(--bg-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 350px;
   max-height: 400px;
   overflow-y: scroll;
+  box-shadow: 0px 4px 10px var(--dark-alt-color);
 }
 
 ::-webkit-scrollbar {
   z-index: 1;
   width: 13px; 
+  border-radius: 0px 15px 15px 0px;
   background: var(--main-color);
   box-shadow: 8px 8px 14px rgba(10, 125, 115, 0.95);
 }
@@ -1383,7 +1383,7 @@ fieldset {
 .form > .info-box {
   max-width: 350px;
   min-height: 420px;
-  box-shadow: 0px 4px 10px rgba(8, 94, 86, 0.95);
+  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
 }
 
 .form {
@@ -1391,11 +1391,20 @@ fieldset {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  border: 1.5px solid var(--dark-alt-color);
   background-color: var(--dark-main-color);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0px 2px 12px var(--dark-alt-color);
+  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
+}
+
+.boxy {
+  border: 1.5px solid var(--dark-alt-color);
+  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
+}
+
+body.dark-mode .boxy{
+  border: 1.5px solid var(--dark-alt-color);
+  box-shadow: 0px 1.5px 10px var(--dark-alt-color);
 }
 
 body.dark-mode .form fieldset > h4 {
@@ -1404,7 +1413,6 @@ body.dark-mode .form fieldset > h4 {
 
 body.dark-mode .form  fieldset {
   background-color: var(--main-color);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .form fieldset > input {
@@ -1464,7 +1472,7 @@ form > button {
   background-color: var(--dark-main-color);
   min-width: 230px;
   min-height: 400px;
-  box-shadow:0px 7px 14px rgba(10, 125, 115, 0.55);
+  box-shadow:0px 2px 14px var(--dark-alt-color);
 }
 
 body.dark-mode .temp-box {
@@ -1653,4 +1661,9 @@ canvas {
 body.dark-mode .view-counter {
   background-color: var(--dark-main-color);
   color: var(--dark-bg-color);
+}
+
+.subject-form > fieldset{
+  border: 2px solid var(--dark-alt-color);
+  box-shadow: 0px 2px 10px var(--dark-alt-color);
 }

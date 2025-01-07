@@ -58,7 +58,8 @@
             <br> <br>
         </div>
         <div class="form">
-            <div id="suggestionsBox" class="info-box"><p>List of currently Available Subjects: 
+            <div id="suggestionsBox" class="info-box">
+                <p>List of currently Available Subjects: 
                 <ol>
                     <li>FSD (3 Credits)</li>
                     <li>DS (4 Credits)</li>
@@ -67,9 +68,10 @@
                     <li>TNT (3 Credits)</li>
                     <li>JAVA (2 Credits)</li>
                     <li>LINUX (2 Credits)</li>
-                </ol> ( <strong>Note:</strong> For now the subjects are of 2nd year only )</p></div>
-                <form id="marksForm" class="form" onsubmit="calculatePercentage(event)">
-                    <fieldset>              
+                </ol> ( <strong>Note:</strong> For now the subjects are of 2nd year only )</p>
+            </div>
+                <form id="marksForm" onsubmit="calculatePercentage(event)">
+                    <fieldset class="boxy">              
                         <h4>Enter your marks</h4><br>
                         <input type="text" id="subjectName" placeholder="Subject Name" required>
                         <input type="number" id="obtainedMarks" placeholder="Obtained Marks" required>

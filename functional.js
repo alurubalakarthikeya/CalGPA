@@ -669,7 +669,7 @@ function attendanceCal() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
     <form id="attendanceForm">
-      <fieldset>
+      <fieldset class="boxy">
         <input type="number" id="noOfAttended" placeholder="No. of Attended classes" required>
         <input type="number" id="totalNoOfClasses" placeholder="Total No. of classes" required>
         <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
@@ -690,8 +690,6 @@ function attendanceCal() {
 function perCal() {
   const numberOfAttended = parseInt(document.getElementById('noOfAttended').value);
   const totalNumberOfClasses = parseInt(document.getElementById('totalNoOfClasses').value);
-
-  // Validate inputs
   if (numberOfAttended > totalNumberOfClasses || numberOfAttended < 0 || totalNumberOfClasses < 0 || numberOfAttended > 500 || totalNumberOfClasses > 500) {
     alert("Invalid Input, please enter valid values.");
     return;
@@ -749,8 +747,8 @@ function attendanceGuider() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
   <div class="form-section">
-    <form id="requiredPercentageForm">
-      <fieldset>
+    <form id="requiredPercentageForm" >
+      <fieldset class="boxy">
         <p class="dark-text">Enter the details:</p><br>
         <input type="number" id="requiredPercentage" placeholder="Required Percentage" required>
         <p class="hmm">Choose the days you will be absent: </p> <br>
@@ -771,7 +769,7 @@ function attendanceGuider() {
   </div>
   <div class="form-section">
     <form id="attendanceForm">
-      <fieldset>
+      <fieldset class="boxy">
         <p class="dark-text">Enter the details:</p><br>
         <input type="number" id="noOfAttended" placeholder="No.of Attended classes" required>
         <input type="number" id="totalNoOfClasses" placeholder="Total No.of classes" required>
@@ -783,6 +781,13 @@ function attendanceGuider() {
   </div>
   <div id="results" class="info-box results">The Results will appear here once you enter all the required data into the form</div> 
   `;
+
+  document.getElementById('requiredPercentageForm').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      document.getElementById('noOfAttended').focus();
+    }
+  });
 
   document.getElementById('attendanceForm').addEventListener('submit', calculateClass);
 }
