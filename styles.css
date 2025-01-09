@@ -840,7 +840,7 @@ h1:hover sup i {
   min-width: 280px;
   max-width: 285px;
   font-size: 2.2vh;
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
   transition: 0.3s;
   border: 1.5px solid var(--dark-main-color);
 }
@@ -1316,7 +1316,7 @@ input[type="radio"]:checked{
   max-width: 350px;
   max-height: 400px;
   overflow-y: scroll;
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
 
 ::-webkit-scrollbar {
@@ -1383,7 +1383,7 @@ fieldset {
 .form > .info-box {
   max-width: 350px;
   min-height: 420px;
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
 
 .form {
@@ -1394,17 +1394,17 @@ fieldset {
   background-color: var(--dark-main-color);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
 
 .boxy {
   border: 1.5px solid var(--dark-alt-color);
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
 
 body.dark-mode .boxy{
   border: 1.5px solid var(--dark-alt-color);
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
 
 body.dark-mode .form fieldset > h4 {
@@ -1669,5 +1669,5 @@ body.dark-mode .view-counter {
 
 .subject-form > fieldset{
   border: 2px solid var(--dark-alt-color);
-  box-shadow: 0px 1px 10px var(--dark-alt-color);
+  box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
