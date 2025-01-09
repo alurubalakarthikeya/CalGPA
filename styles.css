@@ -1313,7 +1313,7 @@ input[type="radio"]:checked{
   padding: 20px;
   border-radius: 10px;
   background-color: var(--bg-color);
-  max-width: 350px;
+  min-width: 400px;
   max-height: 400px;
   overflow-y: scroll;
   box-shadow: 0px 0.4px 10px var(--dark-alt-color);

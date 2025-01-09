@@ -39,12 +39,13 @@ CalGPA is a web application designed to help students analyze and track their se
   - HTML5 
   - CSS3 
   - JavaScript
-  - Chart.js
+  - d3.js
   - FLask
   - Python
 
 - **Version Control:**
-  - Git, Github
+  - Git
+  - Github
     
 - **Hosting**:
   - GitHub Pages

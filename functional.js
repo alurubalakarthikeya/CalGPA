@@ -669,16 +669,15 @@ function attendanceCal() {
   const form = document.getElementById('attendance-form');
   form.innerHTML = `
     <form id="attendanceForm">
-      <fieldset class="boxy">
+      <fieldset>
+        <p class="dark-text">Enter the details:</p><br>
         <input type="number" id="noOfAttended" placeholder="No. of Attended classes" required>
         <input type="number" id="totalNoOfClasses" placeholder="Total No. of classes" required>
         <input type="number" id="attendancePercentage" placeholder="Current percentage" readonly>
         <button type="submit" class="button3">Submit</button>
       </fieldset>
     </form>
-    <div class="chart-container form" style="position: relative; width: 100%; height: 400px;">
-      <canvas id="attendanceChart"></canvas>
-    </div>
+    <div id="attendanceChart" class="chart-container info-box"></div>
   `;
 
   document.getElementById('attendanceForm').addEventListener('submit', function(event) {
@@ -701,47 +700,61 @@ function perCal() {
 }
 
 function updateChart(numberOfAttended, totalNumberOfClasses) {
-  const ctx = document.getElementById('attendanceChart').getContext('2d');
-  
-  const data = {
-    labels: ['Attended Classes', 'Remaining Classes'],
-    datasets: [{
-      label: 'Classes',
-      data: [numberOfAttended, totalNumberOfClasses - numberOfAttended],
-      backgroundColor: ['#03dac6', '#f4f4f4'],
-      borderColor: ['#03dac6', '#ccc'],
-      borderWidth: 1
-    }]
-  };
+  const data = [
+    { label: 'Attended Classes', value: numberOfAttended },
+    { label: 'Classes Absent', value: totalNumberOfClasses - numberOfAttended }
+  ];
 
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          callback: function(value) { return value; } // Customize tick format if needed
-        }
-      }
-    }
-  };
+  const container = d3.select('#attendanceChart');
+  const containerWidth = container.node().getBoundingClientRect().width;
+  const width = containerWidth;
+  const height = 300;
+  const margin = { top: 20, right: 30, bottom: 40, left: 40 };
 
-  // Create or update the chart
-  if (window.attendanceChart) {
-    window.attendanceChart.data = data;
-    window.attendanceChart.update();
-  } else {
-    window.attendanceChart = new Chart(ctx, {
-      type: 'bar',
-      data: data,
-      options: options
-    });
-  }
+  // Remove any existing SVG element
+  container.select('svg').remove();
+
+  const svg = container
+    .append('svg')
+    .attr('width', '100%')
+    .attr('height', height)
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .attr('preserveAspectRatio', 'xMinYMin meet')
+    .append('g')
+    .attr('transform', `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleBand()
+    .domain(data.map(d => d.label))
+    .range([0, width - margin.left - margin.right])
+    .padding(0.3); // Adjust padding for gap between bars
+
+  const y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.value)])
+    .nice()
+    .range([height - margin.top - margin.bottom, 0]);
+
+  svg.append('g')
+    .selectAll('rect')
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr('x', d => x(d.label))
+    .attr('y', d => y(d.value))
+    .attr('width', x.bandwidth())
+    .attr('height', d => y(0) - y(d.value))
+    .attr('fill', d => d.label === 'Attended Classes' ? '#03dac6' : '#f4f4f4');
+
+  svg.append('g')
+    .attr('class', 'x-axis')
+    .attr('transform', `translate(0,${height - margin.top - margin.bottom})`)
+    .call(d3.axisBottom(x));
+
+  svg.append('g')
+    .attr('class', 'y-axis')
+    .call(d3.axisLeft(y).ticks(5));
 }
 
 document.addEventListener('DOMContentLoaded', attendanceCal);
-
 
 function attendanceGuider() {
   const form = document.getElementById('attendance-form');
