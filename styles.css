@@ -1018,7 +1018,6 @@ body.dark-mode .back-to-top > a {
   color: var(--dark-bg-color);
 }
 
-/* Loader styles */
 .loader {
   position: fixed;
   top: 0;
@@ -1031,6 +1030,7 @@ body.dark-mode .back-to-top > a {
   align-items: center;
   z-index: 9999;
   visibility: hidden;
+  opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 }
 

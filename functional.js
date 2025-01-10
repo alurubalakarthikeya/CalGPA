@@ -860,3 +860,44 @@ function calculateClass(event) {
 }
 
 document.getElementById('requiredPercentageForm').addEventListener('submit', calculateClass);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const loader = document.getElementById('loader');
+  const loaderText = document.getElementById('loader-text');
+  const grades = ['O', 'A+', 'A', 'B'];
+  let gradeIndex = 0;
+
+  loader.classList.add('show');
+
+  const changeGrade = () => {
+    loaderText.textContent = grades[gradeIndex];
+    gradeIndex = (gradeIndex + 1) % grades.length;
+  };
+
+  const gradeInterval = setInterval(changeGrade, 500);
+
+  const images = document.images;
+  let loadedImagesCount = 0;
+
+  function imageLoaded() {
+    loadedImagesCount++;
+    if (loadedImagesCount === images.length) {
+      clearInterval(gradeInterval);
+      loader.classList.remove('show');
+    }
+  }
+
+  if (images.length === 0) {
+    clearInterval(gradeInterval);
+    loader.classList.remove('show');
+  } else {
+    for (let i = 0; i < images.length; i++) {
+      if (images[i].complete) {
+        imageLoaded();
+      } else {
+        images[i].addEventListener('load', imageLoaded);
+        images[i].addEventListener('error', imageLoaded);
+      }
+    }
+  }
+});
