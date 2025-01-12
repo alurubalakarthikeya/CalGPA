@@ -1671,3 +1671,11 @@ body.dark-mode .view-counter {
   border: 2px solid var(--dark-alt-color);
   box-shadow: 0px 0.4px 10px var(--dark-alt-color);
 }
+
+.floater{
+  text-align: center;
+}
+
+.floater > img {
+  display: inline-block;
+}
