@@ -495,9 +495,9 @@ sup> i {
 
 
 @media (max-width: 630px) {
-  .info-box {
-    display: none;
-  }
+    .info-box {
+      display: none;
+    }
     .options {
         display: none;
     }
@@ -517,9 +517,16 @@ sup> i {
         font-size: 1.5vh;
     }
     .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
       color: var(--main-color);
       margin: 85px 30px 50px 30px;
     }
+
+    
 
     .main {
       color: var(--main-color);
