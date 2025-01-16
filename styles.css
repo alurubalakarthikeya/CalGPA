@@ -491,6 +491,11 @@ sup> i {
   .long-bar {
     width: 90%;
   }
+
+  .img-container > img {
+    width: 100%;
+    min-width: 350px;
+  }
 }
 
 
@@ -569,6 +574,11 @@ sup> i {
 
       .long-bar {
         width: 98%;
+      }
+
+      .img-container > img {
+        width: 100%;
+        min-width: 300px;
       }
 
 }
@@ -1688,5 +1698,16 @@ body.dark-mode .view-counter {
 
 .floater > img {
   display: inline-block;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline {
+  border-bottom: 2px solid var(--dark-main-color);
+  padding: 10px 0px;
 }
 
