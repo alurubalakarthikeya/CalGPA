@@ -1,3 +1,4 @@
+<!--Under Development yet!!!-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,13 +60,13 @@
     <div class="main">
         <div class="title">
             <div class="sub-div">
-                <h1>Grading Systems</h1> <br>
-                <p>There are two types of grading systems commonly used in educational institutions: Relative Grading and Absolute Grading. Grading systems are essential for evaluating student performance and ensuring a standardized assessment process. </p> <br>
+                <h1 class="underline">Grading Systems</h1> <br>
+                <p>Educational institutions commonly use two types of grading systems: Relative Grading and Absolute Grading. These systems are crucial for evaluating student performance and maintaining a standardized assessment process. Relative Grading compares a student's performance to their peers, while Absolute Grading measures performance against a fixed standard. </p> <br>
             </div>
-            <div class="image">
+            <div class="image img-container">
                 <img src="../imgs/info-img.png" alt="" class="img floater">
-            </div>
-        </div>
+            </div><br><br>
+        </div><br><br>
         <h1>Relative Grading</h1>
         <p>Relative grading, also known as curve grading, assigns grades based on the distribution of scores within a class. This means that a student's grade is determined in relation to the performance of their peers. For example, the top 10% of students might receive an 'O', the next 20% a 'A', and so on. This system ensures a certain percentage of students receive each grade, regardless of their absolute performance.</p> <br>
         <table border="1">
@@ -135,26 +136,28 @@
                     </td>
                 </tr>
             </table>
-        </div> <br>
-        <div class="response">
-            <h3>Choose an option</h3>
-            <h4>( By choosing an option you'll get a mini-roadmap for scoring  )</h4><br>
-            <input type="radio" name="input" onclick="showInfo('gpa9')">
-            <label for="response">GPA > 9</label><br>
-            <input type="radio" name="input" onclick="showInfo('gpa8')">
-            <label for="response">GPA > 8</label><br>
-            <input type="radio" name="input" onclick="showInfo('gpa65')">
-            <label for="response">GPA > 6.5</label><br>
-        </div><br><strong>Check out <a href="guider.html">Guider.io</a> to get more info of how to score well subject wise</strong><br><br>
+        </div> <br><br>
+        <h1>Suggestion Box: </h1>
         <div class="form">
             <div id="info-box" class="info-box">
-                <p id="info-text1">Choose an option from above to get the roadmap</p>
+                <p id="info-text1">Choose an option from above to get the roadmap</p><br>
+                <img src="/imgs/map.png" alt="" class="floater img">
+            </div>
+            <div id="info-box" class="info-box">
+                <div class="response">
+                    <h3>Choose an option</h3>
+                    <h4>( By choosing an option you'll get recommendations for scoring good )</h4>
+                    <strong>Check out <a href="guider.html">Guider.io</a> to get more info of how to score well subject wise</strong><br><br>
+                    <input type="radio" name="input" onclick="showInfo('gpa9')">
+                    <label for="response">GPA > 9</label><br>
+                    <input type="radio" name="input" onclick="showInfo('gpa8')">
+                    <label for="response">GPA > 8</label><br>
+                    <input type="radio" name="input" onclick="showInfo('gpa65')">
+                    <label for="response">GPA > 6.5</label><br>
+                </div><br>
             </div>
             <div id="info-box" class="info-box">
                 <p id="info-text2"></p>
-            </div>
-            <div id="info-box" class="info-box">
-                <p id="info-text3"></p>
             </div>
         </div>
     </div><br><br>
@@ -195,3 +198,4 @@
     <script src="../functional.js"></script>
 </body>
 </html>
+<!--Under Development yet!!!-->
