@@ -725,11 +725,11 @@ sup> i {
   }
 
   .title > img {
-    max-width: 300px;
+    max-width: 200px;
   }
 
   .floater > img {
-    max-width: 250px;
+    max-width: 200px;
   }
 
   .floater {
@@ -960,7 +960,7 @@ h1:hover sup i {
   }
   .img > img {
     justify-content: center;
-    max-width: 700px;
+    max-width: 200px;
   }
   .cards-container {
     justify-content: center;
@@ -1138,7 +1138,7 @@ td {
 }
 
 .main img.img {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
 }
 
@@ -1706,8 +1706,15 @@ body.dark-mode .view-counter {
   align-items: center;
 }
 
+.img-container > img {
+  max-width: 200px;
+}
+
 .underline {
   border-bottom: 2px solid var(--dark-main-color);
   padding: 10px 0px;
 }
 
+#floater img {
+  max-width: 200px;
+}
