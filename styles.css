@@ -1707,7 +1707,7 @@ body.dark-mode .view-counter {
 }
 
 .img-container > img {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .underline {
@@ -1715,6 +1715,3 @@ body.dark-mode .view-counter {
   padding: 10px 0px;
 }
 
-#floater img {
-  max-width: 200px;
-}
