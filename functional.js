@@ -967,3 +967,30 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', lazyLoad);
   lazyLoad();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const lazyImages = document.querySelectorAll('img.lazy');
+
+  function lazyLoad() {
+    lazyImages.forEach(function(img) {
+      if (img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0 && getComputedStyle(img).display !== 'none') {
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', lazyLoad);
+  lazyLoad();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+  collapsibleHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      content.classList.toggle('collapsed');
+    });
+  });
+});
