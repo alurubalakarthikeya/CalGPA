@@ -901,3 +901,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const progressCircle = document.getElementById('progress-circle');
+
+  function updateProgressCircle() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+    const angle = (scrollPercentage / 100) * 360;
+    progressCircle.style.transform = `rotate(${angle}deg)`;
+  }
+
+  window.addEventListener('scroll', updateProgressCircle);
+  updateProgressCircle(); // Initial call to set the progress circle on page load
+});
