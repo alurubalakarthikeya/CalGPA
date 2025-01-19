@@ -911,7 +911,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
     const angle = (scrollPercentage / 100) * 360;
-    progressCircle.style.transform = `rotate(${angle}deg)`;
+
+    if (scrollPercentage <= 25) {
+      progressCircle.style.borderTopColor = 'var(--main-color)';
+      progressCircle.style.borderRightColor = 'transparent';
+      progressCircle.style.borderBottomColor = 'transparent';
+      progressCircle.style.borderLeftColor = 'transparent';
+    } else if (scrollPercentage <= 50) {
+      progressCircle.style.borderTopColor = 'var(--main-color)';
+      progressCircle.style.borderRightColor = 'var(--main-color)';
+      progressCircle.style.borderBottomColor = 'transparent';
+      progressCircle.style.borderLeftColor = 'transparent';
+    } else if (scrollPercentage <= 75) {
+      progressCircle.style.borderTopColor = 'var(--main-color)';
+      progressCircle.style.borderRightColor = 'var(--main-color)';
+      progressCircle.style.borderBottomColor = 'var(--main-color)';
+      progressCircle.style.borderLeftColor = 'transparent';
+    } else {
+      progressCircle.style.borderTopColor = 'var(--main-color)';
+      progressCircle.style.borderRightColor = 'var(--main-color)';
+      progressCircle.style.borderBottomColor = 'var(--main-color)';
+      progressCircle.style.borderLeftColor = 'var(--main-color)';
+    }
   }
 
   window.addEventListener('scroll', updateProgressCircle);

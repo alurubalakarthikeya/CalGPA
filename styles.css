@@ -1029,7 +1029,7 @@ h1:hover sup i {
   padding: 0.5px;
   border-radius: 50%;
   color: var(--bg-color);
-  box-shadow: 2px 2px 10px rgba(2,150,138, 0.6);
+  box-shadow: 2px 2px 10px rgba(2, 150, 138, 0.6);
 }
 
 .back-to-top > a {
@@ -1049,16 +1049,13 @@ body.dark-mode .back-to-top > a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 5px solid transparent;
-  border-top-color: var(--main-color);
-  border-right-color: var(--main-color);
+  background: conic-gradient(var(--main-color) 0deg, transparent 0deg);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1000001;
-  transform: rotate(0deg);
-  transition: transform 0.2s linear;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .progress-circle::before {
@@ -1078,7 +1075,10 @@ body.dark-mode .progress-circle::before {
 .progress-circle i {
   position: relative;
   z-index: 1000003;
+  color: var(--bg-color);
+  font-size: 16px;
 }
+
 
 .loader {
   position: fixed;
