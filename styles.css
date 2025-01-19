@@ -986,6 +986,12 @@ h1:hover sup i {
   justify-content: center;
   color: var(--bg-color);
   text-decoration: none;
+  transition: 0.4s;
+}
+
+.footer-section > .quick-links > a:hover {
+  transform: translateY(-5px);
+  
 }
 
 .social {
