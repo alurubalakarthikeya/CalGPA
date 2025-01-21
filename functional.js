@@ -994,3 +994,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+
+/*My First ever project with 1000+ lines JavaScript yayyyy!!!*/
