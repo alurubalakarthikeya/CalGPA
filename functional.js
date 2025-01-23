@@ -657,7 +657,7 @@ function displayFinalGPA() {
   }
 
   const gpa = totalGradePoints / totalCredits;
-  document.getElementById("dynamicGPA").innerHTML += `
+  document.getElementById("dynamicGPA").innerHTML = `
   <div class="infobox">
     <center>
       <h3>SGPA & CGPA:</h3><br>
