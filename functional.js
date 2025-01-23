@@ -657,7 +657,25 @@ function displayFinalGPA() {
   }
 
   const gpa = totalGradePoints / totalCredits;
-  document.getElementById("dynamicGPA").innerHTML += `<center><h3>Total GPA: ${gpa.toFixed(2)}</h3></center>`;
+  document.getElementById("dynamicGPA").innerHTML += `
+  <div class="infobox">
+    <center>
+      <h3>SGPA & CGPA:</h3><br>
+      <fieldset><br>
+        <input type="text" id="finalGPA" placeholder="Predicted GPA" value="${gpa.toFixed(2)}" readonly>
+        <input type="text" id="CGPA" placeholder="Current CGPA">
+        <input type="text" id="finalCGPA" placeholder="Predicted CGPA" readonly>
+      </fieldset>
+    </center>
+  </div>`;
+
+  document.getElementById('CGPA').addEventListener('input', function() {
+    const currentCGPA = parseFloat(this.value);
+    if (!isNaN(currentCGPA)) {
+      const predictedCGPA = (currentCGPA + gpa) / 2;
+      document.getElementById('finalCGPA').value = predictedCGPA.toFixed(2);
+    }
+  });
 }
 
 document.getElementById('submitButton').addEventListener('click', (event) => {
@@ -998,3 +1016,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /*My First ever project with 1000+ lines JavaScript yayyyy!!!*/
+
