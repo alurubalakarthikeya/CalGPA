@@ -1729,6 +1729,13 @@ body.dark-mode .view-counter {
   color: var(--dark-bg-color);
 }
 
+.form-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
 .subject-form > fieldset{
   border: 2px solid var(--dark-alt-color);
   box-shadow: 0px 0.4px 10px var(--dark-alt-color);
