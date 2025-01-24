@@ -642,26 +642,29 @@ function displayFinalGPA() {
   const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
   let totalCredits = 0;
   let totalGradePoints = 0;
-  for (let i = 1; i <= noOfSubjects; i++) {
-      const credits = parseInt(document.getElementById(`creds${i}`).value);
-      const grade = parseInt(document.getElementById(`grade${i}`).value);
 
-      if (!isNaN(credits) && !isNaN(grade)) {
-          const gradePoints = grade * credits;
-          totalCredits += credits;
-          totalGradePoints += gradePoints;
-      } else {
-          alert(`Please calculate the grade for Subject ${i} before submitting.`);
-          return;
-      }
+  for (let i = 1; i <= noOfSubjects; i++) {
+    const credits = parseInt(document.getElementById(`creds${i}`).value);
+    const grade = parseInt(document.getElementById(`grade${i}`).value);
+
+    if (!isNaN(credits) && !isNaN(grade)) {
+      const gradePoints = grade * credits;
+      totalCredits += credits;
+      totalGradePoints += gradePoints;
+    } else {
+      alert(`Please calculate the grade for Subject ${i} before submitting.`);
+      return;
+    }
   }
 
   const gpa = totalGradePoints / totalCredits;
-  document.getElementById("dynamicGPA").innerHTML = `
+  const dynamicGPA = document.createElement('div');
+  dynamicGPA.className = 'dynamicGPA';
+  dynamicGPA.innerHTML = `
   <div class="infobox">
-    <center>
+    <center class="form">
       <h3>SGPA & CGPA:</h3><br>
-      <fieldset><br>
+      <fieldset class="boxy">
         <input type="text" id="finalGPA" placeholder="Predicted GPA" value="${gpa.toFixed(2)}" readonly>
         <input type="text" id="CGPA" placeholder="Current CGPA">
         <input type="text" id="finalCGPA" placeholder="Predicted CGPA" readonly>
@@ -669,8 +672,14 @@ function displayFinalGPA() {
     </center>
   </div>`;
 
+  document.getElementById('gpa-container').appendChild(dynamicGPA);
+
   document.getElementById('CGPA').addEventListener('input', function() {
     const currentCGPA = parseFloat(this.value);
+    if(currentCGPA < 0 || currentCGPA > 10) {
+      alert("Invalid CGPA, please enter a valid value.");
+      return;
+    }
     if (!isNaN(currentCGPA)) {
       const predictedCGPA = (currentCGPA + gpa) / 2;
       document.getElementById('finalCGPA').value = predictedCGPA.toFixed(2);
