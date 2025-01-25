@@ -546,10 +546,11 @@ document.getElementById('marksForm').addEventListener('submit', calculatePercent
 
 document.getElementById('noOfSubjects').addEventListener('input', function() {
   const formy = document.getElementsByClassName('formy');
-  if (this.value) {
+if (value == ''){
+    formy.style.display = 'none';
+}
+  else {
       formy.style.display = 'block';
-  } else {
-      formy.style.display = 'none';
   }
 });
 
