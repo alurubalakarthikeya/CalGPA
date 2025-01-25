@@ -544,36 +544,49 @@ function calculatePercentage(event) {
 
 document.getElementById('marksForm').addEventListener('submit', calculatePercentage);
 
+document.getElementById('noOfSubjects').addEventListener('input', function() {
+  const formy = document.getElementsByClassName('formy');
+  if (this.value) {
+    for (let i = 0; i < formy.length; i++) {
+      formy.style.display = 'block';
+    }
+  } else {
+    for (let i = 0; i < formy.length; i++) {
+      formy.style.display = 'none';
+    }
+  }
+});
 
 function createInputs(event) {
   event.preventDefault();
-  const noOfSubjects = parseInt(document.getElementById('noOfSubjects').value);
+  const noOfSubjectsInput = document.getElementById('noOfSubjects');
+  const noOfSubjects = parseInt(noOfSubjectsInput.value);
   const dynamicForms = document.getElementById('dynamicForms');
   dynamicForms.innerHTML = ''; 
-  if(noOfSubjects < 1 || noOfSubjects >= 10) {
+
+  if (noOfSubjects < 1 || noOfSubjects >= 10) {
     alert("Please enter a valid number of subjects (max 10)");
     return;
   }
-  else {
+
   for (let i = 1; i <= noOfSubjects; i++) {
-      const formBox = document.createElement('div');
-      formBox.className = 'form-box';
-      formBox.innerHTML = `
+    const formBox = document.createElement('div');
+    formBox.className = 'form-box';
+    formBox.innerHTML = `
       <form class="subject-form" id="subjectForm${i}">
-          <fieldset>
-              <p class="hmm">Subject ${i}</p><br>
-              <input type="text" id="subjectName${i}" placeholder="Subject Name" required>
-              <input type="number" id="creds${i}" placeholder="No.of Credits" required>
-              <input type="number" id="internal${i}" placeholder="CIA Marks" required><br><br>
-              <label for="seePred${i}" class="hmm">How much you think you can score in SEE?</label><br><br>
-              <input type="number" id="predSEE${i}" placeholder="Predicted SEE" required>
-              <input type="text" id="grade${i}" placeholder="Grade" readonly>
-              <button type="button" class="button3" onclick="processForm(${i})">Calculate</button>
-          </fieldset>
+        <fieldset>
+          <p class="hmm">Subject ${i}</p><br>
+          <input type="text" id="subjectName${i}" placeholder="Subject Name" required>
+          <input type="number" id="creds${i}" placeholder="No.of Credits" required>
+          <input type="number" id="internal${i}" placeholder="CIA Marks" required><br><br>
+          <label for="seePred${i}" class="hmm">How much you think you can score in SEE?</label><br><br>
+          <input type="number" id="predSEE${i}" placeholder="Predicted SEE" required>
+          <input type="text" id="grade${i}" placeholder="Grade" readonly>
+          <button type="button" class="button3" onclick="processForm(${i})">Calculate</button>
+        </fieldset>
       </form>
-      `;
-      dynamicForms.appendChild(formBox);
-      }
+    `;
+    dynamicForms.appendChild(formBox);
   }
   addInputListeners();
 }
@@ -581,21 +594,21 @@ function createInputs(event) {
 function addInputListeners() {
   const forms = document.querySelectorAll('.subject-form');
   forms.forEach(form => {
-      const inputs = form.querySelectorAll('input[required]');
-      inputs.forEach(input => {
-          input.addEventListener('input', () => {
-                  if (input.value) {
-                    if (darkModePreference === 'enabled') {
-                      input.style.backgroundColor = 'var(--dark-bg-color)';
-                    } else{
-                      input.style.backgroundColor = 'var(--dark-main-color)';
-                    }
-                  } else {
-                      input.style.backgroundColor = '';
-                  }
-              });
-         });
+    const inputs = form.querySelectorAll('input[required]');
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        if (input.value) {
+          if (darkModePreference === 'enabled') {
+            input.style.backgroundColor = 'var(--dark-bg-color)';
+          } else {
+            input.style.backgroundColor = 'var(--dark-main-color)';
+          }
+        } else {
+          input.style.backgroundColor = '';
+        }
+      });
     });
+  });
 }
 
 function calculateGrade(internal, see) {
@@ -604,23 +617,23 @@ function calculateGrade(internal, see) {
 
   let grade;
   switch (true) {
-      case (percentage >= 90 && percentage <= 100):
-          grade = 10;
-          break;
-      case (percentage >= 80 && percentage < 90):
-          grade = 9;
-          break;
-      case (percentage >= 70 && percentage < 80):
-          grade = 8;
-          break;
-      case (percentage >= 60 && percentage < 70):
-          grade = 7;
-          break;
-      case (percentage >= 50 && percentage < 60):
-          grade = 6;
-          break;
-      default:
-          grade = 0; 
+    case (percentage >= 90 && percentage <= 100):
+      grade = 10;
+      break;
+    case (percentage >= 80 && percentage < 90):
+      grade = 9;
+      break;
+    case (percentage >= 70 && percentage < 80):
+      grade = 8;
+      break;
+    case (percentage >= 60 && percentage < 70):
+      grade = 7;
+      break;
+    case (percentage >= 50 && percentage < 60):
+      grade = 6;
+      break;
+    default:
+      grade = 0; 
   }
   return grade;
 }
@@ -631,10 +644,10 @@ function processForm(i) {
   const gradeInput = document.getElementById(`grade${i}`);
 
   if (!isNaN(internal) && !isNaN(see)) {
-      const grade = calculateGrade(internal, see);
-      gradeInput.value = grade;
+    const grade = calculateGrade(internal, see);
+    gradeInput.value = grade;
   } else {
-      gradeInput.value = 'Invalid input';
+    gradeInput.value = 'Invalid input';
   }
 }
 
