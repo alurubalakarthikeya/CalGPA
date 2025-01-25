@@ -547,13 +547,9 @@ document.getElementById('marksForm').addEventListener('submit', calculatePercent
 document.getElementById('noOfSubjects').addEventListener('input', function() {
   const formy = document.getElementsByClassName('formy');
   if (this.value) {
-    for (let i = 0; i < formy.length; i++) {
       formy.style.display = 'block';
-    }
   } else {
-    for (let i = 0; i < formy.length; i++) {
       formy.style.display = 'none';
-    }
   }
 });
 
