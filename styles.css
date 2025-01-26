@@ -1054,7 +1054,6 @@ body.dark-mode .back-to-top > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   z-index: 1000001;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -1067,10 +1066,6 @@ body.dark-mode .back-to-top > a {
   border-radius: 50%;
   background-color: var(--dark-alt-color);
   z-index: 1000002;
-}
-
-body.dark-mode .progress-circle::before {
-  background-color: var(--main-color);
 }
 
 .progress-circle i {
