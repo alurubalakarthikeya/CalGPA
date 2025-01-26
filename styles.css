@@ -531,8 +531,6 @@ sup> i {
       margin: 85px 30px 50px 30px;
     }
 
-    
-
     .main {
       color: var(--main-color);
       margin: 105px 30px 50px 30px;
@@ -559,7 +557,10 @@ sup> i {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: 10px;
+      }
+
+      .title > img {
+        margin-top: 20px;
       }
 
       .cards-container {
