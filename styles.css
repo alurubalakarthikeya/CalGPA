@@ -1075,6 +1075,34 @@ body.dark-mode .back-to-top > a {
   font-size: 16px;
 }
 
+.falling-pngs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.falling-png {
+  width: 50px;
+  position: absolute;
+  top: -10px;
+  animation: fall 15s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0.5;
+  }
+}
 
 .loader {
   position: fixed;

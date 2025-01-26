@@ -1032,6 +1032,39 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const fallingPngs = document.querySelectorAll('.falling-png');
+
+  function createFallingEffect(png, gradea.png) {
+    let speed = 2 + Math.random() * 3; // Random speed for falling
+    let currentTop = -10; // Start above the viewport
+    const randomLeft = Math.random() * 100; // Random horizontal position
+
+    png.style.left = `${randomLeft}%`;
+    png.style.position = 'absolute';
+
+    const fallInterval = setInterval(() => {
+      currentTop += speed;
+
+      // Update position
+      png.style.top = `${currentTop}%`;
+
+      // Reset position when it goes out of view
+      if (currentTop > 110) {
+        currentTop = -10;
+        speed = 2 + Math.random() * 3; // Randomize speed again
+        png.style.left = `${Math.random() * 100}%`; // Randomize horizontal position
+      }
+    }, 50); // Update every 50ms
+  }
+
+  // Apply the falling effect to all PNGs
+  fallingPngs.forEach(png => {
+    createFallingEffect(png);
+  });
+});
+
+
 
 
 /*My First ever project with 1000+ lines JavaScript yayyyy!!!*/
