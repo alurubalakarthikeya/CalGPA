@@ -1005,21 +1005,6 @@ document.addEventListener('DOMContentLoaded', function() {
   lazyLoad();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const lazyImages = document.querySelectorAll('img.lazy');
-
-  function lazyLoad() {
-    lazyImages.forEach(function(img) {
-      if (img.getBoundingClientRect().top < window.innerHeight && img.getBoundingClientRect().bottom > 0 && getComputedStyle(img).display !== 'none') {
-        img.src = img.dataset.src;
-        img.classList.remove('lazy');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', lazyLoad);
-  lazyLoad();
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
@@ -1033,39 +1018,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const fallingPngs = document.querySelectorAll('.falling-png');
+  const container = document.querySelector('.falling-pngs'); // Falling PNGs container
+  const pngCount = 10; // Number of PNGs to show at once
+  const pngSource = './imgs/gradea.png'; // Path to the PNG file
+  const fallInterval = 500; // Interval to create a new falling PNG
 
-  function createFallingEffect(png, gradea.png) {
-    let speed = 2 + Math.random() * 3; // Random speed for falling
-    let currentTop = -10; // Start above the viewport
-    const randomLeft = Math.random() * 100; // Random horizontal position
+  function createFallingPng() {
+      const png = document.createElement('img');
+      png.classList.add('falling-png');
+      png.src = pngSource; // Set the image source
+      png.style.left = `${Math.random() * 100}vw`; // Random horizontal position (0-100vw)
+      png.style.animationDuration = `${5 + Math.random() * 5}s`; // Random duration (5-10s)
+      png.style.animationDelay = `${Math.random() * 3}s`; // Random delay (0-3s)
 
-    png.style.left = `${randomLeft}%`;
-    png.style.position = 'absolute';
+      container.appendChild(png);
 
-    const fallInterval = setInterval(() => {
-      currentTop += speed;
-
-      // Update position
-      png.style.top = `${currentTop}%`;
-
-      // Reset position when it goes out of view
-      if (currentTop > 110) {
-        currentTop = -10;
-        speed = 2 + Math.random() * 3; // Randomize speed again
-        png.style.left = `${Math.random() * 100}%`; // Randomize horizontal position
-      }
-    }, 50); // Update every 50ms
+      // Automatically remove the PNG after animation completes
+      setTimeout(() => {
+          png.remove();
+      }, (5 + Math.random() * 5) * 1000); // Match the timeout with the animation duration
   }
 
-  // Apply the falling effect to all PNGs
-  fallingPngs.forEach(png => {
-    createFallingEffect(png);
-  });
+  // Create falling PNGs at specified intervals
+  setInterval(() => {
+      if (document.querySelectorAll('.falling-png').length < pngCount) {
+          createFallingPng(); // Create a new PNG if the limit is not reached
+      }
+  }, fallInterval);
 });
-
-
-
 
 /*My First ever project with 1000+ lines JavaScript yayyyy!!!*/
 
