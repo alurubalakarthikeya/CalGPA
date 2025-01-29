@@ -9,6 +9,46 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const installPrompt = document.getElementById('installPrompt');
+  installPrompt.style.display = 'block';
+
+  const installButton = document.getElementById('installButton');
+  const dismissButton = document.getElementById('dismissButton');
+
+  installButton.addEventListener('click', () => {
+    installPrompt.style.display = 'none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+
+  dismissButton.addEventListener('click', () => {
+    installPrompt.style.display = 'none';
+  });
+});
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
