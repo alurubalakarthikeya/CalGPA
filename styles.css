@@ -1791,3 +1791,34 @@ body.dark-mode .view-counter {
   border-bottom: 2px solid var(--dark-main-color);
   padding: 10px 0px;
 }
+
+.install-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  border: 1px solid var(--dark-main-color);
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.install-prompt p {
+  margin: 0 0 10px;
+  color: var(--dark-text-color);
+}
+
+.install-prompt button {
+  margin-right: 10px;
+  background-color: var(--dark-main-color);
+  color: var(--light-text-color);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.install-prompt button:hover {
+  background-color: var(--dark-bg-color);
+}
