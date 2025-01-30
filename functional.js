@@ -20,7 +20,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
   localStorage.setItem('refreshCount', refreshCount);
 
-  if (refreshCount % 10 === 0) {
+  if (refreshCount % 20 === 0) {
     const installPrompt = document.getElementById('installPrompt');
     installPrompt.style.display = 'block';
 
@@ -46,6 +46,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
   }
 });
 
+document.getElementById('downloadButton').addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = 'path/to/your/file.pdf'; // Replace with the path to your file
+  link.download = 'file.pdf'; // Replace with the desired file name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -1067,34 +1075,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const container = document.querySelector('.falling-pngs'); // Falling PNGs container
-  const pngCount = 10; // Number of PNGs to show at once
-  const pngSource = './imgs/gradea.png'; // Path to the PNG file
-  const fallInterval = 500; // Interval to create a new falling PNG
+  const container = document.querySelector('.falling-pngs'); 
+  const pngCount = 10; 
+  const pngSource = './imgs/gradea.png'; 
+  const fallInterval = 500; 
 
   function createFallingPng() {
       const png = document.createElement('img');
       png.classList.add('falling-png');
-      png.src = pngSource; // Set the image source
-      png.style.left = `${Math.random() * 100}vw`; // Random horizontal position (0-100vw)
-      png.style.animationDuration = `${5 + Math.random() * 5}s`; // Random duration (5-10s)
-      png.style.animationDelay = `${Math.random() * 3}s`; // Random delay (0-3s)
+      png.src = pngSource; 
+      png.style.left = `${Math.random() * 100}vw`; 
+      png.style.animationDuration = `${5 + Math.random() * 5}s`; 
+      png.style.animationDelay = `${Math.random() * 3}s`; 
 
       container.appendChild(png);
 
-      // Automatically remove the PNG after animation completes
       setTimeout(() => {
           png.remove();
-      }, (5 + Math.random() * 5) * 1000); // Match the timeout with the animation duration
+      }, (5 + Math.random() * 5) * 1000); 
   }
-
-  // Create falling PNGs at specified intervals
   setInterval(() => {
       if (document.querySelectorAll('.falling-png').length < pngCount) {
-          createFallingPng(); // Create a new PNG if the limit is not reached
+          createFallingPng(); 
       }
   }, fallInterval);
 });
 
 /*My First ever project with 1000+ lines JavaScript yayyyy!!!*/
-

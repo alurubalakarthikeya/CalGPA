@@ -1836,3 +1836,8 @@ body.dark-mode .view-counter {
   width: 100%;
   padding: 15px;
 }
+
+#downloadButton {
+  width: 100%;
+  padding: 15px;
+}
