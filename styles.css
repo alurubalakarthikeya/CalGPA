@@ -1804,6 +1804,7 @@ body.dark-mode .view-counter {
   display: none;
   z-index: 1000;
   border-radius: 20px;
+  min-width: 300px;
 }
 
 .install-prompt p {
@@ -1824,4 +1825,14 @@ body.dark-mode .view-counter {
 .install-prompt button:hover {
   background-color: var(--main-color);
   color: white;
+}
+
+#installButton {
+  width: 100%;
+  padding: 15px;
+}
+
+#dismissButton {
+  width: 100%;
+  padding: 15px;
 }
