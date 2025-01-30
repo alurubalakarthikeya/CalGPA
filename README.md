@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image.png?raw=true" alt="Image 1" width="500" style="display: inline-block; margin-right: 20px;"/>
 </p>
-<h2>Description📜</h2>
+<h2>Description</h2>
 CalGPA is a web app designed to help students analyze and track their semester performance effectively, allows students to monitor their academic progress throughout the semester in real-time. There are different tools that can help students maintain a good academic record. CalGPA delivers insights that help you improve your weaker subjects and get better in subjects you are good at. Download the app (pwa) in your device for better experience and offline access.
 
 ## Features ✨
