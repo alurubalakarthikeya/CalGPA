@@ -1817,7 +1817,7 @@ body.dark-mode .view-counter {
   background-color: var(--dark-main-color);
   color: var(--bg-color);
   border: none;
-  padding: 5px 10px;
+  padding: 15px 20px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -1827,17 +1827,28 @@ body.dark-mode .view-counter {
   color: white;
 }
 
-#installButton {
-  width: 100%;
-  padding: 15px;
+
+.downButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
-#dismissButton {
-  width: 100%;
-  padding: 15px;
+.downButton span {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Pointer/hand icon */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the container inline-block */
+  font-size: 16px; /* Increase font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-#downloadButton {
-  width: 100%;
-  padding: 15px;
+.downButton span:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
