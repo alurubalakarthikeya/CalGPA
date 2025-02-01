@@ -46,14 +46,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
   }
 });
 
-document.getElementById('downloadButton').addEventListener('click', () => {
+function downloadFile() {
   const link = document.createElement('a');
-  link.href = 'path/to/your/file.pdf'; // Replace with the path to your file
-  link.download = 'file.pdf'; // Replace with the desired file name
+  link.href = 'manifest.json'; 
+  link.download = 'CalGPA.json'; 
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-});
+}
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
