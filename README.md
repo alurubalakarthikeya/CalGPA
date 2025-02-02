@@ -5,7 +5,7 @@
 <h2>Description</h2>
 CalGPA is a web app designed to help students analyze and track their semester performance effectively, allows students to monitor their academic progress throughout the semester in real-time. There are different tools that can help students maintain a good academic record. CalGPA delivers insights that help you improve your weaker subjects and get better in subjects you are good at. Download the app (pwa) in your device for better experience and offline access.
 
-## Features ✨
+## ✨ Features 
 
 - **GPA Calculator (Estimator.io)**:  Estimator.io is a tool which focuses on bringing awareness in students that even a single mark can change their grade by minus one or even plus one. So by using this tool, students can now estimate their predicted GPA based on their inputs and then creating goals for the SEE and CIA Marks by filling the form inputs like no.of credits, CIA marks and predicted SEE marks.Try the tool here: <a href="https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html" target="_blank">Open</a> <br>
 <p align="center">
@@ -27,35 +27,39 @@ CalGPA is a web app designed to help students analyze and track their semester p
 - Task manager (Todo.io) : a basic todo tool to add remainders and work on them with some cool stuff like todo completion streaks 
 - GPA Roadmap (Tracker.io) : a tool which has different study plans to get a certain GPA based on your inputs, and how to improve the GPA.
   <br>
-## UI Demo 💻
+## UI Demo
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image4.png?raw=true" alt="Image 4" width="300" style="display: inline-block; margin-right: 20px;">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="Image 3" width="300" style="display: inline-block; margin-right: 20px;"/>
 </p>
 
-## Tech Used 🛠️
+## 🛠️ Tech Used 
 
-- **Frontend**:
-  - HTML5 
-  - CSS3 
-  - JavaScript
-  - D3.js
-  - Flask
-  - Python
+- **Frontend**:<br>
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)<br>
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)<br>
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)<br>
 
-- **Version Control:**
-  - Git
-  - Github
+- **Backend**:<br>
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)<br>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)<br>
+
+
+
+- **Version Control:**<br>
+  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)<br>
+  ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)<br>
+
     
-- **Hosting**:
-  - GitHub Pages
+- **Hosting**:<br>
+  ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
     
 1. Clone the repository:
    
    ```bash
    git clone https://github.com/alurubalakarthikeya/CalGPA.git
 
-<h2>Contributing✒️</h2>
+<h2>Contributing</h2>
 <p>We welcome contributions from the community! To get started:</p>
 <ol>
   <li>Fork the Repository. </li><br>
@@ -66,8 +70,19 @@ CalGPA is a web app designed to help students analyze and track their semester p
   <li>Push to your branch:</li><pre><code>git push origin feature-branch</code></pre>
   <li>Create a pull request for review.</li>
 </ol>
-<h2>License🪪</h2>
+<h2>License</h2>
 <p>This project is licensed under the <strong>MIT License</strong>. For more information, please refer to the <a href="LICENSE">LICENSE</a> file.</p>
 
-## Project Link 🔗
+
+![License](https://img.shields.io/github/license/alurubalakarthikeya/CalGPA)
+![GitHub stars](https://img.shields.io/github/stars/alurubalakarthikeya/CalGPA?style=social)
+![GitHub contributors](https://img.shields.io/github/contributors/alurubalakarthikeya/CalGPA)
+![GitHub repo size](https://img.shields.io/github/repo-size/alurubalakarthikeya/CalGPA)
+
+
+## Project Link
  Open project: <a href="https://alurubalakarthikeya.github.io/CalGPA/">Click me</a>
+
+![Maintenance](https://img.shields.io/maintenance/yes/2025)
+![GitHub last commit](https://img.shields.io/github/last-commit/alurubalakarthikeya/CalGPA)
+
