@@ -15,8 +15,8 @@ With **CalGPA**, students can:
 
 ## Features
 
-### 🚀 **GPA Calculator (Estimator.io)**
-A tool that helps students understand how a single mark can impact their grade and set goals accordingly.
+### 🧮 **GPA Calculator (Estimator.io)**
+A tool that helps students to calculate their predicted sgpa based on their internal marks. Which helps is accurate goal setting.
 🔗 [Try it here](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)
 
 <p align="center">
@@ -24,27 +24,27 @@ A tool that helps students understand how a single mark can impact their grade a
 </p>
 
 ### 📚 **Subject Analyzer (Guider.io)**
-Guides students on how to improve in specific subjects, their real-world applications, career opportunities, and study resources.
+Guides on how to improve in specific subjects, their real-world applications, career opportunities, and study resources to get the opportunities related to the subject.
 🔗 [Try it here](https://alurubalakarthikeya.github.io/CalGPA/pages/guider.html)
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image2.png?raw=true" alt="Subject Analyzer" width="550"/>
 </p>
 
-### 🏫 **Vacation & Attendance Tracker (Attender.io)**
-Helps students plan long vacations without worrying about attendance requirements and provides insights on how to maintain the minimum required attendance.
+### 🪂 **Vacation & Attendance Tracker (Attender.io)**
+Helps students plan to go home, without worrying about attendance requirements and provides insights on how to maintain the minimum required attendance.
 🔗 [Try it here](https://alurubalakarthikeya.github.io/CalGPA/pages/attendance.html)
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image6.png?raw=true" alt="Attendance Tracker" width="550"/>
 </p>
 
-## 🔥 Upcoming Features
+## ⚡ Upcoming Features
 - **Predictor.io:** ML-based GPA prediction for future semesters.
 - **Todo.io:** A task manager with completion streaks.
 - **Tracker.io:** A GPA roadmap with personalized study plans.
 
-## 🎨 UI Demo
+## 🪐 UI Demo
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image4.png?raw=true" alt="UI Demo" width="300"/>
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image3.png?raw=true" alt="UI Demo" width="300"/>
@@ -52,33 +52,34 @@ Helps students plan long vacations without worrying about attendance requirement
 
 ## 🛠️ Tech Stack
 
-### **Frontend**  
+### 📱 **Frontend**  
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### **Backend**  
+### 👨‍💻 **Backend**  
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-### **Version Control**  
+### 🪛 **Version Control**  
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-### **Hosting**  
+### 🚥 **Hosting**  
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 
-## 🏗️ Installation & Setup
+## ⬇️ Installation & Setup
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/alurubalakarthikeya/CalGPA.git
    ```
 
-## 🤝 Contributing
+## 👤 Contributing
 We welcome contributions! To get started:
 
 1. **Fork the repository.**
+<br>
 2. **Create a new branch:**
    ```bash
    git checkout -b feature-branch
@@ -93,10 +94,10 @@ We welcome contributions! To get started:
    ```
 5. **Create a pull request for review.**
 
-## 📜 License
+## 📄 License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-## 📊 Project Stats
+## 📈 Project Stats
 ![License](https://img.shields.io/github/license/alurubalakarthikeya/CalGPA)
 ![GitHub Stars](https://img.shields.io/github/stars/alurubalakarthikeya/CalGPA?style=social)
 ![GitHub Contributors](https://img.shields.io/github/contributors/alurubalakarthikeya/CalGPA)
@@ -104,7 +105,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ![Maintenance](https://img.shields.io/maintenance/yes/2025)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/alurubalakarthikeya/CalGPA)
 
-## 🚀 Project Link
+## Project Link
 🔗 [Open CalGPA](https://alurubalakarthikeya.github.io/CalGPA/)
 
 
