@@ -40,9 +40,9 @@ Helps students plan to go home, without worrying about attendance requirements a
 </p>
 
 ## ⚡ Upcoming Features
-- **Predictor.io:** ML-based GPA prediction for future semesters.
-- **Todo.io:** A task manager with completion streaks.
-- **Tracker.io:** A GPA roadmap with personalized study plans.
+- **Predictor.io:** ML-based GPA prediction for future semesters
+- **Todo.io:** A task manager with completion streaks
+- **Tracker.io:** A GPA roadmap with personalized study plans
 
 ## 🪐 UI Demo
 <p align="center">
