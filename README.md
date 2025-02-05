@@ -84,6 +84,7 @@ We welcome contributions! To get started:
    ```bash
    git checkout -b feature-branch
    ```
+<br>
 3. **Make changes and commit:**
    ```bash
    git commit -m "Add new feature"
