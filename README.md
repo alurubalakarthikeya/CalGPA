@@ -82,9 +82,8 @@ We welcome contributions! To get started:
 <br>
 2. **Create a new branch:**
    ```bash
-   git checkout -b feature-branch
+   git checkout -b feature-branch <br>
    ```
-<br>
 3. **Make changes and commit:**
    ```bash
    git commit -m "Add new feature"
