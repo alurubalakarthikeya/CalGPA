@@ -71,6 +71,7 @@ Helps students plan to go home, without worrying about attendance requirements a
 ## ⬇️ Installation & Setup
 
 1. **Clone the repository:**
+``` ```
    ```bash
    git clone https://github.com/alurubalakarthikeya/CalGPA.git
    ```
