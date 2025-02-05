@@ -78,7 +78,7 @@ Helps students plan to go home, without worrying about attendance requirements a
 ## 👤 Contributing
 We welcome contributions! To get started:
 
-1. **Fork the repository.<br>**
+1. **Fork the repository.<br><br>**
 
 2. **Create a new branch:**
    ```bash
