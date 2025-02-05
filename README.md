@@ -75,15 +75,14 @@ Helps students plan to go home, without worrying about attendance requirements a
    ```bash
    git clone https://github.com/alurubalakarthikeya/CalGPA.git
    ```
-<br>
 ## 👤 Contributing
 We welcome contributions! To get started:
 
-1. **Fork the repository.**
+1. **Fork the repository.<br>**
 
 2. **Create a new branch:**
    ```bash
-   git checkout -b feature-branch <br>
+   git checkout -b feature-branch
    ```
 3. **Make changes and commit:**
    ```bash
