@@ -79,7 +79,7 @@ Helps students plan to go home, without worrying about attendance requirements a
 We welcome contributions! To get started:
 
 1. **Fork the repository.**
-<br>
+
 2. **Create a new branch:**
    ```bash
    git checkout -b feature-branch <br>
