@@ -16,7 +16,7 @@ With **CalGPA**, students can:
 ## Features
 
 ### 🧮 **GPA Calculator (Estimator.io)**
-A tool that helps students to calculate their predicted sgpa based on their internal marks. Which helps is accurate goal setting. Check it here: [Open 📍](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)
+A tool that helps students to calculate their predicted sgpa based on their internal marks. Which helps is accurate goal setting. Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image5.png?raw=true" alt="GPA Calculator" width="550"/>
