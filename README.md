@@ -13,7 +13,7 @@ With **CalGPA**, students can:
 - Analyze the use of a subject in their career.
 - Plan for going home without fear of attendance issues.
 
-## Features
+## Tools
 
 ### 🧮 **GPA Calculator (Estimator.io)**
 A tool that helps students to calculate their predicted sgpa based on their internal marks. Which helps is accurate goal setting. Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)
@@ -24,7 +24,7 @@ A tool that helps students to calculate their predicted sgpa based on their inte
 
 ### 📚 **Subject Analyzer (Guider.io)**
 Guides on how to improve in specific subjects, their real-world applications, career opportunities, and study resources to get the opportunities related to the subject.
-🔗 [Try it here](https://alurubalakarthikeya.github.io/CalGPA/pages/guider.html)
+Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/guider.html)
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image2.png?raw=true" alt="Subject Analyzer" width="550"/>
@@ -32,7 +32,7 @@ Guides on how to improve in specific subjects, their real-world applications, ca
 
 ### 🪂 **Vacation & Attendance Tracker (Attender.io)**
 Helps students plan to go home, without worrying about attendance requirements and provides insights on how to maintain the minimum required attendance.
-🔗 [Try it here](https://alurubalakarthikeya.github.io/CalGPA/pages/attendance.html)
+Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/attendance.html)
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image6.png?raw=true" alt="Attendance Tracker" width="550"/>
