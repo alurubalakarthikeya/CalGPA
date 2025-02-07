@@ -15,9 +15,9 @@ With **CalGPA**, students can:
 
 ## Features
 
-### Core Academic Tools  
+### Academic Tools  
 - **🧮 GPA Calculator (Estimator.io)**
-- **📚 Subject Analyzer (Guider.io) **
+- **📚 Subject Analyzer (Guider.io)**
 - **🪂 Attendance & Vacation Planner (Attender.io)**
 
 ### Technical Excellence  
@@ -37,7 +37,7 @@ With **CalGPA**, students can:
 
 ---
 
-<q>"Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement."</q>
+<q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q>
 
 ## Tools
 
