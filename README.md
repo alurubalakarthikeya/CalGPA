@@ -5,13 +5,39 @@
 </p>
 
 ## Description
-CalGPA is a web app designed to help uni students analyze and track their semester performance. It allows students to monitor their academic progress in real-time and provides various tools to maintain a good academic record. The app can be downloaded (PWA) for offline access and better usability.
+CalGPA is a web app designed to help uni students analyze and track their semester performance. It allows students to track their academic progress in real-time and provides various tools to maintain a good academic record. App can be downloaded for offline access and better usability.
 
 With **CalGPA**, students can:
 - Calculate their estimated SGPA based on Internal marks.
 - Set academic goals based on their estimated GPA.
 - Analyze the use of a subject in their career.
 - Plan for going home without fear of attendance issues.
+
+## Features
+
+### Core Academic Tools  
+- **🧮 GPA Calculator (Estimator.io)**
+- **📚 Subject Analyzer (Guider.io) **
+- **🪂 Attendance & Vacation Planner (Attender.io)**
+
+### Technical Excellence  
+- **📲 Progressive Web App (PWA)**
+- **🌓 Dark/Light Mode Toggle**
+- **🔁 Real-Time Sync**
+
+###  User-Centric Design  
+- **📊 Goal Tracking Dashboard**
+- **📅 Attendance Alerts**   
+- **🔄 Cross-Device Sync** 
+
+### Coming Soon  
+- **🤖 ML-Powered Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
+- **✅ Streak-Based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
+- **🗺️ Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
+
+---
+
+This section highlights both functional tools and technical advantages while aligning with the project’s existing structure and tone. 🌈
 
 ## Tools
 
