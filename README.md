@@ -16,24 +16,21 @@ With **CalGPA**, students can:
 ## Features
 
 ### Academic Tools  
-- **🧮 GPA Calculator (Estimator.io)**
-- **📚 Subject Analyzer (Guider.io)**
-- **🪂 Attendance & Vacation Planner (Attender.io)**
+- 🧮 GPA Calculator (Estimator.io)
+- 📚 Subject Analyzer (Guider.io)
+- 🪂 Attendance & Vacation Planner (Attender.io)
 
-### Technical Excellence  
-- **📲 Progressive Web App (PWA)**
-- **🌓 Dark/Light Mode Toggle**
-- **🔁 Real-Time Sync**
+### App Features
+-  Progressive Web App (PWA)
+-  Dark/Light Mode Toggle
+-  Real-Time Sync
+-  Goal Tracking Dashboard
+-  Cross-Device Sync
 
-###  User-Centric Design  
-- **📊 Goal Tracking Dashboard**
-- **📅 Attendance Alerts**   
-- **🔄 Cross-Device Sync** 
-
-### Coming Soon  
-- **🤖 ML-Powered Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
-- **✅ Streak-Based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
-- **🗺️ Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
+### Upcoming Features 
+- ** ML-Powered Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
+- ** Streak-Based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
+- ** Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
 
 ---
 
@@ -63,11 +60,6 @@ Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/att
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image6.png?raw=true" alt="Attendance Tracker" width="550"/>
 </p>
-
-## ⚡ Upcoming Tools
-- **Predictor.io:** ML-based GPA prediction for future semesters
-- **Todo.io:** A task manager with completion streaks
-- **Tracker.io:** A GPA roadmap with personalized study plans
 
 ## 🪐 UI Demo
 <p align="center">
