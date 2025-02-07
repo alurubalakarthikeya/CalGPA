@@ -38,7 +38,7 @@ Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/att
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image6.png?raw=true" alt="Attendance Tracker" width="550"/>
 </p>
 
-## ⚡ Upcoming Features
+## ⚡ Upcoming Tools
 - **Predictor.io:** ML-based GPA prediction for future semesters
 - **Todo.io:** A task manager with completion streaks
 - **Tracker.io:** A GPA roadmap with personalized study plans
