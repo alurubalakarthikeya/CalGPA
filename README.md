@@ -28,9 +28,9 @@ With **CalGPA**, students can:
 -  Cross-Device Sync
 
 ### Upcoming Features 
-- ** ML-Powered Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
-- ** Streak-Based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
-- ** Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
+- **ML-Powered Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
+- **Streak-Based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
+- **Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
 
 ---
 
@@ -126,8 +126,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ![Maintenance](https://img.shields.io/maintenance/yes/2025)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/alurubalakarthikeya/CalGPA)
 
-## Project Link
-[Open CalGPA📍](https://alurubalakarthikeya.github.io/CalGPA/)
+## Project Link: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/)
 
 
 
