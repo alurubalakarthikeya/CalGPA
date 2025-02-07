@@ -37,7 +37,7 @@ With **CalGPA**, students can:
 
 ---
 
-This section highlights both functional tools and technical advantages while aligning with the project’s existing structure and tone. 🌈
+<q>"Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement."</q>
 
 ## Tools
 
