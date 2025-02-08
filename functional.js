@@ -259,7 +259,394 @@ function calculatePercentage(event) {
       let jobRoles = '';
 
       switch (subjectName.toLowerCase()) {
-        case 'fsd':
+        case 'linear-algebra' || 'lade':
+            infoText = 'Linear Algebra and Differential Equations form the mathematical foundation for engineering and computer science. This subject covers key topics such as matrices, vector spaces, eigenvalues, and differential equations, which are crucial in fields like machine learning, control systems, and scientific computing.';
+              
+              if (percentage > 90) {
+                  salaryInsights = 'Expected salary: ₹24 LPA';
+                  jobRoles = 'Key roles: Machine Learning Engineer, Data Scientist, Control Systems Engineer';
+                  suggestionsText = 'Focus on advanced topics such as Singular Value Decomposition (SVD) and Partial Differential Equations. Apply these concepts in AI/ML models and engineering simulations. <br>' +
+                      '<strong>Useful Courses:</strong><br>' +
+                      '<a href="https://www.edx.org/course/linear-algebra" class="link" target="_blank">Linear Algebra by MIT <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                      '<a href="https://www.khanacademy.org/math/linear-algebra" class="link" target="_blank">Linear Algebra by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                      '<a href="https://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/" class="link" target="_blank">Differential Equations by MIT OpenCourseWare <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              } 
+              if (percentage > 80 && percentage <= 90) {
+                  salaryInsights = 'Expected salary: ₹18 LPA';
+                  jobRoles = 'Key roles: Data Analyst, Signal Processing Engineer, Research Associate';
+                  suggestionsText = 'Strengthen your knowledge of eigenvalues, eigenvectors, and Fourier series. Work on applied problems related to physics and engineering. <br>' +
+                      '<strong>Useful Courses:</strong><br>' +
+                      '<a href="https://www.coursera.org/learn/matrix-algebra-engineers" class="link" target="_blank">Matrix Algebra for Engineers by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                      '<a href="https://brilliant.org/courses/linear-algebra/" class="link" target="_blank">Linear Algebra by Brilliant <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              } 
+              if (percentage > 70 && percentage <= 80) {
+                  salaryInsights = 'Expected salary: ₹13 LPA';
+                  jobRoles = 'Key roles: Mathematician, Quantitative Analyst, Junior Engineer';
+                  suggestionsText = 'Improve your understanding of determinant properties and Laplace transforms. Solve real-world problems using mathematical models. <br>' +
+                      '<strong>Useful Courses:</strong><br>' +
+                      '<a href="https://www.udemy.com/course/linear-algebra-theory-and-applications/" class="link" target="_blank">Linear Algebra: Theory and Applications on Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                      '<a href="https://www.khanacademy.org/math/differential-equations" class="link" target="_blank">Differential Equations by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              } 
+              if (percentage <= 70) {
+                  salaryInsights = 'Expected salary: ₹9 LPA';
+                  jobRoles = 'Key roles: Teaching Assistant, Research Intern, Graduate Trainee';
+                  suggestionsText = 'Master basic concepts such as Gaussian elimination and first-order ODEs. Work on small projects involving matrix computations. <br>' +
+                      '<strong>Useful Courses:</strong><br>' +
+                      '<a href="https://www.coursera.org/learn/linear-algebra-machine-learning" class="link" target="_blank">Linear Algebra for Machine Learning by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                      '<a href="https://www.udacity.com/course/linear-algebra-refresher-course--ud953" class="link" target="_blank">Linear Algebra Refresher by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              }
+              break;
+              case 'c-programming' || 'c':
+                infoText = 'C Programming is a fundamental language for system-level programming and problem-solving. This subject covers topics such as data types, control structures, functions, pointers, and file handling, which are essential for embedded systems, operating systems, and high-performance computing.';
+                
+                if (percentage > 90) {
+                    salaryInsights = 'Expected salary: ₹22 LPA';
+                    jobRoles = 'Key roles: Embedded Systems Engineer, Software Engineer, Compiler Developer';
+                    suggestionsText = 'Focus on advanced topics such as memory management, multi-threading, and low-level optimizations. Contribute to open-source C projects and work on embedded programming. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udacity.com/course/c-for-programmers--ud210" class="link" target="_blank">C for Programmers by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/c-programming" class="link" target="_blank">C Programming by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://nptel.ac.in/courses/106105171" class="link" target="_blank">Programming in C by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                } 
+                if (percentage > 80 && percentage <= 90) {
+                    salaryInsights = 'Expected salary: ₹16 LPA';
+                    jobRoles = 'Key roles: System Programmer, Game Developer, Firmware Engineer';
+                    suggestionsText = 'Master data structures using C, work on debugging techniques, and explore system programming concepts. Build small projects using C for hands-on experience. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/c-programming-for-beginners/" class="link" target="_blank">C Programming for Beginners on Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.khanacademy.org/computing/computer-programming" class="link" target="_blank">Computer Programming by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                } 
+                if (percentage > 70 && percentage <= 80) {
+                    salaryInsights = 'Expected salary: ₹12 LPA';
+                    jobRoles = 'Key roles: Junior Software Developer, Technical Support Engineer';
+                    suggestionsText = 'Enhance your knowledge of pointers, arrays, and file handling. Solve real-world problems using C programs and understand debugging techniques. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/low-level-programming-c-assembly-and-programming-fundamentals/" class="link" target="_blank">Low-Level Programming with C by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/c-programming" class="link" target="_blank">C Programming by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                } 
+                if (percentage <= 70) {
+                    salaryInsights = 'Expected salary: ₹8 LPA';
+                    jobRoles = 'Key roles: Intern, QA Tester, IT Support Specialist';
+                    suggestionsText = 'Strengthen basic concepts like loops, functions, and arrays. Practice coding problems on platforms like LeetCode and CodeChef. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://nptel.ac.in/courses/106104128" class="link" target="_blank">C Programming and Data Structures by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udacity.com/course/intro-to-programming-nanodegree--nd000" class="link" target="_blank">Intro to Programming Nanodegree by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                }
+                break;
+            
+                case 'oops':
+                  infoText = 'Object-Oriented Programming (OOPs) is a paradigm that focuses on objects and classes for building scalable software. This subject covers core concepts like inheritance, polymorphism, encapsulation, and abstraction, which are essential for modern software development.';
+              
+                  if (percentage > 90) {
+                      salaryInsights = 'Expected salary: ₹24 LPA';
+                      jobRoles = 'Key roles: Software Engineer, Backend Developer, Solution Architect';
+                      suggestionsText = 'Master advanced OOP principles, design patterns, and SOLID principles. Work on projects using OOP-based languages like Java, C++, or Python. <br>' +
+                          '<strong>Useful Courses:</strong><br>' +
+                          '<a href="https://www.coursera.org/learn/object-oriented-programming" class="link" target="_blank">Object-Oriented Programming by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                          '<a href="https://www.udacity.com/course/object-oriented-programming-in-java--ud282" class="link" target="_blank">OOP in Java by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                          '<a href="https://nptel.ac.in/courses/106105153" class="link" target="_blank">OOPs by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                  } 
+                  if (percentage > 80 && percentage <= 90) {
+                      salaryInsights = 'Expected salary: ₹18 LPA';
+                      jobRoles = 'Key roles: Java Developer, Software Analyst, Application Engineer';
+                      suggestionsText = 'Work on real-world applications using OOP principles. Learn about design patterns and best practices. Contribute to open-source OOP-based projects. <br>' +
+                          '<strong>Useful Courses:</strong><br>' +
+                          '<a href="https://www.udemy.com/course/object-oriented-programming-in-python/" class="link" target="_blank">OOP in Python by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                          '<a href="https://www.khanacademy.org/computing/computer-programming" class="link" target="_blank">Programming Concepts by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                  } 
+                  if (percentage > 70 && percentage <= 80) {
+                      salaryInsights = 'Expected salary: ₹14 LPA';
+                      jobRoles = 'Key roles: Junior Software Developer, Backend Support Engineer';
+                      suggestionsText = 'Enhance your understanding of inheritance, polymorphism, and encapsulation. Solve OOP-based coding challenges and work on mini-projects. <br>' +
+                          '<strong>Useful Courses:</strong><br>' +
+                          '<a href="https://www.udemy.com/course/java-programming-for-complete-beginners/" class="link" target="_blank">Java OOP for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                          '<a href="https://www.edx.org/course/object-oriented-programming" class="link" target="_blank">OOP Concepts by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                  } 
+                  if (percentage <= 70) {
+                      salaryInsights = 'Expected salary: ₹10 LPA';
+                      jobRoles = 'Key roles: Intern, Support Engineer, QA Tester';
+                      suggestionsText = 'Strengthen basic OOP concepts by practicing simple projects and debugging object-oriented code. Explore online coding platforms. <br>' +
+                          '<strong>Useful Courses:</strong><br>' +
+                          '<a href="https://nptel.ac.in/courses/106106162" class="link" target="_blank">OOPs in Java by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                          '<a href="https://www.udacity.com/course/intro-to-object-oriented-programming--ud283" class="link" target="_blank">Intro to OOP by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                  }
+                  break;
+                  case 'cn':
+                    infoText = 'Computer Networks (CN) focuses on how computers communicate with each other over networks, including protocols, architectures, and security aspects. This subject is crucial for understanding networking fundamentals and designing robust systems.';
+                
+                    if (percentage > 90) {
+                        salaryInsights = 'Expected salary: ₹25 LPA';
+                        jobRoles = 'Key roles: Network Engineer, Security Analyst, Cloud Architect';
+                        suggestionsText = 'Deep dive into advanced networking concepts, including network security, cloud networking, and SDN (Software-Defined Networking). Gain hands-on experience with tools like Wireshark, Cisco Packet Tracer, and network simulators. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.coursera.org/specializations/computer-networking" class="link" target="_blank">Computer Networking by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/the-complete-networking-fundamentals-course/" class="link" target="_blank">Networking Fundamentals by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://nptel.ac.in/courses/106105183" class="link" target="_blank">Computer Networks by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                    } 
+                    if (percentage > 80 && percentage <= 90) {
+                        salaryInsights = 'Expected salary: ₹19 LPA';
+                        jobRoles = 'Key roles: Network Administrator, System Engineer, Cloud Engineer';
+                        suggestionsText = 'Strengthen your understanding of OSI and TCP/IP models, subnetting, and routing protocols. Work on setting up and managing networks using tools like Cisco Packet Tracer and GNS3. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.udacity.com/course/computer-networking--ud199" class="link" target="_blank">Computer Networking by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.edx.org/course/introduction-to-networking" class="link" target="_blank">Networking Basics by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                    } 
+                    if (percentage > 70 && percentage <= 80) {
+                        salaryInsights = 'Expected salary: ₹15 LPA';
+                        jobRoles = 'Key roles: Junior Network Engineer, IT Support, NOC Engineer';
+                        suggestionsText = 'Practice configuring networks and troubleshooting connectivity issues. Learn about VLANs, firewalls, and VPNs. Experiment with virtual networking tools. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.udemy.com/course/networking-for-beginners/" class="link" target="_blank">Networking for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.coursera.org/learn/networking-basics" class="link" target="_blank">Networking Basics by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                    } 
+                    if (percentage <= 70) {
+                        salaryInsights = 'Expected salary: ₹11 LPA';
+                        jobRoles = 'Key roles: IT Technician, Network Support, Helpdesk Engineer';
+                        suggestionsText = 'Focus on fundamental networking concepts, learn IP addressing, and practice setting up small networks. Explore free networking simulators for hands-on learning. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://nptel.ac.in/courses/106102113" class="link" target="_blank">Basics of Networking by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.khanacademy.org/computing/computer-science/internet-intro" class="link" target="_blank">Internet & Networking by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                    }
+                    break;
+                    case 'os':
+                      infoText = 'Operating Systems (OS) covers the core principles of how operating systems manage hardware, processes, memory, and file systems. Understanding OS is essential for roles in system development, cybersecurity, and cloud computing.';
+                  
+                      if (percentage > 90) {
+                          salaryInsights = 'Expected salary: ₹27 LPA';
+                          jobRoles = 'Key roles: OS Developer, Kernel Engineer, Cloud Architect';
+                          suggestionsText = 'Master OS internals, process scheduling, memory management, and file systems. Learn Linux kernel development and virtualization. <br>' +
+                              '<strong>Useful Courses:</strong><br>' +
+                              '<a href="https://cs75.net/" class="link" target="_blank">Operating Systems by Harvard <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                              '<a href="https://www.udacity.com/course/advanced-operating-systems--ud189" class="link" target="_blank">Advanced OS by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                              '<a href="https://nptel.ac.in/courses/106102132" class="link" target="_blank">Operating Systems by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                      } 
+                      if (percentage > 80 && percentage <= 90) {
+                          salaryInsights = 'Expected salary: ₹20 LPA';
+                          jobRoles = 'Key roles: System Engineer, DevOps Engineer, Security Analyst';
+                          suggestionsText = 'Strengthen your OS concepts, work with Linux commands, and learn process synchronization. Explore Docker, Kubernetes, and shell scripting. <br>' +
+                              '<strong>Useful Courses:</strong><br>' +
+                              '<a href="https://www.coursera.org/learn/os-pku" class="link" target="_blank">Operating Systems by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                              '<a href="https://www.udemy.com/course/operating-system-fundamentals/" class="link" target="_blank">OS Fundamentals by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                      } 
+                      if (percentage > 70 && percentage <= 80) {
+                          salaryInsights = 'Expected salary: ₹16 LPA';
+                          jobRoles = 'Key roles: Linux Administrator, System Support Engineer';
+                          suggestionsText = 'Learn OS basics like process management, deadlocks, and memory allocation. Get hands-on with Linux, command-line tools, and system monitoring. <br>' +
+                              '<strong>Useful Courses:</strong><br>' +
+                              '<a href="https://www.udemy.com/course/linux-for-beginners/" class="link" target="_blank">Linux for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                              '<a href="https://www.coursera.org/learn/introduction-to-linux" class="link" target="_blank">Intro to Linux by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                      } 
+                      if (percentage <= 70) {
+                          salaryInsights = 'Expected salary: ₹12 LPA';
+                          jobRoles = 'Key roles: IT Support, Desktop Engineer';
+                          suggestionsText = 'Focus on OS fundamentals like file systems, process scheduling, and basic Linux commands. Try small projects on OS functionalities. <br>' +
+                              '<strong>Useful Courses:</strong><br>' +
+                              '<a href="https://nptel.ac.in/courses/106105214" class="link" target="_blank">Basics of OS by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                              '<a href="https://www.khanacademy.org/computing/computer-science/algorithms" class="link" target="_blank">OS Basics by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                      }
+                      break;
+                      case 'ee' || 'electrical' || 'electrical engineering':
+                        infoText = 'Introduction to Electrical Engineering (EE) covers fundamental concepts of electricity, circuits, and electronic components. It is crucial for fields like embedded systems, IoT, and power engineering.';
+                    
+                        if (percentage > 90) {
+                            salaryInsights = 'Expected salary: ₹26 LPA';
+                            jobRoles = 'Key roles: Embedded Systems Engineer, Power Systems Engineer, IoT Specialist';
+                            suggestionsText = 'Master circuit analysis, AC/DC concepts, and power systems. Learn about microcontrollers, PCB designing, and industrial automation. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/" class="link" target="_blank">Circuits & Electronics by MIT <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udacity.com/course/electrical-engineering-fundamentals--ud188" class="link" target="_blank">Electrical Engineering Fundamentals by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                        } 
+                        if (percentage > 80 && percentage <= 90) {
+                            salaryInsights = 'Expected salary: ₹20 LPA';
+                            jobRoles = 'Key roles: Circuit Design Engineer, Control Systems Engineer';
+                            suggestionsText = 'Understand circuit behavior, study transformers, and explore signal processing. Gain hands-on experience with Arduino & Raspberry Pi. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://nptel.ac.in/courses/108102042" class="link" target="_blank">Basic Electrical Circuits by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udemy.com/course/electrical-engineering-for-beginners/" class="link" target="_blank">Electrical Engineering for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                        } 
+                        if (percentage > 70 && percentage <= 80) {
+                            salaryInsights = 'Expected salary: ₹15 LPA';
+                            jobRoles = 'Key roles: Electrical Technician, Maintenance Engineer';
+                            suggestionsText = 'Develop a strong understanding of Ohm’s Law, circuit components, and power systems. Practice solving real-world electrical problems. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.coursera.org/learn/basic-electrical-engineering" class="link" target="_blank">Basic Electrical Engineering by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                        } 
+                        if (percentage <= 70) {
+                            salaryInsights = 'Expected salary: ₹12 LPA';
+                            jobRoles = 'Key roles: Electrician, Field Service Engineer';
+                            suggestionsText = 'Focus on circuit diagrams, electrical safety, and basic troubleshooting techniques. Gain practical knowledge of wiring and power distribution. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://nptel.ac.in/courses/108105053" class="link" target="_blank">Electrical Engineering Basics by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                        }
+                        break;
+                        case 'ec':
+                          infoText = 'Engineering Chemistry (EC) focuses on the chemical principles applicable in engineering fields, covering energy sources, electrochemistry, corrosion, polymers, nanotechnology, and water treatment.';
+                      
+                          if (percentage > 90) {
+                              salaryInsights = 'Expected salary: ₹25 LPA';
+                              jobRoles = 'Key roles: Materials Scientist, Electrochemical Engineer, Fuel Cell Engineer';
+                              suggestionsText = 'Master concepts of chemical energy, fuel cells, nanomaterials, and corrosion protection. Explore advanced battery technology and semiconductor doping.<br>' +
+                                  '<strong>Useful Courses:</strong><br>' +
+                                  '<a href="https://ocw.mit.edu/courses/chemistry/5-111sc-principles-of-chemical-science-fall-2011/" class="link" target="_blank">Principles of Chemical Science by MIT <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                  '<a href="https://www.coursera.org/specializations/nanotechnology" class="link" target="_blank">Nanotechnology Specialization by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                          } 
+                          if (percentage > 80 && percentage <= 90) {
+                              salaryInsights = 'Expected salary: ₹20 LPA';
+                              jobRoles = 'Key roles: Corrosion Engineer, Battery R&D Specialist, Polymer Scientist';
+                              suggestionsText = 'Develop expertise in corrosion control, electrochemical analysis, and battery chemistry. Understand polymer applications in engineering.<br>' +
+                                  '<strong>Useful Courses:</strong><br>' +
+                                  '<a href="https://nptel.ac.in/courses/103102013" class="link" target="_blank">Chemical Engineering Thermodynamics by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                          } 
+                          if (percentage > 70 && percentage <= 80) {
+                              salaryInsights = 'Expected salary: ₹15 LPA';
+                              jobRoles = 'Key roles: Chemical Analyst, Water Treatment Engineer';
+                              suggestionsText = 'Focus on water purification techniques, spectroscopic analysis, and electrochemical processes. Work on fuel cell technology and polymer chemistry.<br>' +
+                                  '<strong>Useful Courses:</strong><br>' +
+                                  '<a href="https://www.edx.org/course/fundamentals-of-chemistry" class="link" target="_blank">Fundamentals of Chemistry by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                          } 
+                          if (percentage <= 70) {
+                              salaryInsights = 'Expected salary: ₹12 LPA';
+                              jobRoles = 'Key roles: Lab Technician, Chemical Process Engineer';
+                              suggestionsText = 'Strengthen basics in chemical energy, corrosion prevention, and electroplating. Learn about spectrophotometry and polymer science.<br>' +
+                                  '<strong>Useful Courses:</strong><br>' +
+                                  '<a href="https://nptel.ac.in/courses/104106122" class="link" target="_blank">Introduction to Chemistry by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                          }
+                          break;
+                          case 'chemistry' || 'ec':
+                            infoText = 'Engineering Chemistry (EC) focuses on the chemical principles applicable in engineering fields, covering energy sources, electrochemistry, corrosion, polymers, nanotechnology, and water treatment.';
+                        
+                            if (percentage > 90) {
+                                salaryInsights = 'Expected salary: ₹25 LPA';
+                                jobRoles = 'Key roles: Materials Scientist, Electrochemical Engineer, Fuel Cell Engineer';
+                                suggestionsText = 'Master concepts of chemical energy, fuel cells, nanomaterials, and corrosion protection. Explore advanced battery technology and semiconductor doping.<br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://ocw.mit.edu/courses/chemistry/5-111sc-principles-of-chemical-science-fall-2011/" class="link" target="_blank">Principles of Chemical Science by MIT <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.coursera.org/specializations/nanotechnology" class="link" target="_blank">Nanotechnology Specialization by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                            } 
+                            if (percentage > 80 && percentage <= 90) {
+                                salaryInsights = 'Expected salary: ₹20 LPA';
+                                jobRoles = 'Key roles: Corrosion Engineer, Battery R&D Specialist, Polymer Scientist';
+                                suggestionsText = 'Develop expertise in corrosion control, electrochemical analysis, and battery chemistry. Understand polymer applications in engineering.<br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://nptel.ac.in/courses/103102013" class="link" target="_blank">Chemical Engineering Thermodynamics by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                            } 
+                            if (percentage > 70 && percentage <= 80) {
+                                salaryInsights = 'Expected salary: ₹15 LPA';
+                                jobRoles = 'Key roles: Chemical Analyst, Water Treatment Engineer';
+                                suggestionsText = 'Focus on water purification techniques, spectroscopic analysis, and electrochemical processes. Work on fuel cell technology and polymer chemistry.<br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://www.edx.org/course/fundamentals-of-chemistry" class="link" target="_blank">Fundamentals of Chemistry by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                            } 
+                            if (percentage <= 70) {
+                                salaryInsights = 'Expected salary: ₹12 LPA';
+                                jobRoles = 'Key roles: Lab Technician, Chemical Process Engineer';
+                                suggestionsText = 'Strengthen basics in chemical energy, corrosion prevention, and electroplating. Learn about spectrophotometry and polymer science.<br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://nptel.ac.in/courses/104106122" class="link" target="_blank">Introduction to Chemistry by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                            }
+                            break;
+                            case 'me' || 'mechanical' || 'mechanical engineering':
+                              infoText = 'Introduction to Mechanical Engineering (ME) covers energy sources, thermodynamics, materials, manufacturing, thermal systems, and advanced technologies like robotics and hybrid vehicles.';
+                          
+                              if (percentage > 90) {
+                                  salaryInsights = 'Expected salary: ₹25 LPA';
+                                  jobRoles = 'Key roles: Mechanical Design Engineer, Robotics Engineer, Thermal Systems Expert';
+                                  suggestionsText = 'Master energy systems, thermodynamics, CNC machining, and robotics. Gain expertise in electric vehicles, industrial automation, and additive manufacturing.<br>' +
+                                      '<strong>Useful Courses:</strong><br>' +
+                                      '<a href="https://ocw.mit.edu/courses/mechanical-engineering/2-003sc-engineering-dynamics-fall-2011/" class="link" target="_blank">Engineering Dynamics by MIT <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                      '<a href="https://www.coursera.org/specializations/modern-mechanical-engineering" class="link" target="_blank">Modern Mechanical Engineering by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                              } 
+                              if (percentage > 80 && percentage <= 90) {
+                                  salaryInsights = 'Expected salary: ₹20 LPA';
+                                  jobRoles = 'Key roles: Manufacturing Engineer, Thermal Engineer, Automotive Engineer';
+                                  suggestionsText = 'Focus on thermodynamics, CNC machining, and smart manufacturing. Learn about robotics, automation, and 3D printing for mechanical applications.<br>' +
+                                      '<strong>Useful Courses:</strong><br>' +
+                                      '<a href="https://nptel.ac.in/courses/112105123" class="link" target="_blank">Fundamentals of Manufacturing by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                              } 
+                              if (percentage > 70 && percentage <= 80) {
+                                  salaryInsights = 'Expected salary: ₹15 LPA';
+                                  jobRoles = 'Key roles: HVAC Engineer, Tooling Engineer, Industrial Designer';
+                                  suggestionsText = 'Develop skills in thermal systems, CAD/CAM, and refrigeration. Understand mechatronics and automation for mechanical systems.<br>' +
+                                      '<strong>Useful Courses:</strong><br>' +
+                                      '<a href="https://www.edx.org/course/mechanical-behavior-of-materials" class="link" target="_blank">Mechanical Behavior of Materials by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                              } 
+                              if (percentage <= 70) {
+                                  salaryInsights = 'Expected salary: ₹12 LPA';
+                                  jobRoles = 'Key roles: Mechanical Technician, Production Supervisor';
+                                  suggestionsText = 'Strengthen basics in energy sources, welding, and manufacturing techniques. Gain hands-on experience with CNC and thermal systems.<br>' +
+                                      '<strong>Useful Courses:</strong><br>' +
+                                      '<a href="https://nptel.ac.in/courses/112103174" class="link" target="_blank">Basics of Mechanical Engineering by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                              }
+                              break;
+                          
+                              case 'be':
+                                infoText = 'Biology for Engineers (BE) applies biological principles to engineering fields, covering biomimetics, bioenergy, biomechanics, bioelectronics, and biopharma.';
+                            
+                                if (percentage > 90) {
+                                    salaryInsights = 'Expected salary: ₹22 LPA';
+                                    jobRoles = 'Key roles: Biomedical Engineer, Bioinformatics Scientist, Biotech Researcher';
+                                    suggestionsText = 'Focus on biomechanics, bioelectronics, and biosensors. Learn about bio-inspired robotics, drug discovery, and biological computing.<br>' +
+                                        '<strong>Useful Courses:</strong><br>' +
+                                        '<a href="https://www.edx.org/course/introduction-to-bioengineering" class="link" target="_blank">Introduction to Bioengineering by edX <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                        '<a href="https://ocw.mit.edu/courses/biological-engineering/20-020-introduction-to-biological-engineering-design-spring-2009/" class="link" target="_blank">Biological Engineering Design by MIT <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                } 
+                                if (percentage > 80 && percentage <= 90) {
+                                    salaryInsights = 'Expected salary: ₹18 LPA';
+                                    jobRoles = 'Key roles: Biomechanics Engineer, Clinical Research Associate, Bionics Developer';
+                                    suggestionsText = 'Gain expertise in bio-catalysts, bioenergy, and bionic systems. Explore medical IoT applications and biosensors.<br>' +
+                                        '<strong>Useful Courses:</strong><br>' +
+                                        '<a href="https://www.coursera.org/learn/biomedical-visualization" class="link" target="_blank">Biomedical Visualization by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                } 
+                                if (percentage > 70 && percentage <= 80) {
+                                    salaryInsights = 'Expected salary: ₹14 LPA';
+                                    jobRoles = 'Key roles: Bioinformatics Analyst, Lab Technician, Medical Device Developer';
+                                    suggestionsText = 'Understand biomechanics, circadian rhythms, and bio-inspired systems. Learn about biosensors and lab-on-a-chip technology.<br>' +
+                                        '<strong>Useful Courses:</strong><br>' +
+                                        '<a href="https://nptel.ac.in/courses/102103086" class="link" target="_blank">Biomedical Signal Processing by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                } 
+                                if (percentage <= 70) {
+                                    salaryInsights = 'Expected salary: ₹10 LPA';
+                                    jobRoles = 'Key roles: Biology Lab Assistant, Biotech Technician';
+                                    suggestionsText = 'Strengthen basics in biomechanics, biomimetics, and biosensors. Focus on practical applications in healthcare and drug discovery.<br>' +
+                                        '<strong>Useful Courses:</strong><br>' +
+                                        '<a href="https://www.udemy.com/course/biotechnology-basics/" class="link" target="_blank">Biotechnology Basics by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                }
+                                break;
+                                case 'cipe':
+                                  infoText = 'Constitution of India and Professional Ethics (CIPE) covers the making of the Constitution, fundamental rights, governance structures, and ethical responsibilities of professionals.';
+                              
+                                  if (percentage > 90) {
+                                      salaryInsights = 'Expected salary: ₹20 LPA';
+                                      jobRoles = 'Key roles: Policy Analyst, Legal Consultant, Civil Services Officer';
+                                      suggestionsText = 'Focus on constitutional amendments, governance policies, and public administration ethics. Understand legal frameworks and socio-political structures.<br>' +
+                                          '<strong>Useful Courses:</strong><br>' +
+                                          '<a href="https://www.coursera.org/learn/indian-constitution" class="link" target="_blank">Indian Constitution by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                          '<a href="https://nptel.ac.in/courses/129106154" class="link" target="_blank">Indian Judiciary by NPTEL <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                  } 
+                                  if (percentage > 80 && percentage <= 90) {
+                                      salaryInsights = 'Expected salary: ₹16 LPA';
+                                      jobRoles = 'Key roles: Legal Advisor, Ethics Consultant, Public Policy Researcher';
+                                      suggestionsText = 'Deepen knowledge on professional ethics, governance structures, and emergency provisions. Explore amendments and their impact.<br>' +
+                                          '<strong>Useful Courses:</strong><br>' +
+                                          '<a href="https://www.edx.org/course/the-rule-of-law-and-democratic-constitution" class="link" target="_blank">Rule of Law and Democratic Constitution by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                  } 
+                                  if (percentage > 70 && percentage <= 80) {
+                                      salaryInsights = 'Expected salary: ₹12 LPA';
+                                      jobRoles = 'Key roles: Compliance Officer, HR Policy Manager';
+                                      suggestionsText = 'Understand the roles of the President, Prime Minister, and Judiciary. Learn about constitutional amendments and special provisions for marginalized communities.<br>' +
+                                          '<strong>Useful Courses:</strong><br>' +
+                                          '<a href="https://www.classcentral.com/course/swayam-constitutional-studies-144934" class="link" target="_blank">Constitutional Studies by Swayam <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                  } 
+                                  if (percentage <= 70) {
+                                      salaryInsights = 'Expected salary: ₹8 LPA';
+                                      jobRoles = 'Key roles: Government Clerk, Administrative Assistant';
+                                      suggestionsText = 'Strengthen basics in the Constitution, governance, and ethical principles. Focus on professional conduct and public policy.<br>' +
+                                          '<strong>Useful Courses:</strong><br>' +
+                                          '<a href="https://www.udemy.com/course/ethics-and-governance/" class="link" target="_blank">Ethics and Governance by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>.';
+                                  }
+                                  break;
+                                                                                                                                             
+        case 'fsd' || 'full stack development':
               infoText = 'Full Stack Development involves both front-end and back-end web development. Developers in this field are responsible for designing, developing, and maintaining complete web applications. The role demands expertise in both client-side and server-side technologies, making it a versatile and highly sought-after skill.';
               if (percentage > 90) {
                   salaryInsights = 'Expected salary: ₹20 LPA';
