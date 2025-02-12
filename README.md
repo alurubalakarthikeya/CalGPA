@@ -5,7 +5,7 @@
 </p>
 
 ## Description
-CalGPA is a web app designed to help uni students analyze and track their semester performance. It allows students to track their academic progress in real-time and provides various tools to maintain a good academic record. App can be downloaded for offline access and better usability.
+CalGPA is a web app designed to help uni students analyze and check their semester performance. It allows students to track their academic progress in real-time and provides various tools to maintain a good academic record. App can be downloaded for offline access and better usability.
 
 With **CalGPA**, students can:
 - Calculate their estimated SGPA based on Internal marks.
@@ -22,24 +22,24 @@ With **CalGPA**, students can:
 
 ### App Features
 -  Progressive Web App (PWA)
--  Dark/Light Mode Toggle
--  Real-Time Sync
--  Goal Tracking Dashboard
--  Cross-Device Sync
+-  Dark/Light Mode
+-  Real-Time Outputs
+-  Unique User Interface
+-  Responsive on Mobile and Desktop
 
 ### Upcoming Features 
-- **ML-Powered Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
-- **Streak-Based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
+- **ML based Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
+- **Streak based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
 - **Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
 
 ---
 
-<q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q>
+<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b><br>                         -Unknown
 
 ## Tools
 
 ### 🧮 **GPA Calculator (Estimator.io)**
-A tool that helps students to calculate their predicted sgpa based on their internal marks. Which helps is accurate goal setting.<br> Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)
+A tool that helps students to calculate their predicted sgpa based on their internal marks and predicted SEE marks. Which helps in accurate goal setting.<br> Check it here: [Open📍](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image5.png?raw=true" alt="GPA Calculator" width="550"/>
