@@ -1191,8 +1191,6 @@ function updateChart(numberOfAttended, totalNumberOfClasses) {
   const width = containerWidth;
   const height = 300;
   const margin = { top: 20, right: 30, bottom: 40, left: 40 };
-
-  // Remove any existing SVG element
   container.select('svg').remove();
 
   const svg = container
@@ -1207,7 +1205,7 @@ function updateChart(numberOfAttended, totalNumberOfClasses) {
   const x = d3.scaleBand()
     .domain(data.map(d => d.label))
     .range([0, width - margin.left - margin.right])
-    .padding(0.3); // Adjust padding for gap between bars
+    .padding(0.3);
 
   const y = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.value)])
@@ -1285,6 +1283,29 @@ function attendanceGuider() {
 
   document.getElementById('attendanceForm').addEventListener('submit', calculateClass);
 }
+
+function saveToLocalStorage() {
+  const requiredPercentage = document.getElementById('requiredPercentage').value;
+  const attendedClasses = document.getElementById('noOfAttended').value;
+  const totalClasses = document.getElementById('totalNoOfClasses').value;
+  localStorage.setItem('requiredPercentage', requiredPercentage);
+  localStorage.setItem('attendedClasses', attendedClasses);
+  localStorage.setItem('totalClasses', totalClasses);
+}
+
+function retrieveFromLocalStorage() {
+  const requiredPercentage = localStorage.getItem('requiredPercentage');
+  const attendedClasses = localStorage.getItem('attendedClasses');
+  const totalClasses = localStorage.getItem('totalClasses');
+  if (requiredPercentage) document.getElementById('requiredPercentage').value = requiredPercentage;
+  if (attendedClasses) document.getElementById('attendedClasses').value = attendedClasses;
+  if (totalClasses) document.getElementById('totalClasses').value = totalClasses;
+}
+document.getElementById('requiredPercentage').addEventListener('input', saveToLocalStorage);
+document.getElementById('noOfAttended').addEventListener('input', saveToLocalStorage);
+document.getElementById('totalNoOfClasses').addEventListener('input', saveToLocalStorage);
+
+window.onload = retrieveFromLocalStorage;
 
 function calculateClass(event) {
   event.preventDefault();
