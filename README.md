@@ -34,7 +34,7 @@ With **CalGPA**, students can:
 
 ---
 
-<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b><br>                         -Unknown
+<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b>  -Unknown
 
 ## Tools
 
