@@ -33,7 +33,7 @@ With **CalGPA**, students can:
 - **Personalized Roadmaps (Tracker.io):** Tips and Steps to score good grades 
 ---
 
-<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b>  -Unknown
+<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b>  - Unknown
 
 ## Tools
 
