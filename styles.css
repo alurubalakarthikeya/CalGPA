@@ -1852,3 +1852,9 @@ body.dark-mode .view-counter {
 .downButton span:hover {
   background-color: #45a049; /* Darker green on hover */
 }
+
+.streakBox {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 200px;
+}
