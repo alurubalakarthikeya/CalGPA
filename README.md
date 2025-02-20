@@ -28,13 +28,12 @@ With **CalGPA**, students can:
 -  Responsive on Mobile and Desktop
 
 ### Upcoming Features 
-- **ML based Predictions (Predictor.io):** AI-driven GPA forecasts for future semesters.  
-- **Streak based Task Manager (Todo.io):** Gamified productivity tool with daily study streaks.  
-- **Personalized Roadmaps (Tracker.io):** Custom semester plans based on your academic goals.  
-
+- **ML based Predictions (Predictor.io):** Predictions made based on previous years results.  
+- **Streak based Task Manager (Todo.io):** Streaks stimulate interest to complete tasks which is required to complete things way earlier
+- **Personalized Roadmaps (Tracker.io):** Tips and Steps to score good grades 
 ---
 
-<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b><br>                         -Unknown
+<b><q>Success is the sum of small efforts, repeated day in and day out. Keep tracking your progress, stay focused, and let every goal guide you to the next achievement.</q></b>  - Unknown
 
 ## Tools
 
