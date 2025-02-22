@@ -266,7 +266,7 @@ body.dark-mode .response > label {
   color: var(--dark-bg-color);
 }
 
-body.dark-mode .install-prompt p {
+body.dark-mode .insta-text p {
   margin: 0 0 10px;
   color: var(--dark-bg-color);
 }
@@ -1804,17 +1804,16 @@ body.dark-mode .view-counter {
   transform: translateX(-50%);
   background-color: var(--main-color);
   border: 1px solid var(--dark-main-color);
-  padding: 15px;
+  padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: none;
   z-index: 1000;
   border-radius: 20px;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .install-prompt p {
   margin: 0 0 10px;
-  color: var(--bg-color);
 }
 
 .install-prompt button {
