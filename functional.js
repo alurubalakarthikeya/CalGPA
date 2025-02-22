@@ -20,7 +20,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
   localStorage.setItem('refreshCount', refreshCount);
 
-  if (refreshCount % 20 === 0) {
+  if (refreshCount % 3 === 0) {
     const installPrompt = document.getElementById('installPrompt');
     installPrompt.style.display = 'block';
 
