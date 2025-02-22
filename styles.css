@@ -266,6 +266,11 @@ body.dark-mode .response > label {
   color: var(--dark-bg-color);
 }
 
+body.dark-mode .install-prompt p {
+  margin: 0 0 10px;
+  color: var(--dark-bg-color);
+}
+
 *{
     margin: 0;
     padding: 0;
