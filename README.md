@@ -126,4 +126,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/alurubalakarthikeya/CalGPA)
 
 ## Project Link:
-[Check Project📍](https://alurubalakarthikeya.github.io/CalGPA/)
+[Check Project 📍](https://alurubalakarthikeya.github.io/CalGPA/)
