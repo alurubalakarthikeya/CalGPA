@@ -1503,5 +1503,29 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }, fallInterval);
 });
+  function generateCalendar() {
+    const streakBox = document.getElementById("streakBox");
+    const weeks = 7;
+    const columns = 53; // Approx. weeks in a year
+    const activeDays = new Set([3, 10, 20, 45, 50, 80, 100, 150, 180, 200, 250, 300]); // Example contributions
+
+    for (let i = 0; i < columns; i++) {
+      const week = document.createElement("div");
+      week.classList.add("week");
+
+      for (let j = 0; j < weeks; j++) {
+        const dayIndex = i * weeks + j;
+        const day = document.createElement("div");
+        day.classList.add("day");
+        if (activeDays.has(dayIndex)) {
+          day.classList.add("active");
+        }
+        week.appendChild(day);
+      }
+      streakBox.appendChild(week);
+    }
+  }
+
+  generateCalendar();
 
 /*My First ever project with 1000+ lines JavaScript yayyyy!!!*/
