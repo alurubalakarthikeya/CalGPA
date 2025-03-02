@@ -1832,33 +1832,40 @@ body.dark-mode .view-counter {
 }
 
 
-.downButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
 
-.downButton span {
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text */
-  padding: 10px 20px; /* Some padding */
-  border: none; /* Remove borders */
-  cursor: pointer; /* Pointer/hand icon */
-  text-align: center; /* Center the text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make the container inline-block */
-  font-size: 16px; /* Increase font size */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-.downButton span:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
-
-.streakBox {
-  background-color: var(--bg-color);
+.contributionCalendar {
+  display: grid;
+  grid-template-columns: repeat(53, minmax(10px, 1fr));
+  gap: 4px;
+  padding: 10px;
+  overflow-x: auto;
   width: 100%;
-  height: 200px;
+  max-width: 100%;
+  white-space: nowrap;
+  background: #111;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.weekColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dayBox {
+  width: 12px;
+  height: 12px;
+  background-color: #222;
+  border-radius: 3px;
+}
+
+.dayBox.active {
+  background-color: #00c853;
+}
+
+@media (max-width: 768px) {
+  .contributionCalendar {
+    overflow-x: scroll;
+  }
 }
