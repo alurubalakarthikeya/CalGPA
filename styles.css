@@ -1831,8 +1831,6 @@ body.dark-mode .view-counter {
   color: white;
 }
 
-
-
 .contributionCalendar {
   display: grid;
   grid-template-columns: repeat(53, minmax(10px, 1fr));
@@ -1868,4 +1866,8 @@ body.dark-mode .view-counter {
   .contributionCalendar {
     overflow-x: scroll;
   }
+}
+
+#results {
+  background-color: var(--dark-bg-color); 
 }
