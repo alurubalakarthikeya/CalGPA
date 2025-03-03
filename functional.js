@@ -1309,10 +1309,10 @@ function calculateClass(event) {
   const totalNoOfClasses = parseInt(document.getElementById('totalNoOfClasses').value);
   const days = {
     monday: 5,
-    tuesday: 6,
-    wednesday: 4,
-    thursday: 4,
-    friday: 3
+    tuesday: 5,
+    wednesday: 5,
+    thursday: 5,
+    friday: 5
   };
   let totalClassesToMiss = 0;
   for (const day in days) {
