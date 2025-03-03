@@ -1354,10 +1354,9 @@ function calculateClass(event) {
       }
     }
     additionalInfo = `
-    const additionalDays = Math.ceil(requiredClassesToAttend / 5);
     <p>Total number of classes after vacation: ${futureTotalClasses}</p>
     <p>Current number of classes attended: ${noOfAttended}</p>
-    <p>After attending ${additionalDays} days, your attended classes would be: ${noOfAttended+requiredClassesToAttend}</p>
+    <p>After attending 
   `;
 
     const resultsDiv = document.getElementById('results');

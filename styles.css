@@ -1867,7 +1867,3 @@ body.dark-mode .view-counter {
     overflow-x: scroll;
   }
 }
-
-#results {
-  background-color: var(--dark-bg-color); 
-}
