@@ -1332,24 +1332,34 @@ function calculateClass(event) {
     const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100 - futureAttendedClasses) / (1 - requiredPercentage / 100));
     let hardnessLevel = '';
     let hardnessColor = '';
+    let additionalInfo = '';
 
     if (requiredClassesToAttend > totalClassesToMiss) {
-      hardnessLevel = 'Kinda Hard to get that percentage';
+      const additionalDays = Math.ceil(requiredClassesToAttend / 5);
+      hardnessLevel = `Kinda Hard to get that percentage. You need to attend approximately ${additionalDays} more days.`;
       hardnessColor = 'red';
     } else if (requiredClassesToAttend > totalClassesToMiss / 2) {
-      hardnessLevel = 'Try to attend every single class without fail';
+      const additionalDays = Math.ceil(requiredClassesToAttend / 5);
+      hardnessLevel = `Try to attend every single class without fail. You need to attend approximately ${additionalDays} more days.`;
       hardnessColor = 'orange';
     } else {
-      hardnessLevel = 'You can easily get that percentage';
+      const additionalDays = Math.ceil(requiredClassesToAttend / 5);
+      hardnessLevel = `You can easily get that percentage. You need to attend approximately ${additionalDays} more days.`;
       hardnessColor = 'green';
     }
+
+    additionalInfo = `
+    <p>Total number of classes after vacation: ${futureTotalClasses}</p>
+    <p>Current number of classes attended: ${noOfAttended}</p>
+  `;
 
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
       <p>Current Attendance Percentage: ${((noOfAttended / totalNoOfClasses) * 100).toFixed(2)}%</p><br>
       <p>Future Attendance Percentage: ${futurePercentage.toFixed(2)}%</p><br>
-      ${requiredClassesToAttend > 0 ? `<p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes.</p><br>` : ''}
+      ${requiredClassesToAttend > 0 ? `<p>To meet the required percentage, you need to attend ${requiredClassesToAttend} more classes after the vacation.</p><br>` : ''}
       <p>Possibility to attain required percentage:<br><br> <span id="hardnessLevel">${hardnessLevel}</span></p><br>
+      <p>More information :<br>  ${additionalInfo}</p>
     `;
 
     document.getElementById('hardnessLevel').style.color = hardnessColor;
