@@ -1315,9 +1315,11 @@ function calculateClass(event) {
     friday: 5
   };
   let totalClassesToMiss = 0;
+  let anyCheckboxChecked = false;
   for (const day in days) {
     if (document.getElementById(day).checked) {
       totalClassesToMiss += days[day];
+      anyCheckboxChecked = true;
     }
   }
   if (requiredPercentage > 92 || isNaN(requiredPercentage) || isNaN(noOfAttended) || isNaN(totalNoOfClasses) || noOfAttended > totalNoOfClasses || noOfAttended < 0 || totalNoOfClasses < 0 || noOfAttended > 500 || totalNoOfClasses > 500 || requiredPercentage < 0) {
@@ -1329,7 +1331,12 @@ function calculateClass(event) {
     const futurePercentage = (futureAttendedClasses / futureTotalClasses) * 100;
     document.getElementById('attendancePercentage').value = ((noOfAttended / totalNoOfClasses) * 100).toFixed(2);
     document.getElementById('futurePercentage').value = futurePercentage.toFixed(2);
-    const requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100 - futureAttendedClasses) / (1 - requiredPercentage / 100));
+    let requiredClassesToAttend;
+    if (anyCheckboxChecked) {
+      requiredClassesToAttend = Math.ceil((requiredPercentage * futureTotalClasses / 100 - futureAttendedClasses) / (1 - requiredPercentage / 100));
+    } else {
+      requiredClassesToAttend = Math.ceil((requiredPercentage * totalNoOfClasses / 100 - noOfAttended) / (1 - requiredPercentage / 100));
+    }
     let hardnessLevel = '';
     let hardnessColor = '';
     let additionalInfo = '';
@@ -1337,13 +1344,13 @@ function calculateClass(event) {
     if (requiredClassesToAttend > totalClassesToMiss) {
       const additionalDays = Math.ceil(requiredClassesToAttend / 5);
       if(additionalDays>0){
-        hardnessLevel = `Kinda Hard to get that percentage. You need to attend approximately ${additionalDays} more days.`;
+        hardnessLevel = `Kinda Hard. You need to attend approximately ${additionalDays} more days.`;
         hardnessColor = 'red';
       }
     } else if (requiredClassesToAttend > totalClassesToMiss / 2) {
       const additionalDays = Math.ceil(requiredClassesToAttend / 5);
       if(additionalDays>0){
-        hardnessLevel = `Try to attend every single class without fail. You need to attend approximately ${additionalDays} more days.`;
+        hardnessLevel = `Try to attend most classes possible. You need to attend approximately ${additionalDays} more days.`;
         hardnessColor = 'orange';
       }
     } else {
