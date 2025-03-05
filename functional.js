@@ -1,53 +1,3 @@
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-          .then(registration => {
-              console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, err => {
-              console.log('ServiceWorker registration failed: ', err);
-          });
-  });
-}
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-
-  let refreshCount = localStorage.getItem('refreshCount') || 0;
-  refreshCount = parseInt(refreshCount, 10) + 1;
-
-  localStorage.setItem('refreshCount', refreshCount);
-
-  if (refreshCount % 3 === 0) {
-      const installPrompt = document.getElementById('installPrompt');
-      installPrompt.style.display = 'block';
-
-      const installButton = document.getElementById('installButton');
-      const dismissButton = document.getElementById('dismissButton');
-
-      installButton.addEventListener('click', () => {
-          installPrompt.style.display = 'none';
-          deferredPrompt.prompt();
-          deferredPrompt.userChoice.then((choiceResult) => {
-              deferredPrompt = null;
-          });
-      });
-
-      dismissButton.addEventListener('click', () => {
-          installPrompt.style.display = 'none';
-      });
-  }
-});
-
-function downloadFile() {
-  const link = document.createElement('a');
-  link.href = 'manifest.json';
-  link.download = 'CalGPA.json';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -93,6 +43,56 @@ document.getElementById('button2').addEventListener('mouseover', function() {
 document.getElementById('button2').addEventListener('mouseout', function() {
   document.getElementById('button1').classList.remove('hovered');
 });
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, err => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+  }
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+  
+    let refreshCount = localStorage.getItem('refreshCount') || 0;
+    refreshCount = parseInt(refreshCount, 10) + 1;
+  
+    localStorage.setItem('refreshCount', refreshCount);
+  
+    if (refreshCount % 3 === 0) {
+        const installPrompt = document.getElementById('installPrompt');
+        installPrompt.style.display = 'block';
+  
+        const installButton = document.getElementById('installButton');
+        const dismissButton = document.getElementById('dismissButton');
+  
+        installButton.addEventListener('click', () => {
+            installPrompt.style.display = 'none';
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                deferredPrompt = null;
+            });
+        });
+  
+        dismissButton.addEventListener('click', () => {
+            installPrompt.style.display = 'none';
+        });
+    }
+  });
+  
+  function downloadFile() {
+    const link = document.createElement('a');
+    link.href = 'manifest.json';
+    link.download = 'CalGPA.json';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
 function addTodo() {
   const todoInput = document.getElementById('todo');
