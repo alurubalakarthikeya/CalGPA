@@ -686,6 +686,126 @@ function calculatePercentage(event) {
                       '<a href="https://www.udemy.com/course/git-and-github-bootcamp/" class="link" target="_blank">Git & GitHub Bootcamp <i class="fa-solid fa-up-right-from-square"></i></a><br>';
               }
               break;
+            case 'dbms':
+              infoText = 'Database Management Systems (DBMS) are essential for storing, retrieving, and managing data in various applications. This subject covers relational databases, SQL, normalization, transactions, and database design, which are crucial for roles in data management, software development, and business intelligence.';
+            
+              if (percentage > 90) {
+                salaryInsights = 'Expected salary: ₹22 LPA';
+                jobRoles = 'Key roles: Database Administrator, Data Architect, Database Developer';
+                suggestionsText = 'Focus on advanced topics like database optimization, distributed databases, and NoSQL databases. Gain expertise in database security, backup, and recovery. Work on large-scale database projects and explore cloud database solutions. <br>' +
+                  '<strong>Useful Courses:</strong><br>' +
+                  '<a href="https://www.coursera.org/learn/database-management" class="link" target="_blank">Database Management Essentials by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.udemy.com/course/the-complete-sql-bootcamp/" class="link" target="_blank">The Complete SQL Bootcamp by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.edx.org/course/databases-5-sql" class="link" target="_blank">Databases: Advanced Topics in SQL by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              }
+              if (percentage > 80 && percentage <= 90) {
+                salaryInsights = 'Expected salary: ₹18 LPA';
+                jobRoles = 'Key roles: Data Analyst, SQL Developer, Business Intelligence Analyst';
+                suggestionsText = 'Deepen your knowledge of SQL, database design, and normalization. Work on real-world projects involving data modeling and query optimization. Explore database management tools and techniques. <br>' +
+                  '<strong>Useful Courses:</strong><br>' +
+                  '<a href="https://www.coursera.org/learn/relational-database" class="link" target="_blank">Relational Database Management by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.udemy.com/course/sql-for-data-science/" class="link" target="_blank">SQL for Data Science by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.edx.org/course/databases-4-nosql" class="link" target="_blank">Databases: NoSQL by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              }
+              if (percentage > 70 && percentage <= 80) {
+                salaryInsights = 'Expected salary: ₹14 LPA';
+                jobRoles = 'Key roles: Junior Database Developer, Data Analyst, IT Support';
+                suggestionsText = 'Build a strong understanding of basic SQL queries, database design, and normalization. Practice creating and managing databases using SQL. Participate in database-related projects and challenges. <br>' +
+                  '<strong>Useful Courses:</strong><br>' +
+                  '<a href="https://www.coursera.org/learn/sql-for-data-science" class="link" target="_blank">SQL for Data Science by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.udemy.com/course/sql-and-database-management/" class="link" target="_blank">SQL and Database Management by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.edx.org/course/databases-3-sql" class="link" target="_blank">Databases: Introduction to SQL by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              }
+              if (percentage <= 70) {
+                salaryInsights = 'Expected salary: ₹10 LPA';
+                jobRoles = 'Key roles: Database Support, IT Technician';
+                suggestionsText = 'Strengthen basics in SQL, database design, and data management. Focus on understanding relational databases and practicing SQL queries. Work on small database projects to gain practical experience. <br>' +
+                  '<strong>Useful Courses:</strong><br>' +
+                  '<a href="https://www.coursera.org/learn/sql-basics" class="link" target="_blank">SQL Basics by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.udemy.com/course/sql-for-beginners/" class="link" target="_blank">SQL for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                  '<a href="https://www.edx.org/course/databases-1-introduction" class="link" target="_blank">Databases: Introduction by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+              }
+              break;
+           case 'probability and statistics' || 'ps':
+               infoText = 'Probability and Statistics are essential for analyzing data and making informed decisions based on statistical methods. This subject covers topics such as probability theory, statistical inference, hypothesis testing, and regression analysis, which are crucial for roles in data science, finance, and research.';
+             
+               if (percentage > 90) {
+                 salaryInsights = 'Expected salary: ₹22 LPA';
+                 jobRoles = 'Key roles: Data Scientist, Statistician, Quantitative Analyst';
+                 suggestionsText = 'Focus on advanced topics like Bayesian statistics, machine learning algorithms, and time series analysis. Gain expertise in statistical software like R and Python. Work on real-world data projects to enhance your practical skills. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/specializations/statistics" class="link" target="_blank">Statistics with R Specialization by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/" class="link" target="_blank">Statistics for Data Science and Business Analysis by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/introduction-to-probability" class="link" target="_blank">Introduction to Probability by MIT <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               if (percentage > 80 && percentage <= 90) {
+                 salaryInsights = 'Expected salary: ₹18 LPA';
+                 jobRoles = 'Key roles: Data Analyst, Research Scientist, Biostatistician';
+                 suggestionsText = 'Deepen your knowledge of hypothesis testing, regression analysis, and ANOVA. Work on projects involving data visualization and statistical modeling. Explore statistical tools and techniques for data analysis. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/statistical-inference" class="link" target="_blank">Statistical Inference by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/statistics-for-business-analytics-and-data-science-a-z/" class="link" target="_blank">Statistics for Business Analytics and Data Science A-Z by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/statistics-and-data-science" class="link" target="_blank">Statistics and Data Science by MIT <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               if (percentage > 70 && percentage <= 80) {
+                 salaryInsights = 'Expected salary: ₹14 LPA';
+                 jobRoles = 'Key roles: Junior Data Analyst, Statistical Assistant, Research Assistant';
+                 suggestionsText = 'Build a strong understanding of basic probability, descriptive statistics, and inferential statistics. Practice solving statistical problems and work on small data analysis projects. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/probability-statistics" class="link" target="_blank">Probability and Statistics by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/statistics-for-data-science-and-business-analysis/" class="link" target="_blank">Statistics for Data Science and Business Analysis by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/introduction-to-statistics" class="link" target="_blank">Introduction to Statistics by Stanford University <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               if (percentage <= 70) {
+                 salaryInsights = 'Expected salary: ₹10 LPA';
+                 jobRoles = 'Key roles: Data Entry Clerk, Statistical Intern';
+                 suggestionsText = 'Strengthen basics in probability, mean, median, mode, and standard deviation. Focus on understanding the fundamental concepts and practicing statistical problems. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/statistics" class="link" target="_blank">Statistics by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/statistics-for-beginners/" class="link" target="_blank">Statistics for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/statistics-for-data-analysis" class="link" target="_blank">Statistics for Data Analysis by University of California, Berkeley <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               break;
+           case 'coa' || 'computer organization and architecture':
+               infoText = 'Computer Organization and Architecture (COA) covers the fundamental principles of computer hardware and low-level programming. This subject includes topics such as registers, memory hierarchy, instruction sets, and assembly language programming, which are essential for understanding how computers execute programs and manage resources.';
+             
+               if (percentage > 90) {
+                 salaryInsights = 'Expected salary: ₹24 LPA';
+                 jobRoles = 'Key roles: Hardware Engineer, System Architect, Embedded Systems Developer';
+                 suggestionsText = 'Focus on advanced topics like pipelining, parallel processing, and hardware-software co-design. Gain expertise in assembly language programming and work on projects involving microcontroller programming and hardware simulations. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/computer-architecture" class="link" target="_blank">Computer Architecture by Princeton University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/computer-organization-and-architecture/" class="link" target="_blank">Computer Organization and Architecture by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/computer-architecture" class="link" target="_blank">Computer Architecture by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               if (percentage > 80 && percentage <= 90) {
+                 salaryInsights = 'Expected salary: ₹18 LPA';
+                 jobRoles = 'Key roles: System Engineer, Firmware Developer, Hardware Designer';
+                 suggestionsText = 'Deepen your knowledge of instruction sets, memory hierarchy, and CPU design. Work on real-world projects involving assembly language programming and hardware interfacing. Explore tools and techniques for hardware debugging and optimization. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/computer-architecture" class="link" target="_blank">Computer Architecture by Princeton University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/computer-organization-and-architecture/" class="link" target="_blank">Computer Organization and Architecture by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/computer-architecture" class="link" target="_blank">Computer Architecture by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               if (percentage > 70 && percentage <= 80) {
+                 salaryInsights = 'Expected salary: ₹14 LPA';
+                 jobRoles = 'Key roles: Junior Hardware Engineer, Embedded Systems Developer';
+                 suggestionsText = 'Build a strong understanding of basic computer organization concepts, including registers, ALU, and control units. Practice writing assembly language programs and work on small hardware projects. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/computer-architecture" class="link" target="_blank">Computer Architecture by Princeton University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/computer-organization-and-architecture/" class="link" target="_blank">Computer Organization and Architecture by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/computer-architecture" class="link" target="_blank">Computer Architecture by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               if (percentage <= 70) {
+                 salaryInsights = 'Expected salary: ₹10 LPA';
+                 jobRoles = 'Key roles: Hardware Support, IT Technician';
+                 suggestionsText = 'Strengthen basics in computer organization, including understanding registers, memory, and basic assembly language programming. Work on small projects to gain practical experience. <br>' +
+                   '<strong>Useful Courses:</strong><br>' +
+                   '<a href="https://www.coursera.org/learn/computer-architecture" class="link" target="_blank">Computer Architecture by Princeton University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.udemy.com/course/computer-organization-and-architecture/" class="link" target="_blank">Computer Organization and Architecture by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                   '<a href="https://www.edx.org/course/computer-architecture" class="link" target="_blank">Computer Architecture by edX <i class="fa-solid fa-up-right-from-square"></i></a>.';
+               }
+               break;
           case 'dld' || 'digital logic design':
               infoText = 'Digital Logic Design is the foundation of modern electronics and computing systems. It deals with the theoretical and practical aspects of designing and analyzing digital circuits, essential in hardware development. Topics include logic gates, Boolean algebra, flip-flops, multiplexers, counters, and microcontrollers. These concepts are pivotal in industries like consumer electronics, telecommunications, and automotive systems. With DLD skills, you can work on projects like developing embedded systems, optimizing digital signal processing, and creating innovative IoT devices.';
               if (percentage > 90) {
