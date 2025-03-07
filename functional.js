@@ -1471,7 +1471,6 @@ function calculateClass(event) {
       let hardnessLevel = '';
       let hardnessColor = '';
       let additionalInfo = '';
-
       if (requiredClassesToAttend > totalClassesToMiss) {
           const additionalDays = Math.ceil(requiredClassesToAttend / 5);
           if (additionalDays > 0) {
