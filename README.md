@@ -28,9 +28,9 @@ With **CalGPA**, students can:
 -  Responsive on Mobile and Desktop
 
 ### Upcoming Features 
-- **ML based Predictions (Predictor.io):** Predictions made based on previous years results.  
+- **ML based Predictions (Predictor.io):** Predictions made based on previous years results and your current progress in internals.  
 - **Streak based Task Manager (Todo.io):** Streaks stimulate interest to complete tasks which is required to complete things way earlier
-- **Personalized Roadmaps (Tracker.io):** Tips and Steps to score good grades 
+- **Personalized Roadmaps (Tracker.io):** Tips and Steps to score particular gpa, choose from options and find ways
 ---
 
 ## Tools
