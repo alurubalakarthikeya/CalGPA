@@ -1867,3 +1867,12 @@ body.dark-mode .view-counter {
     overflow-x: scroll;
   }
 }
+
+.downloadingButton > span {
+  background-color: red;
+  color: white;
+  padding: 10px 14px;
+  position: fixed;
+  top: 20%;
+  border-radius: 30px;
+}
