@@ -849,6 +849,46 @@ function calculatePercentage(event) {
                       '<a href="https://www.coursera.org/learn/electronic-circuits" class="link" target="_blank">Electronic Circuits by Georgia Tech <i class="fa-solid fa-up-right-from-square"></i></a><br>';
               }
               break;
+              case 'daa' || 'design and analysis of algorithms':
+                infoText = 'Design and Analysis of Algorithms is fundamental to creating efficient, scalable, and optimized solutions. It helps in evaluating the performance of algorithms, ensuring they operate within optimal time and space complexity constraints. Mastering this subject enables developers to enhance their problem-solving skills and apply algorithmic techniques in real-world scenarios, making it a critical skill for competitive programming and technical interviews.';
+                
+                if (percentage > 90) {
+                    salaryInsights = 'Expected salary: ₹24 LPA';
+                    jobRoles = 'Key roles: Algorithm Engineer, Research Scientist, AI Engineer';
+                    suggestionsText = 'Deep dive into advanced topics like NP-completeness, randomized algorithms, and approximation algorithms. Work on optimizing algorithms for large-scale applications and participate in research-oriented projects. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/advanced-algorithms/" class="link" target="_blank">Advanced Algorithms by Andrei Neagoie <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/advanced-algorithms-and-complexity" class="link" target="_blank">Advanced Algorithms and Complexity by UC San Diego <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/algorithm-design-and-analysis" class="link" target="_blank">Algorithm Design and Analysis by Stanford University <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage > 80 && percentage <= 90) {
+                    salaryInsights = 'Expected salary: ₹18 LPA';
+                    jobRoles = 'Key roles: Software Engineer, Data Scientist, Optimization Engineer';
+                    suggestionsText = 'Focus on mastering dynamic programming, greedy algorithms, and divide & conquer techniques. Apply these concepts to solve real-world problems and enhance coding efficiency. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/algorithms-course/" class="link" target="_blank">The Algorithms Course by William Fiset <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/algorithmic-thinking" class="link" target="_blank">Algorithmic Thinking by Rice University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" class="link" target="_blank">GeeksforGeeks: Fundamentals of Algorithms <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage > 70 && percentage <= 80) {
+                    salaryInsights = 'Expected salary: ₹13 LPA';
+                    jobRoles = 'Key roles: Junior Developer, System Analyst, Software Tester';
+                    suggestionsText = 'Develop strong fundamentals in sorting, searching, and recursion. Solve coding problems that require different algorithmic approaches and participate in coding challenges. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udacity.com/course/intro-to-algorithms--cs215" class="link" target="_blank">Intro to Algorithms by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/algorithms-and-data-structures" class="link" target="_blank">Algorithms and Data Structures by Holczer Balazs <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/algorithmic-toolbox" class="link" target="_blank">Algorithmic Toolbox by UC San Diego <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage <= 70) {
+                    salaryInsights = 'Expected salary: ₹9 LPA';
+                    jobRoles = 'Key roles: Intern, Junior Programmer, Software Trainee';
+                    suggestionsText = 'Start with the basics: time complexity, recursion, and simple sorting techniques. Practice implementing fundamental algorithms and work on improving problem-solving speed. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.coursera.org/learn/algorithmic-toolbox" class="link" target="_blank">Algorithmic Toolbox by UC San Diego <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/algorithms-in-python/" class="link" target="_blank">Algorithms in Python by Jose Portilla <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/algorithm-design-and-analysis" class="link" target="_blank">Algorithm Design and Analysis by Stanford University <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                break;            
           case 'ds' || 'data structures':
               infoText = 'Data Structures are essential for efficient algorithm implementation and serve as the backbone of computer science. A strong foundation in this area allows developers to write optimized and scalable code, enabling the creation of powerful applications. This subject covers various data structures like arrays, linked lists, trees, and graphs, each critical for organizing and managing data effectively. Proficiency in data structures is vital for problem-solving and is a key skill sought by employers.';
               if (percentage > 90) {
@@ -892,6 +932,46 @@ function calculatePercentage(event) {
                       '<a href="https://www.freecodecamp.org/news/data-structures-and-algorithms-in-javascript/" class="link" target="_blank">Data Structures and Algorithms in JavaScript by FreeCodeCamp <i class="fa-solid fa-up-right-from-square"></i></a>';
               }
               break;
+              case 'ai' || 'artificial intelligence' || 'introduction to ai':
+                infoText = 'Artificial Intelligence is at the core of modern technological advancements, enabling machines to learn, reason, and make decisions. Mastering AI opens doors to cutting-edge innovations in machine learning, robotics, natural language processing, and more. Understanding AI concepts is crucial for staying ahead in the rapidly evolving tech landscape.';
+                
+                if (percentage > 90) {
+                    salaryInsights = 'Expected salary: ₹26 LPA';
+                    jobRoles = 'Key roles: AI Engineer, Machine Learning Scientist, Research Scientist';
+                    suggestionsText = 'Advance your AI knowledge with deep learning, reinforcement learning, and AI ethics. Work on AI-driven projects and contribute to open-source AI initiatives. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.coursera.org/learn/machine-learning" class="link" target="_blank">Machine Learning by Andrew Ng <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" class="link" target="_blank">Deep Learning Nanodegree by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://cs50.ai/" class="link" target="_blank">CS50’s Introduction to AI with Python <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage > 80 && percentage <= 90) {
+                    salaryInsights = 'Expected salary: ₹20 LPA';
+                    jobRoles = 'Key roles: Data Scientist, AI Developer, NLP Engineer';
+                    suggestionsText = 'Deepen your understanding of neural networks, optimization techniques, and AI applications in real-world scenarios. Participate in AI hackathons and Kaggle competitions. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/artificial-intelligence-reinforcement-learning-in-python/" class="link" target="_blank">AI & Reinforcement Learning in Python <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/specializations/deep-learning" class="link" target="_blank">Deep Learning Specialization by Andrew Ng <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/artificial-intelligence-ai" class="link" target="_blank">Artificial Intelligence by Columbia University <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage > 70 && percentage <= 80) {
+                    salaryInsights = 'Expected salary: ₹14 LPA';
+                    jobRoles = 'Key roles: AI Analyst, Junior AI Engineer, Computer Vision Engineer';
+                    suggestionsText = 'Strengthen your AI fundamentals with supervised and unsupervised learning. Work on small AI projects and implement basic machine learning models. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/" class="link" target="_blank">Python for Data Science & Machine Learning <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/ai-for-everyone" class="link" target="_blank">AI for Everyone by Andrew Ng <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.kaggle.com/learn/intro-to-machine-learning" class="link" target="_blank">Intro to Machine Learning by Kaggle <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage <= 70) {
+                    salaryInsights = 'Expected salary: ₹10 LPA';
+                    jobRoles = 'Key roles: AI Intern, Junior Data Analyst, AI Assistant';
+                    suggestionsText = 'Start with basic AI concepts, learn Python, and explore beginner-friendly AI tools like TensorFlow and scikit-learn. Work on simple projects like chatbots and recommendation systems. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.coursera.org/learn/introduction-to-ai" class="link" target="_blank">Introduction to AI by Stanford University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udacity.com/course/ai-programming-with-python-nanodegree--nd089" class="link" target="_blank">AI Programming with Python by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/machine-learning-with-python" class="link" target="_blank">Machine Learning with Python by IBM <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                break;            
           case 'dmgt':
               infoText = 'Discrete Mathematics and Graph Theory are fundamental to algorithm development and theoretical computer science. These topics are widely used in cryptography, network theory, and database systems. A strong understanding of these subjects can significantly enhance your problem-solving skills and open doors to various tech careers.';
               if (percentage > 90) {
@@ -934,7 +1014,6 @@ function calculatePercentage(event) {
                       '<a href="https://www.udemy.com/course/graph-theory-theory-and-practice/" class="link" target="_blank">Graph Theory: Theory and Practice <i class="fa-solid fa-up-right-from-square"></i></a><br>';
               }
               break;
-
           case 'tnt':
               infoText = 'Transforms and Numerical Techniques are vital for solving complex equations in engineering and applied mathematics. These methods are used extensively in signal processing, scientific computing, and data analysis. A strong grasp of these concepts enables professionals to tackle real-world problems effectively, making it a crucial area of study for aspiring engineers and data scientists.';
 
@@ -1029,6 +1108,46 @@ function calculatePercentage(event) {
                       '<a href="https://www.khanacademy.org/computing/computer-programming/programming/java" class="link" target="_blank">Java on Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a><br>';
               }
               break;
+              case 'matlab' || 'MATLAB Programming':
+                infoText = 'MATLAB is a high-level programming language and environment used for numerical computing, data visualization, and algorithm development. It is widely used in engineering, scientific research, and academia for tasks such as signal processing, machine learning, and simulation. A solid understanding of MATLAB enables efficient prototyping and problem-solving in various technical fields.';
+                if (percentage > 90) {
+                    salaryInsights = 'Expected salary: ₹20 LPA';
+                    jobRoles = 'Key roles: Research Scientist, Simulation Engineer, Data Analyst';
+                    suggestionsText = 'Focus on advanced topics such as Simulink modeling, machine learning integration, and real-time data analysis. Work on optimizing MATLAB code for performance improvements and explore parallel computing.<br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.coursera.org/specializations/matlab-programming" class="link" target="_blank">MATLAB Programming for Engineers by Vanderbilt University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/matlab-for-beginners/" class="link" target="_blank">MATLAB for Beginners by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/matlab-and-octave-for-beginners" class="link" target="_blank">MATLAB and Octave for Beginners by EdX <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.mathworks.com/learn/tutorials/matlab-onramp.html" class="link" target="_blank">MATLAB Onramp by MathWorks <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage > 80 && percentage <= 90) {
+                    salaryInsights = 'Expected salary: ₹15 LPA';
+                    jobRoles = 'Key roles: Data Analyst, Control Systems Engineer, Software Engineer';
+                    suggestionsText = 'Develop expertise in numerical computing and data visualization. Explore MATLAB’s built-in functions and toolboxes for various applications such as AI, signal processing, and system modeling.<br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/matlab-programming-basics/" class="link" target="_blank">MATLAB Programming Basics by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/matlab" class="link" target="_blank">Introduction to MATLAB by Vanderbilt University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.mathworks.com/learn/tutorials/signal-processing-onramp.html" class="link" target="_blank">Signal Processing Onramp by MathWorks <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage > 70 && percentage <= 80) {
+                    salaryInsights = 'Expected salary: ₹12 LPA';
+                    jobRoles = 'Key roles: Junior Engineer, Research Assistant, Software Developer';
+                    suggestionsText = 'Work on projects involving data analysis and visualization. Learn about MATLAB scripting, loops, and functions to enhance automation in computations.<br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udemy.com/course/matlab-for-beginners/" class="link" target="_blank">MATLAB for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/matlab-programming" class="link" target="_blank">MATLAB Programming for Engineers by Vanderbilt University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/course/matlab-and-octave-for-beginners" class="link" target="_blank">MATLAB and Octave for Beginners by EdX <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                if (percentage <= 70) {
+                    salaryInsights = 'Expected salary: ₹9 LPA';
+                    jobRoles = 'Key roles: Intern, Junior Researcher, Assistant Developer';
+                    suggestionsText = 'Start with fundamental concepts such as matrix operations, plotting, and basic programming in MATLAB. Work on small projects to apply concepts in practical scenarios.<br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.mathworks.com/learn/tutorials/matlab-onramp.html" class="link" target="_blank">MATLAB Onramp by MathWorks <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/matlab-for-beginners/" class="link" target="_blank">MATLAB for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/matlab" class="link" target="_blank">Introduction to MATLAB by Vanderbilt University <i class="fa-solid fa-up-right-from-square"></i></a>';
+                }
+                break;            
           case 'linux':
               infoText = 'Linux is a powerful, open-source operating system widely used in server environments, cloud computing, and embedded systems. Understanding Linux is essential for system administration, software development, and cybersecurity. Its flexibility and robustness make it a popular choice for developers and IT professionals alike. Mastery of Linux can significantly enhance your troubleshooting and scripting skills.';
 
