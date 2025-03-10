@@ -1147,7 +1147,44 @@ function calculatePercentage(event) {
                         '<a href="https://www.udemy.com/course/matlab-for-beginners/" class="link" target="_blank">MATLAB for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
                         '<a href="https://www.coursera.org/learn/matlab" class="link" target="_blank">Introduction to MATLAB by Vanderbilt University <i class="fa-solid fa-up-right-from-square"></i></a>';
                 }
-                break;            
+                break;  
+                case 'deep learning' || 'Deep Learning':
+                    infoText = 'Deep Learning is a subset of machine learning focused on neural networks and their applications in artificial intelligence. It is used in various domains, including computer vision, natural language processing, and autonomous systems. Mastering Deep Learning opens opportunities in AI-driven industries.';
+                    if (percentage > 90) {
+                        salaryInsights = 'Expected salary: ₹30 LPA';
+                        jobRoles = 'Key roles: AI Research Scientist, Deep Learning Engineer, Computer Vision Engineer';
+                        suggestionsText = 'Focus on advanced topics such as transformer models, generative adversarial networks (GANs), and reinforcement learning. Gain expertise in deep learning frameworks like TensorFlow and PyTorch.<br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.coursera.org/specializations/deep-learning" class="link" target="_blank">Deep Learning Specialization by Andrew Ng <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" class="link" target="_blank">Deep Learning Nanodegree by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.fast.ai/" class="link" target="_blank">Fast.ai Deep Learning Course <i class="fa-solid fa-up-right-from-square"></i></a>';
+                    }
+                    if (percentage > 80 && percentage <= 90) {
+                        salaryInsights = 'Expected salary: ₹25 LPA';
+                        jobRoles = 'Key roles: Machine Learning Engineer, AI Developer, NLP Engineer';
+                        suggestionsText = 'Develop expertise in convolutional and recurrent neural networks. Work on projects involving image classification, speech recognition, and text generation.<br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://cs50.ai/" class="link" target="_blank">CS50’s Introduction to AI with Python <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/deeplearning/" class="link" target="_blank">Deep Learning A-Z by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.coursera.org/learn/convolutional-neural-networks" class="link" target="_blank">Convolutional Neural Networks by Andrew Ng <i class="fa-solid fa-up-right-from-square"></i></a>';
+                    }
+                    if (percentage > 70 && percentage <= 80) {
+                        salaryInsights = 'Expected salary: ₹18 LPA';
+                        jobRoles = 'Key roles: AI Analyst, Data Scientist, Junior ML Engineer';
+                        suggestionsText = 'Learn about deep learning fundamentals, activation functions, and optimization techniques. Implement neural networks using TensorFlow and Keras.<br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187" class="link" target="_blank">Intro to TensorFlow for Deep Learning by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.deeplearning.ai/" class="link" target="_blank">DeepLearning.AI Courses <i class="fa-solid fa-up-right-from-square"></i></a>';
+                    }
+                    if (percentage <= 70) {
+                        salaryInsights = 'Expected salary: ₹12 LPA';
+                        jobRoles = 'Key roles: Intern, AI Enthusiast, Research Assistant';
+                        suggestionsText = 'Start with fundamental concepts like perceptrons, backpropagation, and simple feedforward networks. Work on small projects such as digit recognition using MNIST.<br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.coursera.org/learn/neural-networks-deep-learning" class="link" target="_blank">Neural Networks and Deep Learning by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/machinelearning/" class="link" target="_blank">Machine Learning by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>';
+                    }
+                    break;                          
           case 'linux':
               infoText = 'Linux is a powerful, open-source operating system widely used in server environments, cloud computing, and embedded systems. Understanding Linux is essential for system administration, software development, and cybersecurity. Its flexibility and robustness make it a popular choice for developers and IT professionals alike. Mastery of Linux can significantly enhance your troubleshooting and scripting skills.';
 
