@@ -1184,7 +1184,39 @@ function calculatePercentage(event) {
                             '<a href="https://www.coursera.org/learn/neural-networks-deep-learning" class="link" target="_blank">Neural Networks and Deep Learning by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
                             '<a href="https://www.udemy.com/course/machinelearning/" class="link" target="_blank">Machine Learning by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>';
                     }
-                    break;                          
+                    break;  
+                    case 'compiler design and system software' || 'CDSS':
+                        infoText = 'Compiler Design and System Software deals with the principles of compiler construction and system-level programming. It includes topics like lexical analysis, parsing, code generation, and optimization techniques.';
+                        if (percentage > 90) {
+                            salaryInsights = 'Expected salary: ₹28 LPA';
+                            jobRoles = 'Key roles: Compiler Engineer, System Software Developer, Embedded Systems Engineer';
+                            suggestionsText = 'Master advanced compiler optimization techniques and system-level programming languages like C and Assembly.<br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.coursera.org/learn/compilers" class="link" target="_blank">Compilers by Stanford University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udacity.com/course/advanced-operating-systems--ud189" class="link" target="_blank">Advanced Operating Systems by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>';
+                        }
+                        if (percentage > 80 && percentage <= 90) {
+                            salaryInsights = 'Expected salary: ₹22 LPA';
+                            jobRoles = 'Key roles: Compiler Developer, System Programmer, Software Engineer';
+                            suggestionsText = 'Gain experience with tools like LLVM, GCC, and Flex/Bison.<br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.edx.org/course/compilers" class="link" target="_blank">Compilers by edX <i class="fa-solid fa-up-right-from-square"></i></a>';
+                        }
+                        if (percentage > 70 && percentage <= 80) {
+                            salaryInsights = 'Expected salary: ₹15 LPA';
+                            jobRoles = 'Key roles: Junior System Programmer, Compiler Analyst';
+                            suggestionsText = 'Learn about parsing techniques and intermediate code generation.<br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.udemy.com/course/compiler-design/" class="link" target="_blank">Compiler Design by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>';
+                        }
+                        if (percentage <= 70) {
+                            salaryInsights = 'Expected salary: ₹10 LPA';
+                            jobRoles = 'Key roles: Intern, Software Developer';
+                            suggestionsText = 'Understand the basics of compiler phases and try building a simple compiler.<br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.coursera.org/learn/compiler-design" class="link" target="_blank">Compiler Design Basics by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>';
+                        }
+                        break;                                            
           case 'linux':
               infoText = 'Linux is a powerful, open-source operating system widely used in server environments, cloud computing, and embedded systems. Understanding Linux is essential for system administration, software development, and cybersecurity. Its flexibility and robustness make it a popular choice for developers and IT professionals alike. Mastery of Linux can significantly enhance your troubleshooting and scripting skills.';
 
