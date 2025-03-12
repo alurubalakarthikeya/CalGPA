@@ -1869,7 +1869,4 @@ function generateCalendar() {
 }
 
 generateCalendar();
-
-
-
 /*My First ever project with 2000+ lines JavaScript yayyyy!!!*/
