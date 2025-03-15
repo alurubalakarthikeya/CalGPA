@@ -14,10 +14,10 @@ With **CalGPA**, students can:
 - Analyze the use of a subject in their career.
 - Plan for going home without fear of attendance issues.
 
-# <h3>Problem Statement:</h3>
+## <h3>Problem Statement:</h3>
 University students often struggle to track their academic progress, set realistic goals, and manage their attendance effectively. The lack of proper tools to estimate grades, analyze subject importance, and plan vacations without affecting attendance makes academic planning challenging.
 
-# <h3>Solution:</h3>
+## <h3>Solution:</h3>
 CalGPA is a web-based application designed to help students monitor and improve their academic performance. It provides tools for GPA estimation, subject analysis, and attendance tracking, enabling students to make informed decisions. With features like real-time outputs, a Progressive Web App (PWA) interface, and upcoming machine-learning-based predictions, CalGPA ensures students can optimize their study plans and academic goals effortlessly.
 
 
