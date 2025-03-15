@@ -4,7 +4,6 @@
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image.png?raw=true" alt="CalGPA Logo" width="500"/>
 </p>
 
-
 ## Description
 CalGPA is a web app designed to help uni students analyze and check their semester performance. It allows students to track their academic progress in real-time and provides various tools to maintain a good academic record. App can be downloaded for offline access and better usability.
 
