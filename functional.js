@@ -1014,7 +1014,7 @@ function calculatePercentage(event) {
                       '<a href="https://www.udemy.com/course/graph-theory-theory-and-practice/" class="link" target="_blank">Graph Theory: Theory and Practice <i class="fa-solid fa-up-right-from-square"></i></a><br>';
               }
               break;
-          case 'tnt':
+            case 'tnt':
               infoText = 'Transforms and Numerical Techniques are vital for solving complex equations in engineering and applied mathematics. These methods are used extensively in signal processing, scientific computing, and data analysis. A strong grasp of these concepts enables professionals to tackle real-world problems effectively, making it a crucial area of study for aspiring engineers and data scientists.';
 
               if (percentage > 90) {
@@ -1061,6 +1061,53 @@ function calculatePercentage(event) {
                       '<a href="https://www.edx.org/course/engineering-statistics" class="link" target="_blank">Engineering Statistics by MIT <i class="fa-solid fa-up-right-from-square"></i></a><br>';
               }
               break;
+              case 'iot':
+                infoText = 'IoT (Internet of Things) App Development focuses on building applications that connect and interact with smart devices. It involves working with embedded systems, cloud platforms, and real-time data processing. Mastering IoT development can lead to exciting opportunities in smart home technology, industrial automation, and healthcare innovations.';
+            
+                if (percentage > 90) {
+                    salaryInsights = 'Expected salary: ₹22 LPA';
+                    jobRoles = 'Key roles: IoT Architect, Embedded Systems Engineer';
+                    suggestionsText = 'Deepen your knowledge of IoT security, edge computing, and AI integration in IoT applications. Work on real-world projects involving smart devices and sensor networks. Collaborate on open-source IoT platforms to enhance your expertise. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.coursera.org/learn/iot" class="link" target="_blank">Internet of Things (IoT) Specialization by University of California, Irvine <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.edx.org/professional-certificate/iot-system-design" class="link" target="_blank">IoT System Design by Curtin University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udacity.com/course/iot-software-development--ud2003" class="link" target="_blank">IoT Software Development Nanodegree by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/the-complete-iot-course/" class="link" target="_blank">The Complete IoT Course by Udemy <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                }
+            
+                if (percentage > 80 && percentage <= 90) {
+                    salaryInsights = 'Expected salary: ₹18 LPA';
+                    jobRoles = 'Key roles: IoT Developer, Cloud IoT Engineer';
+                    suggestionsText = 'Learn about cloud IoT platforms like AWS IoT, Google Cloud IoT, and Azure IoT. Build applications that process real-time data from sensors and actuators. Participate in IoT hackathons to showcase your skills. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.coursera.org/learn/iot-azure" class="link" target="_blank">IoT on Azure by Microsoft <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/iot-using-raspberry-pi/" class="link" target="_blank">IoT Using Raspberry Pi by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.pluralsight.com/courses/aws-iot-fundamentals" class="link" target="_blank">AWS IoT Fundamentals by Pluralsight <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udacity.com/course/cloud-iot-edge-development--ud1501" class="link" target="_blank">Cloud IoT Edge Development by Udacity <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                }
+            
+                if (percentage > 70 && percentage <= 80) {
+                    salaryInsights = 'Expected salary: ₹12 LPA';
+                    jobRoles = 'Key roles: IoT Analyst, Junior IoT Engineer';
+                    suggestionsText = 'Gain experience with IoT communication protocols like MQTT and CoAP. Work on small projects integrating microcontrollers with sensors. Explore IoT data analytics to understand real-time processing. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.codecademy.com/learn/learn-iot" class="link" target="_blank">Learn IoT by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/iot-for-beginners/" class="link" target="_blank">IoT for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.khanacademy.org/computing/computer-programming" class="link" target="_blank">Khan Academy IoT Basics <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.coursera.org/learn/iot-data-analytics" class="link" target="_blank">IoT Data Analytics by Google Cloud <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                }
+            
+                if (percentage <= 70) {
+                    salaryInsights = 'Expected salary: ₹9 LPA';
+                    jobRoles = 'Key roles: IoT Intern, Embedded Developer';
+                    suggestionsText = 'Start by understanding basic IoT components like microcontrollers and sensors. Learn how to write simple programs for Arduino and Raspberry Pi. Practice building basic IoT applications like temperature monitoring. <br>' +
+                        '<strong>Useful Courses:</strong><br>' +
+                        '<a href="https://www.udacity.com/course/intro-to-iot--ud721" class="link" target="_blank">Intro to IoT by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.codecademy.com/learn/learn-iot" class="link" target="_blank">Learn IoT by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.udemy.com/course/iot-essentials-for-beginners/" class="link" target="_blank">IoT Essentials for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                        '<a href="https://www.khanacademy.org/computing/computer-programming" class="link" target="_blank">Khan Academy IoT Basics <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                }
+                break;            
           case 'java':
               infoText = 'Java Development is widely used for building robust applications across various domains, including enterprise systems, mobile development, and web applications. Its platform independence and vast ecosystem make it a popular choice among developers. Mastering Java can open doors to numerous career opportunities and enhance your problem-solving skills in software development.';
 
