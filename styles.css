@@ -1050,68 +1050,6 @@ body.dark-mode .back-to-top > a {
   color: var(--dark-bg-color);
 }
 
-.progress-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: conic-gradient(var(--main-color) 0deg, transparent 0deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000001;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.progress-circle::before {
-  content: '';
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: var(--dark-alt-color);
-  z-index: 1000002;
-}
-
-.progress-circle i {
-  position: relative;
-  z-index: 1000003;
-  color: var(--bg-color);
-  font-size: 16px;
-}
-
-.falling-pngs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.falling-png {
-  width: 50px; /* Adjust size as needed */
-  position: absolute;
-  top: -10px; /* Start just above the viewport */
-  opacity: 1;
-  filter: contrast(1.5);
-  filter: drop-shadow(0px 1px 6px rgba(2, 150, 138, 0.3));
-  animation: fall linear forwards; /* Apply fall animation */
-}
-
-@keyframes fall {
-  0% {
-    top: -100px; /* Start above the viewport */
-    opacity: 1;
-  }
-  100% {
-    top: 100vh; /* Fall to the bottom of the viewport */
-    opacity: 0; /* Fade out at the bottom */
-  }
-}
-
-
 .loader {
   position: fixed;
   top: 0;
