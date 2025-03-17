@@ -1355,7 +1355,55 @@ function calculatePercentage(event) {
                                 '<strong>Useful Courses:</strong><br>' +
                                 '<a href="https://www.coursera.org/learn/compiler-design" class="link" target="_blank">Compiler Design Basics by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>';
                         }
-                        break;                                            
+                        break;
+                        case 'technical-writing':
+                            infoText = 'Technical Writing involves creating clear, concise, and structured documentation that helps users understand complex concepts, products, or processes. It is widely used in software documentation, user manuals, white papers, and research writing. Strong writing skills combined with technical knowledge make technical writers highly valuable across industries.';
+              
+                            if (percentage > 90) {
+                                salaryInsights = 'Expected salary: ₹15 LPA';
+                                jobRoles = 'Key roles: Senior Technical Writer, Documentation Manager';
+                                suggestionsText = 'Focus on mastering structured authoring tools like DITA XML. Learn API documentation and content strategy to expand your expertise. Contribute to open-source documentation projects and build a strong portfolio. <br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://www.coursera.org/learn/technical-writing" class="link" target="_blank">Technical Writing by Moscow Institute of Physics and Technology <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.udemy.com/course/technical-writing-essentials/" class="link" target="_blank">Technical Writing Essentials by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.edx.org/course/professional-technical-writing" class="link" target="_blank">Professional Technical Writing by edX <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.udacity.com/course/technical-writing--ud476" class="link" target="_blank">Technical Writing by Udacity <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                            }
+              
+                            if (percentage > 80 && percentage <= 90) {
+                                salaryInsights = 'Expected salary: ₹12 LPA';
+                                jobRoles = 'Key roles: Technical Writer, Content Developer';
+                                suggestionsText = 'Enhance your writing skills by working on software documentation and knowledge bases. Learn Markdown, LaTeX, and other documentation tools. Participate in tech communities to stay updated on writing trends. <br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://www.coursera.org/learn/engineering-communication" class="link" target="_blank">Engineering Communication by Rice University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.udemy.com/course/become-a-professional-technical-writer/" class="link" target="_blank">Become a Professional Technical Writer by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.edx.org/course/writing-for-technical-professionals" class="link" target="_blank">Writing for Technical Professionals by edX <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.pluralsight.com/courses/technical-writing-fundamentals" class="link" target="_blank">Technical Writing Fundamentals by Pluralsight <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                            }
+              
+                            if (percentage > 70 && percentage <= 80) {
+                                salaryInsights = 'Expected salary: ₹9 LPA';
+                                jobRoles = 'Key roles: Junior Technical Writer, Content Analyst';
+                                suggestionsText = 'Practice writing clear and concise documentation for software applications. Get familiar with tools like Confluence and Notion. Engage in freelance writing to gain real-world experience. <br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://www.codecademy.com/learn/technical-writing" class="link" target="_blank">Technical Writing by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.udemy.com/course/writing-technical-documents/" class="link" target="_blank">Writing Technical Documents by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.khanacademy.org/college-careers-more/career-content-technical-writing" class="link" target="_blank">Technical Writing by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.coursera.org/learn/technical-report-writing-for-engineers" class="link" target="_blank">Technical Report Writing for Engineers by University of Sheffield <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                            }
+              
+                            if (percentage <= 70) {
+                                salaryInsights = 'Expected salary: ₹7 LPA';
+                                jobRoles = 'Key roles: Trainee Technical Writer';
+                                suggestionsText = 'Start by improving your grammar and writing skills. Focus on writing structured reports and instructional guides. Join online forums and practice writing summaries of technical concepts. <br>' +
+                                    '<strong>Useful Courses:</strong><br>' +
+                                    '<a href="https://www.udacity.com/course/intro-to-technical-writing--ud477" class="link" target="_blank">Intro to Technical Writing by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.codecademy.com/learn/technical-writing" class="link" target="_blank">Technical Writing by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.udemy.com/course/technical-writing-for-beginners/" class="link" target="_blank">Technical Writing for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                    '<a href="https://www.khanacademy.org/college-careers-more/career-content-technical-writing" class="link" target="_blank">Technical Writing by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                            }
+                            break;
+                                                                        
           case 'linux':
               infoText = 'Linux is a powerful, open-source operating system widely used in server environments, cloud computing, and embedded systems. Understanding Linux is essential for system administration, software development, and cybersecurity. Its flexibility and robustness make it a popular choice for developers and IT professionals alike. Mastery of Linux can significantly enhance your troubleshooting and scripting skills.';
 
