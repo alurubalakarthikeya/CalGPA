@@ -1107,7 +1107,54 @@ function calculatePercentage(event) {
                         '<a href="https://www.udemy.com/course/iot-essentials-for-beginners/" class="link" target="_blank">IoT Essentials for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
                         '<a href="https://www.khanacademy.org/computing/computer-programming" class="link" target="_blank">Khan Academy IoT Basics <i class="fa-solid fa-up-right-from-square"></i></a><br>';
                 }
-                break;            
+                break;
+                case 'image-processing' || 'ipcv' || 'ip and cv' || 'image-processing and computer vision':
+                    infoText = 'Image Processing and Computer Vision are crucial in various applications like medical imaging, autonomous vehicles, and facial recognition. Mastering these technologies opens doors to cutting-edge AI research and development in multiple industries.';
+      
+                    if (percentage > 90) {
+                        salaryInsights = 'Expected salary: ₹24 LPA';
+                        jobRoles = 'Key roles: Computer Vision Engineer, AI Researcher';
+                        suggestionsText = 'Explore deep learning techniques like CNNs and GANs for image processing. Work on projects involving real-world datasets to gain hands-on experience. Contribute to open-source AI projects. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.coursera.org/learn/convolutional-neural-networks" class="link" target="_blank">Convolutional Neural Networks by DeepLearning.AI <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udacity.com/course/computer-vision-nanodegree--nd891" class="link" target="_blank">Computer Vision Nanodegree by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/deep-learning-computer-vision/" class="link" target="_blank">Deep Learning for Computer Vision by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.edx.org/course/applied-computer-vision-with-tensorflow" class="link" target="_blank">Applied Computer Vision with TensorFlow by Harvard University <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                    }
+      
+                    if (percentage > 80 && percentage <= 90) {
+                        salaryInsights = 'Expected salary: ₹20 LPA';
+                        jobRoles = 'Key roles: Vision Engineer, Image Processing Specialist';
+                        suggestionsText = 'Learn OpenCV, TensorFlow, and PyTorch for practical applications. Work on real-world challenges like object detection and segmentation. Participate in AI hackathons. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.coursera.org/learn/computer-vision-basics" class="link" target="_blank">Computer Vision Basics by University at Buffalo <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/mastering-opencv/" class="link" target="_blank">Mastering OpenCV by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.pluralsight.com/courses/computer-vision-fundamentals" class="link" target="_blank">Computer Vision Fundamentals by Pluralsight <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810" class="link" target="_blank">Introduction to Computer Vision by Udacity <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                    }
+      
+                    if (percentage > 70 && percentage <= 80) {
+                        salaryInsights = 'Expected salary: ₹14 LPA';
+                        jobRoles = 'Key roles: Junior Vision Engineer, AI Developer';
+                        suggestionsText = 'Get comfortable with image processing libraries like OpenCV and PIL. Work on small projects like image filtering and edge detection. Engage in community coding challenges. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.codecademy.com/learn/computer-vision" class="link" target="_blank">Learn Computer Vision by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/image-processing-and-analysis/" class="link" target="_blank">Image Processing and Analysis by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.khanacademy.org/computing/computer-programming/imagemanipulation" class="link" target="_blank">Image Manipulation by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.coursera.org/learn/image-processing" class="link" target="_blank">Image Processing by Northwestern University <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                    }
+      
+                    if (percentage <= 70) {
+                        salaryInsights = 'Expected salary: ₹10 LPA';
+                        jobRoles = 'Key roles: Trainee Vision Engineer';
+                        suggestionsText = 'Start with basic image processing techniques like color manipulation and thresholding. Focus on understanding how image data is represented. Solve beginner-level problems on coding platforms. <br>' +
+                            '<strong>Useful Courses:</strong><br>' +
+                            '<a href="https://www.udacity.com/course/introduction-to-image-processing--ud955" class="link" target="_blank">Introduction to Image Processing by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.codecademy.com/learn/computer-vision" class="link" target="_blank">Learn Computer Vision by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.udemy.com/course/image-processing-for-beginners/" class="link" target="_blank">Image Processing for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                            '<a href="https://www.khanacademy.org/computing/computer-programming/imagemanipulation" class="link" target="_blank">Image Manipulation by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                    }
+                    break;                  
           case 'java':
               infoText = 'Java Development is widely used for building robust applications across various domains, including enterprise systems, mobile development, and web applications. Its platform independence and vast ecosystem make it a popular choice among developers. Mastering Java can open doors to numerous career opportunities and enhance your problem-solving skills in software development.';
 
@@ -1231,7 +1278,55 @@ function calculatePercentage(event) {
                             '<a href="https://www.coursera.org/learn/neural-networks-deep-learning" class="link" target="_blank">Neural Networks and Deep Learning by Coursera <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
                             '<a href="https://www.udemy.com/course/machinelearning/" class="link" target="_blank">Machine Learning by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>';
                     }
-                    break;  
+                    break; 
+                    case 'technical-writing':
+                        infoText = 'Technical Writing involves creating clear, concise, and structured documentation that helps users understand complex concepts, products, or processes. It is widely used in software documentation, user manuals, white papers, and research writing. Strong writing skills combined with technical knowledge make technical writers highly valuable across industries.';
+          
+                        if (percentage > 90) {
+                            salaryInsights = 'Expected salary: ₹5 LPA';
+                            jobRoles = 'Key roles: Senior Technical Writer, Documentation Manager';
+                            suggestionsText = 'Focus on mastering structured authoring tools like DITA XML. Learn API documentation and content strategy to expand your expertise. Contribute to open-source documentation projects and build a strong portfolio. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.coursera.org/learn/technical-writing" class="link" target="_blank">Technical Writing by Moscow Institute of Physics and Technology <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udemy.com/course/technical-writing-essentials/" class="link" target="_blank">Technical Writing Essentials by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.edx.org/course/professional-technical-writing" class="link" target="_blank">Professional Technical Writing by edX <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udacity.com/course/technical-writing--ud476" class="link" target="_blank">Technical Writing by Udacity <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                        }
+          
+                        if (percentage > 80 && percentage <= 90) {
+                            salaryInsights = 'Expected salary: ₹4 LPA';
+                            jobRoles = 'Key roles: Technical Writer, Content Developer';
+                            suggestionsText = 'Enhance your writing skills by working on software documentation and knowledge bases. Learn Markdown, LaTeX, and other documentation tools. Participate in tech communities to stay updated on writing trends. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.coursera.org/learn/engineering-communication" class="link" target="_blank">Engineering Communication by Rice University <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udemy.com/course/become-a-professional-technical-writer/" class="link" target="_blank">Become a Professional Technical Writer by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.edx.org/course/writing-for-technical-professionals" class="link" target="_blank">Writing for Technical Professionals by edX <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.pluralsight.com/courses/technical-writing-fundamentals" class="link" target="_blank">Technical Writing Fundamentals by Pluralsight <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                        }
+          
+                        if (percentage > 70 && percentage <= 80) {
+                            salaryInsights = 'Expected salary: ₹3.5 LPA';
+                            jobRoles = 'Key roles: Junior Technical Writer, Content Analyst';
+                            suggestionsText = 'Practice writing clear and concise documentation for software applications. Get familiar with tools like Confluence and Notion. Engage in freelance writing to gain real-world experience. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.codecademy.com/learn/technical-writing" class="link" target="_blank">Technical Writing by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udemy.com/course/writing-technical-documents/" class="link" target="_blank">Writing Technical Documents by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.khanacademy.org/college-careers-more/career-content-technical-writing" class="link" target="_blank">Technical Writing by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.coursera.org/learn/technical-report-writing-for-engineers" class="link" target="_blank">Technical Report Writing for Engineers by University of Sheffield <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                        }
+          
+                        if (percentage <= 70) {
+                            salaryInsights = 'Expected salary: ₹3 LPA';
+                            jobRoles = 'Key roles: Trainee Technical Writer';
+                            suggestionsText = 'Start by improving your grammar and writing skills. Focus on writing structured reports and instructional guides. Join online forums and practice writing summaries of technical concepts. <br>' +
+                                '<strong>Useful Courses:</strong><br>' +
+                                '<a href="https://www.udacity.com/course/intro-to-technical-writing--ud477" class="link" target="_blank">Intro to Technical Writing by Udacity <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.codecademy.com/learn/technical-writing" class="link" target="_blank">Technical Writing by Codecademy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.udemy.com/course/technical-writing-for-beginners/" class="link" target="_blank">Technical Writing for Beginners by Udemy <i class="fa-solid fa-up-right-from-square"></i></a>,<br>' +
+                                '<a href="https://www.khanacademy.org/college-careers-more/career-content-technical-writing" class="link" target="_blank">Technical Writing by Khan Academy <i class="fa-solid fa-up-right-from-square"></i></a><br>';
+                        }
+                        break;
+          
                     case 'compiler design and system software' || 'CDSS':
                         infoText = 'Compiler Design and System Software deals with the principles of compiler construction and system-level programming. It includes topics like lexical analysis, parsing, code generation, and optimization techniques.';
                         if (percentage > 90) {
