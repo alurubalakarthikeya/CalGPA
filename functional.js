@@ -150,28 +150,25 @@ function showInfo(gpa) {
   const infoText1 = document.getElementById('info-text1');
   const infoText2 = document.getElementById('info-text2');
   const infoText3 = document.getElementById('info-text3');
-
-  if (gpa === 'gpa9') {
+    if (gpa === 'gpa9') {
       infoText1.innerHTML = `
     <strong>Tip 1 for GPA > 9:</strong> Focus on understanding the core concepts deeply. 
-    Use resources like textbooks, online courses, and tutorials to strengthen your understanding. 
+    Use resources like PPT's, online courses, and tutorials to strengthen your understanding. 
     Participate in study groups and discussions to clarify doubts and gain new perspectives.
   `;
       infoText2.innerHTML = `
     <strong>Roadmap for GPA > 9:</strong><br>
-    1. <strong>Set Clear Goals:</strong> Define your academic goals and create a detailed study plan.<br>
-    2. <strong>Deep Understanding:</strong> Focus on understanding the core concepts deeply. Use resources like textbooks, online courses, and tutorials to strengthen your understanding.<br>
-    3. <strong>Regular Practice:</strong> Practice regularly and solve previous year papers. Consistent practice helps in retaining information and improving problem-solving skills.<br>
-    4. <strong>Time Management:</strong> Manage your time effectively. Create a study schedule that allocates sufficient time for each subject. Avoid last-minute cramming by reviewing your notes regularly and staying on top of your assignments.<br>
-    5. <strong>Seek Help:</strong> Seek help from professors and peers when needed. Don't hesitate to ask questions and seek clarification on topics you find challenging.<br>
-    6. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional practice and learning.<br>
-    7. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
+    1. <strong>Internal Marks:</strong> Score above 55 out of 60 in CIA to increase the chances of getting a 9.<br>
+    2. <strong>High Credit Courses:</strong> Prioritize the high credit subjects like 4 and 3 over 2 and 1's because they carry more grade point which play a crucial role in sgpa.<br>
+    3. <strong>Regular Practice:</strong> Getting grades alone doesn't help, consistant practice makes it easy to remember things more than just studying for the sake of marks cuz at the end all that matters are your skills.<br>
+    4. <strong>Seek Help:</strong> Make friends from seniors and ask for guidance. Approach your lecturers who value you in class<br>
+    5. <strong>Use Resources:</strong> Utilize the PPT's for scoring marks, but to learn the actual thing you should definitely work yourself online and find tutorials.<br>
+    6. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
   `;
       infoText3.innerHTML = `
     <strong>Additional Tips for GPA > 9:</strong><br>
-    - <strong>Active Learning:</strong> Engage in active learning techniques such as summarizing information in your own words, teaching concepts to others, and applying knowledge to practical problems.<br>
+    - <strong>Being Active:</strong> Engage in active learning techniques such as summarizing information in your own words, teaching concepts to others, and applying knowledge to practical problems.<br>
     - <strong>Consistent Review:</strong> Regularly review your notes and materials to reinforce your understanding and retention of the subject matter.<br>
-    - <strong>Mock Tests:</strong> Take mock tests to simulate exam conditions and identify areas where you need improvement.<br>
   `;
   } else if (gpa === 'gpa8') {
       infoText1.innerHTML = `
@@ -1881,44 +1878,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  const progressCircle = document.getElementById('progress-circle');
-
-  function updateProgressCircle() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrollPercentage = (scrollTop / scrollHeight) * 100;
-
-      const angle = (scrollPercentage / 100) * 360;
-
-      if (scrollPercentage <= 25) {
-          progressCircle.style.borderTopColor = 'var(--main-color)';
-          progressCircle.style.borderRightColor = 'transparent';
-          progressCircle.style.borderBottomColor = 'transparent';
-          progressCircle.style.borderLeftColor = 'transparent';
-      } else if (scrollPercentage <= 50) {
-          progressCircle.style.borderTopColor = 'var(--main-color)';
-          progressCircle.style.borderRightColor = 'var(--main-color)';
-          progressCircle.style.borderBottomColor = 'transparent';
-          progressCircle.style.borderLeftColor = 'transparent';
-      } else if (scrollPercentage <= 75) {
-          progressCircle.style.borderTopColor = 'var(--main-color)';
-          progressCircle.style.borderRightColor = 'var(--main-color)';
-          progressCircle.style.borderBottomColor = 'var(--main-color)';
-          progressCircle.style.borderLeftColor = 'transparent';
-      } else {
-          progressCircle.style.borderTopColor = 'var(--main-color)';
-          progressCircle.style.borderRightColor = 'var(--main-color)';
-          progressCircle.style.borderBottomColor = 'var(--main-color)';
-          progressCircle.style.borderLeftColor = 'var(--main-color)';
-      }
-  }
-
-  window.addEventListener('scroll', updateProgressCircle);
-  updateProgressCircle();
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
   const backToTopButton = document.querySelector('.back-to-top a');
