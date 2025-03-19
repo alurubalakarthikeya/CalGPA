@@ -171,24 +171,23 @@ function showInfo(gpa) {
     - <strong>Consistent Review:</strong> Regularly review your notes and materials to reinforce your understanding and retention of the subject matter.<br>
   `;
   } else if (gpa === 'gpa8') {
-      infoText1.innerHTML = `
+    infoText1.innerHTML = `
     <strong>Tip 1 for GPA > 8:</strong> Manage your time effectively and prioritize your studies. 
     Use tools like planners and to-do lists to keep track of your tasks and deadlines. 
     Break down your study sessions into manageable chunks to avoid burnout.
   `;
-      infoText2.innerHTML = `
+    infoText2.innerHTML = `
     <strong>Roadmap for GPA > 8:</strong><br>
-    1. <strong>Set Priorities:</strong> Identify your priorities and focus on important tasks. Use tools like planners and to-do lists to keep track of your tasks and deadlines.<br>
-    2. <strong>Effective Study:</strong> Use effective study techniques like active learning and spaced repetition. Break down your study sessions into manageable chunks to avoid burnout.<br>
-    3. <strong>Regular Breaks:</strong> Take regular breaks to avoid burnout and maintain productivity. Incorporate short breaks into your study sessions to rest and recharge.<br>
-    4. <strong>Seek Clarification:</strong> Seek help from professors and peers when needed. Don't hesitate to ask questions and seek clarification on topics you find challenging.<br>
-    5. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional practice and learning.<br>
-    6. <strong>Stay Organized:</strong> Keep your study materials and notes organized. Use tools like binders, folders, and digital note-taking apps to stay organized.<br>
-    7. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
+    1. <strong>Internal Marks:</strong> Aim to score above 50 out of 60 in CIA to increase the chances of getting an 8.<br>
+    2. <strong>High Credit Courses:</strong> Focus on high credit subjects as they have a significant impact on your SGPA.<br>
+    3. <strong>Consistent Practice:</strong> Regular practice helps in retaining information better than cramming before exams.<br>
+    4. <strong>Seek Help:</strong> Don't hesitate to ask for help from seniors or professors when needed.<br>
+    5. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional learning.<br>
+    6. <strong>Stay Healthy:</strong> Maintain a balanced lifestyle with proper sleep, diet, and exercise to support your studies.<br>
   `;
       infoText3.innerHTML = `
     <strong>Additional Tips for GPA > 8:</strong><br>
-    - <strong>Group Study:</strong> Form study groups with classmates to discuss and review course materials. Group study can provide different perspectives and help clarify doubts.<br>
+    - <strong>Group Study:</strong> Form study groups to discuss and review course materials. Group study can provide different perspectives and help clarify doubts.<br>
     - <strong>Practice Problems:</strong> Solve practice problems and exercises to reinforce your understanding. Use textbooks, online resources, and past exam papers for practice.<br>
     - <strong>Feedback:</strong> Seek feedback on your assignments and exams to identify areas for improvement. Use the feedback to improve your understanding and performance.<br>
   `;
