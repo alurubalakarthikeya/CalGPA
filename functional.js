@@ -198,14 +198,13 @@ function showInfo(gpa) {
     Review your notes regularly to reinforce your learning and identify areas that need improvement.
   `;
       infoText2.innerHTML = `
-    <strong>Roadmap for GPA > 6.5:</strong><br>
-    1. <strong>Attend Classes:</strong> Attend all classes and take detailed notes. Regular attendance helps you stay updated with the course material and understand the concepts better.<br>
-    2. <strong>Review Regularly:</strong> Review your notes regularly and clarify doubts immediately. Don't let doubts accumulate; seek help from your professors or classmates as soon as possible.<br>
-    3. <strong>Focus on Assignments:</strong> Complete assignments and projects to the best of your ability. Use them as opportunities to apply what you've learned and demonstrate your understanding of the subject.<br>
-    4. <strong>Seek Help:</strong> Seek help from professors and peers when needed. Don't hesitate to ask questions and seek clarification on topics you find challenging.<br>
+  <strong>Roadmap for GPA > 6.5:</strong><br>
+    1. <strong>Internal Marks:</strong> Aim to score above 40 out of 60 in CIA to increase the chances of getting a 6.5+.<br>
+    2. <strong>Review Notes:</strong> Regularly review your notes and course materials to reinforce your understanding and retention.<br>
+    3. <strong>Complete Assignments:</strong> Complete all assignments and projects on time. Use them as opportunities to apply what you've learned.<br>
+    4. <strong>Seek Help:</strong> Don't hesitate to ask for help from professors or classmates when you encounter difficulties.<br>
     5. <strong>Use Resources:</strong> Utilize online resources like Coursera, Khan Academy, and edX for additional practice and learning.<br>
     6. <strong>Stay Organized:</strong> Keep your study materials and notes organized. Use tools like binders, folders, and digital note-taking apps to stay organized.<br>
-    7. <strong>Stay Healthy:</strong> Maintain a healthy lifestyle with proper sleep, diet, and exercise. A healthy body supports a healthy mind.<br>
   `;
       infoText3.innerHTML = `
     <strong>Additional Tips for GPA > 6.5:</strong><br>
