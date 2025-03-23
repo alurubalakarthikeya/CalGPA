@@ -12,7 +12,7 @@ With **CalGPA**, students can:
 - Set academic goals based on their estimated GPA.
 - Analyze the use of a subject in their career.
 - Plan for going home without fear of attendance issues.
-- [Check Project 🔗](https://alurubalakarthikeya.github.io/CalGPA/)
+- [Check Project ](https://alurubalakarthikeya.github.io/CalGPA/)📍
 
 ## <h3>Problem Statement:</h3>
 University students often struggle to track their academic progress, set realistic goals, and manage their attendance effectively. The lack of proper tools to estimate grades, analyze subject importance, and plan vacations without affecting attendance makes academic planning challenging.
@@ -126,12 +126,15 @@ We welcome contributions! To get started:<br>
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ## 📈 Project Stats
+<p><b>Start Date: </b> 24-10-2024</p>
+<p><b>Developer: </b><a href="https://github.com/alurubalakarthikeya">@alurubalakarthikeya</a></p>
+
 ![License](https://img.shields.io/github/license/alurubalakarthikeya/CalGPA)
 ![GitHub Stars](https://img.shields.io/github/stars/alurubalakarthikeya/CalGPA?style=social)
 ![GitHub Contributors](https://img.shields.io/github/contributors/alurubalakarthikeya/CalGPA)
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/alurubalakarthikeya/CalGPA)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/alurubalakarthikeya/CalGPA)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/alurubalakarthikeya/CalGPA) 
 
 ## Project Link:
-[Check Project 📍](https://alurubalakarthikeya.github.io/CalGPA/)
+[Check Project ](https://alurubalakarthikeya.github.io/CalGPA/)📍
