@@ -47,24 +47,21 @@ CalGPA is a web-based application designed to help students monitor and improve 
 ## Tools
 
 ### 🧮 **GPA Calculator (Estimator.io)**
-A tool that helps students to calculate their predicted sgpa based on their internal marks and predicted SEE marks. Which helps in accurate goal setting.<br> Check it here: [ Open](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)📍
-
+A tool that helps students to calculate their predicted sgpa based on their internal marks and predicted SEE marks. Which helps in accurate goal setting.<br> Check it here: [ Open](https://alurubalakarthikeya.github.io/CalGPA/pages/tracker.html)📍<br>
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image5.png?raw=true" alt="GPA Calculator" width="550"/>
 </p>
 
 ### 📚 **Subject Analyzer (Guider.io)**
 Guides on how to improve in specific subjects, their real-world applications, career opportunities, and study resources to get the opportunities related to the subject.<br>
-Check it here: [ Open](https://alurubalakarthikeya.github.io/CalGPA/pages/guider.html)📍
-
+Check it here: [ Open](https://alurubalakarthikeya.github.io/CalGPA/pages/guider.html)📍<br>
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image2.png?raw=true" alt="Subject Analyzer" width="550"/>
 </p>
 
 ### 🪂 **Vacation & Attendance Tracker (Attender.io)**
 Helps students plan to go home, without worrying about attendance requirements and provides insights on how to maintain the minimum required attendance.<br>
-Check it here: [ Open](https://alurubalakarthikeya.github.io/CalGPA/pages/attendance.html)📍
-
+Check it here: [ Open](https://alurubalakarthikeya.github.io/CalGPA/pages/attendance.html)📍<br>
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image6.png?raw=true" alt="Attendance Tracker" width="550"/>
 </p>
