@@ -13,7 +13,7 @@ With **CalGPA**, students can:
 - Set academic goals based on their estimated GPA.
 - Analyze the use of a subject in their career.
 - Plan for going home without fear of attendance issues.
-- [Check Project ](https://alurubalakarthikeya.github.io/CalGPA/)📍
+- Check Project: [Here](https://alurubalakarthikeya.github.io/CalGPA/)📍
 
 ## <h3>Problem Statement:</h3>
 University students often struggle to track their academic progress, set realistic goals, and manage their attendance effectively. The lack of proper tools to estimate grades, analyze subject importance, and plan vacations without affecting attendance makes academic planning challenging.
