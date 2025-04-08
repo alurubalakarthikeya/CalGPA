@@ -1029,14 +1029,19 @@ h1:hover sup i {
 .back-to-top {
   position: fixed;
   z-index: 1000000;
-  top: 90%;
+  top: 85%;
   right: 3%;
-  padding: 0.5px;
-  border-radius: 50%;
-  color: var(--bg-color);
+  padding: 40px 10px;
+  border: 1px solid #03dac6;
+  border-radius: 25px;
+  background-color: var(--main-color);
   box-shadow: 2px 2px 10px rgba(2, 150, 138, 0.6);
 }
 
+.back-to-top > a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
 .back-to-top > a {
   text-decoration: none;
   color: var(--bg-color);
