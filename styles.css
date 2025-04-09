@@ -22,7 +22,10 @@ body.dark-mode .navbar {
 
 body.dark-mode .sidenav {
   color: var(--dark-bg-color);
-  background-color: var(--dark-main-color);
+  background-color: rgba(5, 83, 77, 0.7); /* Semi-transparent version of #03746b */
+  backdrop-filter: blur(10px); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 4px 4px 10px rgba(3, 116, 107, 0.5);
 }
 
 body.dark-mode .sidenav a {
@@ -596,11 +599,12 @@ sup> i {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgba(10, 125, 115, 0.95);
-    overflow-x: hidden;
+    background-color: rgba(10, 125, 115, 0.6);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
     transition: 0.6s;
     padding-top: 60px;
-    box-shadow: 4px 4px 10px black;
+    box-shadow: 4px 4px 10px rgb(10, 125, 115);
     overflow-x: hidden;
   }
   
@@ -1025,7 +1029,7 @@ h1:hover sup i {
   box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
   transform: translateY(-5px);
 }
-
+/* 
 .back-to-top {
   position: fixed;
   z-index: 1000000;
@@ -1041,18 +1045,93 @@ h1:hover sup i {
 .back-to-top > a {
   text-decoration: none;
   color: var(--bg-color);
+} */
+
+.back-to-top {
+  position: fixed;
+  top: 80%;
+  right: 2%;
+  background-color: rgba(0, 130, 119, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--main-color);
+  padding: 7px;
+  border-radius: 25px;
+  width: 27px; 
+  height: 100px; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden; 
+  z-index: 99999;
 }
-.back-to-top > a {
+
+.back-to-top a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+  width: 100%;
+  color: var(--dark-main-color);
   text-decoration: none;
-  color: var(--bg-color);
+}
+
+.back-to-top i {
+  position: absolute; 
+  top: 0;
+  transition: top 0.4s ease;
+}
+
+#pulse-wrapper {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--main-color); 
+  z-index: 999999;
+}
+
+#pulse-wrapper #pulse {
+  margin: auto;
+}
+
+#pulse-wrapper #pulse span {
+  position: absolute;
+  margin-top: -25px; 
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  animation: pulse_animation 1.3s infinite;
+}
+
+#pulse-wrapper #pulse span:nth-child(2) {
+  animation-delay: 0.3s; 
+  border-radius: 50%;
+}
+
+@keyframes pulse_animation {
+  0% { 
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8) 
+  }
+  100% { 
+      box-shadow: 0 0 0 200px rgba(254, 206, 104, 0) 
+  }
 }
 
 body.dark-mode .back-to-top {
-  background-color: var(--main-color);
+  background-color: rgba(3, 116, 107, 0.5); /* Semi-transparent version of #03746b */
+  backdrop-filter: blur(10px); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for dark mode */
+  border: 2px solid var(--main-color);
 }
 
 body.dark-mode .back-to-top > a {
-  color: var(--dark-bg-color);
+  color: var(--main-color);
 }
 
 .loader {

@@ -2017,4 +2017,71 @@ function generateCalendar() {
 
 generateCalendar();
 
+// Select the arrow element inside the cylindrical container
+const arrow = document.getElementById('arrow');
+const cylinder = document.getElementById('cylinder');
+
+// Function to update the arrow's position based on scroll
+function updateArrowPosition() {
+    // Get the total scrollable height of the page
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // Calculate the scroll percentage
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+    // Get the height of the cylinder
+    const cylinderHeight = cylinder.offsetHeight;
+
+    // Calculate the arrow's position within the cylinder
+    const arrowPosition = (scrollPercentage / 100) * (cylinderHeight - 20); // Adjust for padding
+    arrow.style.top = `${arrowPosition}px`;
+}
+
+// Add scroll event listener to update the arrow's position
+window.addEventListener('scroll', updateArrowPosition);
+
+// Optional: Smooth scroll to top when the button is clicked
+document.querySelector('.back-to-top a').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/*Loader Animation*/
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
+      const loader = document.getElementById('pulse-wrapper');
+      loader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+  });
+/*Loader Animation*/
+// Function to update the arrow's position based on scroll
+function updateIconPosition() {
+    const buttonContainer = document.querySelector('.back-to-top'); // Select the container
+    const icon = buttonContainer.querySelector('i'); // Select the arrow icon
+    const documentHeight = document.documentElement.scrollHeight; // Total height of the document
+    const viewportHeight = window.innerHeight; // Height of the visible viewport
+    const scrollPosition = window.scrollY; // Current scroll position
+
+    // Calculate the scroll percentage
+    const scrollPercentage = (scrollPosition / (documentHeight - viewportHeight)) * 100;
+
+    // Get the height of the container and the icon
+    const containerHeight = buttonContainer.offsetHeight;
+    const iconHeight = icon.offsetHeight;
+
+    // Calculate the maximum position the icon can move within the container
+    const maxPosition = containerHeight - iconHeight;
+
+    // Calculate the new position of the icon based on the scroll percentage
+    const newPosition = (scrollPercentage / 100) * maxPosition;
+
+    // Update the icon's position
+    icon.style.transform = `translateY(${newPosition}px)`;
+}
+
+// Add event listeners to update the arrow position on scroll and page load
+document.addEventListener('scroll', updateIconPosition);
+window.addEventListener('load', updateIconPosition);
 /*My First ever project with 2000+ lines JavaScript yayyyy!!!*/
