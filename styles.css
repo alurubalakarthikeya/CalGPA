@@ -1078,7 +1078,7 @@ h1:hover sup i {
 }
 
 .back-to-top i {
-  font-size: 2.25vh;
+  font-size: 2.1vh;
   position: absolute; 
   top: 0;
   transition: top 0.1s ease-in-out; /* smoother movement */
