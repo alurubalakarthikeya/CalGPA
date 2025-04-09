@@ -2056,32 +2056,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 /*Loader Animation*/
-// Function to update the arrow's position based on scroll
-function updateIconPosition() {
-    const buttonContainer = document.querySelector('.back-to-top'); // Select the container
-    const icon = buttonContainer.querySelector('i'); // Select the arrow icon
-    const documentHeight = document.documentElement.scrollHeight; // Total height of the document
-    const viewportHeight = window.innerHeight; // Height of the visible viewport
-    const scrollPosition = window.scrollY; // Current scroll position
-
-    // Calculate the scroll percentage
-    const scrollPercentage = (scrollPosition / (documentHeight - viewportHeight)) * 100;
-
-    // Get the height of the container and the icon
-    const containerHeight = buttonContainer.offsetHeight;
-    const iconHeight = icon.offsetHeight;
-
-    // Calculate the maximum position the icon can move within the container
-    const maxPosition = containerHeight - iconHeight;
-
-    // Calculate the new position of the icon based on the scroll percentage
-    const newPosition = (scrollPercentage / 100) * maxPosition;
-
-    // Update the icon's position
-    icon.style.transform = `translateY(${newPosition}px)`;
-}
-
-// Add event listeners to update the arrow position on scroll and page load
-document.addEventListener('scroll', updateIconPosition);
-window.addEventListener('load', updateIconPosition);
+function updateArrowPosition() {
+    const container = document.getElementById('cylinder');
+    const arrow = document.getElementById('arrow');
+  
+    if (!container || !arrow) return;
+  
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+  
+    const scrollableHeight = scrollHeight - clientHeight;
+    const scrollPercentage = scrollTop / scrollableHeight;
+  
+    const containerHeight = container.clientHeight;
+    const arrowHeight = arrow.offsetHeight;
+    const maxTop = containerHeight - arrowHeight;
+  
+    const arrowTop = scrollPercentage * maxTop;
+    arrow.style.top = `${arrowTop}px`;
+  }
+  
+  window.addEventListener('scroll', updateArrowPosition);
+  window.addEventListener('load', updateArrowPosition);
+  
 /*My First ever project with 2000+ lines JavaScript yayyyy!!!*/

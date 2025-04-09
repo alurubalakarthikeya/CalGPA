@@ -290,10 +290,10 @@ body.dark-mode .insta-text p {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: var(--main-color);
+    background-color: rgba(13, 132, 122, 0.96); 
     color: var(--bg-color);
     z-index: 100;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: visible;
 }
 
 .navbar > h1 {
@@ -596,13 +596,13 @@ sup> i {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 101;
     top: 0;
     right: 0;
     background-color: rgba(10, 125, 115, 0.6);
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
-    transition: 0.6s;
+    transition: width 0.6s ease;
     padding-top: 60px;
     box-shadow: 4px 4px 10px rgb(10, 125, 115);
     overflow-x: hidden;
@@ -1063,13 +1063,13 @@ h1:hover sup i {
   align-items: flex-start;
   justify-content: center;
   overflow: hidden; 
-  z-index: 99999;
+  z-index: 99;
 }
 
 .back-to-top a {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%; 
   width: 100%;
@@ -1078,9 +1078,10 @@ h1:hover sup i {
 }
 
 .back-to-top i {
+  font-size: 2.25vh;
   position: absolute; 
   top: 0;
-  transition: top 0.4s ease;
+  transition: top 0.1s ease-in-out; /* smoother movement */
 }
 
 #pulse-wrapper {
