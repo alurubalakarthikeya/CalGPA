@@ -1966,30 +1966,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const container = document.querySelector('.falling-pngs');
-  const pngCount = 10;
-  const pngSource = './imgs/gradea.png';
-  const fallInterval = 500;
+    const container = document.querySelector('.falling-pngs');
+    const pngCount = 10;
+    const pngSource = './imgs/gradea.png';
+    const fallInterval = 500;
 
-  function createFallingPng() {
-      const png = document.createElement('img');
-      png.classList.add('falling-png');
-      png.src = pngSource;
-      png.style.left = `${Math.random() * 100}vw`;
-      png.style.animationDuration = `${5 + Math.random() * 5}s`;
-      png.style.animationDelay = `${Math.random() * 3}s`;
+    function createFallingPng() {
+        const png = document.createElement('img');
+        png.classList.add('falling-png');
+        png.src = pngSource;
+        png.style.left = `${Math.random() * 100}vw`;
+        png.style.animationDuration = `${5 + Math.random() * 5}s`;
+        png.style.animationDelay = `${Math.random() * 3}s`;
 
-      container.appendChild(png);
+        container.appendChild(png);
 
-      setTimeout(() => {
-          png.remove();
-      }, (5 + Math.random() * 5) * 1000);
-  }
-  setInterval(() => {
-      if (document.querySelectorAll('.falling-png').length < pngCount) {
-          createFallingPng();
-      }
-  }, fallInterval);
+        setTimeout(() => {
+            png.remove();
+        }, (5 + Math.random() * 5) * 1000);
+    }
+    setInterval(() => {
+        if (document.querySelectorAll('.falling-png').length < pngCount) {
+            createFallingPng();
+        }
+    }, fallInterval);
 });
 
 function generateCalendar() {
