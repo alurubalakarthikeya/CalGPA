@@ -2017,66 +2017,21 @@ function generateCalendar() {
 
 generateCalendar();
 
-// Select the arrow element inside the cylindrical container
-const arrow = document.getElementById('arrow');
-const cylinder = document.getElementById('cylinder');
-
-// Function to update the arrow's position based on scroll
-function updateArrowPosition() {
-    // Get the total scrollable height of the page
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    // Get the current scroll position
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    // Calculate the scroll percentage
-    const scrollPercentage = (scrollTop / scrollHeight) * 100;
-
-    // Get the height of the cylinder
-    const cylinderHeight = cylinder.offsetHeight;
-
-    // Calculate the arrow's position within the cylinder
-    const arrowPosition = (scrollPercentage / 100) * (cylinderHeight - 20); // Adjust for padding
-    arrow.style.top = `${arrowPosition}px`;
-}
-
-// Add scroll event listener to update the arrow's position
-window.addEventListener('scroll', updateArrowPosition);
-
-// Optional: Smooth scroll to top when the button is clicked
-document.querySelector('.back-to-top a').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-/*Loader Animation*/
-document.addEventListener("DOMContentLoaded", function() {
-    window.addEventListener("load", function() {
-      const loader = document.getElementById('pulse-wrapper');
-      loader.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
-  });
-/*Loader Animation*/
 function updateArrowPosition() {
     const container = document.getElementById('cylinder');
     const arrow = document.getElementById('arrow');
-  
-    if (!container || !arrow) return;
-  
     const scrollTop = window.scrollY;
     const scrollHeight = document.documentElement.scrollHeight;
     const clientHeight = document.documentElement.clientHeight;
-  
     const scrollableHeight = scrollHeight - clientHeight;
     const scrollPercentage = scrollTop / scrollableHeight;
-  
     const containerHeight = container.clientHeight;
     const arrowHeight = arrow.offsetHeight;
     const maxTop = containerHeight - arrowHeight;
-  
     const arrowTop = scrollPercentage * maxTop;
     arrow.style.top = `${arrowTop}px`;
   }
-  
+
   window.addEventListener('scroll', updateArrowPosition);
   window.addEventListener('load', updateArrowPosition);
 /*My First ever project with 2000+ lines JavaScript yayyyy!!!*/
