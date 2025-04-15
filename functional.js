@@ -2079,5 +2079,4 @@ function updateArrowPosition() {
   
   window.addEventListener('scroll', updateArrowPosition);
   window.addEventListener('load', updateArrowPosition);
-  
 /*My First ever project with 2000+ lines JavaScript yayyyy!!!*/
