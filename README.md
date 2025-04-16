@@ -1,4 +1,4 @@
-# <h2 align="center"> <a href="https://alurubalakarthikeya.github.io/CalGPA/">CalGPA</a> 👾</h2>
+# <h2 align="center"> <a href="https://alurubalakarthikeya.github.io/CalGPA/">CalGPA</a> 🎓</h2>
 
 <p align="center">
   <img src="https://github.com/alurubalakarthikeya/CalGPA/blob/main/imgs/image.png?raw=true" alt="CalGPA Logo" width="500"/>
