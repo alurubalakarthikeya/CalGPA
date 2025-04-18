@@ -1601,9 +1601,16 @@ function displayFinalGPA() {
   }
 
   const gpa = totalGradePoints / totalCredits;
-  const dynamicGPA = document.createElement('div');
+let dynamicGPA = document.getElementById('dynamicGPA');
+
+if (!dynamicGPA) {
+  dynamicGPA = document.createElement('div');
+  dynamicGPA.id = 'dynamicGPA';
   dynamicGPA.className = 'dynamicGPA';
-  dynamicGPA.innerHTML = `
+  document.getElementById('gpa-container').appendChild(dynamicGPA);
+}
+
+dynamicGPA.innerHTML = `
 <div class="infobox">
   <center class="form">
     <h3>SGPA & CGPA:</h3><br>
@@ -1614,8 +1621,6 @@ function displayFinalGPA() {
     </fieldset>
   </center>
 </div>`;
-
-  document.getElementById('gpa-container').appendChild(dynamicGPA);
 
   document.getElementById('CGPA').addEventListener('input', function() {
       const currentCGPA = parseFloat(this.value);
