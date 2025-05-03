@@ -94,6 +94,24 @@ if ('serviceWorker' in navigator) {
     document.body.removeChild(link);
   }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+
+  if (isPWA) {
+    document.body.style.paddingTop = '0';
+
+    const navContainer = document.querySelector('.nav-container'); 
+    if (navContainer) {
+      navContainer.style.paddingTop = 'env(safe-area-inset-top)';
+    }
+
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.style.marginTop = 'env(safe-area-inset-top)';
+    });
+  }
+});
+
 function addTodo() {
   const todoInput = document.getElementById('todo');
   const todoText = todoInput.value.trim();
