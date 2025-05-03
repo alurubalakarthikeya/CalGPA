@@ -5,7 +5,7 @@
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2a9d8f",
+    "theme_color": "rgba(13, 132, 122, 0.96)",
 "icons": [
   {
     "src": "imgs/gpa-logo.png",
@@ -20,13 +20,13 @@
     "purpose": "any"
   },
   {
-    "src": "imgs/gpa-logo-maskable.png",
+    "src": "imgs/gpa-logo.png",
     "sizes": "192x192",
     "type": "image/png",
     "purpose": "maskable"
   },
   {
-    "src": "imgs/gpa-logo-maskable.png",
+    "src": "imgs/gpa-logo.png",
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "maskable"
