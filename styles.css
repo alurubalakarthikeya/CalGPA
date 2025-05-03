@@ -290,7 +290,7 @@ body.dark-mode .insta-text p {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgba(13, 132, 122, 0.96); 
+    background-color: rgba(13, 132, 122, 0.97); 
     color: var(--bg-color);
     z-index: 100;
     overflow: visible;
