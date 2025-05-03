@@ -95,19 +95,15 @@ if ('serviceWorker' in navigator) {
   }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const isPWA = window.matchMedia('(display-mode: standalone)').matches;
-
+  const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
   if (isPWA) {
-    document.body.style.paddingTop = '0';
-
-    const navContainer = document.querySelector('.nav-container'); 
-    if (navContainer) {
-      navContainer.style.paddingTop = 'env(safe-area-inset-top)';
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      navbar.style.paddingTop = 'env(safe-area-inset-top)';
     }
-
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-      item.style.marginTop = 'env(safe-area-inset-top)';
+    const navbarContents = navbar.querySelectorAll('h1, .menu, .options, .sidenav');
+    navbarContents.forEach(content => {
+      content.style.marginTop = '0'; 
     });
   }
 });
