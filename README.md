@@ -123,7 +123,7 @@ We welcome contributions! To get started:<br>
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ## 📈 Project Stats
-<p><b>Start Date: </b> 23-10-2024</p>
+<p><b>Start Date: </b> 29-10-2024</p>
 <p><b>Developer: </b><a href="https://github.com/alurubalakarthikeya">@alurubalakarthikeya</a></p>
 
 ![License](https://img.shields.io/github/license/alurubalakarthikeya/CalGPA)
