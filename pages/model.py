@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 # Load data
 df = pd.read_csv('student_gpa_data.csv')
 
-# with sample data
+# sample data
 X = df[['internal_marks', 'see_marks', 'total_marks']]
 y = df['gpa']
 
